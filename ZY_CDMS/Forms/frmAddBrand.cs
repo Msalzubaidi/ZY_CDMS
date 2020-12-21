@@ -16,5 +16,10 @@ namespace ZY_CDMS.Forms
         {
             InitializeComponent();
         }
+
+        private void frmAddBrand_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

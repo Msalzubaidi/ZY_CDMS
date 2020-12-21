@@ -16,5 +16,34 @@ namespace ZY_CDMS.Forms
         {
             InitializeComponent();
         }
+
+        private void hyperlinkLabelControl1_Click(object sender, EventArgs e)
+        {
+            bool isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Whats New")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+
+            if (isopen == false)
+            {
+                frmWhatsNew wn = new frmWhatsNew();
+              
+                wn.Show();
+
+                this.Close();
+
+            }
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
