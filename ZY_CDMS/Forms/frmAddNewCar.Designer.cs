@@ -35,8 +35,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.KeyPreview = true;
             this.Name = "frmAddNewCar";
             this.Text = "Add New Car";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmAddNewCar_KeyDown);
             this.ResumeLayout(false);
 
         }

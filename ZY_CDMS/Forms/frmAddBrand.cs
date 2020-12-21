@@ -21,5 +21,13 @@ namespace ZY_CDMS.Forms
         {
 
         }
+
+        private void frmAddBrand_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SendKeys.Send("{TAB}");
+            }
+        }
     }
 }

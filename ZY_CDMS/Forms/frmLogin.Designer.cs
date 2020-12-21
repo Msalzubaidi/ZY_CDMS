@@ -157,7 +157,7 @@
             this.credInfo.AutoSize = true;
             this.credInfo.BackColor = System.Drawing.Color.Transparent;
             this.credInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.credInfo.Location = new System.Drawing.Point(184, 60);
+            this.credInfo.Location = new System.Drawing.Point(183, 60);
             this.credInfo.Name = "credInfo";
             this.credInfo.Size = new System.Drawing.Size(267, 52);
             this.credInfo.TabIndex = 9;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUpdateBrandInfo));
             this.SuspendLayout();
             // 
             // frmUpdateBrandInfo
@@ -35,8 +36,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Name = "frmUpdateBrandInfo";
             this.Text = "Update Brand Info";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmUpdateBrandInfo_KeyDown);
             this.ResumeLayout(false);
 
         }

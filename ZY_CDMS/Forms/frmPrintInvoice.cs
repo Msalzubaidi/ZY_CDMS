@@ -16,5 +16,13 @@ namespace ZY_CDMS.Forms
         {
             InitializeComponent();
         }
+
+        private void frmPrintInvoice_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SendKeys.Send("{TAB}");
+            }
+        }
     }
 }

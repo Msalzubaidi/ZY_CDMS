@@ -288,6 +288,9 @@
     <EmbeddedResource Include="Forms\frmDefineServices.resx">
       <DependentUpon>frmDefineServices.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDevloper.resx">
+      <DependentUpon>frmDevloper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmHomePage.resx">
       <DependentUpon>frmHomePage.cs</DependentUpon>
     </EmbeddedResource>
