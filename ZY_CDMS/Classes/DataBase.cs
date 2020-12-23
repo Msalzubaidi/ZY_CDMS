@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ZY_CDMS.Properties;
 
 namespace ZY_CDMS.Classes
 {
@@ -15,13 +16,11 @@ namespace ZY_CDMS.Classes
           public static string usernamecon=Connection.un;
           public static string passwordcon=Connection.ps;
           */
-
-      
-
-        public static string servercon = "MZUBAIDI"; //ZYTECH
-        public static string dbnamecon = "Auto2020";
-        public static string usernamecon = "sa";
-        public static string passwordcon = "1";
+          
+        public static string servercon =Resources.servercon; 
+        public static string dbnamecon = Resources.dbnamecon;
+        public static string usernamecon = Resources.usernamecon;
+        public static string passwordcon =Resources.passwordcon;
         public static int ZYTECH = 0;
         public static int AZAuto = 10;
         public static int JordanCleaning = 20;

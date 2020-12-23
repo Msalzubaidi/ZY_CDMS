@@ -66,7 +66,7 @@ namespace ZY_CDMS.Forms
             if (string.IsNullOrEmpty(txt_userid.Text) || string.IsNullOrEmpty(txt_password.Text) || string.IsNullOrEmpty(txt_username.Text) || rule.isDigitsOnly(txt_userid.Text) == false)
             {
 
-                MessageBox.Show("Please Type Valid Information", Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(Resources.invalidData, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_password.Clear();
                 txt_userid.Clear();
                 txt_username.Clear();
@@ -99,13 +99,13 @@ namespace ZY_CDMS.Forms
                 }
                 else if (result == 0)
                 {
-                    MessageBox.Show("Invalid Username Or Password ", Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(Resources.FaieldLogin, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txt_password.Clear();
                     txt_userid.Clear();
                     txt_username.Clear();
                 }
                 else
-                    MessageBox.Show("Please Try Again !", Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    MessageBox.Show(Resources.TryAgain, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Hand);
 
 
             }
@@ -118,7 +118,7 @@ namespace ZY_CDMS.Forms
            
             if (string.IsNullOrEmpty(txt_userid.Text) || rule.isDigitsOnly(txt_userid.Text) == false)
             {
-                MessageBox.Show("Please Type Digit Only ", Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(Resources.digitOnlyError , Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
 
@@ -138,7 +138,7 @@ namespace ZY_CDMS.Forms
 
                 else
                 {
-                    MessageBox.Show("User Not Exist ", Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("User "+ Resources.notExist, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txt_password.Clear();
                     txt_userid.Clear();
                     txt_username.Clear();

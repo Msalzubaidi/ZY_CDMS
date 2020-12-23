@@ -26,6 +26,18 @@ namespace ZY_CDMS.Classes
             return true; // does not contain char
         }
 
+        public bool isCharOnly(string str)
+        {
+            foreach (char c in str)
+            {
+                if ((c < 'a'  || c > 'z' ) || (c < 'A' || c > 'Z'))
+                    return true;//contain symbols 
+
+            }
+
+            return false; // does not contain char
+        }
+
         public int FindMax(string table_name)
         {
             SqlConnection con = new SqlConnection(DataBase.connstring);
@@ -43,29 +55,37 @@ namespace ZY_CDMS.Classes
             sda.Fill(dt);
 
             con.Open();
-            return dt.Rows.Count;
+            return dt.Rows.Count + 1 ;
 
         }
 
-        public int checkexist(string parameter , string tablename , int x , string condition)
+        public int checkexist(string tablename , int parx , string condition)
         {
+            int x = parx;
 
             SqlConnection con = new SqlConnection(DataBase.connstring);
+            string begqry = "select * from ";
+            string table_name = tablename;
+            string qrycondition = condition;
             string qry = "";
             
             if (x == 0)
             {
-              //   qry = "selct * from " + tablename + " where " + parameter + " =@"+;
+                //Only For Select * 
+                 qry = "selct * from " + tablename ;
             }
             else if (x == 1) 
             {
-                qry = "";
+                //For Conditional Select 
+                qry = begqry + table_name + " where " + qrycondition ; 
             }
          
             SqlCommand cmd = new SqlCommand(qry , con); // sql command to so get data from data base
 
 
-            cmd.Parameters.AddWithValue("@unum", parameter);
+            //cmd.Parameters.AddWithValue("@tablename", tablename);
+            //cmd.Parameters.AddWithValue("@parx", parx);
+            //cmd.Parameters.AddWithValue("@condition", condition); 
 
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
 

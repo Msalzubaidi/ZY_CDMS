@@ -61,7 +61,7 @@ namespace ZY_CDMS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Added Successfully.
+        ///   Looks up a localized string similar to  Added Successfully.
         /// </summary>
         internal static string AddedSuccessfully {
             get {
@@ -111,6 +111,24 @@ namespace ZY_CDMS.Properties {
         internal static string dbnamecon {
             get {
                 return ResourceManager.GetString("dbnamecon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please Type Digit Only .
+        /// </summary>
+        internal static string digitOnlyError {
+            get {
+                return ResourceManager.GetString("digitOnlyError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  Already Exist.
+        /// </summary>
+        internal static string Exist {
+            get {
+                return ResourceManager.GetString("Exist", resourceCulture);
             }
         }
         
@@ -178,6 +196,15 @@ namespace ZY_CDMS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to   Not Exist.
+        /// </summary>
+        internal static string notExist {
+            get {
+                return ResourceManager.GetString("notExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 1.
         /// </summary>
         internal static string passwordcon {
@@ -192,6 +219,24 @@ namespace ZY_CDMS.Properties {
         internal static string servercon {
             get {
                 return ResourceManager.GetString("servercon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please Try Again .
+        /// </summary>
+        internal static string TryAgain {
+            get {
+                return ResourceManager.GetString("TryAgain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  Updated Successfully.
+        /// </summary>
+        internal static string Updated {
+            get {
+                return ResourceManager.GetString("Updated", resourceCulture);
             }
         }
         

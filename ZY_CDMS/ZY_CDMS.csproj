@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -111,12 +111,18 @@
     <Compile Include="Classes\DataBase.cs" />
     <Compile Include="Classes\Operations.cs" />
     <Compile Include="Classes\Rules.cs" />
-    <Compile Include="Classes\Settings.cs" />
+    <Compile Include="Classes\SysSettings.cs" />
     <Compile Include="Forms\frmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmAbout.Designer.cs">
       <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAccountSetttings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAccountSetttings.Designer.cs">
+      <DependentUpon>frmAccountSetttings.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmAddNewCar.cs">
       <SubType>Form</SubType>
@@ -202,6 +208,12 @@
     <Compile Include="Forms\frmDevloper.Designer.cs">
       <DependentUpon>frmDevloper.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmEditServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEditServices.Designer.cs">
+      <DependentUpon>frmEditServices.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +261,9 @@
     <EmbeddedResource Include="Forms\frmAbout.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAccountSetttings.resx">
+      <DependentUpon>frmAccountSetttings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmActivationApp.resx">
       <DependentUpon>frmActivationApp.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDevloper.resx">
       <DependentUpon>frmDevloper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEditServices.resx">
+      <DependentUpon>frmEditServices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmHomePage.resx">
       <DependentUpon>frmHomePage.cs</DependentUpon>
