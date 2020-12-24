@@ -180,4 +180,10 @@
   <data name="Updated" xml:space="preserve">
     <value> Updated Successfully</value>
   </data>
+  <data name="activationneeded" xml:space="preserve">
+    <value>Your License not Valid</value>
+  </data>
+  <data name="pleaseActive" xml:space="preserve">
+    <value>Please Activate App</value>
+  </data>
 </root>

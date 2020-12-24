@@ -61,6 +61,15 @@ namespace ZY_CDMS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Your License not Valid.
+        /// </summary>
+        internal static string activationneeded {
+            get {
+                return ResourceManager.GetString("activationneeded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to  Added Successfully.
         /// </summary>
         internal static string AddedSuccessfully {
@@ -210,6 +219,15 @@ namespace ZY_CDMS.Properties {
         internal static string passwordcon {
             get {
                 return ResourceManager.GetString("passwordcon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please Activate App.
+        /// </summary>
+        internal static string pleaseActive {
+            get {
+                return ResourceManager.GetString("pleaseActive", resourceCulture);
             }
         }
         

@@ -197,6 +197,7 @@ namespace ZY_CDMS.Forms
         private void frmHomePage_Load(object sender, EventArgs e)
         {
             lic.Text = Resources.Logo +" "+ Resources.AppName + " V " + Resources.AppVersion ;
+           
         }
 
         private void myAccountSettingsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -216,6 +217,31 @@ namespace ZY_CDMS.Forms
             {
                 frmAccountSetttings fas = new frmAccountSetttings();
                 fas.Show();
+            }
+        }
+
+        private void LoadMenus_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void buyCarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Add New Car")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+
+            if (isopen == false)
+            {
+                frmAddNewCar nc = new frmAddNewCar();
+                nc.Show();
             }
         }
     }

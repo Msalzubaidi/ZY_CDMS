@@ -28,7 +28,7 @@ namespace ZY_CDMS.Classes
             if (x == 0)
             {
                 //Only For Select * 
-                qry = "selct * from " + tablename;
+                qry = "select * from " + tablename;
             }
             else if (x == 1)
             {

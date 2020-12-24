@@ -70,6 +70,13 @@
             this.tab_accountsettings = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_exit = new System.Windows.Forms.ToolStripMenuItem();
             this.lic = new System.Windows.Forms.LinkLabel();
+            this.buyCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sellCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addServiceToCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printInvoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateCustomerInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.carTestViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -309,6 +316,14 @@
             // 
             // mnu_operations
             // 
+            this.mnu_operations.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.buyCarToolStripMenuItem,
+            this.sellCarToolStripMenuItem,
+            this.addServiceToCarToolStripMenuItem,
+            this.printInvoiceToolStripMenuItem,
+            this.addCustomerToolStripMenuItem,
+            this.updateCustomerInfoToolStripMenuItem,
+            this.carTestViewToolStripMenuItem});
             this.mnu_operations.Name = "mnu_operations";
             this.mnu_operations.Size = new System.Drawing.Size(80, 20);
             this.mnu_operations.Text = "Operations";
@@ -326,19 +341,19 @@
             // carsToolStripMenuItem
             // 
             this.carsToolStripMenuItem.Name = "carsToolStripMenuItem";
-            this.carsToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.carsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.carsToolStripMenuItem.Text = "Cars";
             // 
             // tab_tests
             // 
             this.tab_tests.Name = "tab_tests";
-            this.tab_tests.Size = new System.Drawing.Size(133, 22);
+            this.tab_tests.Size = new System.Drawing.Size(152, 22);
             this.tab_tests.Text = "Tests";
             // 
             // tab_customers
             // 
             this.tab_customers.Name = "tab_customers";
-            this.tab_customers.Size = new System.Drawing.Size(133, 22);
+            this.tab_customers.Size = new System.Drawing.Size(152, 22);
             this.tab_customers.Text = "Customers";
             // 
             // mnu_reports
@@ -352,7 +367,7 @@
             // tab_reports
             // 
             this.tab_reports.Name = "tab_reports";
-            this.tab_reports.Size = new System.Drawing.Size(118, 22);
+            this.tab_reports.Size = new System.Drawing.Size(152, 22);
             this.tab_reports.Text = "Reports";
             // 
             // mun_sysmanage
@@ -410,6 +425,49 @@
             this.lic.TabIndex = 11;
             this.lic.TabStop = true;
             this.lic.Text = "License Info";
+            // 
+            // buyCarToolStripMenuItem
+            // 
+            this.buyCarToolStripMenuItem.Name = "buyCarToolStripMenuItem";
+            this.buyCarToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.buyCarToolStripMenuItem.Text = "Buy Car";
+            this.buyCarToolStripMenuItem.Click += new System.EventHandler(this.buyCarToolStripMenuItem_Click);
+            // 
+            // sellCarToolStripMenuItem
+            // 
+            this.sellCarToolStripMenuItem.Name = "sellCarToolStripMenuItem";
+            this.sellCarToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.sellCarToolStripMenuItem.Text = "Sell Car";
+            // 
+            // addServiceToCarToolStripMenuItem
+            // 
+            this.addServiceToCarToolStripMenuItem.Name = "addServiceToCarToolStripMenuItem";
+            this.addServiceToCarToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.addServiceToCarToolStripMenuItem.Text = "Add Service To Car";
+            // 
+            // printInvoiceToolStripMenuItem
+            // 
+            this.printInvoiceToolStripMenuItem.Name = "printInvoiceToolStripMenuItem";
+            this.printInvoiceToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.printInvoiceToolStripMenuItem.Text = "Print Invoice";
+            // 
+            // addCustomerToolStripMenuItem
+            // 
+            this.addCustomerToolStripMenuItem.Name = "addCustomerToolStripMenuItem";
+            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.addCustomerToolStripMenuItem.Text = "Add Customer";
+            // 
+            // updateCustomerInfoToolStripMenuItem
+            // 
+            this.updateCustomerInfoToolStripMenuItem.Name = "updateCustomerInfoToolStripMenuItem";
+            this.updateCustomerInfoToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.updateCustomerInfoToolStripMenuItem.Text = "Update Customer Info";
+            // 
+            // carTestViewToolStripMenuItem
+            // 
+            this.carTestViewToolStripMenuItem.Name = "carTestViewToolStripMenuItem";
+            this.carTestViewToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.carTestViewToolStripMenuItem.Text = "Car Test View";
             // 
             // frmHomePage
             // 
@@ -479,5 +537,12 @@
         private System.Windows.Forms.ToolStripMenuItem tab_reports;
         private System.Windows.Forms.ToolStripMenuItem tab_sysinfo;
         private System.Windows.Forms.ToolStripMenuItem tab_usersettings;
+        private System.Windows.Forms.ToolStripMenuItem buyCarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sellCarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addServiceToCarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem printInvoiceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addCustomerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateCustomerInfoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem carTestViewToolStripMenuItem;
     }
 }
