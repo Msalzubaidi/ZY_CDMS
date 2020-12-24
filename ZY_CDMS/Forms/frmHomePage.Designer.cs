@@ -62,14 +62,14 @@
             this.tab_tests = new System.Windows.Forms.ToolStripMenuItem();
             this.tab_customers = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_reports = new System.Windows.Forms.ToolStripMenuItem();
+            this.tab_reports = new System.Windows.Forms.ToolStripMenuItem();
             this.mun_sysmanage = new System.Windows.Forms.ToolStripMenuItem();
+            this.tab_sysinfo = new System.Windows.Forms.ToolStripMenuItem();
+            this.tab_usersettings = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_myaccount = new System.Windows.Forms.ToolStripMenuItem();
             this.tab_accountsettings = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_exit = new System.Windows.Forms.ToolStripMenuItem();
             this.lic = new System.Windows.Forms.LinkLabel();
-            this.tab_sysinfo = new System.Windows.Forms.ToolStripMenuItem();
-            this.tab_usersettings = new System.Windows.Forms.ToolStripMenuItem();
-            this.tab_reports = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -326,19 +326,19 @@
             // carsToolStripMenuItem
             // 
             this.carsToolStripMenuItem.Name = "carsToolStripMenuItem";
-            this.carsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.carsToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.carsToolStripMenuItem.Text = "Cars";
             // 
             // tab_tests
             // 
             this.tab_tests.Name = "tab_tests";
-            this.tab_tests.Size = new System.Drawing.Size(152, 22);
+            this.tab_tests.Size = new System.Drawing.Size(133, 22);
             this.tab_tests.Text = "Tests";
             // 
             // tab_customers
             // 
             this.tab_customers.Name = "tab_customers";
-            this.tab_customers.Size = new System.Drawing.Size(152, 22);
+            this.tab_customers.Size = new System.Drawing.Size(133, 22);
             this.tab_customers.Text = "Customers";
             // 
             // mnu_reports
@@ -349,6 +349,12 @@
             this.mnu_reports.Size = new System.Drawing.Size(63, 20);
             this.mnu_reports.Text = "Reports";
             // 
+            // tab_reports
+            // 
+            this.tab_reports.Name = "tab_reports";
+            this.tab_reports.Size = new System.Drawing.Size(118, 22);
+            this.tab_reports.Text = "Reports";
+            // 
             // mun_sysmanage
             // 
             this.mun_sysmanage.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -357,6 +363,18 @@
             this.mun_sysmanage.Name = "mun_sysmanage";
             this.mun_sysmanage.Size = new System.Drawing.Size(107, 20);
             this.mun_sysmanage.Text = "System Manage";
+            // 
+            // tab_sysinfo
+            // 
+            this.tab_sysinfo.Name = "tab_sysinfo";
+            this.tab_sysinfo.Size = new System.Drawing.Size(185, 22);
+            this.tab_sysinfo.Text = "System Information";
+            // 
+            // tab_usersettings
+            // 
+            this.tab_usersettings.Name = "tab_usersettings";
+            this.tab_usersettings.Size = new System.Drawing.Size(185, 22);
+            this.tab_usersettings.Text = "Users Settings";
             // 
             // mnu_myaccount
             // 
@@ -392,24 +410,6 @@
             this.lic.TabIndex = 11;
             this.lic.TabStop = true;
             this.lic.Text = "License Info";
-            // 
-            // tab_sysinfo
-            // 
-            this.tab_sysinfo.Name = "tab_sysinfo";
-            this.tab_sysinfo.Size = new System.Drawing.Size(185, 22);
-            this.tab_sysinfo.Text = "System Information";
-            // 
-            // tab_usersettings
-            // 
-            this.tab_usersettings.Name = "tab_usersettings";
-            this.tab_usersettings.Size = new System.Drawing.Size(185, 22);
-            this.tab_usersettings.Text = "Users Settings";
-            // 
-            // tab_reports
-            // 
-            this.tab_reports.Name = "tab_reports";
-            this.tab_reports.Size = new System.Drawing.Size(152, 22);
-            this.tab_reports.Text = "Reports";
             // 
             // frmHomePage
             // 

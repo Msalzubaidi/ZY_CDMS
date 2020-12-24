@@ -131,5 +131,27 @@ namespace ZY_CDMS.Classes
             else
                 return cmd.ExecuteNonQuery();
         }
+
+
+        public int AddColor(int color_id, string color_name , string table)
+        {
+
+            SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
+            SqlCommand cmd = new SqlCommand("INSERT INTO Colors(color_id , color_name ) VALUES(@cr_id,@cr_name)", con); // sql command to so get data from data bas
+
+
+            cmd.Parameters.Add(new SqlParameter("@cr_id", color_id));
+            cmd.Parameters.Add(new SqlParameter("@cr_name", color_name));
+
+
+            string condition = "color_name=" + "'" + @color_name + "'";
+            con.Open();
+         
+            int x = r.checkexist(table , 1 , condition); // if exist return -1 ; 
+            if (x > 0)
+                return -1;
+            else
+                return cmd.ExecuteNonQuery();
+        }
     }
 }
