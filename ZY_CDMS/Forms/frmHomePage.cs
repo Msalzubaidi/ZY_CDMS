@@ -244,5 +244,30 @@ namespace ZY_CDMS.Forms
                 nc.Show();
             }
         }
+
+        private void sellCarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+
+            if (isopen == false)
+            {
+                frmSellCar sc = new frmSellCar();
+                    sc.Show();
+            }
+        }
+
+        private void accordionControlElement5_Click(object sender, EventArgs e)
+        {
+            buyCarToolStripMenuItem.PerformClick();
+        }
     }
 }

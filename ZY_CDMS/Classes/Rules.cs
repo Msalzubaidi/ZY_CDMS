@@ -83,10 +83,6 @@ namespace ZY_CDMS.Classes
             SqlCommand cmd = new SqlCommand(qry , con); // sql command to so get data from data base
 
 
-            //cmd.Parameters.AddWithValue("@tablename", tablename);
-            //cmd.Parameters.AddWithValue("@parx", parx);
-            //cmd.Parameters.AddWithValue("@condition", condition); 
-
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
 
             System.Data.DataTable dt = new System.Data.DataTable();

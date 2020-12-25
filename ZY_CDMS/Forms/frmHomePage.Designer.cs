@@ -57,6 +57,13 @@
             this.defineSourceCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.definePaintCodesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_operations = new System.Windows.Forms.ToolStripMenuItem();
+            this.buyCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sellCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addServiceToCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printInvoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateCustomerInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.carTestViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tab_cars = new System.Windows.Forms.ToolStripMenuItem();
             this.carsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tab_tests = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,13 +77,7 @@
             this.tab_accountsettings = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_exit = new System.Windows.Forms.ToolStripMenuItem();
             this.lic = new System.Windows.Forms.LinkLabel();
-            this.buyCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sellCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addServiceToCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.printInvoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateCustomerInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.carTestViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.carMaintainanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -92,8 +93,9 @@
             this.accordionControlElement4});
             this.accordionControl1.Location = new System.Drawing.Point(0, 24);
             this.accordionControl1.Name = "accordionControl1";
+            this.accordionControl1.OptionsMinimizing.State = DevExpress.XtraBars.Navigation.AccordionControlState.Minimized;
             this.accordionControl1.ShowFilterControl = DevExpress.XtraBars.Navigation.ShowFilterControl.Always;
-            this.accordionControl1.Size = new System.Drawing.Size(292, 697);
+            this.accordionControl1.Size = new System.Drawing.Size(40, 697);
             this.accordionControl1.TabIndex = 0;
             this.accordionControl1.Text = "accordionControl1";
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
@@ -109,6 +111,7 @@
             this.accordionControlElement11,
             this.accordionControlElement12,
             this.accordionControlElement13});
+            this.accordionControlElement1.Expanded = true;
             this.accordionControlElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement1.ImageOptions.Image")));
             this.accordionControlElement1.Name = "accordionControlElement1";
             this.accordionControlElement1.Text = "Operations";
@@ -120,6 +123,7 @@
             this.accordionControlElement5.Name = "accordionControlElement5";
             this.accordionControlElement5.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement5.Text = "Buy Car";
+            this.accordionControlElement5.Click += new System.EventHandler(this.accordionControlElement5_Click);
             // 
             // accordionControlElement6
             // 
@@ -323,10 +327,55 @@
             this.printInvoiceToolStripMenuItem,
             this.addCustomerToolStripMenuItem,
             this.updateCustomerInfoToolStripMenuItem,
+            this.carMaintainanceToolStripMenuItem,
             this.carTestViewToolStripMenuItem});
             this.mnu_operations.Name = "mnu_operations";
             this.mnu_operations.Size = new System.Drawing.Size(80, 20);
             this.mnu_operations.Text = "Operations";
+            // 
+            // buyCarToolStripMenuItem
+            // 
+            this.buyCarToolStripMenuItem.Name = "buyCarToolStripMenuItem";
+            this.buyCarToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.buyCarToolStripMenuItem.Text = "Buy Car";
+            this.buyCarToolStripMenuItem.Click += new System.EventHandler(this.buyCarToolStripMenuItem_Click);
+            // 
+            // sellCarToolStripMenuItem
+            // 
+            this.sellCarToolStripMenuItem.Name = "sellCarToolStripMenuItem";
+            this.sellCarToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.sellCarToolStripMenuItem.Text = "Sell Car";
+            this.sellCarToolStripMenuItem.Click += new System.EventHandler(this.sellCarToolStripMenuItem_Click);
+            // 
+            // addServiceToCarToolStripMenuItem
+            // 
+            this.addServiceToCarToolStripMenuItem.Name = "addServiceToCarToolStripMenuItem";
+            this.addServiceToCarToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.addServiceToCarToolStripMenuItem.Text = "Add Service To Car";
+            // 
+            // printInvoiceToolStripMenuItem
+            // 
+            this.printInvoiceToolStripMenuItem.Name = "printInvoiceToolStripMenuItem";
+            this.printInvoiceToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.printInvoiceToolStripMenuItem.Text = "Print Invoice";
+            // 
+            // addCustomerToolStripMenuItem
+            // 
+            this.addCustomerToolStripMenuItem.Name = "addCustomerToolStripMenuItem";
+            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.addCustomerToolStripMenuItem.Text = "Add Customer";
+            // 
+            // updateCustomerInfoToolStripMenuItem
+            // 
+            this.updateCustomerInfoToolStripMenuItem.Name = "updateCustomerInfoToolStripMenuItem";
+            this.updateCustomerInfoToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.updateCustomerInfoToolStripMenuItem.Text = "Update Customer Info";
+            // 
+            // carTestViewToolStripMenuItem
+            // 
+            this.carTestViewToolStripMenuItem.Name = "carTestViewToolStripMenuItem";
+            this.carTestViewToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.carTestViewToolStripMenuItem.Text = "Car Test View";
             // 
             // tab_cars
             // 
@@ -341,19 +390,19 @@
             // carsToolStripMenuItem
             // 
             this.carsToolStripMenuItem.Name = "carsToolStripMenuItem";
-            this.carsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.carsToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.carsToolStripMenuItem.Text = "Cars";
             // 
             // tab_tests
             // 
             this.tab_tests.Name = "tab_tests";
-            this.tab_tests.Size = new System.Drawing.Size(152, 22);
+            this.tab_tests.Size = new System.Drawing.Size(133, 22);
             this.tab_tests.Text = "Tests";
             // 
             // tab_customers
             // 
             this.tab_customers.Name = "tab_customers";
-            this.tab_customers.Size = new System.Drawing.Size(152, 22);
+            this.tab_customers.Size = new System.Drawing.Size(133, 22);
             this.tab_customers.Text = "Customers";
             // 
             // mnu_reports
@@ -367,7 +416,7 @@
             // tab_reports
             // 
             this.tab_reports.Name = "tab_reports";
-            this.tab_reports.Size = new System.Drawing.Size(152, 22);
+            this.tab_reports.Size = new System.Drawing.Size(118, 22);
             this.tab_reports.Text = "Reports";
             // 
             // mun_sysmanage
@@ -426,48 +475,11 @@
             this.lic.TabStop = true;
             this.lic.Text = "License Info";
             // 
-            // buyCarToolStripMenuItem
+            // carMaintainanceToolStripMenuItem
             // 
-            this.buyCarToolStripMenuItem.Name = "buyCarToolStripMenuItem";
-            this.buyCarToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.buyCarToolStripMenuItem.Text = "Buy Car";
-            this.buyCarToolStripMenuItem.Click += new System.EventHandler(this.buyCarToolStripMenuItem_Click);
-            // 
-            // sellCarToolStripMenuItem
-            // 
-            this.sellCarToolStripMenuItem.Name = "sellCarToolStripMenuItem";
-            this.sellCarToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.sellCarToolStripMenuItem.Text = "Sell Car";
-            // 
-            // addServiceToCarToolStripMenuItem
-            // 
-            this.addServiceToCarToolStripMenuItem.Name = "addServiceToCarToolStripMenuItem";
-            this.addServiceToCarToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.addServiceToCarToolStripMenuItem.Text = "Add Service To Car";
-            // 
-            // printInvoiceToolStripMenuItem
-            // 
-            this.printInvoiceToolStripMenuItem.Name = "printInvoiceToolStripMenuItem";
-            this.printInvoiceToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.printInvoiceToolStripMenuItem.Text = "Print Invoice";
-            // 
-            // addCustomerToolStripMenuItem
-            // 
-            this.addCustomerToolStripMenuItem.Name = "addCustomerToolStripMenuItem";
-            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.addCustomerToolStripMenuItem.Text = "Add Customer";
-            // 
-            // updateCustomerInfoToolStripMenuItem
-            // 
-            this.updateCustomerInfoToolStripMenuItem.Name = "updateCustomerInfoToolStripMenuItem";
-            this.updateCustomerInfoToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.updateCustomerInfoToolStripMenuItem.Text = "Update Customer Info";
-            // 
-            // carTestViewToolStripMenuItem
-            // 
-            this.carTestViewToolStripMenuItem.Name = "carTestViewToolStripMenuItem";
-            this.carTestViewToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.carTestViewToolStripMenuItem.Text = "Car Test View";
+            this.carMaintainanceToolStripMenuItem.Name = "carMaintainanceToolStripMenuItem";
+            this.carMaintainanceToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.carMaintainanceToolStripMenuItem.Text = "Car Maintainance";
             // 
             // frmHomePage
             // 
@@ -544,5 +556,6 @@
         private System.Windows.Forms.ToolStripMenuItem addCustomerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateCustomerInfoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem carTestViewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem carMaintainanceToolStripMenuItem;
     }
 }

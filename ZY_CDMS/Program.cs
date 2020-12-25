@@ -33,9 +33,12 @@ namespace ZY_CDMS
                 }
                 else if (active == 0 )
                 {
-                    MessageBox.Show(Resources.pleaseActive, Resources.MessageTitle, 0, MessageBoxIcon.Warning);
-                 //   Application.Run(new frmActivationApp());
+
+                    // MessageBox.Show(Resources.pleaseActive , Resources.MessageTitle, 0, MessageBoxIcon.Warning);
+                    //   Application.Run(new frmActivationApp());
+
                     Application.Run(new frmLogin());
+
                 }
             }
             else

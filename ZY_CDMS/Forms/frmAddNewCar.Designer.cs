@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddNewCar));
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.txt_transid = new System.Windows.Forms.TextBox();
-            this.txt_vin = new System.Windows.Forms.TextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.cbo_makemodel = new DevExpress.XtraEditors.ComboBoxEdit();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
@@ -56,6 +56,7 @@
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.txt_vin = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_makemodel.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_color.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_year.Properties)).BeginInit();
@@ -83,17 +84,12 @@
             // 
             // txt_transid
             // 
+            this.txt_transid.Enabled = false;
             this.txt_transid.Location = new System.Drawing.Point(9, 36);
             this.txt_transid.Name = "txt_transid";
             this.txt_transid.Size = new System.Drawing.Size(63, 20);
             this.txt_transid.TabIndex = 55;
-            // 
-            // txt_vin
-            // 
-            this.txt_vin.Location = new System.Drawing.Point(78, 36);
-            this.txt_vin.Name = "txt_vin";
-            this.txt_vin.Size = new System.Drawing.Size(176, 20);
-            this.txt_vin.TabIndex = 57;
+            this.txt_transid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // metroLabel1
             // 
@@ -116,7 +112,7 @@
             this.cbo_makemodel.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbo_makemodel.Size = new System.Drawing.Size(142, 20);
-            this.cbo_makemodel.TabIndex = 58;
+            this.cbo_makemodel.TabIndex = 2;
             // 
             // metroLabel2
             // 
@@ -185,7 +181,7 @@
             "Olive",
             "Cyan"});
             this.cbo_color.Size = new System.Drawing.Size(109, 20);
-            this.cbo_color.TabIndex = 60;
+            this.cbo_color.TabIndex = 3;
             // 
             // metroLabel4
             // 
@@ -250,7 +246,7 @@
             "2029",
             "2030"});
             this.cbo_year.Size = new System.Drawing.Size(109, 20);
-            this.cbo_year.TabIndex = 62;
+            this.cbo_year.TabIndex = 4;
             // 
             // nud_millages
             // 
@@ -262,7 +258,7 @@
             0});
             this.nud_millages.Name = "nud_millages";
             this.nud_millages.Size = new System.Drawing.Size(79, 20);
-            this.nud_millages.TabIndex = 64;
+            this.nud_millages.TabIndex = 5;
             // 
             // metroLabel6
             // 
@@ -302,7 +298,7 @@
             0});
             this.nud_price.Name = "nud_price";
             this.nud_price.Size = new System.Drawing.Size(79, 20);
-            this.nud_price.TabIndex = 66;
+            this.nud_price.TabIndex = 6;
             // 
             // dtp_datein
             // 
@@ -313,8 +309,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtp_datein.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtp_datein.Size = new System.Drawing.Size(159, 20);
-            this.dtp_datein.TabIndex = 68;
+            this.dtp_datein.Properties.Mask.BeepOnError = true;
+            this.dtp_datein.Size = new System.Drawing.Size(144, 20);
+            this.dtp_datein.TabIndex = 1;
             // 
             // metroLabel8
             // 
@@ -351,7 +348,7 @@
             this.cbo_paymethod.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbo_paymethod.Size = new System.Drawing.Size(146, 20);
-            this.cbo_paymethod.TabIndex = 70;
+            this.cbo_paymethod.TabIndex = 7;
             // 
             // metroLabel10
             // 
@@ -374,11 +371,11 @@
             this.cbo_source.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbo_source.Size = new System.Drawing.Size(167, 20);
-            this.cbo_source.TabIndex = 72;
+            this.cbo_source.TabIndex = 8;
             // 
             // txt_carstatus
             // 
-            this.txt_carstatus.Location = new System.Drawing.Point(217, 220);
+            this.txt_carstatus.Location = new System.Drawing.Point(73, 180);
             this.txt_carstatus.Name = "txt_carstatus";
             this.txt_carstatus.Size = new System.Drawing.Size(26, 20);
             this.txt_carstatus.TabIndex = 74;
@@ -388,7 +385,7 @@
             // 
             // txt_trantype
             // 
-            this.txt_trantype.Location = new System.Drawing.Point(96, 218);
+            this.txt_trantype.Location = new System.Drawing.Point(463, 9);
             this.txt_trantype.Name = "txt_trantype";
             this.txt_trantype.Size = new System.Drawing.Size(26, 20);
             this.txt_trantype.TabIndex = 75;
@@ -402,10 +399,10 @@
             this.metroLabel11.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel11.CustomBackground = true;
             this.metroLabel11.CustomForeColor = true;
-            this.metroLabel11.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel11.Location = new System.Drawing.Point(1, 215);
+            this.metroLabel11.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabel11.Location = new System.Drawing.Point(398, 12);
             this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(91, 25);
+            this.metroLabel11.Size = new System.Drawing.Size(59, 15);
             this.metroLabel11.TabIndex = 76;
             this.metroLabel11.Text = "Type - Buy";
             this.metroLabel11.UseStyleColors = true;
@@ -417,10 +414,10 @@
             this.metroLabel12.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel12.CustomBackground = true;
             this.metroLabel12.CustomForeColor = true;
-            this.metroLabel12.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel12.Location = new System.Drawing.Point(128, 216);
+            this.metroLabel12.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabel12.Location = new System.Drawing.Point(6, 184);
             this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(83, 25);
+            this.metroLabel12.Size = new System.Drawing.Size(55, 15);
             this.metroLabel12.TabIndex = 77;
             this.metroLabel12.Text = "CarStatus";
             this.metroLabel12.UseStyleColors = true;
@@ -432,10 +429,10 @@
             this.metroLabel13.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel13.CustomBackground = true;
             this.metroLabel13.CustomForeColor = true;
-            this.metroLabel13.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel13.Location = new System.Drawing.Point(260, 215);
+            this.metroLabel13.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabel13.Location = new System.Drawing.Point(104, 184);
             this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(144, 25);
+            this.metroLabel13.Size = new System.Drawing.Size(92, 15);
             this.metroLabel13.TabIndex = 78;
             this.metroLabel13.Text = "0 : new  1 : selled ";
             this.metroLabel13.UseStyleColors = true;
@@ -443,36 +440,46 @@
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(222, 189);
+            this.simpleButton1.Location = new System.Drawing.Point(236, 180);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton1.TabIndex = 79;
+            this.simpleButton1.TabIndex = 9;
             this.simpleButton1.Text = "Add ";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(305, 189);
+            this.simpleButton2.Location = new System.Drawing.Point(319, 180);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton2.TabIndex = 80;
+            this.simpleButton2.TabIndex = 10;
             this.simpleButton2.Text = "Clear";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // simpleButton3
             // 
-            this.simpleButton3.Location = new System.Drawing.Point(386, 189);
+            this.simpleButton3.Location = new System.Drawing.Point(400, 180);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton3.TabIndex = 81;
+            this.simpleButton3.TabIndex = 11;
             this.simpleButton3.Text = "Cancel";
             this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
+            // 
+            // txt_vin
+            // 
+            this.txt_vin.Location = new System.Drawing.Point(78, 36);
+            this.txt_vin.Mask = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            this.txt_vin.Name = "txt_vin";
+            this.txt_vin.PromptChar = ' ';
+            this.txt_vin.Size = new System.Drawing.Size(176, 20);
+            this.txt_vin.TabIndex = 0;
             // 
             // frmAddNewCar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(499, 244);
+            this.ClientSize = new System.Drawing.Size(496, 215);
+            this.Controls.Add(this.txt_vin);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
@@ -497,11 +504,11 @@
             this.Controls.Add(this.cbo_color);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.cbo_makemodel);
-            this.Controls.Add(this.txt_vin);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.txt_transid);
             this.Controls.Add(this.metroLabel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmAddNewCar";
             this.Text = "Add New Car";
@@ -525,7 +532,6 @@
 
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private System.Windows.Forms.TextBox txt_transid;
-        private System.Windows.Forms.TextBox txt_vin;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private DevExpress.XtraEditors.ComboBoxEdit cbo_makemodel;
         private MetroFramework.Controls.MetroLabel metroLabel2;
@@ -551,5 +557,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private System.Windows.Forms.MaskedTextBox txt_vin;
     }
 }

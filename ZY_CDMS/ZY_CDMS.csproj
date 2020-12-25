@@ -235,6 +235,12 @@
     <Compile Include="Forms\frmPrintInvoice.Designer.cs">
       <DependentUpon>frmPrintInvoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmSellCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSellCar.Designer.cs">
+      <DependentUpon>frmSellCar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmUpdateBrandInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -320,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmPrintInvoice.resx">
       <DependentUpon>frmPrintInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSellCar.resx">
+      <DependentUpon>frmSellCar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmUpdateBrandInfo.resx">
       <DependentUpon>frmUpdateBrandInfo.cs</DependentUpon>
