@@ -63,6 +63,7 @@
             this.printInvoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateCustomerInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.carMaintainanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carTestViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tab_cars = new System.Windows.Forms.ToolStripMenuItem();
             this.carsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,7 +78,6 @@
             this.tab_accountsettings = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_exit = new System.Windows.Forms.ToolStripMenuItem();
             this.lic = new System.Windows.Forms.LinkLabel();
-            this.carMaintainanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -93,9 +93,8 @@
             this.accordionControlElement4});
             this.accordionControl1.Location = new System.Drawing.Point(0, 24);
             this.accordionControl1.Name = "accordionControl1";
-            this.accordionControl1.OptionsMinimizing.State = DevExpress.XtraBars.Navigation.AccordionControlState.Minimized;
             this.accordionControl1.ShowFilterControl = DevExpress.XtraBars.Navigation.ShowFilterControl.Always;
-            this.accordionControl1.Size = new System.Drawing.Size(40, 697);
+            this.accordionControl1.Size = new System.Drawing.Size(250, 697);
             this.accordionControl1.TabIndex = 0;
             this.accordionControl1.Text = "accordionControl1";
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
@@ -131,6 +130,7 @@
             this.accordionControlElement6.Name = "accordionControlElement6";
             this.accordionControlElement6.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement6.Text = "Sell Car";
+            this.accordionControlElement6.Click += new System.EventHandler(this.accordionControlElement6_Click);
             // 
             // accordionControlElement8
             // 
@@ -364,12 +364,20 @@
             this.addCustomerToolStripMenuItem.Name = "addCustomerToolStripMenuItem";
             this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.addCustomerToolStripMenuItem.Text = "Add Customer";
+            this.addCustomerToolStripMenuItem.Click += new System.EventHandler(this.addCustomerToolStripMenuItem_Click);
             // 
             // updateCustomerInfoToolStripMenuItem
             // 
             this.updateCustomerInfoToolStripMenuItem.Name = "updateCustomerInfoToolStripMenuItem";
             this.updateCustomerInfoToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.updateCustomerInfoToolStripMenuItem.Text = "Update Customer Info";
+            this.updateCustomerInfoToolStripMenuItem.Click += new System.EventHandler(this.updateCustomerInfoToolStripMenuItem_Click);
+            // 
+            // carMaintainanceToolStripMenuItem
+            // 
+            this.carMaintainanceToolStripMenuItem.Name = "carMaintainanceToolStripMenuItem";
+            this.carMaintainanceToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.carMaintainanceToolStripMenuItem.Text = "Car Maintainance";
             // 
             // carTestViewToolStripMenuItem
             // 
@@ -474,12 +482,6 @@
             this.lic.TabIndex = 11;
             this.lic.TabStop = true;
             this.lic.Text = "License Info";
-            // 
-            // carMaintainanceToolStripMenuItem
-            // 
-            this.carMaintainanceToolStripMenuItem.Name = "carMaintainanceToolStripMenuItem";
-            this.carMaintainanceToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.carMaintainanceToolStripMenuItem.Text = "Car Maintainance";
             // 
             // frmHomePage
             // 

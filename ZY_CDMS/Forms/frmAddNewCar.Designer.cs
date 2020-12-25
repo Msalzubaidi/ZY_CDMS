@@ -54,9 +54,9 @@
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.txt_vin = new System.Windows.Forms.MaskedTextBox();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_makemodel.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_color.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_year.Properties)).BeginInit();
@@ -74,10 +74,9 @@
             this.metroLabel5.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel5.CustomBackground = true;
             this.metroLabel5.CustomForeColor = true;
-            this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel5.Location = new System.Drawing.Point(6, 8);
+            this.metroLabel5.Location = new System.Drawing.Point(12, 14);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(77, 25);
+            this.metroLabel5.Size = new System.Drawing.Size(58, 19);
             this.metroLabel5.TabIndex = 54;
             this.metroLabel5.Text = "Trans ID ";
             this.metroLabel5.UseStyleColors = true;
@@ -97,17 +96,16 @@
             this.metroLabel1.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel1.CustomBackground = true;
             this.metroLabel1.CustomForeColor = true;
-            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(89, 8);
+            this.metroLabel1.Location = new System.Drawing.Point(78, 14);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(45, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(34, 19);
             this.metroLabel1.TabIndex = 56;
             this.metroLabel1.Text = "VIN ";
             this.metroLabel1.UseStyleColors = true;
             // 
             // cbo_makemodel
             // 
-            this.cbo_makemodel.Location = new System.Drawing.Point(9, 97);
+            this.cbo_makemodel.Location = new System.Drawing.Point(9, 88);
             this.cbo_makemodel.Name = "cbo_makemodel";
             this.cbo_makemodel.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -120,10 +118,9 @@
             this.metroLabel2.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel2.CustomBackground = true;
             this.metroLabel2.CustomForeColor = true;
-            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.Location = new System.Drawing.Point(9, 69);
+            this.metroLabel2.Location = new System.Drawing.Point(12, 66);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(123, 25);
+            this.metroLabel2.Size = new System.Drawing.Size(96, 19);
             this.metroLabel2.TabIndex = 59;
             this.metroLabel2.Text = "Make / Model ";
             this.metroLabel2.UseStyleColors = true;
@@ -134,17 +131,16 @@
             this.metroLabel3.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel3.CustomBackground = true;
             this.metroLabel3.CustomForeColor = true;
-            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel3.Location = new System.Drawing.Point(157, 69);
+            this.metroLabel3.Location = new System.Drawing.Point(157, 66);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(53, 25);
+            this.metroLabel3.Size = new System.Drawing.Size(42, 19);
             this.metroLabel3.TabIndex = 61;
             this.metroLabel3.Text = "Color";
             this.metroLabel3.UseStyleColors = true;
             // 
             // cbo_color
             // 
-            this.cbo_color.Location = new System.Drawing.Point(157, 97);
+            this.cbo_color.Location = new System.Drawing.Point(157, 88);
             this.cbo_color.Name = "cbo_color";
             this.cbo_color.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -189,17 +185,16 @@
             this.metroLabel4.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel4.CustomBackground = true;
             this.metroLabel4.CustomForeColor = true;
-            this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel4.Location = new System.Drawing.Point(271, 69);
+            this.metroLabel4.Location = new System.Drawing.Point(272, 66);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(44, 25);
+            this.metroLabel4.Size = new System.Drawing.Size(34, 19);
             this.metroLabel4.TabIndex = 63;
             this.metroLabel4.Text = "Year";
             this.metroLabel4.UseStyleColors = true;
             // 
             // cbo_year
             // 
-            this.cbo_year.Location = new System.Drawing.Point(271, 97);
+            this.cbo_year.Location = new System.Drawing.Point(271, 88);
             this.cbo_year.Name = "cbo_year";
             this.cbo_year.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -250,7 +245,7 @@
             // 
             // nud_millages
             // 
-            this.nud_millages.Location = new System.Drawing.Point(386, 97);
+            this.nud_millages.Location = new System.Drawing.Point(386, 88);
             this.nud_millages.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -266,10 +261,9 @@
             this.metroLabel6.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel6.CustomBackground = true;
             this.metroLabel6.CustomForeColor = true;
-            this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel6.Location = new System.Drawing.Point(386, 69);
+            this.metroLabel6.Location = new System.Drawing.Point(386, 66);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(74, 25);
+            this.metroLabel6.Size = new System.Drawing.Size(57, 19);
             this.metroLabel6.TabIndex = 65;
             this.metroLabel6.Text = "Millages";
             this.metroLabel6.UseStyleColors = true;
@@ -280,17 +274,16 @@
             this.metroLabel7.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel7.CustomBackground = true;
             this.metroLabel7.CustomForeColor = true;
-            this.metroLabel7.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel7.Location = new System.Drawing.Point(9, 120);
+            this.metroLabel7.Location = new System.Drawing.Point(6, 115);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(121, 25);
+            this.metroLabel7.Size = new System.Drawing.Size(93, 19);
             this.metroLabel7.TabIndex = 67;
             this.metroLabel7.Text = "Perchase Price";
             this.metroLabel7.UseStyleColors = true;
             // 
             // nud_price
             // 
-            this.nud_price.Location = new System.Drawing.Point(9, 148);
+            this.nud_price.Location = new System.Drawing.Point(9, 137);
             this.nud_price.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -319,10 +312,9 @@
             this.metroLabel8.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel8.CustomBackground = true;
             this.metroLabel8.CustomForeColor = true;
-            this.metroLabel8.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel8.Location = new System.Drawing.Point(260, 9);
+            this.metroLabel8.Location = new System.Drawing.Point(260, 14);
             this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(66, 25);
+            this.metroLabel8.Size = new System.Drawing.Size(50, 19);
             this.metroLabel8.TabIndex = 69;
             this.metroLabel8.Text = "Date In";
             this.metroLabel8.UseStyleColors = true;
@@ -333,17 +325,16 @@
             this.metroLabel9.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel9.CustomBackground = true;
             this.metroLabel9.CustomForeColor = true;
-            this.metroLabel9.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel9.Location = new System.Drawing.Point(134, 120);
+            this.metroLabel9.Location = new System.Drawing.Point(134, 115);
             this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(146, 25);
+            this.metroLabel9.Size = new System.Drawing.Size(113, 19);
             this.metroLabel9.TabIndex = 71;
             this.metroLabel9.Text = " Payment Method";
             this.metroLabel9.UseStyleColors = true;
             // 
             // cbo_paymethod
             // 
-            this.cbo_paymethod.Location = new System.Drawing.Point(134, 148);
+            this.cbo_paymethod.Location = new System.Drawing.Point(134, 137);
             this.cbo_paymethod.Name = "cbo_paymethod";
             this.cbo_paymethod.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -356,17 +347,16 @@
             this.metroLabel10.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel10.CustomBackground = true;
             this.metroLabel10.CustomForeColor = true;
-            this.metroLabel10.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel10.Location = new System.Drawing.Point(298, 120);
+            this.metroLabel10.Location = new System.Drawing.Point(298, 115);
             this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(167, 25);
+            this.metroLabel10.Size = new System.Drawing.Size(128, 19);
             this.metroLabel10.TabIndex = 73;
             this.metroLabel10.Text = "Source Of Purchase ";
             this.metroLabel10.UseStyleColors = true;
             // 
             // cbo_source
             // 
-            this.cbo_source.Location = new System.Drawing.Point(298, 148);
+            this.cbo_source.Location = new System.Drawing.Point(298, 137);
             this.cbo_source.Name = "cbo_source";
             this.cbo_source.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -375,7 +365,7 @@
             // 
             // txt_carstatus
             // 
-            this.txt_carstatus.Location = new System.Drawing.Point(73, 180);
+            this.txt_carstatus.Location = new System.Drawing.Point(73, 172);
             this.txt_carstatus.Name = "txt_carstatus";
             this.txt_carstatus.Size = new System.Drawing.Size(26, 20);
             this.txt_carstatus.TabIndex = 74;
@@ -415,7 +405,7 @@
             this.metroLabel12.CustomBackground = true;
             this.metroLabel12.CustomForeColor = true;
             this.metroLabel12.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel12.Location = new System.Drawing.Point(6, 184);
+            this.metroLabel12.Location = new System.Drawing.Point(6, 176);
             this.metroLabel12.Name = "metroLabel12";
             this.metroLabel12.Size = new System.Drawing.Size(55, 15);
             this.metroLabel12.TabIndex = 77;
@@ -430,7 +420,7 @@
             this.metroLabel13.CustomBackground = true;
             this.metroLabel13.CustomForeColor = true;
             this.metroLabel13.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel13.Location = new System.Drawing.Point(104, 184);
+            this.metroLabel13.Location = new System.Drawing.Point(104, 176);
             this.metroLabel13.Name = "metroLabel13";
             this.metroLabel13.Size = new System.Drawing.Size(92, 15);
             this.metroLabel13.TabIndex = 78;
@@ -440,30 +430,13 @@
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(236, 180);
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(236, 172);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 9;
             this.simpleButton1.Text = "Add ";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Location = new System.Drawing.Point(319, 180);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton2.TabIndex = 10;
-            this.simpleButton2.Text = "Clear";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
-            // 
-            // simpleButton3
-            // 
-            this.simpleButton3.Location = new System.Drawing.Point(400, 180);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton3.TabIndex = 11;
-            this.simpleButton3.Text = "Cancel";
-            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // txt_vin
             // 
@@ -474,14 +447,34 @@
             this.txt_vin.Size = new System.Drawing.Size(176, 20);
             this.txt_vin.TabIndex = 0;
             // 
+            // simpleButton4
+            // 
+            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.simpleButton4.Location = new System.Drawing.Point(400, 172);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton4.TabIndex = 103;
+            this.simpleButton4.Text = "Cancel";
+            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click_1);
+            // 
+            // simpleButton5
+            // 
+            this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
+            this.simpleButton5.Location = new System.Drawing.Point(319, 172);
+            this.simpleButton5.Name = "simpleButton5";
+            this.simpleButton5.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton5.TabIndex = 102;
+            this.simpleButton5.Text = "Clear";
+            this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
+            // 
             // frmAddNewCar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(496, 215);
+            this.ClientSize = new System.Drawing.Size(496, 207);
+            this.Controls.Add(this.simpleButton4);
+            this.Controls.Add(this.simpleButton5);
             this.Controls.Add(this.txt_vin);
-            this.Controls.Add(this.simpleButton3);
-            this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.metroLabel13);
             this.Controls.Add(this.metroLabel12);
@@ -555,8 +548,8 @@
         private MetroFramework.Controls.MetroLabel metroLabel12;
         private MetroFramework.Controls.MetroLabel metroLabel13;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private System.Windows.Forms.MaskedTextBox txt_vin;
+        private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.SimpleButton simpleButton5;
     }
 }

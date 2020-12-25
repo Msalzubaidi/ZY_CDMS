@@ -250,7 +250,7 @@ namespace ZY_CDMS.Forms
             bool isopen = false;
             foreach (Form f in Application.OpenForms)
             {
-                if (f.Text == "")
+                if (f.Text == "Sell Car")
                 {
                     isopen = true;
                     f.BringToFront();
@@ -268,6 +268,21 @@ namespace ZY_CDMS.Forms
         private void accordionControlElement5_Click(object sender, EventArgs e)
         {
             buyCarToolStripMenuItem.PerformClick();
+        }
+
+        private void addCustomerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateCustomerInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accordionControlElement6_Click(object sender, EventArgs e)
+        {
+            sellCarToolStripMenuItem.PerformClick();
         }
     }
 }

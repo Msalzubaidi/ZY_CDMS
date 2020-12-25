@@ -20,7 +20,9 @@ namespace ZY_CDMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
+            Application.Run(new frmSellCar());
+            /*
+            
             String table = "ActivationApp";
             Operations o = new Operations();
            DataTable dt = o.SelctData(table , 0 , "");
@@ -34,11 +36,10 @@ namespace ZY_CDMS
                 else if (active == 0 )
                 {
 
-                    // MessageBox.Show(Resources.pleaseActive , Resources.MessageTitle, 0, MessageBoxIcon.Warning);
-                    //   Application.Run(new frmActivationApp());
+                    MessageBox.Show(Resources.pleaseActive , Resources.MessageTitle, 0, MessageBoxIcon.Warning);
+                    Application.Run(new frmActivationApp());
 
-                    Application.Run(new frmLogin());
-
+               
                 }
             }
             else
@@ -47,9 +48,9 @@ namespace ZY_CDMS
             }
           
 
-            
+            */
 
-           
+
         }
     }
 }

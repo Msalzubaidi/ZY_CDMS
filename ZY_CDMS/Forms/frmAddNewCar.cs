@@ -87,7 +87,7 @@ namespace ZY_CDMS.Forms
 
                     MessageBox.Show(table + Resources.AddedSuccessfully, Resources.MessageTitle, 0, MessageBoxIcon.Information);
                     o.newTransaction(transno, transtype, Vin, Price, paytype, desc, date);
-                    simpleButton2.PerformClick();
+                    simpleButton5.PerformClick();
                   
                 }
                 else if (rest == -1)
@@ -106,18 +106,7 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            txt_vin.Clear();
-            int v = r.FindMax(table);
-            txt_transid.Text = v.ToString();
-            dtp_datein.EditValue = DateTime.Now;
-            cbo_color.EditValue ="";
-            cbo_makemodel.EditValue ="";
-            cbo_paymethod.EditValue ="";
-            cbo_source.EditValue ="";
-            cbo_year.EditValue ="";
-            nud_millages.Value = 0;
-            nud_price.Value = 0;
-            txt_vin.Focus();
+           
         
            
 
@@ -126,9 +115,8 @@ namespace ZY_CDMS.Forms
 
         private void frmAddNewCar_Load(object sender, EventArgs e)
         {
-            simpleButton2.PerformClick();
+            simpleButton5.PerformClick();
             txt_vin.Focus();
-         
             string connstring = @"Data Source=" + Resources.servercon + ";Initial Catalog=" + Resources.dbnamecon + ";User ID=" + Resources.usernamecon + ";Password=" + Resources.passwordcon;
 
             SqlConnection con = new SqlConnection(connstring);
@@ -189,11 +177,49 @@ namespace ZY_CDMS.Forms
 
             }
 
+
         }
 
         private void simpleButton4_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void simpleButton5_Click(object sender, EventArgs e)
+        {
+            txt_vin.Clear();
+            int v = r.FindMax(table);
+            txt_transid.Text = v.ToString();
+            dtp_datein.EditValue = DateTime.Now;
+            cbo_color.EditValue = "";
+            cbo_makemodel.EditValue = "";
+            cbo_paymethod.EditValue = "";
+            cbo_source.EditValue = "";
+            cbo_year.EditValue = "";
+            nud_millages.Value = 0;
+            nud_price.Value = 0;
+            txt_vin.Focus();
+        }
+
+        private void simpleButton4_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(" Do you want to Close Without Save Data ?  ", Resources.MessageTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+
+                this.Close();
+
+
+            }
+            else if (result == DialogResult.No)
+            {
+
+            }
         }
     }
 }
