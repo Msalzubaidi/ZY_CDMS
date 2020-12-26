@@ -93,8 +93,9 @@
             this.accordionControlElement4});
             this.accordionControl1.Location = new System.Drawing.Point(0, 24);
             this.accordionControl1.Name = "accordionControl1";
+            this.accordionControl1.OptionsMinimizing.State = DevExpress.XtraBars.Navigation.AccordionControlState.Minimized;
             this.accordionControl1.ShowFilterControl = DevExpress.XtraBars.Navigation.ShowFilterControl.Always;
-            this.accordionControl1.Size = new System.Drawing.Size(250, 697);
+            this.accordionControl1.Size = new System.Drawing.Size(40, 697);
             this.accordionControl1.TabIndex = 0;
             this.accordionControl1.Text = "accordionControl1";
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
@@ -352,6 +353,7 @@
             this.addServiceToCarToolStripMenuItem.Name = "addServiceToCarToolStripMenuItem";
             this.addServiceToCarToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.addServiceToCarToolStripMenuItem.Text = "Add Service To Car";
+            this.addServiceToCarToolStripMenuItem.Click += new System.EventHandler(this.addServiceToCarToolStripMenuItem_Click);
             // 
             // printInvoiceToolStripMenuItem
             // 
@@ -499,6 +501,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmHomePage";
             this.Text = "Home Page";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmHomePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             this.menuStrip1.ResumeLayout(false);

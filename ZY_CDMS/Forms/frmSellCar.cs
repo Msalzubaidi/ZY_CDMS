@@ -28,6 +28,9 @@ namespace ZY_CDMS.Forms
         string table = "Cars";
         string TarnsTabletable = "TransActions";
         string cutsTabel = "customersInfo";
+        string servicetable = "TransServices";
+        string selltable = "SellTransactions";
+
 
 
 
@@ -43,13 +46,34 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton4_Click(object sender, EventArgs e)
         {
-            txt_taxval.Text = "Value";
-           txt_discount.Focus();
+            if (string.IsNullOrEmpty(txt_taxper.Text))
+            {
+                MessageBox.Show(Resources.digitOnlyError, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                double tax = (double.Parse(txt_price.Text) * (double.Parse(txt_taxper.Text) / 100));
+                txt_taxval.Text = tax.ToString();
+                txt_discount.Focus();
+            }
         }
 
         private void simpleButton5_Click(object sender, EventArgs e)
         {
-            txt_totalprice.Text = "Total";
+            if (r.isDigitsOnly(txt_service.Text) == false ||string.IsNullOrEmpty (txt_service.Text)|| string.IsNullOrEmpty(txt_price.Text) || string.IsNullOrEmpty(txt_taxper.Text) || string.IsNullOrEmpty(txt_taxval.Text) || string.IsNullOrEmpty(txt_discount.Text) ||  r.isDigitsOnly(txt_discount.Text) == false || r.isDigitsOnly(txt_taxval.Text) == false || r.isDigitsOnly(txt_taxper.Text) == false || r.isDigitsOnly(txt_price.Text) == false)
+            {
+                MessageBox.Show(Resources.digitOnlyError + " For Price - Service - Discount - Tax ", Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                double price = double.Parse(txt_price.Text);
+                double service = double.Parse(txt_service.Text);
+                double tax = double.Parse(txt_taxval.Text);
+                double discount = double.Parse(txt_discount.Text);
+                double total = (price + service + tax) - discount;
+                txt_totalprice.Text = total.ToString();
+            }
+
 
         }
 
@@ -70,8 +94,16 @@ namespace ZY_CDMS.Forms
 
 
                 DataTable dtable = o.SelctData(table, 1, condition);
+                DataTable dtableser = o.SelctData(servicetable, 1, condition);
 
-                int x = dtable.Rows.Count;
+                if (dtableser != null && dtableser.Rows.Count > 0)
+                {                   
+                    txt_service.Text = dtableser.Rows[0]["Servcost"].ToString();
+                }
+                
+
+
+                    int x = dtable.Rows.Count;
 
 
                 if (dtable != null && dtable.Rows.Count > 0)
@@ -81,7 +113,7 @@ namespace ZY_CDMS.Forms
                     if (statuscar > 0)
                     {
 
-                        txt_carinfo.Text = nl + nl + nl + "            CAR ALREADY SELLED     ";
+                        txt_carinfo.Text = nl + nl + nl + nl + "   CAR ALREADY SELLED     ";
 
                         dtp_date.Enabled = false;
                         cbo_paymethod.Enabled = false;
@@ -157,7 +189,22 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton9_Click(object sender, EventArgs e)
         {
+            bool isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Add Customer")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
 
+            if (isopen == false)
+            {
+                frmAddCustomer ac = new frmAddCustomer();
+                ac.Show();
+            }
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)
@@ -192,13 +239,14 @@ namespace ZY_CDMS.Forms
             txt_custaddress.Clear();
             txt_custname.Clear();
             txt_carinfo.Clear();
+            txt_discount.Text = "0";
             int v = r.FindMax(table);
             txt_transid.Text = v.ToString();
             txt_vin.Focus();
             dtp_date.Enabled = true;
             cbo_paymethod.Enabled = true;
-            txt_totalprice.Enabled = true;
-            txt_taxval.Enabled = true;
+           
+         
             txt_taxper.Enabled = true;
             txt_service.Enabled = true;
             txt_price.Enabled = true;
@@ -211,16 +259,72 @@ namespace ZY_CDMS.Forms
 
         }
 
-        private void txt_taxper_TextChanged(object sender, EventArgs e)
-        {
-           
-
-        }
-
         private void simpleButton1_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txt_vin.Text) || string.IsNullOrEmpty(txt_carinfo.Text) || string.IsNullOrEmpty(txt_custname.Text) || string.IsNullOrEmpty(cbo_paymethod.SelectedItem.ToString() ) || r.isDigitsOnly(txt_service.Text) == false || string.IsNullOrEmpty(txt_service.Text) || string.IsNullOrEmpty(txt_price.Text) || string.IsNullOrEmpty(txt_taxper.Text) || string.IsNullOrEmpty(txt_taxval.Text) || string.IsNullOrEmpty(txt_discount.Text) || r.isDigitsOnly(txt_discount.Text) == false || r.isDigitsOnly(txt_taxval.Text) == false || r.isDigitsOnly(txt_taxper.Text) == false || r.isDigitsOnly(txt_price.Text) == false)
+            {
+                MessageBox.Show(Resources.invalidData, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
+            }
+
+            else
+            {
+                // MessageBox.Show("All fields are OK ... " , Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                int transno = int.Parse(txt_transid.Text);
+                string vinn = txt_vin.Text;
+                int transtype = int.Parse(txt_trantype.Text);
+                DateTime date = DateTime.Parse(dtp_date.EditValue.ToString());
+
+                int spm = cbo_paymethod.SelectedIndex + 1;
+                string pmethod = cbo_paymethod.EditValue.ToString();
+                double price = double.Parse(txt_price.Text);
+                double ser = double.Parse(txt_service.Text);
+                double tax = double.Parse(txt_taxval.Text);
+                double total = double.Parse(txt_totalprice.Text);
+                int cstat = int.Parse(txt_carstatus.Text);
+                string carsttext = "Selled Car";
+                string carinfoo = txt_carinfo.Text;
+                string custnum = txt_custid.Text;
+                string custnamee = txt_custname.Text;
+                string custmob = txt_custmobile.Text;
+                string custaddres = txt_custaddress.Text;
+
+
+
+                int g = o.newSellTransaction(transno, transtype, date, vinn, spm, price, ser, tax, total, carinfoo, custnum, custnamee, custaddres, custmob , pmethod);
+
+                if (g > 0 )
+                {
+                    string desc = "";
+                    if (transtype == 1 && spm == 1)
+                        desc = "Sell Cash";
+                    if (transtype == 1 && spm == 2)
+                        desc = "Sell Cheq";
+                    MessageBox.Show(Resources.Completed , Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    o.newTransaction(transno, transtype, vinn, total, spm, desc, date);
+                    o.updatecarStatus(vinn, cstat, carsttext);
+                    simpleButton2.PerformClick();
+
+
+                }
+
+                else if (g == -1)
+                {
+                    MessageBox.Show("You Can't Sell Same car more than one ... ", Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+                }
+
+                else
+                {
+                    MessageBox.Show(Resources.TryAgain, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+            }
         }
+
 
         private void simpleButton8_Click(object sender, EventArgs e)
         {
@@ -262,5 +366,48 @@ namespace ZY_CDMS.Forms
             simpleButton4.PerformClick();
             txt_taxval.Focus();
         }
+
+        private void simpleButton7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_taxper_Leave_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_taxper.Text))
+            {
+                MessageBox.Show(Resources.digitOnlyError, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_taxval.Focus();
+            }
+            else
+            {
+                double tax = (double.Parse(txt_price.Text) * (double.Parse(txt_taxper.Text) / 100));
+                txt_taxval.Text = tax.ToString();
+                txt_discount.Focus();
+            }
+        }
+
+        private void simpleButton11_Click(object sender, EventArgs e)
+        {
+            bool isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Update Customer Info")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+
+            if (isopen == false)
+            {
+                frmUpdateCustomerInfo uc = new frmUpdateCustomerInfo();
+                uc.Show();
+            }
+        }
     }
-}
+            
+    }
+
+    

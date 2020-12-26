@@ -272,17 +272,67 @@ namespace ZY_CDMS.Forms
 
         private void addCustomerToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            bool isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Add Customer")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
 
+            if (isopen == false)
+            {
+                frmAddCustomer ac = new frmAddCustomer();
+                ac.Show();
+            }
         }
 
         private void updateCustomerInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            bool isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Update Customer Info")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
 
+            if (isopen == false)
+            {
+                frmUpdateCustomerInfo uc = new frmUpdateCustomerInfo();
+                uc.Show();
+            }
         }
 
         private void accordionControlElement6_Click(object sender, EventArgs e)
         {
             sellCarToolStripMenuItem.PerformClick();
+        }
+
+        private void addServiceToCarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Add Servicecs")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+
+            if (isopen == false)
+            {
+                frmAddServicecs ad = new frmAddServicecs();
+                ad.Show();
+            }
         }
     }
 }

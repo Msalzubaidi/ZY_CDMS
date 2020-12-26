@@ -26,6 +26,17 @@ namespace ZY_CDMS.Classes
             return true; // does not contain char
         }
 
+     
+
+        public bool ISnullorEmptyRule(string str)
+        {
+            if (string.IsNullOrEmpty(str))
+                return true;
+            else
+                return false; 
+        }
+
+
         public bool isCharOnly(string str)
         {
             foreach (char c in str)

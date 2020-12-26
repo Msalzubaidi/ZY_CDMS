@@ -115,5 +115,62 @@ namespace ZY_CDMS.Classes
 
         }
 
+        public int newSellTransaction(int transNo, int transType, DateTime date, string vin, int sellPayMethod, double purchPrice, double services, double tax, double totalPrice, string carinfo, string custno, string custname, string addr, string mob , string paymethodtext )
+        {
+
+            SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
+            SqlCommand cmd = new SqlCommand("INSERT INTO SellTransactions (transNo,transType,date, vin , sellPayMethod , purchPrice , services , tax , totalPrice , carinfo , custid , custname , custaddress , custmob , paymethodtext) VALUES(@transNo,@transType,@date, @vin , @sellPayMethod , @purchPrice , @services , @tax , @totalPrice , @carinfo , @custno ,@custname , @custaddress , @custmob , @paymethodtext)", con); // sql command to so get data from data bas
+
+            cmd.Parameters.Add(new SqlParameter("@transNo", transNo));
+            cmd.Parameters.Add(new SqlParameter("@transType", transType));
+            cmd.Parameters.Add(new SqlParameter("@date", date));
+            cmd.Parameters.Add(new SqlParameter("@vin", vin));
+            cmd.Parameters.Add(new SqlParameter("@sellPayMethod", sellPayMethod));
+            cmd.Parameters.Add(new SqlParameter("@purchPrice", purchPrice));
+            cmd.Parameters.Add(new SqlParameter("@services", services));
+            cmd.Parameters.Add(new SqlParameter("@tax", tax));
+            cmd.Parameters.Add(new SqlParameter("@totalPrice", totalPrice));//carinfo
+            cmd.Parameters.Add(new SqlParameter("@carinfo", carinfo));//carinfo
+            cmd.Parameters.Add(new SqlParameter("@custno", custno));//carinfo
+            cmd.Parameters.Add(new SqlParameter("@custname", custname));//carinfo
+            cmd.Parameters.Add(new SqlParameter("@custaddress", addr));//carinfo
+            cmd.Parameters.Add(new SqlParameter("@custmob", mob));//carinfo
+            cmd.Parameters.Add(new SqlParameter("@paymethodtext", paymethodtext));
+
+            Operations o = new Operations();
+             string condition = "VIN=" + "'" + @vin + "'";
+            con.Open();
+            DataTable dt = o.SelctData("Cars", 1, condition);
+            int so = int.Parse(dt.Rows[0]["carStatus"].ToString());
+            if (so == 0)
+                return cmd.ExecuteNonQuery();
+            else
+                return -1;
+
+        }
+
+        public int updatecarStatus(string vin, int status, string carSttext)
+        {
+
+            SqlConnection con = new SqlConnection(DataBase.connstring);
+            SqlCommand cmd = new SqlCommand("update Cars set carStatus=@crst , carSttext=@carSttext  where VIN =@vin", con); // sql command to so get data from data bas
+
+
+            cmd.Parameters.Add(new SqlParameter("@crst", status));
+            cmd.Parameters.Add(new SqlParameter("@vin", vin));
+            cmd.Parameters.Add(new SqlParameter("@carSttext", carSttext));
+
+
+
+
+
+
+            con.Open();
+
+            return cmd.ExecuteNonQuery();
+
+
+        }
+
     }
 }

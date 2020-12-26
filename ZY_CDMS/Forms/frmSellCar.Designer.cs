@@ -67,16 +67,15 @@
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton9 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton11 = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.txt_discount = new System.Windows.Forms.TextBox();
             this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_date.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_date.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_paymethod.Properties)).BeginInit();
@@ -111,7 +110,7 @@
             this.txt_vin.Location = new System.Drawing.Point(72, 31);
             this.txt_vin.Name = "txt_vin";
             this.txt_vin.Size = new System.Drawing.Size(177, 20);
-            this.txt_vin.TabIndex = 13;
+            this.txt_vin.TabIndex = 0;
             this.txt_vin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_vin.Leave += new System.EventHandler(this.simpleButton6_Click);
             // 
@@ -131,7 +130,7 @@
             // txt_carinfo
             // 
             this.txt_carinfo.Enabled = false;
-            this.txt_carinfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_carinfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_carinfo.Location = new System.Drawing.Point(275, 71);
             this.txt_carinfo.Multiline = true;
             this.txt_carinfo.Name = "txt_carinfo";
@@ -162,7 +161,7 @@
             this.dtp_date.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtp_date.Size = new System.Drawing.Size(165, 20);
-            this.dtp_date.TabIndex = 16;
+            this.dtp_date.TabIndex = 1;
             // 
             // metroLabel3
             // 
@@ -197,14 +196,14 @@
             this.cbo_paymethod.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbo_paymethod.Size = new System.Drawing.Size(118, 20);
-            this.cbo_paymethod.TabIndex = 72;
+            this.cbo_paymethod.TabIndex = 2;
             // 
             // txt_price
             // 
             this.txt_price.Location = new System.Drawing.Point(87, 25);
             this.txt_price.Name = "txt_price";
             this.txt_price.Size = new System.Drawing.Size(61, 20);
-            this.txt_price.TabIndex = 75;
+            this.txt_price.TabIndex = 4;
             this.txt_price.Text = "0";
             this.txt_price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -226,7 +225,7 @@
             this.txt_service.Location = new System.Drawing.Point(87, 48);
             this.txt_service.Name = "txt_service";
             this.txt_service.Size = new System.Drawing.Size(61, 20);
-            this.txt_service.TabIndex = 77;
+            this.txt_service.TabIndex = 1;
             this.txt_service.Text = "0";
             this.txt_service.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -248,11 +247,10 @@
             this.txt_taxper.Location = new System.Drawing.Point(203, 92);
             this.txt_taxper.Name = "txt_taxper";
             this.txt_taxper.Size = new System.Drawing.Size(34, 20);
-            this.txt_taxper.TabIndex = 79;
+            this.txt_taxper.TabIndex = 2;
             this.txt_taxper.Text = "0";
             this.txt_taxper.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_taxper.TextChanged += new System.EventHandler(this.txt_taxper_TextChanged);
-            this.txt_taxper.Leave += new System.EventHandler(this.simpleButton4_Click);
+            this.txt_taxper.Leave += new System.EventHandler(this.txt_taxper_Leave_1);
             // 
             // metroLabel6
             // 
@@ -269,13 +267,13 @@
             // 
             // txt_taxval
             // 
+            this.txt_taxval.Enabled = false;
             this.txt_taxval.Location = new System.Drawing.Point(87, 74);
             this.txt_taxval.Name = "txt_taxval";
             this.txt_taxval.Size = new System.Drawing.Size(61, 20);
-            this.txt_taxval.TabIndex = 80;
+            this.txt_taxval.TabIndex = 3;
             this.txt_taxval.Text = "0";
             this.txt_taxval.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_taxval.Leave += new System.EventHandler(this.simpleButton5_Click);
             // 
             // metroLabel7
             // 
@@ -292,6 +290,7 @@
             // 
             // txt_totalprice
             // 
+            this.txt_totalprice.Enabled = false;
             this.txt_totalprice.Location = new System.Drawing.Point(87, 121);
             this.txt_totalprice.Name = "txt_totalprice";
             this.txt_totalprice.Size = new System.Drawing.Size(61, 20);
@@ -382,8 +381,9 @@
             this.txt_custid.Location = new System.Drawing.Point(60, 19);
             this.txt_custid.Name = "txt_custid";
             this.txt_custid.Size = new System.Drawing.Size(177, 20);
-            this.txt_custid.TabIndex = 90;
+            this.txt_custid.TabIndex = 0;
             this.txt_custid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_custid.Leave += new System.EventHandler(this.simpleButton8_Click);
             // 
             // txt_custname
             // 
@@ -467,66 +467,61 @@
             // simpleButton3
             // 
             this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(587, 248);
+            this.simpleButton3.Location = new System.Drawing.Point(626, 244);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(106, 31);
-            this.simpleButton3.TabIndex = 100;
+            this.simpleButton3.TabIndex = 6;
             this.simpleButton3.Text = "Cancel";
             this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // simpleButton2
             // 
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(478, 248);
+            this.simpleButton2.Location = new System.Drawing.Point(517, 244);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(105, 31);
-            this.simpleButton2.TabIndex = 99;
+            this.simpleButton2.TabIndex = 5;
             this.simpleButton2.Text = "Clear";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // simpleButton4
             // 
-            this.simpleButton4.Location = new System.Drawing.Point(87, 222);
+            this.simpleButton4.Location = new System.Drawing.Point(8, 252);
             this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(70, 23);
+            this.simpleButton4.Size = new System.Drawing.Size(73, 23);
             this.simpleButton4.TabIndex = 101;
             this.simpleButton4.Text = "Tax Cal";
+            this.simpleButton4.Visible = false;
             this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
             // simpleButton5
             // 
-            this.simpleButton5.Location = new System.Drawing.Point(163, 222);
+            this.simpleButton5.Location = new System.Drawing.Point(87, 252);
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Size = new System.Drawing.Size(70, 23);
             this.simpleButton5.TabIndex = 102;
             this.simpleButton5.Text = "Total Cal";
+            this.simpleButton5.Visible = false;
             this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
             // 
             // simpleButton6
             // 
-            this.simpleButton6.Location = new System.Drawing.Point(275, 222);
+            this.simpleButton6.Location = new System.Drawing.Point(8, 227);
             this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(56, 23);
+            this.simpleButton6.Size = new System.Drawing.Size(73, 23);
             this.simpleButton6.TabIndex = 103;
             this.simpleButton6.Text = "Car info";
             this.simpleButton6.Visible = false;
             this.simpleButton6.Click += new System.EventHandler(this.simpleButton6_Click);
             // 
-            // simpleButton7
-            // 
-            this.simpleButton7.Location = new System.Drawing.Point(11, 222);
-            this.simpleButton7.Name = "simpleButton7";
-            this.simpleButton7.Size = new System.Drawing.Size(70, 23);
-            this.simpleButton7.TabIndex = 104;
-            this.simpleButton7.Text = "Services";
-            // 
             // simpleButton8
             // 
-            this.simpleButton8.Location = new System.Drawing.Point(23, 118);
+            this.simpleButton8.Location = new System.Drawing.Point(87, 227);
             this.simpleButton8.Name = "simpleButton8";
             this.simpleButton8.Size = new System.Drawing.Size(70, 23);
             this.simpleButton8.TabIndex = 105;
             this.simpleButton8.Text = "Customer";
+            this.simpleButton8.Visible = false;
             this.simpleButton8.Click += new System.EventHandler(this.simpleButton8_Click);
             // 
             // simpleButton9
@@ -547,6 +542,7 @@
             this.simpleButton11.Size = new System.Drawing.Size(66, 22);
             this.simpleButton11.TabIndex = 108;
             this.simpleButton11.Text = "Update";
+            this.simpleButton11.Click += new System.EventHandler(this.simpleButton11_Click);
             // 
             // groupBox1
             // 
@@ -566,16 +562,30 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 67);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(257, 149);
-            this.groupBox1.TabIndex = 109;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Price Details";
+            // 
+            // metroLabel10
+            // 
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.BackColor = System.Drawing.SystemColors.Control;
+            this.metroLabel10.CustomBackground = true;
+            this.metroLabel10.CustomForeColor = true;
+            this.metroLabel10.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabel10.Location = new System.Drawing.Point(156, 14);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(81, 75);
+            this.metroLabel10.TabIndex = 86;
+            this.metroLabel10.Text = "Please Type \r\nTax Percentage\r\n To calculate\r\n Value Of Tax\r\n";
+            this.metroLabel10.UseStyleColors = true;
             // 
             // txt_discount
             // 
             this.txt_discount.Location = new System.Drawing.Point(87, 97);
             this.txt_discount.Name = "txt_discount";
             this.txt_discount.Size = new System.Drawing.Size(61, 20);
-            this.txt_discount.TabIndex = 85;
+            this.txt_discount.TabIndex = 5;
             this.txt_discount.Text = "0";
             this.txt_discount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_discount.Leave += new System.EventHandler(this.simpleButton5_Click);
@@ -597,7 +607,6 @@
             // 
             this.groupBox2.Controls.Add(this.txt_custid);
             this.groupBox2.Controls.Add(this.metroLabel14);
-            this.groupBox2.Controls.Add(this.simpleButton8);
             this.groupBox2.Controls.Add(this.simpleButton11);
             this.groupBox2.Controls.Add(this.txt_custname);
             this.groupBox2.Controls.Add(this.simpleButton9);
@@ -609,33 +618,19 @@
             this.groupBox2.Location = new System.Drawing.Point(466, 67);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(266, 149);
-            this.groupBox2.TabIndex = 110;
+            this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Customer Details";
             // 
             // simpleButton1
             // 
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(369, 248);
+            this.simpleButton1.Location = new System.Drawing.Point(408, 244);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(105, 31);
-            this.simpleButton1.TabIndex = 111;
+            this.simpleButton1.TabIndex = 4;
             this.simpleButton1.Text = "Save";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // metroLabel10
-            // 
-            this.metroLabel10.AutoSize = true;
-            this.metroLabel10.BackColor = System.Drawing.SystemColors.Control;
-            this.metroLabel10.CustomBackground = true;
-            this.metroLabel10.CustomForeColor = true;
-            this.metroLabel10.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel10.Location = new System.Drawing.Point(156, 14);
-            this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(81, 75);
-            this.metroLabel10.TabIndex = 86;
-            this.metroLabel10.Text = "Please Type \r\nTax Percentage\r\n To calculate\r\n Value Of Tax\r\n";
-            this.metroLabel10.UseStyleColors = true;
             // 
             // frmSellCar
             // 
@@ -644,8 +639,8 @@
             this.ClientSize = new System.Drawing.Size(747, 291);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.simpleButton8);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.simpleButton7);
             this.Controls.Add(this.simpleButton6);
             this.Controls.Add(this.simpleButton5);
             this.Controls.Add(this.simpleButton3);
@@ -725,7 +720,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
         private DevExpress.XtraEditors.SimpleButton simpleButton6;
-        private DevExpress.XtraEditors.SimpleButton simpleButton7;
         private DevExpress.XtraEditors.SimpleButton simpleButton8;
         private DevExpress.XtraEditors.SimpleButton simpleButton9;
         private DevExpress.XtraEditors.SimpleButton simpleButton11;
