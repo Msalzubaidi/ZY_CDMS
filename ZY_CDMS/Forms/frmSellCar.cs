@@ -82,7 +82,7 @@ namespace ZY_CDMS.Forms
 
             if (string.IsNullOrEmpty(txt_vin.Text))
             {
-                MessageBox.Show(Resources.invalidData, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+               // MessageBox.Show(Resources.invalidData, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 simpleButton2.PerformClick();
 
             }
@@ -90,11 +90,14 @@ namespace ZY_CDMS.Forms
             else
             {
                 string vin = txt_vin.Text;
-                string condition = "vin=" + "'" + @vin + "'";
+                string condition = "VIN=" + "'" + @vin + "'";
+             
 
 
+
+                DataTable dtableser = o.SelctData(servicetable, 2, condition);
                 DataTable dtable = o.SelctData(table, 1, condition);
-                DataTable dtableser = o.SelctData(servicetable, 1, condition);
+           
 
                 if (dtableser != null && dtableser.Rows.Count > 0)
                 {                   
@@ -122,7 +125,7 @@ namespace ZY_CDMS.Forms
                         txt_taxper.Enabled = false;
                         txt_service.Enabled = false;
                         txt_price.Enabled = false;
-                        txt_custid.Enabled = false;
+                        txt_cust.Enabled = false;
                         txt_custmobile.Enabled = false;
                         txt_custaddress.Enabled = false;
                         txt_custname.Enabled = false;
@@ -138,7 +141,7 @@ namespace ZY_CDMS.Forms
                     else
                     {
 
-
+                       
                         string bm = dtable.Rows[0]["makeModel"].ToString();
 
                         string year = dtable.Rows[0]["years"].ToString();
@@ -185,6 +188,45 @@ namespace ZY_CDMS.Forms
                 cbo_paymethod.Properties.Items.Add(dr3.GetValue(1).ToString());
 
             }
+
+           
+            SqlConnection con13 = new SqlConnection(connstring);
+            SqlCommand cmd13;
+            SqlDataReader dr13;
+
+            string qry13 = "select * from Cars where carStatus=0";
+            con13.Open();
+
+
+
+            cmd13 = new SqlCommand(qry13, con13);
+            dr13 = cmd13.ExecuteReader();
+
+            while (dr13.Read())
+            {
+                string item1 = dr13.GetValue(3).ToString();
+                txt_vin.Properties.Items.Add(item1);
+
+            }
+
+            SqlConnection con0 = new SqlConnection(connstring);
+            SqlCommand cmd0;
+            SqlDataReader dr0;
+
+            string qry0 = "select * from customersInfo ";
+            con0.Open();
+
+
+
+            cmd0 = new SqlCommand(qry0, con0);
+            dr0 = cmd0.ExecuteReader();
+
+            while (dr0.Read())
+            {
+                string item1 = dr0.GetValue(0).ToString();
+                txt_cust.Properties.Items.Add(item1);
+
+            }
         }
 
         private void simpleButton9_Click(object sender, EventArgs e)
@@ -226,7 +268,7 @@ namespace ZY_CDMS.Forms
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             txt_transid.Clear();
-            txt_vin.Clear();
+            txt_vin.EditValue="";
             dtp_date.EditValue = DateTime.Now;
             cbo_paymethod.EditValue = "";
             txt_totalprice.Text = "0";
@@ -234,13 +276,13 @@ namespace ZY_CDMS.Forms
             txt_taxper.Text = "0";
             txt_service.Text = "0";
             txt_price.Text = "0";
-            txt_custid.Clear();
+            txt_cust.EditValue = "";
             txt_custmobile.Clear();
             txt_custaddress.Clear();
             txt_custname.Clear();
             txt_carinfo.Clear();
             txt_discount.Text = "0";
-            int v = r.FindMax(table);
+            int v = r.FindMax(selltable);
             txt_transid.Text = v.ToString();
             txt_vin.Focus();
             dtp_date.Enabled = true;
@@ -250,7 +292,7 @@ namespace ZY_CDMS.Forms
             txt_taxper.Enabled = true;
             txt_service.Enabled = true;
             txt_price.Enabled = true;
-            txt_custid.Enabled = true;
+            txt_cust.Enabled = true;
 
 
             txt_discount.Enabled = true;
@@ -285,7 +327,7 @@ namespace ZY_CDMS.Forms
                 int cstat = int.Parse(txt_carstatus.Text);
                 string carsttext = "Selled Car";
                 string carinfoo = txt_carinfo.Text;
-                string custnum = txt_custid.Text;
+                string custnum = txt_cust.Text;
                 string custnamee = txt_custname.Text;
                 string custmob = txt_custmobile.Text;
                 string custaddres = txt_custaddress.Text;
@@ -305,7 +347,8 @@ namespace ZY_CDMS.Forms
                     o.newTransaction(transno, transtype, vinn, total, spm, desc, date);
                     o.updatecarStatus(vinn, cstat, carsttext);
                     simpleButton2.PerformClick();
-
+                  
+                    
 
                 }
 
@@ -329,16 +372,16 @@ namespace ZY_CDMS.Forms
         private void simpleButton8_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(txt_custid.Text))
+            if (string.IsNullOrEmpty(txt_cust.Text))
             {
-                MessageBox.Show(Resources.digitOnlyError, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+               // MessageBox.Show(Resources.digitOnlyError, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
 
             else
             {
 
-                string cust = txt_custid.Text;
+                string cust = txt_cust.Text;
                 string condition = "custid=" + "'" + @cust + "'";
 
                 DataTable dtable = o.SelctData(cutsTabel, 1, condition);
@@ -365,11 +408,6 @@ namespace ZY_CDMS.Forms
         {
             simpleButton4.PerformClick();
             txt_taxval.Focus();
-        }
-
-        private void simpleButton7_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void txt_taxper_Leave_1(object sender, EventArgs e)
@@ -404,6 +442,22 @@ namespace ZY_CDMS.Forms
             {
                 frmUpdateCustomerInfo uc = new frmUpdateCustomerInfo();
                 uc.Show();
+            }
+        }
+
+        private void simpleButton7_Click_1(object sender, EventArgs e)
+        {
+            if(cbo_paymethod.SelectedItem.ToString() == "Cheq")
+            {
+                txt_chqno.Visible = true;
+                metroLabel19.Visible = true;
+
+            }
+            if (cbo_paymethod.SelectedItem.ToString() != "Cheq")
+            {
+                txt_chqno.Visible = false;
+                metroLabel19.Visible = false;
+
             }
         }
     }

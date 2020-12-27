@@ -28,12 +28,18 @@ namespace ZY_CDMS.Classes
             if (x == 0)
             {
                 //Only For Select * 
-                qry = "select * from " + tablename;
+                qry = "select * from " + table_name;
             }
             else if (x == 1)
             {
                 //For Conditional Select 
                 qry = begqry + table_name + " where " + qrycondition;
+            }
+
+            else if (x == 2)
+            {
+                //For Conditional Select 
+                qry = "select sum(Servcost) as 'Servcost' from " + table_name + " where " + qrycondition;
             }
 
             SqlConnection con = new SqlConnection(DataBase.connstring);
@@ -160,6 +166,32 @@ namespace ZY_CDMS.Classes
             cmd.Parameters.Add(new SqlParameter("@vin", vin));
             cmd.Parameters.Add(new SqlParameter("@carSttext", carSttext));
 
+
+
+
+
+
+            con.Open();
+
+            return cmd.ExecuteNonQuery();
+
+
+        }
+
+        public int newService(int servid, double servcost, string vin, string serdesc, DateTime sdate , int tr_id)
+        {
+
+            SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
+            SqlCommand cmd = new SqlCommand("INSERT INTO TransServices ( Servid , Servcost , vin , serdesc , servdate , trans_id) VALUES(@srid , @srcost, @vin , @serdesc , @sdate , @trans_id)", con); // sql command to so get data from data bas
+
+            cmd.Parameters.Add(new SqlParameter("@srid", servid));
+            cmd.Parameters.Add(new SqlParameter("@srcost", servcost));
+            cmd.Parameters.Add(new SqlParameter("@vin", vin));
+            cmd.Parameters.Add(new SqlParameter("@serdesc", serdesc));
+            cmd.Parameters.Add(new SqlParameter("@sdate", sdate));
+            cmd.Parameters.Add(new SqlParameter("@trans_id", tr_id));
+
+           
 
 
 

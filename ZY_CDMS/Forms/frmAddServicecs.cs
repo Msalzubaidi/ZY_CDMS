@@ -23,7 +23,8 @@ namespace ZY_CDMS.Forms
         string carstable = "Cars";
         Operations o = new Operations();
         Rules r = new Rules();
-    
+        string servicetable = "Services";
+        public static string nl = "\r\n";
 
 
         private void frmAddServicecs_KeyDown(object sender, KeyEventArgs e)
@@ -36,10 +37,17 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            cbo_cardetails.EditValue = "";
-            cbo_servicedetails.EditValue = "";
+            cbo_vin.EditValue = "";
+            cbo_service.EditValue = "";
+            txt_carinfo.Clear();
+            txt_sercost.Clear();
+            txt_serviceinfo.Clear();
             dtp_date.EditValue = DateTime.Now;
-            cbo_cardetails.Focus();
+            cbo_vin.Focus();
+            int et = r.FindMax(table);
+            txt_transid.Text = et.ToString();
+
+
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)
@@ -68,7 +76,7 @@ namespace ZY_CDMS.Forms
                 string item1 = dr3.GetValue(3).ToString();
                 string item2 = dr3.GetValue(11).ToString();
                 string itemtoadd = item1 + " " + item2; 
-                cbo_cardetails.Properties.Items.Add(itemtoadd);
+                cbo_vin.Properties.Items.Add(item1);
 
             }
 
@@ -88,37 +96,116 @@ namespace ZY_CDMS.Forms
             while (dr4.Read())
             {
                 string item1 = dr4.GetValue(0).ToString();
-                string item2 = dr4.GetValue(1).ToString();
-                string item3 = dr4.GetValue(2).ToString();
-
-                string itemtoadd = item1 + " " + item2 + " " + item3;
-                cbo_servicedetails.Properties.Items.Add(itemtoadd);
+              
+                cbo_service.Properties.Items.Add(item1);
 
             }
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(cbo_cardetails.SelectedItem.ToString()) || string.IsNullOrEmpty(cbo_servicedetails.SelectedItem.ToString()))
+            if (string.IsNullOrEmpty(cbo_vin.SelectedItem.ToString()) || string.IsNullOrEmpty(cbo_service.SelectedItem.ToString()))
             {
                 MessageBox.Show(Resources.invalidData, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                string carinfo = cbo_cardetails.SelectedItem.ToString();
+                string carinfo = txt_carinfo.Text;
                 DateTime date = DateTime.Parse(dtp_date.EditValue.ToString());
-                string servdesc = cbo_servicedetails.SelectedItem.ToString();
-                int servid = 0;
-                int cost = 0;
-                string vin = "";            
-                MessageBox.Show(vin.ToString());
+                string servdesc = txt_serviceinfo.Text;
+                int servid = int.Parse(cbo_service.SelectedItem.ToString());
+                double cost = double.Parse(txt_sercost.Text);
+                string vin = cbo_vin.SelectedItem.ToString();
+                int tr_id = int.Parse(txt_transid.Text);
 
+                int u = o.newService(servid, cost, vin, servdesc, date , tr_id);
 
+                if (u > 0)
+                {
+                    MessageBox.Show(servicetable + Resources.AddedSuccessfully, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    simpleButton2.PerformClick();
 
+                }
 
-
+                else if (u <= 0)
+                {
+                    MessageBox.Show("Operation Failed - Please Try Again With Valid Data ", Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    simpleButton2.PerformClick();
+                }
 
             }
         }
+
+        private void simpleButton4_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(cbo_vin.SelectedItem.ToString()))
+            {
+                // MessageBox.Show(Resources.invalidData, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+ 
+            }
+
+            else
+            {
+                string vin = cbo_vin.Text;
+          
+                string condition = "vin=" + "'" + @vin + "'";
+            
+
+
+                DataTable dtable = o.SelctData(carstable, 1, condition);
+              
+                if (dtable != null && dtable.Rows.Count > 0)
+                {
+                    string bm = dtable.Rows[0]["makeModel"].ToString();
+
+                    string year = dtable.Rows[0]["years"].ToString();
+
+
+                    txt_carinfo.Text = bm + " " + year;
+                }
+
+                else
+                {
+
+   
+                    }
+                }
+
+
+              
+            }
+
+        private void simpleButton5_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(cbo_vin.SelectedItem.ToString()))
+            {
+                // MessageBox.Show(Resources.invalidData, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+
+            else
+            {
+               
+                int id = int.Parse(cbo_service.SelectedItem.ToString());
+               
+                string condition2 = "id=" + "'" + @id + "'";
+             
+                DataTable dtableser = o.SelctData(servicetable, 1, condition2);
+
+                if (dtableser != null && dtableser.Rows.Count > 0)
+                {
+                    txt_serviceinfo.Text = dtableser.Rows[0]["name"].ToString();
+                    txt_sercost.Text = dtableser.Rows[0]["cost"].ToString();
+                }
+                else
+                {
+
+                }
+
+
+              
+                }
+            }
     }
-}
+    }
+

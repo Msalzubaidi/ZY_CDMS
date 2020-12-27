@@ -20,7 +20,7 @@ namespace ZY_CDMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAddServicecs());
+            Application.Run(new frmHomePage());
             /*
             
             String table = "ActivationApp";
