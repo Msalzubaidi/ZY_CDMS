@@ -241,17 +241,17 @@
     <Compile Include="Forms\frmSellCar.Designer.cs">
       <DependentUpon>frmSellCar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmTaxCategoriescs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTaxCategoriescs.Designer.cs">
+      <DependentUpon>frmTaxCategoriescs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmUpdateBrandInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmUpdateBrandInfo.Designer.cs">
       <DependentUpon>frmUpdateBrandInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmUpdateCustomerInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmUpdateCustomerInfo.Designer.cs">
-      <DependentUpon>frmUpdateCustomerInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmUsersManagment.cs">
       <SubType>Form</SubType>
@@ -330,11 +330,11 @@
     <EmbeddedResource Include="Forms\frmSellCar.resx">
       <DependentUpon>frmSellCar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTaxCategoriescs.resx">
+      <DependentUpon>frmTaxCategoriescs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmUpdateBrandInfo.resx">
       <DependentUpon>frmUpdateBrandInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmUpdateCustomerInfo.resx">
-      <DependentUpon>frmUpdateCustomerInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmUsersManagment.resx">
       <DependentUpon>frmUsersManagment.cs</DependentUpon>

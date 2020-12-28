@@ -42,7 +42,6 @@
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.txt_service = new System.Windows.Forms.TextBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.txt_taxper = new System.Windows.Forms.TextBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.txt_taxval = new System.Windows.Forms.TextBox();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
@@ -67,15 +66,15 @@
             this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton9 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton11 = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.txt_discount = new System.Windows.Forms.TextBox();
             this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txt_cust = new DevExpress.XtraEditors.ComboBoxEdit();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.txt_vin = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.txt_cust = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txt_chqno = new System.Windows.Forms.TextBox();
             this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
             this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
@@ -83,9 +82,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtp_date.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_paymethod.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_vin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_cust.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_vin.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // lic
@@ -239,16 +239,6 @@
             this.metroLabel5.Text = "Services";
             this.metroLabel5.UseStyleColors = true;
             // 
-            // txt_taxper
-            // 
-            this.txt_taxper.Location = new System.Drawing.Point(203, 92);
-            this.txt_taxper.Name = "txt_taxper";
-            this.txt_taxper.Size = new System.Drawing.Size(34, 20);
-            this.txt_taxper.TabIndex = 2;
-            this.txt_taxper.Text = "0";
-            this.txt_taxper.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_taxper.Leave += new System.EventHandler(this.txt_taxper_Leave_1);
-            // 
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
@@ -278,7 +268,7 @@
             this.metroLabel7.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel7.CustomBackground = true;
             this.metroLabel7.CustomForeColor = true;
-            this.metroLabel7.Location = new System.Drawing.Point(155, 92);
+            this.metroLabel7.Location = new System.Drawing.Point(184, 89);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(42, 19);
             this.metroLabel7.TabIndex = 81;
@@ -515,25 +505,16 @@
             // simpleButton9
             // 
             this.simpleButton9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton9.ImageOptions.Image")));
-            this.simpleButton9.Location = new System.Drawing.Point(99, 119);
+            this.simpleButton9.Location = new System.Drawing.Point(128, 119);
             this.simpleButton9.Name = "simpleButton9";
-            this.simpleButton9.Size = new System.Drawing.Size(66, 22);
+            this.simpleButton9.Size = new System.Drawing.Size(109, 22);
             this.simpleButton9.TabIndex = 106;
-            this.simpleButton9.Text = "Add ";
+            this.simpleButton9.Text = "Add  - Update";
             this.simpleButton9.Click += new System.EventHandler(this.simpleButton9_Click);
-            // 
-            // simpleButton11
-            // 
-            this.simpleButton11.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton11.ImageOptions.Image")));
-            this.simpleButton11.Location = new System.Drawing.Point(171, 119);
-            this.simpleButton11.Name = "simpleButton11";
-            this.simpleButton11.Size = new System.Drawing.Size(66, 22);
-            this.simpleButton11.TabIndex = 108;
-            this.simpleButton11.Text = "Update";
-            this.simpleButton11.Click += new System.EventHandler(this.simpleButton11_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBoxEdit1);
             this.groupBox1.Controls.Add(this.metroLabel10);
             this.groupBox1.Controls.Add(this.txt_discount);
             this.groupBox1.Controls.Add(this.metroLabel18);
@@ -542,7 +523,6 @@
             this.groupBox1.Controls.Add(this.metroLabel5);
             this.groupBox1.Controls.Add(this.txt_service);
             this.groupBox1.Controls.Add(this.metroLabel7);
-            this.groupBox1.Controls.Add(this.txt_taxper);
             this.groupBox1.Controls.Add(this.txt_taxval);
             this.groupBox1.Controls.Add(this.metroLabel6);
             this.groupBox1.Controls.Add(this.txt_totalprice);
@@ -553,6 +533,16 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Price Details";
+            // 
+            // comboBoxEdit1
+            // 
+            this.comboBoxEdit1.Location = new System.Drawing.Point(185, 111);
+            this.comboBoxEdit1.Name = "comboBoxEdit1";
+            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit1.Size = new System.Drawing.Size(50, 20);
+            this.comboBoxEdit1.TabIndex = 110;
+            this.comboBoxEdit1.TextChanged += new System.EventHandler(this.comboBoxEdit1_TextChanged);
             // 
             // metroLabel10
             // 
@@ -595,7 +585,6 @@
             // 
             this.groupBox2.Controls.Add(this.txt_cust);
             this.groupBox2.Controls.Add(this.metroLabel14);
-            this.groupBox2.Controls.Add(this.simpleButton11);
             this.groupBox2.Controls.Add(this.txt_custname);
             this.groupBox2.Controls.Add(this.simpleButton9);
             this.groupBox2.Controls.Add(this.metroLabel15);
@@ -609,6 +598,16 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Customer Details";
+            // 
+            // txt_cust
+            // 
+            this.txt_cust.Location = new System.Drawing.Point(60, 21);
+            this.txt_cust.Name = "txt_cust";
+            this.txt_cust.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txt_cust.Size = new System.Drawing.Size(177, 20);
+            this.txt_cust.TabIndex = 107;
+            this.txt_cust.TextChanged += new System.EventHandler(this.simpleButton8_Click);
             // 
             // simpleButton1
             // 
@@ -629,16 +628,6 @@
             this.txt_vin.Size = new System.Drawing.Size(166, 20);
             this.txt_vin.TabIndex = 106;
             this.txt_vin.TextChanged += new System.EventHandler(this.simpleButton6_Click);
-            // 
-            // txt_cust
-            // 
-            this.txt_cust.Location = new System.Drawing.Point(60, 21);
-            this.txt_cust.Name = "txt_cust";
-            this.txt_cust.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txt_cust.Size = new System.Drawing.Size(177, 20);
-            this.txt_cust.TabIndex = 107;
-            this.txt_cust.TextChanged += new System.EventHandler(this.simpleButton8_Click);
             // 
             // txt_chqno
             // 
@@ -717,10 +706,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbo_paymethod.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_vin.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_cust.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_vin.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -741,7 +731,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private System.Windows.Forms.TextBox txt_service;
         private MetroFramework.Controls.MetroLabel metroLabel5;
-        private System.Windows.Forms.TextBox txt_taxper;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private System.Windows.Forms.TextBox txt_taxval;
         private MetroFramework.Controls.MetroLabel metroLabel7;
@@ -766,7 +755,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton6;
         private DevExpress.XtraEditors.SimpleButton simpleButton8;
         private DevExpress.XtraEditors.SimpleButton simpleButton9;
-        private DevExpress.XtraEditors.SimpleButton simpleButton11;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txt_discount;
         private MetroFramework.Controls.MetroLabel metroLabel18;
@@ -778,5 +766,6 @@
         private System.Windows.Forms.TextBox txt_chqno;
         private MetroFramework.Controls.MetroLabel metroLabel19;
         private DevExpress.XtraEditors.SimpleButton simpleButton7;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
     }
 }

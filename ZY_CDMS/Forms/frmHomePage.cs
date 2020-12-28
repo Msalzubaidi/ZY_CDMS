@@ -292,22 +292,7 @@ namespace ZY_CDMS.Forms
 
         private void updateCustomerInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            bool isopen = false;
-            foreach (Form f in Application.OpenForms)
-            {
-                if (f.Text == "Update Customer Info")
-                {
-                    isopen = true;
-                    f.BringToFront();
-                    break;
-                }
-            }
-
-            if (isopen == false)
-            {
-                frmUpdateCustomerInfo uc = new frmUpdateCustomerInfo();
-                uc.Show();
-            }
+           
         }
 
         private void accordionControlElement6_Click(object sender, EventArgs e)
@@ -332,6 +317,77 @@ namespace ZY_CDMS.Forms
             {
                 frmAddServicecs ad = new frmAddServicecs();
                 ad.Show();
+            }
+        }
+
+        private void accordionControlElement11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accordionControlElement10_Click(object sender, EventArgs e)
+        {
+            addCustomerToolStripMenuItem.PerformClick();
+        }
+
+        private void printInvoiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Print Invoice")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+
+            if (isopen == false)
+            {
+                frmPrintInvoice pi = new frmPrintInvoice();
+                pi.Show();
+
+            }
+        }
+
+        private void carMaintainanceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Add Car Test")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+
+            if (isopen == false)
+            {
+                frmAddCarTset ct = new frmAddCarTset();
+                ct.Show();
+            }
+        }
+
+        private void defineTaxCategoriesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Tax Categories")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+
+            if (isopen == false)
+            {
+                frmTaxCategoriescs tc = new frmTaxCategoriescs();
+                tc.Show();
             }
         }
     }

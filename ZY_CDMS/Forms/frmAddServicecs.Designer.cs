@@ -243,9 +243,9 @@
             this.metroLabel6.CustomForeColor = true;
             this.metroLabel6.Location = new System.Drawing.Point(12, 20);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(27, 19);
+            this.metroLabel6.Size = new System.Drawing.Size(54, 19);
             this.metroLabel6.TabIndex = 37;
-            this.metroLabel6.Text = "Vin";
+            this.metroLabel6.Text = "Trans ID";
             this.metroLabel6.UseStyleColors = true;
             // 
             // txt_transid

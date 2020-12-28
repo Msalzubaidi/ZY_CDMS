@@ -153,5 +153,24 @@ namespace ZY_CDMS.Classes
             else
                 return cmd.ExecuteNonQuery();
         }
+
+
+        public int AddTaxCat(int tid, int tval)
+        {
+
+            SqlConnection con = new SqlConnection(DataBase.connstring);
+            SqlCommand cmd = new SqlCommand("INSERT INTO TaxCat(tax_id , tax_per) VALUES(@tax_id , @tax_per )", con); // sql command to so get data from data bas
+
+            cmd.Parameters.Add(new SqlParameter("@tax_id", tid));
+            cmd.Parameters.Add(new SqlParameter("@tax_per", tval));
+            
+
+          
+
+
+            con.Open();
+            
+                return cmd.ExecuteNonQuery();
+        }
     }
 }

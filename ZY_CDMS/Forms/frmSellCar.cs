@@ -46,13 +46,13 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton4_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_taxper.Text))
+            if (string.IsNullOrEmpty(comboBoxEdit1.SelectedItem.ToString()))
             {
                 MessageBox.Show(Resources.digitOnlyError, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                double tax = (double.Parse(txt_price.Text) * (double.Parse(txt_taxper.Text) / 100));
+                double tax = (double.Parse(txt_price.Text) * (double.Parse(comboBoxEdit1.SelectedItem.ToString()) / 100));
                 txt_taxval.Text = tax.ToString();
                 txt_discount.Focus();
             }
@@ -60,7 +60,7 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton5_Click(object sender, EventArgs e)
         {
-            if (r.isDigitsOnly(txt_service.Text) == false ||string.IsNullOrEmpty (txt_service.Text)|| string.IsNullOrEmpty(txt_price.Text) || string.IsNullOrEmpty(txt_taxper.Text) || string.IsNullOrEmpty(txt_taxval.Text) || string.IsNullOrEmpty(txt_discount.Text) ||  r.isDigitsOnly(txt_discount.Text) == false || r.isDigitsOnly(txt_taxval.Text) == false || r.isDigitsOnly(txt_taxper.Text) == false || r.isDigitsOnly(txt_price.Text) == false)
+            if (r.isDigitsOnly(txt_service.Text) == false ||string.IsNullOrEmpty (txt_service.Text)|| string.IsNullOrEmpty(txt_price.Text) || string.IsNullOrEmpty(comboBoxEdit1.SelectedItem.ToString()) || string.IsNullOrEmpty(txt_taxval.Text) || string.IsNullOrEmpty(txt_discount.Text) ||  r.isDigitsOnly(txt_discount.Text) == false || r.isDigitsOnly(txt_taxval.Text) == false || r.isDigitsOnly(comboBoxEdit1.SelectedItem.ToString()) == false || r.isDigitsOnly(txt_price.Text) == false)
             {
                 MessageBox.Show(Resources.digitOnlyError + " For Price - Service - Discount - Tax ", Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -97,12 +97,14 @@ namespace ZY_CDMS.Forms
 
                 DataTable dtableser = o.SelctData(servicetable, 2, condition);
                 DataTable dtable = o.SelctData(table, 1, condition);
-           
+                int statuscar = int.Parse(dtable.Rows[0]["carStatus"].ToString());
 
                 if (dtableser != null && dtableser.Rows.Count > 0)
                 {                   
                     txt_service.Text = dtableser.Rows[0]["Servcost"].ToString();
                 }
+
+
                 
 
 
@@ -112,17 +114,17 @@ namespace ZY_CDMS.Forms
                 if (dtable != null && dtable.Rows.Count > 0)
                 {
 
-                    int statuscar = int.Parse(dtable.Rows[0]["carStatus"].ToString());
+                   
                     if (statuscar > 0)
                     {
 
                         txt_carinfo.Text = nl + nl + nl + nl + "   CAR ALREADY SELLED     ";
-
+                        txt_service.Text = "0";
                         dtp_date.Enabled = false;
                         cbo_paymethod.Enabled = false;
                         txt_totalprice.Enabled = false;
                         txt_taxval.Enabled = false;
-                        txt_taxper.Enabled = false;
+                        comboBoxEdit1.Enabled = false;
                         txt_service.Enabled = false;
                         txt_price.Enabled = false;
                         txt_cust.Enabled = false;
@@ -151,7 +153,7 @@ namespace ZY_CDMS.Forms
                         double pr = double.Parse(dtable.Rows[0]["price"].ToString());
                         txt_price.Text = pr.ToString();
 
-                        txt_carinfo.Text = nl + "Make - Model : " + bm + nl + "Year : " + year + nl + "Millages : " + mill + nl + "Color :" + col;
+                        txt_carinfo.Text ="Make - Model : " + bm + nl + "Year : " + year + nl + "Millages : " + mill + nl + "Color : " + col;
 
 
                     }
@@ -189,7 +191,29 @@ namespace ZY_CDMS.Forms
 
             }
 
-           
+
+            SqlConnection conx = new SqlConnection(connstring);
+            SqlCommand cmdx;
+            SqlDataReader drx;
+
+            string qryx = "select* from TaxCat";
+
+            conx.Open();
+            //MessageBox.Show("Connected ... ");
+
+            cmdx = new SqlCommand(qryx, conx);
+            drx = cmdx.ExecuteReader();
+
+            while (drx.Read())
+            {
+
+                comboBoxEdit1.Properties.Items.Add(drx.GetValue(1).ToString());
+
+            }
+
+
+
+            // string connstring = @"Data Source=" + Resources.servercon + ";Initial Catalog=" + Resources.dbnamecon + ";User ID=" + Resources.usernamecon + ";Password=" + Resources.passwordcon;
             SqlConnection con13 = new SqlConnection(connstring);
             SqlCommand cmd13;
             SqlDataReader dr13;
@@ -234,7 +258,7 @@ namespace ZY_CDMS.Forms
             bool isopen = false;
             foreach (Form f in Application.OpenForms)
             {
-                if (f.Text == "Add Customer")
+                if (f.Text == "Customers")
                 {
                     isopen = true;
                     f.BringToFront();
@@ -273,7 +297,7 @@ namespace ZY_CDMS.Forms
             cbo_paymethod.EditValue = "";
             txt_totalprice.Text = "0";
             txt_taxval.Text = "0";
-            txt_taxper.Text = "0";
+            comboBoxEdit1.EditValue = "0";
             txt_service.Text = "0";
             txt_price.Text = "0";
             txt_cust.EditValue = "";
@@ -287,9 +311,9 @@ namespace ZY_CDMS.Forms
             txt_vin.Focus();
             dtp_date.Enabled = true;
             cbo_paymethod.Enabled = true;
-           
-         
-            txt_taxper.Enabled = true;
+
+
+            comboBoxEdit1.Enabled = true;
             txt_service.Enabled = true;
             txt_price.Enabled = true;
             txt_cust.Enabled = true;
@@ -303,7 +327,7 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_vin.Text) || string.IsNullOrEmpty(txt_carinfo.Text) || string.IsNullOrEmpty(txt_custname.Text) || string.IsNullOrEmpty(cbo_paymethod.SelectedItem.ToString() ) || r.isDigitsOnly(txt_service.Text) == false || string.IsNullOrEmpty(txt_service.Text) || string.IsNullOrEmpty(txt_price.Text) || string.IsNullOrEmpty(txt_taxper.Text) || string.IsNullOrEmpty(txt_taxval.Text) || string.IsNullOrEmpty(txt_discount.Text) || r.isDigitsOnly(txt_discount.Text) == false || r.isDigitsOnly(txt_taxval.Text) == false || r.isDigitsOnly(txt_taxper.Text) == false || r.isDigitsOnly(txt_price.Text) == false)
+            if (string.IsNullOrEmpty(txt_vin.Text) || string.IsNullOrEmpty(txt_carinfo.Text) || string.IsNullOrEmpty(txt_custname.Text) || string.IsNullOrEmpty(cbo_paymethod.SelectedItem.ToString() ) || r.isDigitsOnly(txt_service.Text) == false || string.IsNullOrEmpty(txt_service.Text) || string.IsNullOrEmpty(txt_price.Text) || string.IsNullOrEmpty(comboBoxEdit1.SelectedItem.ToString()) || string.IsNullOrEmpty(txt_taxval.Text) || string.IsNullOrEmpty(txt_discount.Text) || r.isDigitsOnly(txt_discount.Text) == false || r.isDigitsOnly(txt_taxval.Text) == false || r.isDigitsOnly(comboBoxEdit1.SelectedItem.ToString()) == false || r.isDigitsOnly(txt_price.Text) == false)
             {
                 MessageBox.Show(Resources.invalidData, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
@@ -412,37 +436,12 @@ namespace ZY_CDMS.Forms
 
         private void txt_taxper_Leave_1(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_taxper.Text))
-            {
-                MessageBox.Show(Resources.digitOnlyError, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_taxval.Focus();
-            }
-            else
-            {
-                double tax = (double.Parse(txt_price.Text) * (double.Parse(txt_taxper.Text) / 100));
-                txt_taxval.Text = tax.ToString();
-                txt_discount.Focus();
-            }
+          
         }
 
         private void simpleButton11_Click(object sender, EventArgs e)
         {
-            bool isopen = false;
-            foreach (Form f in Application.OpenForms)
-            {
-                if (f.Text == "Update Customer Info")
-                {
-                    isopen = true;
-                    f.BringToFront();
-                    break;
-                }
-            }
-
-            if (isopen == false)
-            {
-                frmUpdateCustomerInfo uc = new frmUpdateCustomerInfo();
-                uc.Show();
-            }
+           
         }
 
         private void simpleButton7_Click_1(object sender, EventArgs e)
@@ -458,6 +457,21 @@ namespace ZY_CDMS.Forms
                 txt_chqno.Visible = false;
                 metroLabel19.Visible = false;
 
+            }
+        }
+
+        private void comboBoxEdit1_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(comboBoxEdit1.SelectedItem.ToString()))
+            {
+                MessageBox.Show(Resources.digitOnlyError, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_taxval.Focus();
+            }
+            else
+            {
+                double tax = (double.Parse(txt_price.Text) * (double.Parse(comboBoxEdit1.SelectedItem.ToString()) / 100));
+                txt_taxval.Text = tax.ToString();
+                txt_discount.Focus();
             }
         }
     }

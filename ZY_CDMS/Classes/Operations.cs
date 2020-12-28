@@ -17,7 +17,7 @@ namespace ZY_CDMS.Classes
         public DataTable SelctData(string tablename , int parx , string condition )
         {
             int x = parx;
-
+            //Add Check Exist
       
             string begqry = "select * from ";
             string table_name = tablename;
@@ -204,5 +204,78 @@ namespace ZY_CDMS.Classes
 
         }
 
+
+    public int AddCustomer(string custid, string custname, string licenseno, string mobile, string note)
+    {
+
+        SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
+        SqlCommand cmd = new SqlCommand("INSERT INTO customersInfo (custid , custname , liceNo , mobilenum ,note) VALUES(@custid , @custname , @liceNo , @mobilenum ,@note)", con); // sql command to so get data from data bas
+
+        cmd.Parameters.Add(new SqlParameter("@custid", custid));
+        cmd.Parameters.Add(new SqlParameter("@custname", custname));
+        cmd.Parameters.Add(new SqlParameter("@liceNo", licenseno));
+        cmd.Parameters.Add(new SqlParameter("@mobilenum", mobile));
+        cmd.Parameters.Add(new SqlParameter("@note", note));
+
+
+
+            string condition = "custid=" + "'" + @custid + "'";
+            con.Open();
+
+            int y = r.checkexist("customersInfo", 1, condition);
+            if (y <= 0)
+                return cmd.ExecuteNonQuery();
+            else
+                return -1;
+
+
+
+        }
+
+        public int UpdateCustomer(string custid, string custname, string licenseno, string mobile, string note)
+        {
+
+            SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
+            SqlCommand cmd = new SqlCommand("Update customersInfo set custname=@custname ,liceNo=@liceNo , mobilenum=@mobilenum ,note=@note where custid=@custid ", con); // sql command to so get data from data bas
+
+            cmd.Parameters.Add(new SqlParameter("@custid", custid));
+            cmd.Parameters.Add(new SqlParameter("@custname", custname));
+            cmd.Parameters.Add(new SqlParameter("@liceNo", licenseno));
+            cmd.Parameters.Add(new SqlParameter("@mobilenum", mobile));
+            cmd.Parameters.Add(new SqlParameter("@note", note));
+
+
+
+
+            con.Open();
+            return cmd.ExecuteNonQuery();
+
+
+
+        }
+
+        public int UpdateCustomerinfatora(string custid, string custname, string licenseno, string mobile, string note)
+        {
+
+            SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
+            SqlCommand cmd = new SqlCommand("Update SellTransactions set custname=@custname  , custaddress=@note , custmob=@mobilenum where custid=@custid ", con); // sql command to so get data from data bas
+
+            cmd.Parameters.Add(new SqlParameter("@custid", custid));
+            cmd.Parameters.Add(new SqlParameter("@custname", custname));
+            cmd.Parameters.Add(new SqlParameter("@liceNo", licenseno));
+            cmd.Parameters.Add(new SqlParameter("@mobilenum", mobile));
+            cmd.Parameters.Add(new SqlParameter("@note", note));
+
+
+
+
+            con.Open();
+            return cmd.ExecuteNonQuery();
+
+
+
+        }
     }
+
+
 }
