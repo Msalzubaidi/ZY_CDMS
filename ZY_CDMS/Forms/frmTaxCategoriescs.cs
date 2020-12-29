@@ -53,7 +53,7 @@ namespace ZY_CDMS.Forms
             else
             {
                 int id = int.Parse(txt_id.Text);
-                int tax = int.Parse(txt_value.Text);
+                double tax = double.Parse(txt_value.Text);
 
                 int g = s.AddTaxCat(id , tax);
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ZY_CDMS.Classes;
 using ZY_CDMS.Properties;
 
 namespace ZY_CDMS.Forms
@@ -17,6 +18,9 @@ namespace ZY_CDMS.Forms
         {
             InitializeComponent();
         }
+
+        Operations o = new Operations();
+        string table = "SystemInfo";
 
         private void defineMakeModelToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -64,7 +68,9 @@ namespace ZY_CDMS.Forms
             if (result == DialogResult.Yes)
             {
 
+               // MessageBox.Show("Please Close All Open Forms ", Resources.MessageTitle, 0  , MessageBoxIcon.Warning);
                 Application.Exit();
+              
 
 
             }
@@ -196,8 +202,54 @@ namespace ZY_CDMS.Forms
 
         private void frmHomePage_Load(object sender, EventArgs e)
         {
-            lic.Text = Resources.Logo +" "+ Resources.AppName + " V " + Resources.AppVersion ;
-           
+
+
+            DataTable datatable = o.SelctData(table,0,"");
+
+
+            DateTime dt = DateTime.Parse(datatable.Rows[0]["licenceto"].ToString());
+            DateTime dt1 = DateTime.Parse(datatable.Rows[0]["licencefrom"].ToString());
+            string titleform = datatable.Rows[0]["name"].ToString();
+            TimeSpan t = dt - dt1;
+            double NrOfDays = t.TotalDays;
+
+            string nl = "\r\n";
+            
+
+            int flag = 0;
+
+            if (NrOfDays > 30)
+            {
+                lic.Visible = true;
+                lic.ForeColor = Color.Azure;
+               
+                
+                
+                flag = 0;
+                lic.Text = Resources.Logo + " - Licensed for ( " + " " + titleform.ToString() + " ) "+ "License Active to " + dt.ToShortDateString(); ;
+
+            }
+            if (NrOfDays <= 30)
+            {
+                lic.Visible = true;
+                lic.ForeColor = Color.Azure;
+                lic.Text = Resources.Logo + " - Licensed for ( " + " " + titleform.ToString() + " ) " +  "License will be Expired by " + "" + NrOfDays.ToString() + " " + "Days";
+
+                flag = 0;
+            }
+            if (NrOfDays <= 0)
+            {
+                lic.Visible = true;
+                lic.ForeColor = Color.Red;
+                
+                lic.Text = Resources.Logo + " - Licensed for ( " + " " + titleform.ToString() + " )  " + "License Expired in " + "" + dt.ToShortDateString();
+                
+
+
+
+
+            }
+
         }
 
         private void myAccountSettingsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -389,6 +441,57 @@ namespace ZY_CDMS.Forms
                 frmTaxCategoriescs tc = new frmTaxCategoriescs();
                 tc.Show();
             }
+        }
+
+        private void tab_sysinfo_Click(object sender, EventArgs e)
+        {
+            bool isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "System Info")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+
+            if (isopen == false)
+            {
+                frmSystemInfo si = new frmSystemInfo();
+                si.Show();
+                
+            }
+        }
+
+        private void lic_DoubleClick(object sender, EventArgs e)
+        {
+            bool isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "About")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+
+            if (isopen == false)
+            {
+                frmAbout about = new frmAbout();
+                about.Show();
+            }
+        }
+
+        private void accordionControlElement12_Click(object sender, EventArgs e)
+        {
+            carMaintainanceToolStripMenuItem.PerformClick();
+        }
+
+        private void accordionControlElement8_Click(object sender, EventArgs e)
+        {
+            printInvoiceToolStripMenuItem.PerformClick();
         }
     }
 }

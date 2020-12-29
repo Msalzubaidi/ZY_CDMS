@@ -105,7 +105,7 @@
             // 
             // hyperlinkLabelControl1
             // 
-            this.hyperlinkLabelControl1.Location = new System.Drawing.Point(570, 16);
+            this.hyperlinkLabelControl1.Location = new System.Drawing.Point(550, 148);
             this.hyperlinkLabelControl1.Name = "hyperlinkLabelControl1";
             this.hyperlinkLabelControl1.Size = new System.Drawing.Size(56, 13);
             this.hyperlinkLabelControl1.TabIndex = 14;

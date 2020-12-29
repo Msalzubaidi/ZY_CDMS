@@ -58,6 +58,88 @@ namespace ZY_CDMS.Classes
         }
 
 
+        public int UploadLogo(string id, byte[] logo)
+        {
+
+            SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
+
+            SqlCommand cmd = new SqlCommand("update SystemInfo set logo = @logo where id =@id", con); // sql command to so get data from data bas
+
+            cmd.Parameters.Add(new SqlParameter("@logo", logo));
+            cmd.Parameters.Add(new SqlParameter("@id", id));
+
+
+
+            con.Open();
+
+            return cmd.ExecuteNonQuery();
+        }
+
+
+        public int updatesysinfo(string id, string email, string mobile, string address , string tax)
+        {
+            SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
+            SqlCommand cmd = new SqlCommand("UPDATE SystemInfo SET email=@email , mobile=@phone , address=@adres , tax_no=@tax   where id=@id ", con); // sql command to so get data from data bas
+
+
+            cmd.Parameters.Add(new SqlParameter("@id", id));
+            cmd.Parameters.Add(new SqlParameter("@adres", address));
+            cmd.Parameters.Add(new SqlParameter("@phone", mobile));
+            cmd.Parameters.Add(new SqlParameter("@email", email));
+            cmd.Parameters.Add(new SqlParameter("@tax", tax));
+
+
+
+            con.Open();
+            return cmd.ExecuteNonQuery();
+        }
+
+
+        public DataSet viewLogo(int id)
+        {
+
+            SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
+            SqlCommand cmd = new SqlCommand("select logo from SystemInfo", con); // sql command to so get data from data base
+
+            cmd.Parameters.AddWithValue("@id", id); //store data in parameters to prevent sql injection (get from Password textbox)
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+
+            System.Data.DataSet dt = new System.Data.DataSet();
+            sda.Fill(dt);
+
+            con.Open();
+            return dt;
+
+        }
+
+        public DataSet viewLogo(string vin , char im)
+        {
+            SqlCommand cmd = null; 
+            SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
+           if (im == 'A')
+                 cmd = new SqlCommand("select ImageA from CarTest where carvin=@vin", con); // sql command to so get data from data base
+           else if (im == 'B')
+                 cmd = new SqlCommand("select ImageB from CarTest where carvin=@vin", con); // sql command to so get data from data base
+          
+           else if (im == 'C')
+                 cmd = new SqlCommand("select ImageC from CarTest where carvin=@vin", con); // sql command to so get data from data base
+
+           else if (im == 'D')
+                 cmd = new SqlCommand("select ImageD from CarTest where carvin=@vin", con); // sql command to so get data from data base
+
+
+            cmd.Parameters.AddWithValue("@vin", vin); //store data in parameters to prevent sql injection (get from Password textbox)
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+
+            System.Data.DataSet dt = new System.Data.DataSet();
+            sda.Fill(dt);
+
+            con.Open();
+            return dt;
+
+        }
+
+
         public int AddCAR(int transNo, int transType, int PayType, string VIN, string makeModel, string color, string years, string Millages, DateTime datein, double price, int crst, string crsttext, string scar, string pmtext)
         {
 
@@ -274,6 +356,61 @@ namespace ZY_CDMS.Classes
 
 
 
+        }
+        
+        public int AddCarTest(int tran_id, int transtype, string custid, string custname, string mobile, string vin, DateTime transDate, string MakeModel, string year, string color, string paintCode, int payment, int balance, string carDirty, string carClean, string RepairDescription, float tax, float total)
+        {
+
+            SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
+            SqlCommand cmd = new SqlCommand("INSERT INTO CarTest ( trans_id ,  trans_type ,  cust_id,  cust_name,  cust_mobile,  carvin  ,  trans_date ,  makeModel , year , color ,  paintCode ,  payment, balance , carDirty,  carClean,  RepairDescription , tax , totalpay) VALUES(@tran_id ,  @transtype ,  @custid,  @custname,  @mobile,  @vin  ,  @transDate ,  @MakeModel , @year , @color ,  @paintCode ,  @payment,  @balance,  @carDirty,  @carClean,  @RepairDescription , @tax , @total)", con); // sql command to so get data from data bas
+
+            cmd.Parameters.Add(new SqlParameter("@tran_id", tran_id));
+            cmd.Parameters.Add(new SqlParameter("@transtype", transtype));
+            cmd.Parameters.Add(new SqlParameter("@custid", custid));
+            cmd.Parameters.Add(new SqlParameter("@custname", custname));
+            cmd.Parameters.Add(new SqlParameter("@mobile", mobile));
+            cmd.Parameters.Add(new SqlParameter("@vin", vin));
+            cmd.Parameters.Add(new SqlParameter("@transDate", transDate));
+            cmd.Parameters.Add(new SqlParameter("@MakeModel", MakeModel));
+            cmd.Parameters.Add(new SqlParameter("@year", year));
+            cmd.Parameters.Add(new SqlParameter("@color", color));
+            cmd.Parameters.Add(new SqlParameter("@paintCode", paintCode));
+            cmd.Parameters.Add(new SqlParameter("@payment", payment));
+            cmd.Parameters.Add(new SqlParameter("@balance", balance));
+
+            cmd.Parameters.Add(new SqlParameter("@carDirty", carDirty));
+            cmd.Parameters.Add(new SqlParameter("@carClean", carClean));
+            cmd.Parameters.Add(new SqlParameter("@RepairDescription", RepairDescription));
+            cmd.Parameters.Add(new SqlParameter("@tax", tax));
+            cmd.Parameters.Add(new SqlParameter("@total", total));
+
+
+            con.Open();
+            return cmd.ExecuteNonQuery();
+
+
+
+        }
+
+        public int UploaDCarTestImages(string vin, byte[] A, byte[] B, byte[] C, byte[] D)
+        {
+
+            SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
+
+            SqlCommand cmd = new SqlCommand("update CarTest set ImageA =@A  , ImageB=@B  , ImageC =@C , ImageD =@D where carvin =@vin", con); // sql command to so get data from data bas
+
+            cmd.Parameters.Add(new SqlParameter("@A", A));
+            cmd.Parameters.Add(new SqlParameter("@B", B));
+            cmd.Parameters.Add(new SqlParameter("@C", C));
+            cmd.Parameters.Add(new SqlParameter("@D", D));
+
+            cmd.Parameters.Add(new SqlParameter("@vin", vin));
+
+
+
+            con.Open();
+
+            return cmd.ExecuteNonQuery();
         }
     }
 

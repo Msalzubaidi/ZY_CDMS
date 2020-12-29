@@ -80,6 +80,10 @@
             this.imageC = new System.Windows.Forms.PictureBox();
             this.imageD = new System.Windows.Forms.PictureBox();
             this.cbo_tax = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txt_tax = new System.Windows.Forms.TextBox();
+            this.cbo_vin = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.metroLabel24 = new MetroFramework.Controls.MetroLabel();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_cusid.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_makemodel.Properties)).BeginInit();
@@ -93,6 +97,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_tax.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbo_vin.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -218,7 +223,7 @@
             this.metroLabel1.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel1.CustomBackground = true;
             this.metroLabel1.CustomForeColor = true;
-            this.metroLabel1.Location = new System.Drawing.Point(284, 12);
+            this.metroLabel1.Location = new System.Drawing.Point(421, 9);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(27, 19);
             this.metroLabel1.TabIndex = 108;
@@ -227,9 +232,9 @@
             // 
             // txt_vin
             // 
-            this.txt_vin.Location = new System.Drawing.Point(284, 33);
+            this.txt_vin.Location = new System.Drawing.Point(423, 33);
             this.txt_vin.Name = "txt_vin";
-            this.txt_vin.Size = new System.Drawing.Size(177, 20);
+            this.txt_vin.Size = new System.Drawing.Size(135, 20);
             this.txt_vin.TabIndex = 109;
             this.txt_vin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -398,13 +403,13 @@
             // dtp_date
             // 
             this.dtp_date.EditValue = null;
-            this.dtp_date.Location = new System.Drawing.Point(467, 35);
+            this.dtp_date.Location = new System.Drawing.Point(564, 35);
             this.dtp_date.Name = "dtp_date";
             this.dtp_date.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtp_date.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtp_date.Size = new System.Drawing.Size(205, 20);
+            this.dtp_date.Size = new System.Drawing.Size(108, 20);
             this.dtp_date.TabIndex = 117;
             // 
             // metroLabel6
@@ -413,7 +418,7 @@
             this.metroLabel6.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel6.CustomBackground = true;
             this.metroLabel6.CustomForeColor = true;
-            this.metroLabel6.Location = new System.Drawing.Point(467, 12);
+            this.metroLabel6.Location = new System.Drawing.Point(564, 12);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(36, 19);
             this.metroLabel6.TabIndex = 118;
@@ -440,6 +445,7 @@
             this.txt_pay.Size = new System.Drawing.Size(79, 20);
             this.txt_pay.TabIndex = 120;
             this.txt_pay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_pay.TextChanged += new System.EventHandler(this.txt_pay_TextChanged);
             // 
             // metroLabel8
             // 
@@ -478,7 +484,7 @@
             // txt_total
             // 
             this.txt_total.Enabled = false;
-            this.txt_total.Location = new System.Drawing.Point(542, 131);
+            this.txt_total.Location = new System.Drawing.Point(578, 132);
             this.txt_total.Name = "txt_total";
             this.txt_total.Size = new System.Drawing.Size(90, 20);
             this.txt_total.TabIndex = 126;
@@ -490,7 +496,7 @@
             this.metroLabel10.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel10.CustomBackground = true;
             this.metroLabel10.CustomForeColor = true;
-            this.metroLabel10.Location = new System.Drawing.Point(542, 109);
+            this.metroLabel10.Location = new System.Drawing.Point(578, 110);
             this.metroLabel10.Name = "metroLabel10";
             this.metroLabel10.Size = new System.Drawing.Size(90, 19);
             this.metroLabel10.TabIndex = 125;
@@ -648,6 +654,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(105, 31);
             this.simpleButton1.TabIndex = 143;
             this.simpleButton1.Text = "Add";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // simpleButton3
             // 
@@ -689,7 +696,6 @@
             this.txt_transid.Name = "txt_transid";
             this.txt_transid.Size = new System.Drawing.Size(105, 20);
             this.txt_transid.TabIndex = 146;
-            this.txt_transid.Text = "2";
             this.txt_transid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // imageA
@@ -738,18 +744,65 @@
             // 
             // cbo_tax
             // 
+            this.cbo_tax.Enabled = false;
             this.cbo_tax.Location = new System.Drawing.Point(454, 131);
             this.cbo_tax.Name = "cbo_tax";
             this.cbo_tax.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbo_tax.Size = new System.Drawing.Size(82, 20);
+            this.cbo_tax.Size = new System.Drawing.Size(60, 20);
             this.cbo_tax.TabIndex = 152;
+            this.cbo_tax.TextChanged += new System.EventHandler(this.cbo_tax_TextChanged);
+            // 
+            // txt_tax
+            // 
+            this.txt_tax.Enabled = false;
+            this.txt_tax.Location = new System.Drawing.Point(520, 132);
+            this.txt_tax.Name = "txt_tax";
+            this.txt_tax.Size = new System.Drawing.Size(52, 20);
+            this.txt_tax.TabIndex = 153;
+            this.txt_tax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cbo_vin
+            // 
+            this.cbo_vin.Location = new System.Drawing.Point(282, 33);
+            this.cbo_vin.Name = "cbo_vin";
+            this.cbo_vin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbo_vin.Size = new System.Drawing.Size(135, 20);
+            this.cbo_vin.TabIndex = 154;
+            this.cbo_vin.TextChanged += new System.EventHandler(this.cbo_vin_TextChanged);
+            // 
+            // metroLabel24
+            // 
+            this.metroLabel24.AutoSize = true;
+            this.metroLabel24.BackColor = System.Drawing.SystemColors.Control;
+            this.metroLabel24.CustomBackground = true;
+            this.metroLabel24.CustomForeColor = true;
+            this.metroLabel24.Location = new System.Drawing.Point(284, 9);
+            this.metroLabel24.Name = "metroLabel24";
+            this.metroLabel24.Size = new System.Drawing.Size(27, 19);
+            this.metroLabel24.TabIndex = 155;
+            this.metroLabel24.Text = "Vin";
+            this.metroLabel24.UseStyleColors = true;
+            // 
+            // simpleButton4
+            // 
+            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.simpleButton4.Location = new System.Drawing.Point(441, 263);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(105, 31);
+            this.simpleButton4.TabIndex = 156;
+            this.simpleButton4.Text = "Print";
             // 
             // frmAddCarTset
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(888, 302);
+            this.Controls.Add(this.simpleButton4);
+            this.Controls.Add(this.metroLabel24);
+            this.Controls.Add(this.cbo_vin);
+            this.Controls.Add(this.txt_tax);
             this.Controls.Add(this.cbo_tax);
             this.Controls.Add(this.imageD);
             this.Controls.Add(this.imageC);
@@ -812,6 +865,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_tax.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbo_vin.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -870,5 +924,9 @@
         private System.Windows.Forms.PictureBox imageC;
         private System.Windows.Forms.PictureBox imageD;
         private DevExpress.XtraEditors.ComboBoxEdit cbo_tax;
+        private System.Windows.Forms.TextBox txt_tax;
+        private DevExpress.XtraEditors.ComboBoxEdit cbo_vin;
+        private MetroFramework.Controls.MetroLabel metroLabel24;
+        private DevExpress.XtraEditors.SimpleButton simpleButton4;
     }
 }

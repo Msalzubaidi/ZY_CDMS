@@ -155,7 +155,7 @@ namespace ZY_CDMS.Classes
         }
 
 
-        public int AddTaxCat(int tid, int tval)
+        public int AddTaxCat(int tid, double tval)
         {
 
             SqlConnection con = new SqlConnection(DataBase.connstring);

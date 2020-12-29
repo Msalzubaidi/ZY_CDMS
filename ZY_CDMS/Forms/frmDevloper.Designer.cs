@@ -29,61 +29,68 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDevloper));
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.masterkey = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lic = new MetroFramework.Controls.MetroLabel();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.SuspendLayout();
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(118, 47);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(18, 47);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Enter";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // masterkey
             // 
-            this.masterkey.Location = new System.Drawing.Point(18, 25);
+            this.masterkey.Location = new System.Drawing.Point(12, 37);
             this.masterkey.Name = "masterkey";
             this.masterkey.Size = new System.Drawing.Size(186, 20);
             this.masterkey.TabIndex = 5;
             this.masterkey.UseSystemPasswordChar = true;
             // 
-            // label1
+            // lic
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(87, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Password";
+            this.lic.AutoSize = true;
+            this.lic.BackColor = System.Drawing.SystemColors.Control;
+            this.lic.CustomBackground = true;
+            this.lic.CustomForeColor = true;
+            this.lic.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lic.Location = new System.Drawing.Point(12, 9);
+            this.lic.Name = "lic";
+            this.lic.Size = new System.Drawing.Size(82, 25);
+            this.lic.TabIndex = 45;
+            this.lic.Text = "Password";
+            this.lic.UseStyleColors = true;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(12, 66);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton1.TabIndex = 46;
+            this.simpleButton1.Text = "Enter";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(123, 66);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton2.TabIndex = 47;
+            this.simpleButton2.Text = "Cancel";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // frmDevloper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(226, 93);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(220, 102);
+            this.Controls.Add(this.simpleButton2);
+            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.lic);
             this.Controls.Add(this.masterkey);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmDevloper";
-            this.Text = "frmDevloper";
+            this.Text = "Devloper";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmDevloper_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -91,10 +98,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox masterkey;
-        private System.Windows.Forms.Label label1;
+        private MetroFramework.Controls.MetroLabel lic;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
     }
 }
