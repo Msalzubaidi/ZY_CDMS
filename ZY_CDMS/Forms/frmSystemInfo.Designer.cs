@@ -66,7 +66,7 @@
             this.txt_comname.Enabled = false;
             this.txt_comname.Location = new System.Drawing.Point(12, 50);
             this.txt_comname.Name = "txt_comname";
-            this.txt_comname.Size = new System.Drawing.Size(300, 20);
+            this.txt_comname.Size = new System.Drawing.Size(356, 20);
             this.txt_comname.TabIndex = 13;
             // 
             // lic
@@ -85,7 +85,7 @@
             // txt_comno
             // 
             this.txt_comno.Enabled = false;
-            this.txt_comno.Location = new System.Drawing.Point(318, 50);
+            this.txt_comno.Location = new System.Drawing.Point(374, 50);
             this.txt_comno.Name = "txt_comno";
             this.txt_comno.Size = new System.Drawing.Size(106, 20);
             this.txt_comno.TabIndex = 15;
@@ -122,7 +122,7 @@
             this.metroLabel3.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel3.CustomBackground = true;
             this.metroLabel3.CustomForeColor = true;
-            this.metroLabel3.Location = new System.Drawing.Point(318, 28);
+            this.metroLabel3.Location = new System.Drawing.Point(374, 28);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(34, 19);
             this.metroLabel3.TabIndex = 17;
@@ -135,7 +135,7 @@
             this.metroLabel4.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel4.CustomBackground = true;
             this.metroLabel4.CustomForeColor = true;
-            this.metroLabel4.Location = new System.Drawing.Point(430, 28);
+            this.metroLabel4.Location = new System.Drawing.Point(486, 28);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(52, 19);
             this.metroLabel4.TabIndex = 19;
@@ -144,7 +144,7 @@
             // 
             // txt_taxno
             // 
-            this.txt_taxno.Location = new System.Drawing.Point(430, 50);
+            this.txt_taxno.Location = new System.Drawing.Point(486, 50);
             this.txt_taxno.Name = "txt_taxno";
             this.txt_taxno.Size = new System.Drawing.Size(81, 20);
             this.txt_taxno.TabIndex = 18;
@@ -187,14 +187,14 @@
             // 
             this.txt_email.Location = new System.Drawing.Point(181, 95);
             this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(201, 20);
+            this.txt_email.Size = new System.Drawing.Size(239, 20);
             this.txt_email.TabIndex = 22;
             // 
             // txt_mobile
             // 
-            this.txt_mobile.Location = new System.Drawing.Point(388, 95);
+            this.txt_mobile.Location = new System.Drawing.Point(426, 95);
             this.txt_mobile.Name = "txt_mobile";
-            this.txt_mobile.Size = new System.Drawing.Size(125, 20);
+            this.txt_mobile.Size = new System.Drawing.Size(141, 20);
             this.txt_mobile.TabIndex = 24;
             this.txt_mobile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -204,7 +204,7 @@
             this.metroLabel7.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel7.CustomBackground = true;
             this.metroLabel7.CustomForeColor = true;
-            this.metroLabel7.Location = new System.Drawing.Point(388, 73);
+            this.metroLabel7.Location = new System.Drawing.Point(426, 73);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(54, 19);
             this.metroLabel7.TabIndex = 25;
@@ -230,7 +230,7 @@
             this.Licence.BackColor = System.Drawing.SystemColors.Control;
             this.Licence.CustomBackground = true;
             this.Licence.CustomForeColor = true;
-            this.Licence.Location = new System.Drawing.Point(90, 126);
+            this.Licence.Location = new System.Drawing.Point(86, 126);
             this.Licence.Name = "Licence";
             this.Licence.Size = new System.Drawing.Size(73, 19);
             this.Licence.TabIndex = 27;
@@ -309,7 +309,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(364, 167);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 88);
+            this.pictureBox1.Size = new System.Drawing.Size(217, 88);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 34;
             this.pictureBox1.TabStop = false;
@@ -320,7 +320,7 @@
             this.metroLabel13.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel13.CustomBackground = true;
             this.metroLabel13.CustomForeColor = true;
-            this.metroLabel13.Location = new System.Drawing.Point(426, 145);
+            this.metroLabel13.Location = new System.Drawing.Point(458, 145);
             this.metroLabel13.Name = "metroLabel13";
             this.metroLabel13.Size = new System.Drawing.Size(39, 19);
             this.metroLabel13.TabIndex = 35;
@@ -383,7 +383,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 261);
+            this.ClientSize = new System.Drawing.Size(593, 261);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);

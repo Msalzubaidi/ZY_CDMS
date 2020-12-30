@@ -50,7 +50,7 @@
             this.lic.CustomBackground = true;
             this.lic.CustomForeColor = true;
             this.lic.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lic.Location = new System.Drawing.Point(12, 9);
+            this.lic.Location = new System.Drawing.Point(55, 9);
             this.lic.Name = "lic";
             this.lic.Size = new System.Drawing.Size(82, 25);
             this.lic.TabIndex = 45;

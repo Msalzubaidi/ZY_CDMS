@@ -60,7 +60,7 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton5_Click(object sender, EventArgs e)
         {
-            if (r.isDigitsOnly(txt_service.Text) == false ||string.IsNullOrEmpty (txt_service.Text)|| string.IsNullOrEmpty(txt_price.Text) || string.IsNullOrEmpty(comboBoxEdit1.SelectedItem.ToString()) || string.IsNullOrEmpty(txt_taxval.Text) || string.IsNullOrEmpty(txt_discount.Text) ||  r.isDigitsOnly(txt_discount.Text) == false || r.isDigitsOnly(txt_taxval.Text) == false || r.isDigitsOnly(comboBoxEdit1.SelectedItem.ToString()) == false || r.isDigitsOnly(txt_price.Text) == false)
+            if (r.isDigitsOnly(txt_service.Text) == false ||string.IsNullOrEmpty (txt_service.Text)|| string.IsNullOrEmpty(txt_price.Text) || string.IsNullOrEmpty(comboBoxEdit1.SelectedItem.ToString()) || string.IsNullOrEmpty(txt_taxval.Text) || string.IsNullOrEmpty(txt_discount.Text) ||  r.isDigitsOnly(txt_discount.Text) == false || r.isDigitsOnly(txt_taxval.Text) == false  || r.isDigitsOnly(txt_price.Text) == false)
             {
                 MessageBox.Show(Resources.digitOnlyError + " For Price - Service - Discount - Tax ", Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -327,7 +327,7 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_vin.Text) || string.IsNullOrEmpty(txt_carinfo.Text) || string.IsNullOrEmpty(txt_custname.Text) || string.IsNullOrEmpty(cbo_paymethod.SelectedItem.ToString() ) || r.isDigitsOnly(txt_service.Text) == false || string.IsNullOrEmpty(txt_service.Text) || string.IsNullOrEmpty(txt_price.Text) || string.IsNullOrEmpty(comboBoxEdit1.SelectedItem.ToString()) || string.IsNullOrEmpty(txt_taxval.Text) || string.IsNullOrEmpty(txt_discount.Text) || r.isDigitsOnly(txt_discount.Text) == false || r.isDigitsOnly(txt_taxval.Text) == false || r.isDigitsOnly(comboBoxEdit1.SelectedItem.ToString()) == false || r.isDigitsOnly(txt_price.Text) == false)
+            if (string.IsNullOrEmpty(txt_vin.Text) || string.IsNullOrEmpty(txt_carinfo.Text) || string.IsNullOrEmpty(txt_custname.Text) || string.IsNullOrEmpty(cbo_paymethod.SelectedItem.ToString() ) || r.isDigitsOnly(txt_service.Text) == false || string.IsNullOrEmpty(txt_service.Text) || string.IsNullOrEmpty(txt_price.Text) || string.IsNullOrEmpty(comboBoxEdit1.SelectedItem.ToString()) || string.IsNullOrEmpty(txt_taxval.Text) || string.IsNullOrEmpty(txt_discount.Text) || r.isDigitsOnly(txt_discount.Text) == false || r.isDigitsOnly(txt_taxval.Text) == false  || r.isDigitsOnly(txt_price.Text) == false)
             {
                 MessageBox.Show(Resources.invalidData, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
 

@@ -64,7 +64,7 @@ namespace ZY_CDMS.Forms
             SqlCommand cmd3;
             SqlDataReader dr3;
 
-            string qry3 = "select * from Cars";
+            string qry3 = "select * from Cars where carStatus=0";
             con3.Open();
 
 

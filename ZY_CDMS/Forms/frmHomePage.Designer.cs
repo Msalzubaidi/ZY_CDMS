@@ -40,8 +40,6 @@
             this.accordionControlElement12 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement14 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement15 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement16 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement17 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -65,8 +63,6 @@
             this.carMaintainanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tab_cars = new System.Windows.Forms.ToolStripMenuItem();
             this.carsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tab_tests = new System.Windows.Forms.ToolStripMenuItem();
-            this.customersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_reports = new System.Windows.Forms.ToolStripMenuItem();
             this.tab_reports = new System.Windows.Forms.ToolStripMenuItem();
             this.mun_sysmanage = new System.Windows.Forms.ToolStripMenuItem();
@@ -107,7 +103,6 @@
             this.accordionControlElement9,
             this.accordionControlElement10,
             this.accordionControlElement12});
-            this.accordionControlElement1.Expanded = true;
             this.accordionControlElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement1.ImageOptions.Image")));
             this.accordionControlElement1.Name = "accordionControlElement1";
             this.accordionControlElement1.Text = "Operations";
@@ -163,9 +158,8 @@
             // accordionControlElement2
             // 
             this.accordionControlElement2.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElement14,
-            this.accordionControlElement15,
-            this.accordionControlElement16});
+            this.accordionControlElement14});
+            this.accordionControlElement2.Expanded = true;
             this.accordionControlElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement2.ImageOptions.Image")));
             this.accordionControlElement2.Name = "accordionControlElement2";
             this.accordionControlElement2.Text = "Search";
@@ -176,20 +170,7 @@
             this.accordionControlElement14.Name = "accordionControlElement14";
             this.accordionControlElement14.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement14.Text = "Cars";
-            // 
-            // accordionControlElement15
-            // 
-            this.accordionControlElement15.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement15.ImageOptions.Image")));
-            this.accordionControlElement15.Name = "accordionControlElement15";
-            this.accordionControlElement15.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement15.Text = "Tests";
-            // 
-            // accordionControlElement16
-            // 
-            this.accordionControlElement16.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement16.ImageOptions.Image")));
-            this.accordionControlElement16.Name = "accordionControlElement16";
-            this.accordionControlElement16.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement16.Text = "Customers";
+            this.accordionControlElement14.Click += new System.EventHandler(this.accordionControlElement14_Click);
             // 
             // accordionControlElement3
             // 
@@ -370,9 +351,7 @@
             // tab_cars
             // 
             this.tab_cars.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.carsToolStripMenuItem,
-            this.tab_tests,
-            this.customersToolStripMenuItem});
+            this.carsToolStripMenuItem});
             this.tab_cars.Name = "tab_cars";
             this.tab_cars.Size = new System.Drawing.Size(57, 20);
             this.tab_cars.Text = "Search";
@@ -380,20 +359,9 @@
             // carsToolStripMenuItem
             // 
             this.carsToolStripMenuItem.Name = "carsToolStripMenuItem";
-            this.carsToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.carsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.carsToolStripMenuItem.Text = "Cars";
-            // 
-            // tab_tests
-            // 
-            this.tab_tests.Name = "tab_tests";
-            this.tab_tests.Size = new System.Drawing.Size(133, 22);
-            this.tab_tests.Text = "Tests";
-            // 
-            // customersToolStripMenuItem
-            // 
-            this.customersToolStripMenuItem.Name = "customersToolStripMenuItem";
-            this.customersToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.customersToolStripMenuItem.Text = "Customers";
+            this.carsToolStripMenuItem.Click += new System.EventHandler(this.carsToolStripMenuItem_Click);
             // 
             // mnu_reports
             // 
@@ -461,7 +429,7 @@
             this.lic.CustomForeColor = true;
             this.lic.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lic.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lic.Location = new System.Drawing.Point(256, 654);
+            this.lic.Location = new System.Drawing.Point(256, 676);
             this.lic.Name = "lic";
             this.lic.Size = new System.Drawing.Size(104, 25);
             this.lic.TabIndex = 45;
@@ -530,11 +498,8 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement10;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement12;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement14;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement15;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement16;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement17;
         private System.Windows.Forms.ToolStripMenuItem carsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tab_tests;
         private System.Windows.Forms.ToolStripMenuItem tab_accountsettings;
         private System.Windows.Forms.ToolStripMenuItem tab_reports;
         private System.Windows.Forms.ToolStripMenuItem tab_sysinfo;
@@ -546,7 +511,6 @@
         private System.Windows.Forms.ToolStripMenuItem addCustomerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem carMaintainanceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem defineTaxCategoriesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem customersToolStripMenuItem;
         private MetroFramework.Controls.MetroLabel lic;
         private System.Windows.Forms.ToolTip toolTip1;
     }

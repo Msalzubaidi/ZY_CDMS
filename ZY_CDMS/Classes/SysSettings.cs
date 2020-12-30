@@ -172,5 +172,24 @@ namespace ZY_CDMS.Classes
             
                 return cmd.ExecuteNonQuery();
         }
+
+        public int UpdateUserinfo(int uid, string username, string password, string new_password)
+        {
+
+            SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
+            SqlCommand cmd = new SqlCommand("UPDATE users set user_name=@uname , password=@new_pass where user_id=@user_id and password=@password ", con); ; // sql command to so get data from data base
+
+
+            cmd.Parameters.Add(new SqlParameter("@user_id", uid));
+            cmd.Parameters.Add(new SqlParameter("@uname", username));
+            cmd.Parameters.Add(new SqlParameter("@password", password));
+            cmd.Parameters.Add(new SqlParameter("@new_pass", new_password));
+
+
+
+            con.Open();
+
+            return cmd.ExecuteNonQuery();
+        }
     }
 }

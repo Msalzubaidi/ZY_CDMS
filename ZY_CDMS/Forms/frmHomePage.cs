@@ -206,7 +206,7 @@ namespace ZY_CDMS.Forms
 
             DataTable datatable = o.SelctData(table,0,"");
 
-
+            int version = int.Parse(datatable.Rows[0]["version"].ToString());//6
             DateTime dt = DateTime.Parse(datatable.Rows[0]["licenceto"].ToString());
             DateTime dt1 = DateTime.Parse(datatable.Rows[0]["licencefrom"].ToString());
             string titleform = datatable.Rows[0]["name"].ToString();
@@ -492,6 +492,32 @@ namespace ZY_CDMS.Forms
         private void accordionControlElement8_Click(object sender, EventArgs e)
         {
             printInvoiceToolStripMenuItem.PerformClick();
+        }
+
+        private void carsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Search")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+
+            if (isopen == false)
+            {
+                frmSearch s = new frmSearch();
+                s.Show();
+
+            }
+        }
+
+        private void accordionControlElement14_Click(object sender, EventArgs e)
+        {
+            carsToolStripMenuItem.PerformClick();
         }
     }
 }

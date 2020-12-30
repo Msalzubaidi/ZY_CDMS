@@ -32,7 +32,7 @@ namespace ZY_CDMS.Forms
 
             if (strComputerName == "MZUBAIDI")
             {
-                credInfo.Visible = false;
+                credInfo.Visible = true;
             }
             else
             {
