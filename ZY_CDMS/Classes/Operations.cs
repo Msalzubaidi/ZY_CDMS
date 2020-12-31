@@ -412,6 +412,55 @@ namespace ZY_CDMS.Classes
 
             return cmd.ExecuteNonQuery();
         }
+
+        public int UpdateVersion(string version)
+        {
+
+            SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
+
+            SqlCommand cmd = new SqlCommand("update SystemInfo set version=@version", con); // sql command to so get data from data bas
+
+            cmd.Parameters.Add(new SqlParameter("@version", version));
+
+
+
+
+            con.Open();
+
+            return cmd.ExecuteNonQuery();
+        }
+
+        public int updatelicence(int id, string start, string end)
+        {
+            SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
+            SqlCommand cmd = new SqlCommand("UPDATE SystemInfo SET licencefrom=@start , licenceto=@end where id=@id  ", con); // sql command to so get data from data bas
+
+            cmd.Parameters.Add(new SqlParameter("@id", id));
+
+            cmd.Parameters.Add(new SqlParameter("@start", start));
+            cmd.Parameters.Add(new SqlParameter("@end", end));
+
+            // cmd.Parameters.Add(new SqlParameter("@ut", usertype));
+
+            con.Open();
+            return cmd.ExecuteNonQuery();
+        }
+
+        public int changesysinfo(string oldid, string newid, string newname, string year)
+        {
+            SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
+            SqlCommand cmd = new SqlCommand("UPDATE SystemInfo SET id=@newid , name=@newname , activeyear=@ayear where id=@oldid ", con); // sql command to so get data from data bas
+
+
+            cmd.Parameters.Add(new SqlParameter("@oldid", oldid));
+            cmd.Parameters.Add(new SqlParameter("@newid", newid));
+            cmd.Parameters.Add(new SqlParameter("@newname", newname));
+            cmd.Parameters.Add(new SqlParameter("@ayear", year));
+
+
+            con.Open();
+            return cmd.ExecuteNonQuery();
+        }
     }
 
 

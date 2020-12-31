@@ -359,7 +359,7 @@
             // carsToolStripMenuItem
             // 
             this.carsToolStripMenuItem.Name = "carsToolStripMenuItem";
-            this.carsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.carsToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
             this.carsToolStripMenuItem.Text = "Cars";
             this.carsToolStripMenuItem.Click += new System.EventHandler(this.carsToolStripMenuItem_Click);
             // 
@@ -455,6 +455,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmHomePage";
             this.Text = "Home Page";

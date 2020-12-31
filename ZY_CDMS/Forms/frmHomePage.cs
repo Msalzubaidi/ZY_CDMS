@@ -38,6 +38,7 @@ namespace ZY_CDMS.Forms
             if (isopen == false)
             {
                 frmAddBrand df = new frmAddBrand();
+                df.MdiParent = this;
                 df.Show();
             }
         }
@@ -58,6 +59,7 @@ namespace ZY_CDMS.Forms
             if (isopen == false)
             {
                 frmUpdateBrandInfo ubi = new frmUpdateBrandInfo();
+                ubi.MdiParent = this;
                 ubi.Show();
             }
         }
@@ -96,6 +98,7 @@ namespace ZY_CDMS.Forms
             if (isopen == false)
             {
                 frmDefineServices ds = new frmDefineServices();
+                ds.MdiParent = this;
                 ds.Show();
             }
         }
@@ -126,6 +129,7 @@ namespace ZY_CDMS.Forms
             if (isopen == false)
             {
                 frmEditServices es = new frmEditServices();
+                es.MdiParent = this;
                 es.Show();
             }
         }
@@ -146,6 +150,7 @@ namespace ZY_CDMS.Forms
             if (isopen == false)
             {
                frmAddPayMethod dpm = new frmAddPayMethod();
+                dpm.MdiParent = this;
                 dpm.Show();
             }
         }
@@ -171,6 +176,7 @@ namespace ZY_CDMS.Forms
             if (isopen == false)
             {
                frmAddCarSource dosc = new frmAddCarSource();
+                dosc.MdiParent = this;
                 dosc.Show();
             }
         }
@@ -191,6 +197,7 @@ namespace ZY_CDMS.Forms
             if (isopen == false)
             {
                 frmAddPaintsCode dc = new frmAddPaintsCode();
+                dc.MdiParent = this;
                 dc.Show();
             }
         }
@@ -268,6 +275,7 @@ namespace ZY_CDMS.Forms
             if (isopen == false)
             {
                 frmAccountSetttings fas = new frmAccountSetttings();
+                fas.MdiParent = this;
                 fas.Show();
             }
         }
@@ -293,6 +301,7 @@ namespace ZY_CDMS.Forms
             if (isopen == false)
             {
                 frmAddNewCar nc = new frmAddNewCar();
+                nc.MdiParent = this;
                 nc.Show();
             }
         }
@@ -313,7 +322,8 @@ namespace ZY_CDMS.Forms
             if (isopen == false)
             {
                 frmSellCar sc = new frmSellCar();
-                    sc.Show();
+                sc.MdiParent = this;
+                sc.Show();
             }
         }
 
@@ -338,6 +348,7 @@ namespace ZY_CDMS.Forms
             if (isopen == false)
             {
                 frmAddCustomer ac = new frmAddCustomer();
+                ac.MdiParent = this;
                 ac.Show();
             }
         }
@@ -368,6 +379,7 @@ namespace ZY_CDMS.Forms
             if (isopen == false)
             {
                 frmAddServicecs ad = new frmAddServicecs();
+                ad.MdiParent = this;
                 ad.Show();
             }
         }
@@ -398,6 +410,7 @@ namespace ZY_CDMS.Forms
             if (isopen == false)
             {
                 frmPrintInvoice pi = new frmPrintInvoice();
+                pi.MdiParent = this;
                 pi.Show();
 
             }
@@ -419,6 +432,7 @@ namespace ZY_CDMS.Forms
             if (isopen == false)
             {
                 frmAddCarTset ct = new frmAddCarTset();
+                ct.MdiParent = this;
                 ct.Show();
             }
         }
@@ -439,6 +453,7 @@ namespace ZY_CDMS.Forms
             if (isopen == false)
             {
                 frmTaxCategoriescs tc = new frmTaxCategoriescs();
+                tc.MdiParent = this;
                 tc.Show();
             }
         }
@@ -459,6 +474,7 @@ namespace ZY_CDMS.Forms
             if (isopen == false)
             {
                 frmSystemInfo si = new frmSystemInfo();
+                si.MdiParent = this;
                 si.Show();
                 
             }
@@ -480,6 +496,7 @@ namespace ZY_CDMS.Forms
             if (isopen == false)
             {
                 frmAbout about = new frmAbout();
+                about.MdiParent = this;
                 about.Show();
             }
         }
@@ -510,6 +527,7 @@ namespace ZY_CDMS.Forms
             if (isopen == false)
             {
                 frmSearch s = new frmSearch();
+                s.MdiParent = this;
                 s.Show();
 
             }

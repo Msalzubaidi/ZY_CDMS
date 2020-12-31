@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -55,16 +56,71 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton4_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_bid.Text) || r.isDigitsOnly(txt_bid.Text) == false)
+           
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            cbo_id.ResetText();
+            txt_make.Clear();
+            txt_model.Clear();
+            cbo_id.Focus();
+
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(cbo_id.Text) || r.isDigitsOnly(cbo_id.Text) == false || string.IsNullOrEmpty(txt_make.Text) || string.IsNullOrEmpty(txt_model.Text))
             {
-                MessageBox.Show(Resources.digitOnlyError, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(Resources.invalidData, Resources.MessageTitle, 0, MessageBoxIcon.Warning);
+            }
+
+            else
+            {
+                int id = int.Parse(cbo_id.EditValue.ToString());
+                string name = txt_make.Text;
+                string model = txt_model.Text;
+
+
+
+                int rest = s.UpdateBrand(id, name, model, table);
+                if (rest > 0)
+                {
+                    MessageBox.Show(table + Resources.Updated, Resources.MessageTitle, 0, MessageBoxIcon.Information);
+                    simpleButton2.PerformClick();
+                }
+                else if (rest == -1)
+                {
+                    MessageBox.Show(table + Resources.Exist, Resources.MessageTitle, 0, MessageBoxIcon.Warning);
+                    simpleButton2.PerformClick();
+
+
+
+                }
+                else
+                {
+                    MessageBox.Show(Resources.TryAgain, Resources.MessageTitle, 0, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void cbo_id_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(cbo_id.Text) || r.isDigitsOnly(cbo_id.Text) == false)
+            {
+               // MessageBox.Show(Resources.digitOnlyError, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 simpleButton2.PerformClick();
             }
 
             else
 
             {
-                int v = int.Parse(txt_bid.Text);
+                int v = int.Parse(cbo_id.Text);
                 string condition = "bnum=" + v.ToString();
 
                 DataTable dtable = o.SelctData(table, 1, condition);
@@ -87,56 +143,27 @@ namespace ZY_CDMS.Forms
             }
         }
 
-        private void simpleButton3_Click(object sender, EventArgs e)
+        private void frmUpdateBrandInfo_Load(object sender, EventArgs e)
         {
-            this.Close();
-        }
+            simpleButton2.PerformClick();
+            string connstring = @"Data Source=" + Resources.servercon + ";Initial Catalog=" + Resources.dbnamecon + ";User ID=" + Resources.usernamecon + ";Password=" + Resources.passwordcon;
+            SqlConnection con13 = new SqlConnection(connstring);
+            SqlCommand cmd13;
+            SqlDataReader dr13;
 
-        private void simpleButton2_Click(object sender, EventArgs e)
-        {
-            txt_bid.Clear();
-            txt_make.Clear();
-            txt_model.Clear();
-            txt_bid.Focus();
-        }
+            string qry13 = "select * from Brands";
+            con13.Open();
 
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txt_bid.Text) || r.isDigitsOnly(txt_bid.Text) == false || string.IsNullOrEmpty(txt_make.Text) || string.IsNullOrEmpty(txt_model.Text))
+
+
+            cmd13 = new SqlCommand(qry13, con13);
+            dr13 = cmd13.ExecuteReader();
+
+            while (dr13.Read())
             {
-                MessageBox.Show(Resources.invalidData, Resources.MessageTitle, 0, MessageBoxIcon.Warning);
-            }
+                string item1 = dr13.GetValue(0).ToString();
+                cbo_id.Properties.Items.Add(item1);
 
-            else
-            {
-                int id = int.Parse(txt_bid.Text);
-                string name = txt_make.Text;
-                string model = txt_model.Text;
-
-
-
-                int rest = s.UpdateBrand(id, name, model, table);
-                if (rest > 0)
-                {
-                    MessageBox.Show(table + Resources.Updated, Resources.MessageTitle, 0, MessageBoxIcon.Information);
-                    txt_bid.Clear();
-                    txt_make.Clear();
-                    txt_model.Clear();
-                }
-                else if (rest == -1)
-                {
-                    MessageBox.Show(table + Resources.Exist, Resources.MessageTitle, 0, MessageBoxIcon.Warning);
-                    txt_bid.Clear();
-                    txt_make.Clear();
-                    txt_model.Clear();
-
-
-
-                }
-                else
-                {
-                    MessageBox.Show(Resources.TryAgain, Resources.MessageTitle, 0, MessageBoxIcon.Error);
-                }
             }
         }
     }

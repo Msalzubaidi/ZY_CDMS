@@ -38,12 +38,15 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.lic = new MetroFramework.Controls.MetroLabel();
             this.txt_sid = new System.Windows.Forms.TextBox();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.cbo_id = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.cbo_id.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // simpleButton3
             // 
-            this.simpleButton3.Location = new System.Drawing.Point(344, 121);
+            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.simpleButton3.Location = new System.Drawing.Point(300, 124);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(75, 23);
             this.simpleButton3.TabIndex = 6;
@@ -52,7 +55,8 @@
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(191, 124);
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(210, 124);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 5;
@@ -61,7 +65,8 @@
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(60, 124);
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(124, 124);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 4;
@@ -70,9 +75,9 @@
             // 
             // txt_sdesc
             // 
-            this.txt_sdesc.Location = new System.Drawing.Point(158, 86);
+            this.txt_sdesc.Location = new System.Drawing.Point(105, 82);
             this.txt_sdesc.Name = "txt_sdesc";
-            this.txt_sdesc.Size = new System.Drawing.Size(267, 20);
+            this.txt_sdesc.Size = new System.Drawing.Size(298, 20);
             this.txt_sdesc.TabIndex = 3;
             this.txt_sdesc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -83,7 +88,7 @@
             this.metroLabel2.CustomBackground = true;
             this.metroLabel2.CustomForeColor = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.Location = new System.Drawing.Point(158, 58);
+            this.metroLabel2.Location = new System.Drawing.Point(5, 77);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(97, 25);
             this.metroLabel2.TabIndex = 46;
@@ -92,7 +97,7 @@
             // 
             // txt_scost
             // 
-            this.txt_scost.Location = new System.Drawing.Point(36, 86);
+            this.txt_scost.Location = new System.Drawing.Point(287, 46);
             this.txt_scost.Name = "txt_scost";
             this.txt_scost.Size = new System.Drawing.Size(116, 20);
             this.txt_scost.TabIndex = 2;
@@ -105,7 +110,7 @@
             this.metroLabel1.CustomBackground = true;
             this.metroLabel1.CustomForeColor = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(66, 58);
+            this.metroLabel1.Location = new System.Drawing.Point(236, 41);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(45, 25);
             this.metroLabel1.TabIndex = 45;
@@ -119,7 +124,7 @@
             this.lic.CustomBackground = true;
             this.lic.CustomForeColor = true;
             this.lic.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lic.Location = new System.Drawing.Point(30, 9);
+            this.lic.Location = new System.Drawing.Point(12, 10);
             this.lic.Name = "lic";
             this.lic.Size = new System.Drawing.Size(87, 25);
             this.lic.TabIndex = 44;
@@ -128,28 +133,45 @@
             // 
             // txt_sid
             // 
-            this.txt_sid.Location = new System.Drawing.Point(20, 37);
+            this.txt_sid.Enabled = false;
+            this.txt_sid.Location = new System.Drawing.Point(105, 46);
             this.txt_sid.Name = "txt_sid";
             this.txt_sid.Size = new System.Drawing.Size(116, 20);
             this.txt_sid.TabIndex = 0;
             this.txt_sid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_sid.Leave += new System.EventHandler(this.simpleButton4_Click);
             // 
-            // simpleButton4
+            // cbo_id
             // 
-            this.simpleButton4.Location = new System.Drawing.Point(360, 24);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton4.TabIndex = 1;
-            this.simpleButton4.Text = "View";
-            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
+            this.cbo_id.Location = new System.Drawing.Point(105, 15);
+            this.cbo_id.Name = "cbo_id";
+            this.cbo_id.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbo_id.Size = new System.Drawing.Size(150, 20);
+            this.cbo_id.TabIndex = 47;
+            this.cbo_id.TextChanged += new System.EventHandler(this.cbo_id_TextChanged);
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.BackColor = System.Drawing.SystemColors.Control;
+            this.metroLabel3.CustomBackground = true;
+            this.metroLabel3.CustomForeColor = true;
+            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel3.Location = new System.Drawing.Point(12, 41);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(87, 25);
+            this.metroLabel3.TabIndex = 48;
+            this.metroLabel3.Text = "Service ID";
+            this.metroLabel3.UseStyleColors = true;
             // 
             // frmEditServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(447, 163);
-            this.Controls.Add(this.simpleButton4);
+            this.ClientSize = new System.Drawing.Size(425, 163);
+            this.Controls.Add(this.metroLabel3);
+            this.Controls.Add(this.cbo_id);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
@@ -164,7 +186,9 @@
             this.KeyPreview = true;
             this.Name = "frmEditServices";
             this.Text = "Edit Services";
+            this.Load += new System.EventHandler(this.frmEditServices_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmEditServices_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.cbo_id.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,6 +205,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel lic;
         private System.Windows.Forms.TextBox txt_sid;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.ComboBoxEdit cbo_id;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
     }
 }

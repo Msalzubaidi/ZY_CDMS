@@ -34,11 +34,11 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.lic = new MetroFramework.Controls.MetroLabel();
-            this.txt_bid = new System.Windows.Forms.TextBox();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.cbo_id = new DevExpress.XtraEditors.ComboBoxEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbo_id.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_model
@@ -101,17 +101,9 @@
             this.lic.Text = "ID";
             this.lic.UseStyleColors = true;
             // 
-            // txt_bid
-            // 
-            this.txt_bid.Location = new System.Drawing.Point(68, 12);
-            this.txt_bid.Name = "txt_bid";
-            this.txt_bid.Size = new System.Drawing.Size(85, 20);
-            this.txt_bid.TabIndex = 0;
-            this.txt_bid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_bid.Leave += new System.EventHandler(this.simpleButton4_Click);
-            // 
             // simpleButton3
             // 
+            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
             this.simpleButton3.Location = new System.Drawing.Point(240, 106);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(75, 23);
@@ -121,6 +113,7 @@
             // 
             // simpleButton2
             // 
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
             this.simpleButton2.Location = new System.Drawing.Point(159, 106);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
@@ -130,6 +123,7 @@
             // 
             // simpleButton1
             // 
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
             this.simpleButton1.Location = new System.Drawing.Point(78, 106);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
@@ -137,22 +131,22 @@
             this.simpleButton1.Text = "Update";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
-            // simpleButton4
+            // cbo_id
             // 
-            this.simpleButton4.Location = new System.Drawing.Point(240, 12);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton4.TabIndex = 36;
-            this.simpleButton4.Text = "View";
-            this.simpleButton4.Visible = false;
-            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
+            this.cbo_id.Location = new System.Drawing.Point(68, 14);
+            this.cbo_id.Name = "cbo_id";
+            this.cbo_id.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbo_id.Size = new System.Drawing.Size(100, 20);
+            this.cbo_id.TabIndex = 37;
+            this.cbo_id.TextChanged += new System.EventHandler(this.cbo_id_TextChanged);
             // 
             // frmUpdateBrandInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(334, 144);
-            this.Controls.Add(this.simpleButton4);
+            this.Controls.Add(this.cbo_id);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
@@ -161,14 +155,14 @@
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.lic);
-            this.Controls.Add(this.txt_bid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmUpdateBrandInfo";
             this.Text = "Update Brand Info";
-            this.Load += new System.EventHandler(this.simpleButton2_Click);
+            this.Load += new System.EventHandler(this.frmUpdateBrandInfo_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmUpdateBrandInfo_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.cbo_id.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,10 +175,9 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel lic;
-        private System.Windows.Forms.TextBox txt_bid;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.ComboBoxEdit cbo_id;
     }
 }

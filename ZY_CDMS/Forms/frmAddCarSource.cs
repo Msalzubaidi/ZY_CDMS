@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -39,18 +40,19 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-
             int x = r.FindMax(table);
             txt_sid.Text = x.ToString();
             txt_sname.Clear();
             txt_sname.Focus();
+            simpleButton1.Enabled = true;
+
+
+           
         }
 
         private void simpleButton4_Click(object sender, EventArgs e)
         {
-            txt_id.Clear();
-            txt_name.Clear();
-            txt_id.Focus();
+          
 
         }
 
@@ -92,18 +94,18 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton6_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_id.Text) || r.isDigitsOnly(txt_id.Text) == false)
+            if (string.IsNullOrEmpty(cbo_id.Text) || r.isDigitsOnly(cbo_id.Text) == false)
             {
-                MessageBox.Show(Resources.digitOnlyError, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                simpleButton4.PerformClick();
+              //  MessageBox.Show(Resources.digitOnlyError, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                simpleButton2.PerformClick ();
             }
 
             else
             {
 
 
-               
-                string condition = "id=" + int.Parse(txt_id.Text);
+
+                string condition = "id=" + int.Parse(cbo_id.EditValue.ToString());
 
                 DataTable dtable = o.SelctData(table, 1, condition);
                 int x = dtable.Rows.Count;
@@ -111,15 +113,16 @@ namespace ZY_CDMS.Forms
                 if (dtable != null && dtable.Rows.Count > 0)
                 {
 
-                    txt_name.Text = dtable.Rows[0]["name"].ToString();//1
-                   
+                    txt_sid.Text = dtable.Rows[0]["id"].ToString();//1
+                    txt_sname.Text = dtable.Rows[0]["name"].ToString();//1
+
 
                 }
 
                 else
                 {
                     MessageBox.Show(table + Resources.notExist, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    simpleButton4.PerformClick();
+                 simpleButton2.PerformClick();
                 }
 
             }
@@ -127,18 +130,64 @@ namespace ZY_CDMS.Forms
 
         private void toggleSwitch1_Toggled(object sender, EventArgs e)
         {
-            if (toggleSwitch1.IsOn == true)
-            {
-                simpleButton4.Enabled = true;
-                simpleButton5.Enabled = true;
-                simpleButton6.Enabled = true;
 
-            }
-            if (toggleSwitch1.IsOn == false)
+        }
+
+        private void cbo_id_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(cbo_id.Text) || r.isDigitsOnly(cbo_id.Text) == false)
             {
-                simpleButton4.Enabled = false;
-                simpleButton5.Enabled = false;
-                simpleButton6.Enabled = false;
+                // MessageBox.Show(Resources.digitOnlyError, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                simpleButton2.PerformClick();
+            }
+
+            else
+
+            {
+                simpleButton1.Enabled = false;
+                int v = int.Parse(cbo_id.Text);
+                string condition = "id=" + v.ToString();
+
+                DataTable dtable = o.SelctData(table, 1, condition);
+                int x = dtable.Rows.Count;
+
+                if (dtable != null && dtable.Rows.Count > 0)
+                {
+
+                    txt_sid.Text = dtable.Rows[0]["id"].ToString();//1
+                    txt_sname.Text = dtable.Rows[0]["name"].ToString();//2
+
+                }
+
+                else
+                {
+                    MessageBox.Show(table + Resources.notExist, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    simpleButton2.PerformClick();
+                }
+            }
+        }
+
+        private void frmAddCarSource_Load(object sender, EventArgs e)
+        {
+            simpleButton2.PerformClick();
+            string connstring = @"Data Source=" + Resources.servercon + ";Initial Catalog=" + Resources.dbnamecon + ";User ID=" + Resources.usernamecon + ";Password=" + Resources.passwordcon;
+            SqlConnection con13 = new SqlConnection(connstring);
+            SqlCommand cmd13;
+            SqlDataReader dr13;
+
+            string qry13 = "select * from SourceCar";
+            con13.Open();
+
+
+
+            cmd13 = new SqlCommand(qry13, con13);
+            dr13 = cmd13.ExecuteReader();
+
+            while (dr13.Read())
+            {
+                string item1 = dr13.GetValue(0).ToString();
+                cbo_id.Properties.Items.Add(item1);
+
             }
         }
     }

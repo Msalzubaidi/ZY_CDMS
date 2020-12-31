@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,10 +30,10 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            txt_sid.Clear();
+            cbo_id.ResetText();
             txt_sdesc.Clear();
             txt_scost.Clear();
-            txt_sid.Focus();
+            cbo_id.Focus();
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -77,21 +78,57 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton4_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txt_sid.Text) || r.isDigitsOnly(txt_sid.Text) == false)
+           
+        }
+
+        private void frmEditServices_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
             {
-                MessageBox.Show(Resources.digitOnlyError, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                SendKeys.Send("{TAB}");
+            }
+        }
+
+        private void frmEditServices_Load(object sender, EventArgs e)
+        {
+            string connstring = @"Data Source=" + Resources.servercon + ";Initial Catalog=" + Resources.dbnamecon + ";User ID=" + Resources.usernamecon + ";Password=" + Resources.passwordcon;
+            SqlConnection con13 = new SqlConnection(connstring);
+            SqlCommand cmd13;
+            SqlDataReader dr13;
+
+            string qry13 = "select * from Services";
+            con13.Open();
+
+
+
+            cmd13 = new SqlCommand(qry13, con13);
+            dr13 = cmd13.ExecuteReader();
+
+            while (dr13.Read())
+            {
+                string item1 = dr13.GetValue(0).ToString();
+                cbo_id.Properties.Items.Add(item1);
+
+            }
+        }
+
+        private void cbo_id_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(cbo_id.Text) || r.isDigitsOnly(cbo_id.Text) == false)
+            {
+                //   MessageBox.Show(Resources.digitOnlyError, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 simpleButton2.PerformClick();
             }
             else
             {
-                string condition = "id=" + int.Parse(txt_sid.Text);
+                string condition = "id=" + int.Parse(cbo_id.EditValue.ToString());
 
                 DataTable dtable = o.SelctData(table, 1, condition);
                 int x = dtable.Rows.Count;
 
                 if (dtable != null && dtable.Rows.Count > 0)
                 {
-
+                    txt_sid.Text = dtable.Rows[0]["id"].ToString();//1
                     txt_sdesc.Text = dtable.Rows[0]["name"].ToString();//1
                     txt_scost.Text = dtable.Rows[0]["cost"].ToString();//2
 
@@ -102,14 +139,6 @@ namespace ZY_CDMS.Forms
                     MessageBox.Show(table + Resources.notExist, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     simpleButton2.PerformClick();
                 }
-            }
-        }
-
-        private void frmEditServices_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                SendKeys.Send("{TAB}");
             }
         }
     }

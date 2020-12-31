@@ -101,6 +101,7 @@
             this.txt_oldpass.Name = "txt_oldpass";
             this.txt_oldpass.Size = new System.Drawing.Size(209, 20);
             this.txt_oldpass.TabIndex = 2;
+            this.txt_oldpass.UseSystemPasswordChar = true;
             // 
             // metroLabel4
             // 
@@ -121,6 +122,7 @@
             this.txt_newpass.Name = "txt_newpass";
             this.txt_newpass.Size = new System.Drawing.Size(209, 20);
             this.txt_newpass.TabIndex = 3;
+            this.txt_newpass.UseSystemPasswordChar = true;
             // 
             // simpleButton1
             // 

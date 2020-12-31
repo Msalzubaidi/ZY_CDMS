@@ -102,15 +102,7 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            OpenFileDialog opnfd = new OpenFileDialog();
-            opnfd.Filter = "Image file|" + "*.png; *.jpg; *.jpeg; *.jfif; *.bmp;*.tif; *.tiff; *.gif";
-            if (opnfd.ShowDialog() == DialogResult.OK)
-            {
-
-                imglocation = opnfd.FileName.ToString();
-                pictureBox1.Image = new Bitmap(imglocation);
-
-            }
+           
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -173,8 +165,22 @@ namespace ZY_CDMS.Forms
             if (isopen == false)
             {
                frmDevloper dev = new frmDevloper();
+               
                 dev.Show();
                 this.Close();
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opnfd = new OpenFileDialog();
+            opnfd.Filter = "Image file|" + "*.png; *.jpg; *.jpeg; *.jfif; *.bmp;*.tif; *.tiff; *.gif";
+            if (opnfd.ShowDialog() == DialogResult.OK)
+            {
+
+                imglocation = opnfd.FileName.ToString();
+                pictureBox1.Image = new Bitmap(imglocation);
+
             }
         }
     }
