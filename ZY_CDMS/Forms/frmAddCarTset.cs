@@ -440,7 +440,7 @@ namespace ZY_CDMS.Forms
                     cbo_makemodel.EditValue = dt.Rows[0]["makeModel"].ToString();
                     cbo_color.EditValue = dt.Rows[0]["color"].ToString();
                     cbo_paints.EditValue = dt.Rows[0]["paintCode"].ToString();
-                    cbo_year.EditValue = dt.Rows[0]["year"].ToString();
+                    cbo_year.EditValue = dt.Rows[0]["years"].ToString();
                     txt_vin.Text = dt.Rows[0]["carvin"].ToString();
                     txt_pay.Text = dt.Rows[0]["payment"].ToString();
                     txt_bal.Text = dt.Rows[0]["balance"].ToString();

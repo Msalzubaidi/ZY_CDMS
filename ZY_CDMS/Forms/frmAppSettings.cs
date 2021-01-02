@@ -122,6 +122,7 @@ namespace ZY_CDMS.Forms
             DataTable dtable = o.SelctData(table, 0, "");
 
             txt_comno.Text = dtable.Rows[0]["id"].ToString();
+            txt_newcomno.Text = dtable.Rows[0]["id"].ToString();
             txt_comname.Text = dtable.Rows[0]["name"].ToString();
             txt_from.Text = dtable.Rows[0]["licencefrom"].ToString();
             txt_to.Text = dtable.Rows[0]["licenceto"].ToString();

@@ -42,6 +42,9 @@ namespace ZY_CDMS.Forms
             if (string.IsNullOrWhiteSpace(masterkey.Text))
             {
                 MessageBox.Show("Please Type Master Key ?  ", Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            
+                masterkey.Clear();
+                masterkey.Focus();
             }
             else if (masterkey.Text == date)
             {
@@ -52,6 +55,11 @@ namespace ZY_CDMS.Forms
             else if (masterkey.Text != date)
             {
                 MessageBox.Show("Invalid Master Key", Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+               
+                masterkey.Clear();
+                masterkey.Focus();
+
             }
         }
     }

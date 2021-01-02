@@ -33,9 +33,8 @@ namespace ZY_CDMS.Forms
             if (isopen == false)
             {
                 frmWhatsNew wn = new frmWhatsNew();
-              
+               
                 wn.Show();
-
                 this.Close();
 
             }

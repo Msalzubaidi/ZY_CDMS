@@ -88,11 +88,20 @@ namespace ZY_CDMS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1.0.5.2.
+        ///   Looks up a localized string similar to V 1.0.5.2.
         /// </summary>
         internal static string AppVersion {
             get {
                 return ResourceManager.GetString("AppVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 10.
+        /// </summary>
+        internal static string AZversion {
+            get {
+                return ResourceManager.GetString("AZversion", resourceCulture);
             }
         }
         
@@ -156,6 +165,15 @@ namespace ZY_CDMS.Properties {
         internal static string invalidData {
             get {
                 return ResourceManager.GetString("invalidData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 20.
+        /// </summary>
+        internal static string JordanCleaningVersion {
+            get {
+                return ResourceManager.GetString("JordanCleaningVersion", resourceCulture);
             }
         }
         

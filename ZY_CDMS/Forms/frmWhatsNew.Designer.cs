@@ -28,113 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWhatsNew));
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.lic = new MetroFramework.Controls.MetroLabel();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.showagain = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // metroLabel6
+            // metroLabel7
             // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel6.Location = new System.Drawing.Point(12, 267);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(274, 25);
-            this.metroLabel6.TabIndex = 30;
-            this.metroLabel6.Text = "- User Can Upload Company Logo";
-            this.metroLabel6.UseStyleColors = true;
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel5.Location = new System.Drawing.Point(12, 226);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(185, 25);
-            this.metroLabel5.TabIndex = 29;
-            this.metroLabel5.Text = "- More Friendly Design";
-            this.metroLabel5.UseStyleColors = true;
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel4.Location = new System.Drawing.Point(12, 178);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(434, 25);
-            this.metroLabel4.TabIndex = 28;
-            this.metroLabel4.Text = "- Customers Information Subsystem to link with invoices";
-            this.metroLabel4.UseStyleColors = true;
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel3.Location = new System.Drawing.Point(12, 123);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(239, 25);
-            this.metroLabel3.TabIndex = 27;
-            this.metroLabel3.Text = "- User Can Search On Report ";
-            this.metroLabel3.UseStyleColors = true;
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.Location = new System.Drawing.Point(12, 81);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(318, 25);
-            this.metroLabel2.TabIndex = 26;
-            this.metroLabel2.Text = "- User Can Filtering On Reports by Date ";
-            this.metroLabel2.UseStyleColors = true;
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.BackColor = System.Drawing.SystemColors.Control;
+            this.metroLabel7.CustomBackground = true;
+            this.metroLabel7.CustomForeColor = true;
+            this.metroLabel7.Location = new System.Drawing.Point(12, 9);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(92, 19);
+            this.metroLabel7.TabIndex = 32;
+            this.metroLabel7.Text = "In this Version ";
+            this.metroLabel7.UseStyleColors = true;
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(12, 39);
+            this.metroLabel1.BackColor = System.Drawing.SystemColors.Control;
+            this.metroLabel1.CustomBackground = true;
+            this.metroLabel1.CustomForeColor = true;
+            this.metroLabel1.Location = new System.Drawing.Point(12, 38);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(280, 25);
-            this.metroLabel1.TabIndex = 25;
-            this.metroLabel1.Text = "- User Can Print Customize Invoice ";
+            this.metroLabel1.Size = new System.Drawing.Size(333, 114);
+            this.metroLabel1.TabIndex = 33;
+            this.metroLabel1.Text = resources.GetString("metroLabel1.Text");
             this.metroLabel1.UseStyleColors = true;
             // 
-            // lic
+            // simpleButton1
             // 
-            this.lic.AutoSize = true;
-            this.lic.BackColor = System.Drawing.Color.Transparent;
-            this.lic.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lic.Location = new System.Drawing.Point(12, 9);
-            this.lic.Name = "lic";
-            this.lic.Size = new System.Drawing.Size(122, 25);
-            this.lic.TabIndex = 31;
-            this.lic.Text = "In this Version ";
-            this.lic.UseStyleColors = true;
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(317, 172);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton1.TabIndex = 34;
+            this.simpleButton1.Text = "OK, Close";
+            // 
+            // showagain
+            // 
+            this.showagain.AutoSize = true;
+            this.showagain.Location = new System.Drawing.Point(24, 179);
+            this.showagain.Name = "showagain";
+            this.showagain.Size = new System.Drawing.Size(111, 17);
+            this.showagain.TabIndex = 35;
+            this.showagain.Text = "Don\'t Show Again";
+            this.showagain.UseVisualStyleBackColor = true;
             // 
             // frmWhatsNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(772, 314);
-            this.Controls.Add(this.lic);
-            this.Controls.Add(this.metroLabel6);
-            this.Controls.Add(this.metroLabel5);
-            this.Controls.Add(this.metroLabel4);
-            this.Controls.Add(this.metroLabel3);
-            this.Controls.Add(this.metroLabel2);
+            this.ClientSize = new System.Drawing.Size(404, 207);
+            this.Controls.Add(this.showagain);
+            this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.metroLabel7);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmWhatsNew";
             this.Text = "Whats New";
+            this.Load += new System.EventHandler(this.frmWhatsNew_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,12 +101,9 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroLabel metroLabel6;
-        private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroLabel lic;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.CheckBox showagain;
     }
 }

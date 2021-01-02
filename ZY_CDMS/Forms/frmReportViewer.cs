@@ -7,20 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ZY_CDMS.Properties;
 
 namespace ZY_CDMS.Forms
 {
-    public partial class frmWhatsNew : Form
+    public partial class frmReportViewer : Form
     {
-        public frmWhatsNew()
+        public frmReportViewer()
         {
             InitializeComponent();
         }
 
-        private void frmWhatsNew_Load(object sender, EventArgs e)
+        private void frmReportViewer_Load(object sender, EventArgs e)
         {
-            metroLabel7.Text = "In this Version : " + Resources.AppVersion;
+
         }
     }
 }

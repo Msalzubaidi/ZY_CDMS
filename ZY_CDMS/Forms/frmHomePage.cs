@@ -537,5 +537,58 @@ namespace ZY_CDMS.Forms
         {
             carsToolStripMenuItem.PerformClick();
         }
+
+        private void tab_usersettings_Click(object sender, EventArgs e)
+        {
+            bool isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "My Account Setttings")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+
+            if (isopen == false)
+            {
+                frmUsersManagment um = new frmUsersManagment();
+                um.MdiParent = this;
+                um.Show();
+            }
+        }
+
+        private void accordionControlElement9_Click(object sender, EventArgs e)
+        {
+            addServiceToCarToolStripMenuItem.PerformClick();
+        }
+
+        private void tab_reports_Click(object sender, EventArgs e)
+        {
+            bool isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "System Info")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+
+            if (isopen == false)
+            {
+                frmReports r = new frmReports();
+                r.MdiParent = this;
+                r.Show();
+
+            }
+        }
+
+        private void accordionControlElement17_Click(object sender, EventArgs e)
+        {
+            tab_reports.PerformClick();
+        }
     }
 }

@@ -103,6 +103,7 @@
             this.accordionControlElement9,
             this.accordionControlElement10,
             this.accordionControlElement12});
+            this.accordionControlElement1.Expanded = true;
             this.accordionControlElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement1.ImageOptions.Image")));
             this.accordionControlElement1.Name = "accordionControlElement1";
             this.accordionControlElement1.Text = "Operations";
@@ -138,6 +139,7 @@
             this.accordionControlElement9.Name = "accordionControlElement9";
             this.accordionControlElement9.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement9.Text = "Add Service To Car";
+            this.accordionControlElement9.Click += new System.EventHandler(this.accordionControlElement9_Click);
             // 
             // accordionControlElement10
             // 
@@ -176,6 +178,7 @@
             // 
             this.accordionControlElement3.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement17});
+            this.accordionControlElement3.Expanded = true;
             this.accordionControlElement3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement3.ImageOptions.Image")));
             this.accordionControlElement3.Name = "accordionControlElement3";
             this.accordionControlElement3.Text = "Reports";
@@ -187,6 +190,7 @@
             this.accordionControlElement17.Name = "accordionControlElement17";
             this.accordionControlElement17.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement17.Text = "Reports";
+            this.accordionControlElement17.Click += new System.EventHandler(this.accordionControlElement17_Click);
             // 
             // accordionControlElement7
             // 
@@ -359,7 +363,7 @@
             // carsToolStripMenuItem
             // 
             this.carsToolStripMenuItem.Name = "carsToolStripMenuItem";
-            this.carsToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
+            this.carsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.carsToolStripMenuItem.Text = "Cars";
             this.carsToolStripMenuItem.Click += new System.EventHandler(this.carsToolStripMenuItem_Click);
             // 
@@ -374,8 +378,9 @@
             // tab_reports
             // 
             this.tab_reports.Name = "tab_reports";
-            this.tab_reports.Size = new System.Drawing.Size(118, 22);
+            this.tab_reports.Size = new System.Drawing.Size(152, 22);
             this.tab_reports.Text = "Reports";
+            this.tab_reports.Click += new System.EventHandler(this.tab_reports_Click);
             // 
             // mun_sysmanage
             // 
@@ -398,6 +403,7 @@
             this.tab_usersettings.Name = "tab_usersettings";
             this.tab_usersettings.Size = new System.Drawing.Size(185, 22);
             this.tab_usersettings.Text = "Users Settings";
+            this.tab_usersettings.Click += new System.EventHandler(this.tab_usersettings_Click);
             // 
             // mnu_myaccount
             // 

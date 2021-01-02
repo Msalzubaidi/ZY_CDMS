@@ -124,5 +124,20 @@ namespace ZY_CDMS.Forms
 
             }
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_carinfo.Text) == false)
+            {
+               // Report.y = 16;
+                frmReportViewer rv = new frmReportViewer();
+                rv.Show();
+
+            }
+            if (string.IsNullOrEmpty(txt_carinfo.Text))
+            {
+                MessageBox.Show("Please Fill Valid Data !!   ", Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

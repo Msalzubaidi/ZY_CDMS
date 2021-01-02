@@ -275,5 +275,38 @@ namespace ZY_CDMS.Classes
             return cmd.ExecuteNonQuery();
         }
 
+        public DataTable search(string parameteresearch , int method)
+        {
+            SqlCommand cmd = null; 
+            SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
+            if (method == 0) // by vin
+            { 
+           cmd = new SqlCommand(" select vin as 'Car Vin ' , concat (makeModel ,  ' ',color,  ' ' , years ) as 'Car info' , CarSttext as 'Car Status' , scar as 'Source of Purchase' , price as 'Price' , datein as 'Date in' , Millages as 'Millages' , pmtext as 'Purchase Payment Method '  from  Cars where vin=@vin", con); // sql command to so get data from data base
+            }
+
+            else if (method == 1 ) // by make model 
+            {
+                cmd = new SqlCommand(" select vin as 'Car Vin ' , concat (makeModel ,  ' ',color,  ' ' , years ) as 'Car info' , CarSttext as 'Car Status' , scar as 'Source of Purchase' , price as 'Price' , datein as 'Date in' , Millages as 'Millages' , pmtext as 'Purchase Payment Method '  from  Cars where makeModel=@vin", con); // sql command to so get data from data base
+            }  
+
+            else if (method == 2 )
+            {
+                string qry = "select vin as 'Car Vin ' , concat(makeModel, ' ', color, ' ', years) as 'Car info' , CarSttext as 'Car Status' , scar as 'Source of Purchase' , price as 'Price' , datein as 'Date in' , Millages as 'Millages' , pmtext as 'Purchase Payment Method '  from Cars " + parameteresearch ; 
+               cmd = new SqlCommand(qry, con); // sql command to so get data from data base
+
+            }
+                 
+            // by vin or car info
+            cmd.Parameters.AddWithValue("@vin", parameteresearch); //store data in parametageers to prevent sql injection (get from Password textbox)
+
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            sda.SelectCommand = cmd;
+            DataTable dt = new System.Data.DataTable();
+            sda.Fill(dt);
+
+            con.Open();
+            return dt;
+
+        }
     }
 }

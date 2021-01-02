@@ -26,8 +26,9 @@ namespace ZY_CDMS.Forms
         Rules r = new Rules();
         string servicetable = "Services";
         public static string nl = "\r\n";
+        DataBase db = new DataBase();
 
-
+        string cartest = "CarTest";
         private void frmAddServicecs_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -59,24 +60,41 @@ namespace ZY_CDMS.Forms
         private void frmAddServicecs_Load(object sender, EventArgs e)
         {
             simpleButton2.PerformClick();
+            string qry3 = "";
             string connstring = @"Data Source=" + Resources.servercon + ";Initial Catalog=" + Resources.dbnamecon + ";User ID=" + Resources.usernamecon + ";Password=" + Resources.passwordcon;
             SqlConnection con3 = new SqlConnection(connstring);
             SqlCommand cmd3;
             SqlDataReader dr3;
 
-            string qry3 = "select * from Cars where carStatus=0";
+             
             con3.Open();
 
+            DataTable datatable = db.ViewSysinfo(1);
+            int version = int.Parse(datatable.Rows[0]["version"].ToString());//6
+            if (version.ToString() == Resources.AZversion)
+            {
+                qry3 = "select * from Cars where carStatus=0";
+            }
+            if (version.ToString() == Resources.JordanCleaningVersion)
+            {
+                qry3 = "select * from CarTest";
+            }
 
 
             cmd3 = new SqlCommand(qry3, con3);
             dr3 = cmd3.ExecuteReader();
-
+            string item1 = "";
             while (dr3.Read())
             {
-                string item1 = dr3.GetValue(3).ToString();
-                string item2 = dr3.GetValue(11).ToString();
-                string itemtoadd = item1 + " " + item2; 
+                if (version.ToString() == Resources.JordanCleaningVersion)
+                {
+                    item1 = dr3.GetValue(5).ToString();
+                }
+                if (version.ToString() == Resources.AZversion)
+                {
+                    item1 = dr3.GetValue(3).ToString();
+                }
+            
                 cbo_vin.Properties.Items.Add(item1);
 
             }
@@ -96,9 +114,9 @@ namespace ZY_CDMS.Forms
 
             while (dr4.Read())
             {
-                string item1 = dr4.GetValue(0).ToString();
+                string item1F = dr4.GetValue(0).ToString();
               
-                cbo_service.Properties.Items.Add(item1);
+                cbo_service.Properties.Items.Add(item1F);
 
             }
         }
@@ -139,6 +157,10 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton4_Click(object sender, EventArgs e)
         {
+            DataTable datatable = db.ViewSysinfo(1);
+            int version = int.Parse(datatable.Rows[0]["version"].ToString());//6
+            DataTable dtable = null;
+            string condition = "";
             if (string.IsNullOrEmpty(cbo_vin.SelectedItem.ToString()))
             {
                 // MessageBox.Show(Resources.invalidData, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -149,12 +171,19 @@ namespace ZY_CDMS.Forms
             {
                 string vin = cbo_vin.Text;
           
-                string condition = "vin=" + "'" + @vin + "'";
+                if (version.ToString() == Resources.AZversion)
+                {
+                    condition =  "vin=" + "'" + @vin + "'";
+                    dtable = o.SelctData(carstable, 1, condition);
+                }
+                if (version.ToString() == Resources.JordanCleaningVersion)
+                {
+                    condition = "carvin=" + "'" + @vin + "'";
+                    dtable = o.SelctData(cartest, 1, condition);
+                }
+                
             
-
-
-                DataTable dtable = o.SelctData(carstable, 1, condition);
-              
+                
                 if (dtable != null && dtable.Rows.Count > 0)
                 {
                     string bm = dtable.Rows[0]["makeModel"].ToString();

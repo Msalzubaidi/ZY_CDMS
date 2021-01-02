@@ -278,6 +278,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(105, 31);
             this.simpleButton1.TabIndex = 126;
             this.simpleButton1.Text = "Print";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // simpleButton3
             // 

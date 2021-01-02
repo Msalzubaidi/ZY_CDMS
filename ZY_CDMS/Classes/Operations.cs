@@ -362,7 +362,7 @@ namespace ZY_CDMS.Classes
         {
 
             SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
-            SqlCommand cmd = new SqlCommand("INSERT INTO CarTest ( trans_id ,  trans_type ,  cust_id,  cust_name,  cust_mobile,  carvin  ,  trans_date ,  makeModel , year , color ,  paintCode ,  payment, balance , carDirty,  carClean,  RepairDescription , tax , totalpay) VALUES(@tran_id ,  @transtype ,  @custid,  @custname,  @mobile,  @vin  ,  @transDate ,  @MakeModel , @year , @color ,  @paintCode ,  @payment,  @balance,  @carDirty,  @carClean,  @RepairDescription , @tax , @total)", con); // sql command to so get data from data bas
+            SqlCommand cmd = new SqlCommand("INSERT INTO CarTest ( trans_id ,  trans_type ,  cust_id,  cust_name,  cust_mobile,  carvin  ,  trans_date ,  makeModel , years , color ,  paintCode ,  payment, balance , carDirty,  carClean,  RepairDescription , tax , totalpay) VALUES(@tran_id ,  @transtype ,  @custid,  @custname,  @mobile,  @vin  ,  @transDate ,  @MakeModel , @year , @color ,  @paintCode ,  @payment,  @balance,  @carDirty,  @carClean,  @RepairDescription , @tax , @total)", con); // sql command to so get data from data bas
 
             cmd.Parameters.Add(new SqlParameter("@tran_id", tran_id));
             cmd.Parameters.Add(new SqlParameter("@transtype", transtype));

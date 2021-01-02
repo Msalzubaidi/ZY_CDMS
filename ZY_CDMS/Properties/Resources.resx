@@ -121,7 +121,7 @@
     <value>Car Dealers Mangment System</value>
   </data>
   <data name="AppVersion" xml:space="preserve">
-    <value>1.0.5.2</value>
+    <value>V 1.0.5.2</value>
   </data>
   <data name="dbnamecon" xml:space="preserve">
     <value>Auto2020</value>
@@ -185,5 +185,11 @@
   </data>
   <data name="pleaseActive" xml:space="preserve">
     <value>Please Activate App</value>
+  </data>
+  <data name="AZversion" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="JordanCleaningVersion" xml:space="preserve">
+    <value>20</value>
   </data>
 </root>
