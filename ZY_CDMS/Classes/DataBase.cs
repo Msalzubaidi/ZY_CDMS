@@ -36,9 +36,9 @@ namespace ZY_CDMS.Classes
        
         SqlConnection con = new SqlConnection(connstring);
 
-       
-       
 
+
+        string qry = "";
 
 
 
@@ -275,7 +275,7 @@ namespace ZY_CDMS.Classes
             return cmd.ExecuteNonQuery();
         }
 
-        public DataTable search(string parameteresearch , int method)
+        public DataTable search(string parameteresearch , int method , DateTime from , DateTime to)
         {
             SqlCommand cmd = null; 
             SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
@@ -291,13 +291,16 @@ namespace ZY_CDMS.Classes
 
             else if (method == 2 )
             {
-                string qry = "select vin as 'Car Vin ' , concat(makeModel, ' ', color, ' ', years) as 'Car info' , CarSttext as 'Car Status' , scar as 'Source of Purchase' , price as 'Price' , datein as 'Date in' , Millages as 'Millages' , pmtext as 'Purchase Payment Method '  from Cars " + parameteresearch ; 
+                 qry = "select vin as 'Car Vin ' , concat(makeModel, ' ', color, ' ', years) as 'Car info' , CarSttext as 'Car Status' , scar as 'Source of Purchase' , price as 'Price' , datein as 'Date in' , Millages as 'Millages' , pmtext as 'Purchase Payment Method '  from Cars " + parameteresearch ; 
                cmd = new SqlCommand(qry, con); // sql command to so get data from data base
 
             }
-                 
-            // by vin or car info
-            cmd.Parameters.AddWithValue("@vin", parameteresearch); //store data in parametageers to prevent sql injection (get from Password textbox)
+
+           
+         
+            cmd.Parameters.AddWithValue("@vin", parameteresearch);
+            cmd.Parameters.AddWithValue("@from", from);
+            cmd.Parameters.AddWithValue("@to", to);
 
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             sda.SelectCommand = cmd;
@@ -308,5 +311,146 @@ namespace ZY_CDMS.Classes
             return dt;
 
         }
+
+        public DataTable ReportSerach( int reportserial , string version , DateTime dtf, DateTime dtt)
+        {
+            SqlConnection con = new SqlConnection(DataBase.connstring);
+
+            SqlCommand cmd = null;
+
+            if (reportserial == 0 && version.ToString()==Resources.AZversion )
+            {
+               
+                cmd = new SqlCommand("select vin as 'Car Vin ' , concat (makeModel , ' ' , years , ' ' , color ) as 'Car info' , carSttext as 'Car Status' , scar as 'Source of Purchase' , price as 'Price' , datein as 'Date in' , Millages as 'Millages' , pmtext as 'Purchase Payment Method '   from Cars where datein >= @dtf and datein <=@dtt ", con); // sql command to so get data from data base
+            }
+
+            else if (reportserial == 1 && version.ToString() == Resources.AZversion )
+            {
+             
+                cmd = new SqlCommand("select vin as 'Car Vin ' , carinfo as 'Car info' , purchPrice as 'Purchase Price' ,services as 'Services' ,tax as 'Tax',  totalprice as 'Total Price' , date as 'Selled in' from SellTransactions where (date >= @dtf and date <=@dtt) ", con); // sql command to so get data from data base
+            }
+
+            else if (reportserial == 2 && version.ToString() == Resources.AZversion)
+            {
+             
+                cmd = new SqlCommand("select vin as 'Car Vin ' , carinfo as 'Car info' , purchPrice as 'Purchase Price' ,services as 'Services' ,tax as 'Tax',  totalprice as 'Total Price' , date as 'Selled in' from SellTransactions where sellPayMethod=1 and (date >= @dtf and date <=@dtt)  ", con); // sql command to so get data from data base
+            }
+
+            else if (reportserial == 3 && version.ToString() == Resources.AZversion)
+            {
+                
+                cmd = new SqlCommand("select vin as 'Car Vin ' , carinfo as 'Car info' , purchPrice as 'Purchase Price' ,services as 'Services' ,tax as 'Tax',  totalprice as 'Total Price' , date as 'Selled in' from SellTransactions where sellPayMethod=2 and (date >= @dtf and date <=@dtt) ", con);  // sql command to so get data from data base
+            }
+
+            else if (reportserial == 4 && version.ToString() == Resources.AZversion)
+            {
+                
+                cmd = new SqlCommand("select vin as 'Car Vin ' , concat (makeModel , ' ' , years , ' ' , color ) as 'Car info' , carSttext as 'Car Status' , scar as 'Source of Purchase' , price as 'Price' , datein as 'Date in' , Millages as 'Millages' , pmtext as 'Purchase Payment Method '   from Cars  where carStatus=0 or carStatus=1 and (datein >= @dtf and datein <=@dtt) ", con); // sql command to so get data from data base
+            }
+
+            else if (reportserial == 5 && version.ToString() == Resources.AZversion)
+            {
+               
+                cmd = new SqlCommand("select vin as 'Car Vin ' , concat (makeModel , ' ' , years , ' ' , color ) as 'Car info' , carSttext as 'Car Status' , scar as 'Source of Purchase' , price as 'Price' , datein as 'Date in' , Millages as 'Millages' , pmtext as 'Purchase Payment Method '   from Cars  where carStatus=0 or carStatus=1 and PayType=1 and (datein >= @dtf and datein <=@dtt) ", con); // sql command to so get data from data base
+            }
+
+            else if (reportserial == 6 && version.ToString() == Resources.AZversion)
+            {
+               
+                cmd = new SqlCommand("select vin as 'Car Vin ' , concat (makeModel , ' ' , years , ' ' , color ) as 'Car info' , carSttext as 'Car Status' , scar as 'Source of Purchase' , price as 'Price' , datein as 'Date in' , Millages as 'Millages' , pmtext as 'Purchase Payment Method '   from Cars  where ( carStatus=0 or carStatus=1 ) and PayType=2 and (datein >= @dtf and datein <=@dtt) ", con); // sql command to so get data from data base
+            }
+
+            if (reportserial == 7 && version.ToString() == Resources.AZversion )
+            {
+                cmd = new SqlCommand("select transNo as 'Tranaction No ' , Vin as 'Vin No' , transValue as 'Transaction Value' , transDesc as 'Transaction Descryption' , trnsDate as 'Transaction Date' from TransActions where (trnsDate >= @dtf and trnsDate <=@dtt)  ", con); // sql command to so get data from data base
+            }
+
+            if (reportserial == 8 && version.ToString() == Resources.AZversion)
+            {
+                cmd = new SqlCommand("select transNo as 'Tranaction No ' , Vin as 'Vin No' , transValue as 'Transaction Value' , transDesc as 'Transaction Descryption', trnsDate as 'Transaction Date' from TransActions where transType=0 and (trnsDate >= @dtf and trnsDate <=@dtt)", con); // sql command to so get data from data base
+            }
+
+            if (reportserial == 9 && version.ToString() == Resources.AZversion)
+            {
+                cmd = new SqlCommand("select transNo as 'Tranaction No ' , Vin as 'Vin No' , transValue as 'Transaction Value' , transDesc as 'Transaction Descryption' , trnsDate as 'Transaction Date' from TransActions where transType=0 and payType=1 and (trnsDate >= @dtf and trnsDate <=@dtt)", con);
+            }
+
+            if (reportserial == 10 && version.ToString() == Resources.AZversion)
+            {
+                cmd = new SqlCommand("select transNo as 'Tranaction No ' , Vin as 'Vin No' , transValue as 'Transaction Value' , transDesc as 'Transaction Descryption' , trnsDate as 'Transaction Date' from TransActions where transType=0 and payType=2 and (trnsDate >= @dtf and trnsDate <=@dtt)", con);
+            }
+
+
+            if (reportserial == 11 && version.ToString() == Resources.AZversion)
+            {
+                cmd = new SqlCommand("select transNo as 'Tranaction No ' , Vin as 'Vin No' , transValue as 'Transaction Value' , transDesc as 'Transaction Descryption', trnsDate as 'Transaction Date'  from TransActions where transType=1 and (trnsDate >= @dtf and trnsDate <=@dtt)", con);
+            }
+
+            if (reportserial == 12 && version.ToString() == Resources.AZversion )
+            {
+                cmd = new SqlCommand("select transNo as 'Tranaction No ' , Vin as 'Vin No' , transValue as 'Transaction Value' , transDesc as 'Transaction Descryption' , trnsDate as 'Transaction Date' from TransActions where transType=1 and payType=1 and (trnsDate >= @dtf and trnsDate <=@dtt)", con);
+            }
+
+            if (reportserial == 13 && version.ToString() == Resources.AZversion )
+            {
+                cmd = new SqlCommand("select transNo as 'Tranaction No ' , Vin as 'Vin No' , transValue as 'Transaction Value' , transDesc as 'Transaction Descryption' , trnsDate as 'Transaction Date'  from TransActions where transType=1 and payType=2 and (trnsDate >= @dtf and trnsDate <=@dtt)", con);
+            }
+
+            if ((reportserial == 14 ||  reportserial == 1 ) && (version.ToString() == Resources.AZversion || version.ToString() == Resources.JordanCleaningVersion))
+            {
+                cmd = new SqlCommand("select vin as 'Vin No' , Servcost as 'Service Cost' , serdesc as 'Service Descryption ' , servdate as 'Service Date'  from TransServices where (servdate >= @dtf and servdate <=@dtt)", con);
+            }
+
+            if ((reportserial == 15 || reportserial == 3) && (version.ToString() == Resources.AZversion || version.ToString() == Resources.JordanCleaningVersion))
+            {
+                cmd = new SqlCommand("select custid as 'Customer ID' , custname as 'Customer Name' , liceNo as 'License No.' ,   mobilenum as 'Mobile Number' , note as 'Address'  from customersInfo ", con);
+            }
+
+            if (reportserial ==0  &&  version.ToString() == Resources.JordanCleaningVersion)
+            {
+                cmd = new SqlCommand(" select trans_id as 'Invoice No.' , cust_id as ' Customer ID' , cust_name as ' Customer Name' , carvin as 'Car Vin' , trans_date as 'Test Date' , concat (makeModel ,' ' , years , ' ' , color ) as 'Car Details ' , payment as 'Payment' , tax as 'Tax Value' , totalpay as 'Total Payment'  from CarTest  where (trans_date >= @dtf and trans_date <=@dtt) ", con);
+            }
+           
+            if (reportserial == 2 && version.ToString() == Resources.JordanCleaningVersion)
+            {
+                cmd = new SqlCommand("SELECT trans_id  as 'Invoice ID ' ,  carvin as 'Car VIN', trans_date as 'Date', tax as 'Tax' , name  ,   address  , mobile   FROM CarTest ,SystemInfo where trans_date  >= @dtf  and trans_date  <=@dtt  ", con);
+            }
+           
+
+            
+            cmd.Parameters.AddWithValue("@dtf", dtf);
+            cmd.Parameters.AddWithValue("@dtt", dtt);
+            
+
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+
+            System.Data.DataTable dt = new System.Data.DataTable();
+            sda.Fill(dt);
+
+            con.Open();
+            return dt;
+
+        }
+
+        public DataTable FatoraView(string vin)
+        {
+
+            SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
+                                                                          /// SqlCommand cmd = new SqlCommand("SELECT  * FROM SellTransactions RIGHT JOIN customersInfo ON SellTransactions.custid = customersInfo.custid where SellTransactions.VIN=@vin ; ", con); // sql command to so get data from data base
+            SqlCommand cmd = new SqlCommand("select * from  SellTransactions where VIN=@vin ", con); // sql command to so get data from data base
+
+            cmd.Parameters.AddWithValue("@vin", vin);
+
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            con.Open();
+            return dt;
+
+        }
+
+       
     }
 }

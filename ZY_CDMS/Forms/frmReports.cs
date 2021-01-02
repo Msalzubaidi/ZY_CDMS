@@ -72,9 +72,32 @@ namespace ZY_CDMS.Forms
         {
             dtp_from.EditValue = DateTime.Now;
             dtp_to.EditValue = DateTime.Now;
+            dataGridView1.DataSource = null;
+            dataGridView1.Rows.Clear();
+            dataGridView1.Refresh();
             cbo_reports.ResetText();
             cbo_reports.Focus();
 
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            DataTable dt = null;
+            DataTable datatable = db.ViewSysinfo(1);
+            int version = int.Parse(datatable.Rows[0]["version"].ToString());//6
+            if (string.IsNullOrEmpty(cbo_reports.EditValue.ToString()) || (cbo_reports.SelectedIndex < 0  ||  cbo_reports.SelectedIndex > 15 ))
+            {
+                MessageBox.Show("Please Select Vin  to view Data !!! ", Resources.MessageTitle, 0, MessageBoxIcon.Warning);
+            }
+            else
+            {
+               
+                    dt = db.ReportSerach( cbo_reports.SelectedIndex , version.ToString() ,DateTime.Parse(dtp_from.EditValue.ToString()) , DateTime.Parse(dtp_to.EditValue.ToString()));
+                
+                
+                dataGridView1.DataSource = dt;
+
+            }
         }
     }
 }

@@ -48,6 +48,7 @@
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.txt_transid = new System.Windows.Forms.TextBox();
+            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_vin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_service.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_date.Properties.CalendarTimeProperties)).BeginInit();
@@ -128,7 +129,7 @@
             // simpleButton3
             // 
             this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(447, 108);
+            this.simpleButton3.Location = new System.Drawing.Point(434, 111);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(75, 23);
             this.simpleButton3.TabIndex = 28;
@@ -138,7 +139,7 @@
             // simpleButton2
             // 
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(366, 108);
+            this.simpleButton2.Location = new System.Drawing.Point(356, 111);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 27;
@@ -148,9 +149,9 @@
             // simpleButton1
             // 
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(285, 108);
+            this.simpleButton1.Location = new System.Drawing.Point(251, 111);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton1.Size = new System.Drawing.Size(102, 23);
             this.simpleButton1.TabIndex = 26;
             this.simpleButton1.Text = "Add";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
@@ -164,7 +165,7 @@
             // 
             // simpleButton4
             // 
-            this.simpleButton4.Location = new System.Drawing.Point(456, 137);
+            this.simpleButton4.Location = new System.Drawing.Point(434, 140);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(75, 23);
             this.simpleButton4.TabIndex = 30;
@@ -227,7 +228,7 @@
             // 
             // simpleButton5
             // 
-            this.simpleButton5.Location = new System.Drawing.Point(456, 172);
+            this.simpleButton5.Location = new System.Drawing.Point(434, 168);
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Size = new System.Drawing.Size(75, 23);
             this.simpleButton5.TabIndex = 36;
@@ -257,11 +258,21 @@
             this.txt_transid.TabIndex = 38;
             this.txt_transid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // simpleButton6
+            // 
+            this.simpleButton6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.ImageOptions.Image")));
+            this.simpleButton6.Location = new System.Drawing.Point(251, 135);
+            this.simpleButton6.Name = "simpleButton6";
+            this.simpleButton6.Size = new System.Drawing.Size(102, 23);
+            this.simpleButton6.TabIndex = 39;
+            this.simpleButton6.Text = "Save and Print";
+            // 
             // frmAddServicecs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(543, 212);
+            this.ClientSize = new System.Drawing.Size(521, 212);
+            this.Controls.Add(this.simpleButton6);
             this.Controls.Add(this.txt_transid);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.simpleButton5);
@@ -318,5 +329,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private System.Windows.Forms.TextBox txt_transid;
+        private DevExpress.XtraEditors.SimpleButton simpleButton6;
     }
 }

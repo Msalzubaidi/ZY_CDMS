@@ -91,7 +91,7 @@ namespace ZY_CDMS.Forms
                 string vinnum = cbo_vin.Text;
 
                
-                DataTable dt = d.search(vinnum , 0  );
+                DataTable dt = d.search(vinnum , 0 , DateTime.Now , DateTime.Now );
                 dataGridView1.DataSource = dt;
 
             }
@@ -109,7 +109,7 @@ namespace ZY_CDMS.Forms
                 string vinnum = cbo_makemodel.EditValue.ToString();
 
 
-                DataTable dt = d.search(vinnum, 1);
+                DataTable dt = d.search(vinnum, 1 , DateTime.Now , DateTime.Now);
                 dataGridView1.DataSource = dt;
 
             }
@@ -154,7 +154,7 @@ namespace ZY_CDMS.Forms
                 string con = condition.ToString();
                
 
-                DataTable dt = d.search(con, 2);
+                DataTable dt = d.search(con, 2, DateTime.Now , DateTime.Now);
                 dataGridView1.DataSource = dt;
 
             }

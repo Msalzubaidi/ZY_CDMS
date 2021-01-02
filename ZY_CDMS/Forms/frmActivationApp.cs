@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ZY_CDMS.Classes;
 
 namespace ZY_CDMS.Forms
 {
@@ -19,7 +20,7 @@ namespace ZY_CDMS.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+           
         }
 
         private void frmActivationApp_KeyDown(object sender, KeyEventArgs e)
@@ -32,24 +33,28 @@ namespace ZY_CDMS.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*
-             
-            Z(day)Y(month)C(first digit of year)D(second digit of year)M(third digit of year)S(fourth digit of year)
-            Z(25)Y(12)C(2)D(0)M(2)S(0)
-            Z25Y12C2D0M2S0 
+           
+              
+        }
 
-             
-             * */
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            /*        
+           Z(day)Y(month)C(first digit of year)D(second digit of year)M(third digit of year)S(fourth digit of year)
+           Z(25)Y(12)C(2)D(0)M(2)S(0)
+           Z25Y12C2D0M2S0 
+
+            * */
 
             string date = DateTime.Now.ToString("ddMMyyyy");
-            string day = date[0] +  ""+ date [1];
-            string month = date[2]+ "" + date[3];
+            string day = date[0] + "" + date[1];
+            string month = date[2] + "" + date[3];
             string f = date[4] + "";
             string s = date[5] + "";
             string t = date[6] + "";
             string fth = date[7] + "";
             StringBuilder sb = new StringBuilder();
-          
+
             sb.Append('Z');
             sb.Append(day);
             sb.Append('Y');
@@ -67,7 +72,22 @@ namespace ZY_CDMS.Forms
             key.Text = sb.ToString();
 
 
-              
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmActivationApp_Load(object sender, EventArgs e)
+        {
+          
+           
+
+
+          
+            
+
         }
     }
 }

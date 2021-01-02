@@ -73,6 +73,7 @@
             this.mnu_exit = new System.Windows.Forms.ToolStripMenuItem();
             this.lic = new MetroFramework.Controls.MetroLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.logo = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -88,8 +89,9 @@
             this.accordionControlElement4});
             this.accordionControl1.Location = new System.Drawing.Point(0, 24);
             this.accordionControl1.Name = "accordionControl1";
+            this.accordionControl1.OptionsMinimizing.State = DevExpress.XtraBars.Navigation.AccordionControlState.Minimized;
             this.accordionControl1.ShowFilterControl = DevExpress.XtraBars.Navigation.ShowFilterControl.Always;
-            this.accordionControl1.Size = new System.Drawing.Size(250, 697);
+            this.accordionControl1.Size = new System.Drawing.Size(40, 697);
             this.accordionControl1.TabIndex = 0;
             this.accordionControl1.Text = "accordionControl1";
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
@@ -363,7 +365,7 @@
             // carsToolStripMenuItem
             // 
             this.carsToolStripMenuItem.Name = "carsToolStripMenuItem";
-            this.carsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.carsToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
             this.carsToolStripMenuItem.Text = "Cars";
             this.carsToolStripMenuItem.Click += new System.EventHandler(this.carsToolStripMenuItem_Click);
             // 
@@ -378,7 +380,7 @@
             // tab_reports
             // 
             this.tab_reports.Name = "tab_reports";
-            this.tab_reports.Size = new System.Drawing.Size(152, 22);
+            this.tab_reports.Size = new System.Drawing.Size(118, 22);
             this.tab_reports.Text = "Reports";
             this.tab_reports.Click += new System.EventHandler(this.tab_reports_Click);
             // 
@@ -448,6 +450,22 @@
             // 
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
+            // logo
+            // 
+            this.logo.AutoSize = true;
+            this.logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(61)))), ((int)(((byte)(137)))));
+            this.logo.CustomBackground = true;
+            this.logo.CustomForeColor = true;
+            this.logo.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.logo.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.logo.Location = new System.Drawing.Point(256, 651);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(104, 25);
+            this.logo.TabIndex = 47;
+            this.logo.Text = "licenseinfo";
+            this.toolTip1.SetToolTip(this.logo, "Double Click To Know More");
+            this.logo.UseStyleColors = true;
+            // 
             // frmHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -455,13 +473,13 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(936, 721);
+            this.Controls.Add(this.logo);
             this.Controls.Add(this.lic);
             this.Controls.Add(this.accordionControl1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmHomePage";
             this.Text = "Home Page";
@@ -520,5 +538,6 @@
         private System.Windows.Forms.ToolStripMenuItem defineTaxCategoriesToolStripMenuItem;
         private MetroFramework.Controls.MetroLabel lic;
         private System.Windows.Forms.ToolTip toolTip1;
+        private MetroFramework.Controls.MetroLabel logo;
     }
 }
