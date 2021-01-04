@@ -22,6 +22,12 @@ namespace ZY_CDMS.Forms
 
         DataBase db = new DataBase();
 
+        public static int y = -1;
+
+        public static DateTime dtf;
+        public static DateTime dtt;
+
+
         private void frmReports_Load(object sender, EventArgs e)
         {
             simpleButton3.PerformClick();
@@ -59,8 +65,168 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            frmReportViewer rv = new frmReportViewer();
-            rv.Show();
+            DataTable dt = null;
+            DataTable datatable = db.ViewSysinfo(1);
+            int version = int.Parse(datatable.Rows[0]["version"].ToString());//6
+            if (string.IsNullOrEmpty(cbo_reports.EditValue.ToString()) || (cbo_reports.SelectedIndex < 0 || cbo_reports.SelectedIndex > 15))
+            {
+                MessageBox.Show("Please Select Vin  to view Data !!! ", Resources.MessageTitle, 0, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (cbo_reports.SelectedIndex == 0)
+                {
+                    y = 0;
+                    frmReportViewer rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+                else if (cbo_reports.SelectedIndex == 1)
+                {
+                    y = 1;
+                    frmReportViewer rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+                else if (cbo_reports.SelectedIndex == 2)
+                {
+                    y = 2;
+                    frmReportViewer rv = new frmReportViewer();
+                    rv.Show();
+                }
+
+                else if (cbo_reports.SelectedIndex == 3)
+                {
+                    y = 3;
+                    frmReportViewer rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+                else if (cbo_reports.SelectedIndex == 4)
+                {
+                    y = 4;
+                    frmReportViewer rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+                // 
+
+                else if (cbo_reports.SelectedIndex == 5)
+                {
+                    y = 5;
+                    frmReportViewer rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+
+                else if (cbo_reports.SelectedIndex == 6)
+                {
+                    y = 6;
+                    frmReportViewer rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+
+                else if (cbo_reports.SelectedIndex == 7)
+                {
+                    y = 7;
+                    frmReportViewer rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+
+                else if (cbo_reports.SelectedIndex == 8)
+                {
+                    y = 8;
+                    frmReportViewer rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+
+                else if (cbo_reports.SelectedIndex == 9)
+                {
+                    y = 9;
+                    frmReportViewer rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+
+                else if (cbo_reports.SelectedIndex == 10)
+                {
+                    y = 10;
+                    frmReportViewer rv = new frmReportViewer();
+                    rv.Show();
+                }
+
+                else if (cbo_reports.SelectedIndex == 11)
+                {
+                    y = 11;
+                    frmReportViewer rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+                else if (cbo_reports.SelectedIndex == 12)
+                {
+                    y = 12;
+                    frmReportViewer rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+
+                else if (cbo_reports.SelectedIndex == 13)
+                {
+                    y = 13;
+                    frmReportViewer rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+
+                else if (cbo_reports.SelectedIndex == 14)
+                {
+                    y = 14;
+                    frmReportViewer rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+                else if (cbo_reports.SelectedIndex == 15)
+                {
+                    y = 15;
+                    frmReportViewer rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+
+                else if (comboBox2.SelectedIndex == 0)
+                {
+                    y = 18;
+                    frmReportViewer rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+
+                else if (comboBox2.SelectedIndex == 1)
+                {
+                    y = 19;
+                    frmReportViewer rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+
+                else if (comboBox2.SelectedIndex == 2)
+                {
+                    y = 20;
+                    frmReportViewer rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+
+                else if (y == -1)
+                {
+                    MessageBox.Show(" => You Must Select Report to view <= !!!   ", SystemInfo.MessageTitle, 0, MessageBoxIcon.Error);
+                }
+
+
+            }
         }
 
         private void simpleButton4_Click(object sender, EventArgs e)

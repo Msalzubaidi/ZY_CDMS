@@ -451,6 +451,44 @@ namespace ZY_CDMS.Classes
 
         }
 
-       
+        public DataTable DataSourceReportBuilder(int ConditionalOrNotorFatoora , string table_name , string condition)
+        {
+
+            SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
+            string qry = "";
+         
+            if (ConditionalOrNotorFatoora == 0 )
+            {
+                //NormalReport
+                qry = " Select * from  " + table_name ;
+            }
+            else if (ConditionalOrNotorFatoora == 1)
+            {
+                //ConditionalReport
+                qry = " Select * from  " + table_name + " where " + condition;
+            }
+
+            else if (ConditionalOrNotorFatoora == 2 )
+            {
+                //FatoraInvoice
+                qry = "Select * from " + table_name + " where " + condition;   //VIN=@vin";
+            }
+
+
+            SqlCommand cmd = new SqlCommand(qry, con); // sql command to so get data from data base
+
+         
+
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            con.Open();
+            return dt;
+
+        }
+
+
     }
 }

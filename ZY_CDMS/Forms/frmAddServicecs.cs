@@ -65,8 +65,7 @@ namespace ZY_CDMS.Forms
             SqlConnection con3 = new SqlConnection(connstring);
             SqlCommand cmd3;
             SqlDataReader dr3;
-
-             
+            
             con3.Open();
 
             DataTable datatable = db.ViewSysinfo(1);
