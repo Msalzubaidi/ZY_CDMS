@@ -66,19 +66,12 @@ namespace ZY_CDMS.Forms
 
         private void SetChildrenChecked(TreeNode treeNode, bool checkedState)
         {
-            foreach (TreeNode item in treeNode.Nodes)
-            {
-                if (item.Checked != checkedState)
-                {
-                    item.Checked = checkedState;
-                }
-                SetChildrenChecked(item, item.Checked);
-            }
+           
         }
 
         private void treeView1_AfterCheck(object sender, TreeViewEventArgs e)
         {
-            this.SetChildrenChecked(e.Node, e.Node.Checked);
+          
 
         
 

@@ -451,7 +451,7 @@ namespace ZY_CDMS.Classes
 
         }
 
-        public DataTable DataSourceReportBuilder(int ConditionalOrNotorFatoora , string table_name , string condition)
+        public DataTable DataSourceReportBuilder(int ConditionalOrNotorFatoora , string table_name , string condition )
         {
 
             SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
