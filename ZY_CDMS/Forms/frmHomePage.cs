@@ -279,7 +279,7 @@ namespace ZY_CDMS.Forms
             if (isopen == false)
             {
                 frmAccountSetttings fas = new frmAccountSetttings();
-               
+
                 fas.Show();
             }
         }

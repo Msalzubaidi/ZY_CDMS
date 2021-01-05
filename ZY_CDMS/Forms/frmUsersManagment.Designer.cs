@@ -37,98 +37,65 @@
             this.txt_username = new System.Windows.Forms.TextBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.txt_pass = new System.Windows.Forms.TextBox();
-            this.adminCheck = new System.Windows.Forms.CheckBox();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit2 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit3 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit4 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit5 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit6 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit7 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit8 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit9 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit10 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit11 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit12 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit13 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit14 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit15 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit16 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit17 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit18 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit19 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit20 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit21 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit22 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit23 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit24 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit25 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit26 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit27 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit28 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit29 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit30 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit31 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit32 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit33 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit34 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit35 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit36 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit37 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit38 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit39 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit40 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit41 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit42 = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_MyAcc = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_Exit = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_Reports = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_srch = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_Search = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_cust = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_cm = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_pi = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_sc = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_bc = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_Operations = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_dsc = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_pc = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_tc = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_pm = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_emm = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_dmm = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_Settings = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_rpt = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_systemMange = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_sysinfo = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_us = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_admin = new DevExpress.XtraEditors.CheckEdit();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.chk_sv = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_esv = new DevExpress.XtraEditors.CheckEdit();
+            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_userid.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit8.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit10.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit11.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit12.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit13.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit14.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit15.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit16.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit17.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit18.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit19.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit20.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit21.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit22.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit23.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit24.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit25.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit26.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit27.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit28.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit29.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit30.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit31.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit32.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit33.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit34.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit35.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit36.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit37.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit38.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit39.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit40.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit41.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit42.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_MyAcc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_Exit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_Reports.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_srch.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_Search.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_cust.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_cm.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_pi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_sc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_bc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_Operations.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_dsc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_pc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_tc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_pm.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_emm.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_dmm.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_Settings.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_rpt.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_systemMange.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_sysinfo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_us.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_admin.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_sv.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_esv.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // cbo_userid
@@ -222,29 +189,20 @@
             this.txt_pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_pass.UseSystemPasswordChar = true;
             // 
-            // adminCheck
-            // 
-            this.adminCheck.AutoSize = true;
-            this.adminCheck.Location = new System.Drawing.Point(193, 96);
-            this.adminCheck.Name = "adminCheck";
-            this.adminCheck.Size = new System.Drawing.Size(55, 17);
-            this.adminCheck.TabIndex = 54;
-            this.adminCheck.Text = "Admin";
-            this.adminCheck.UseVisualStyleBackColor = true;
-            // 
             // simpleButton1
             // 
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(44, 263);
+            this.simpleButton1.Location = new System.Drawing.Point(103, 265);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 55;
-            this.simpleButton1.Text = "Save";
+            this.simpleButton1.Text = "Update";
+            this.simpleButton1.Visible = false;
             // 
             // simpleButton2
             // 
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(125, 292);
+            this.simpleButton2.Location = new System.Drawing.Point(184, 294);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 56;
@@ -254,7 +212,7 @@
             // simpleButton3
             // 
             this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(44, 292);
+            this.simpleButton3.Location = new System.Drawing.Point(103, 294);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(75, 23);
             this.simpleButton3.TabIndex = 57;
@@ -264,410 +222,341 @@
             // simpleButton4
             // 
             this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(125, 263);
+            this.simpleButton4.Location = new System.Drawing.Point(184, 265);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(75, 23);
             this.simpleButton4.TabIndex = 58;
             this.simpleButton4.Text = "Delete";
+            this.simpleButton4.Visible = false;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkEdit42);
-            this.groupBox1.Controls.Add(this.checkEdit41);
-            this.groupBox1.Controls.Add(this.checkEdit33);
-            this.groupBox1.Controls.Add(this.checkEdit34);
-            this.groupBox1.Controls.Add(this.checkEdit35);
-            this.groupBox1.Controls.Add(this.checkEdit36);
-            this.groupBox1.Controls.Add(this.checkEdit37);
-            this.groupBox1.Controls.Add(this.checkEdit38);
-            this.groupBox1.Controls.Add(this.checkEdit39);
-            this.groupBox1.Controls.Add(this.checkEdit40);
-            this.groupBox1.Controls.Add(this.checkEdit25);
-            this.groupBox1.Controls.Add(this.checkEdit26);
-            this.groupBox1.Controls.Add(this.checkEdit27);
-            this.groupBox1.Controls.Add(this.checkEdit28);
-            this.groupBox1.Controls.Add(this.checkEdit29);
-            this.groupBox1.Controls.Add(this.checkEdit30);
-            this.groupBox1.Controls.Add(this.checkEdit31);
-            this.groupBox1.Controls.Add(this.checkEdit32);
-            this.groupBox1.Controls.Add(this.checkEdit17);
-            this.groupBox1.Controls.Add(this.checkEdit18);
-            this.groupBox1.Controls.Add(this.checkEdit19);
-            this.groupBox1.Controls.Add(this.checkEdit20);
-            this.groupBox1.Controls.Add(this.checkEdit21);
-            this.groupBox1.Controls.Add(this.checkEdit22);
-            this.groupBox1.Controls.Add(this.checkEdit23);
-            this.groupBox1.Controls.Add(this.checkEdit24);
-            this.groupBox1.Controls.Add(this.checkEdit9);
-            this.groupBox1.Controls.Add(this.checkEdit10);
-            this.groupBox1.Controls.Add(this.checkEdit11);
-            this.groupBox1.Controls.Add(this.checkEdit12);
-            this.groupBox1.Controls.Add(this.checkEdit13);
-            this.groupBox1.Controls.Add(this.checkEdit14);
-            this.groupBox1.Controls.Add(this.checkEdit15);
-            this.groupBox1.Controls.Add(this.checkEdit16);
-            this.groupBox1.Controls.Add(this.checkEdit5);
-            this.groupBox1.Controls.Add(this.checkEdit6);
-            this.groupBox1.Controls.Add(this.checkEdit7);
-            this.groupBox1.Controls.Add(this.checkEdit8);
-            this.groupBox1.Controls.Add(this.checkEdit4);
-            this.groupBox1.Controls.Add(this.checkEdit3);
-            this.groupBox1.Controls.Add(this.checkEdit2);
-            this.groupBox1.Controls.Add(this.checkEdit1);
+            this.groupBox1.Controls.Add(this.chk_esv);
+            this.groupBox1.Controls.Add(this.chk_sv);
+            this.groupBox1.Controls.Add(this.metroLabel5);
+            this.groupBox1.Controls.Add(this.chk_us);
+            this.groupBox1.Controls.Add(this.chk_sysinfo);
+            this.groupBox1.Controls.Add(this.chk_systemMange);
+            this.groupBox1.Controls.Add(this.chk_rpt);
+            this.groupBox1.Controls.Add(this.chk_MyAcc);
+            this.groupBox1.Controls.Add(this.chk_Exit);
+            this.groupBox1.Controls.Add(this.chk_Reports);
+            this.groupBox1.Controls.Add(this.chk_srch);
+            this.groupBox1.Controls.Add(this.chk_Search);
+            this.groupBox1.Controls.Add(this.chk_cust);
+            this.groupBox1.Controls.Add(this.chk_cm);
+            this.groupBox1.Controls.Add(this.chk_pi);
+            this.groupBox1.Controls.Add(this.chk_sc);
+            this.groupBox1.Controls.Add(this.chk_bc);
+            this.groupBox1.Controls.Add(this.chk_Operations);
+            this.groupBox1.Controls.Add(this.chk_dsc);
+            this.groupBox1.Controls.Add(this.chk_pc);
+            this.groupBox1.Controls.Add(this.chk_tc);
+            this.groupBox1.Controls.Add(this.chk_pm);
+            this.groupBox1.Controls.Add(this.chk_emm);
+            this.groupBox1.Controls.Add(this.chk_dmm);
+            this.groupBox1.Controls.Add(this.chk_Settings);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(277, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(566, 315);
+            this.groupBox1.Size = new System.Drawing.Size(613, 315);
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Permissions";
             // 
-            // checkEdit1
-            // 
-            this.checkEdit1.Location = new System.Drawing.Point(6, 21);
-            this.checkEdit1.Name = "checkEdit1";
-            this.checkEdit1.Properties.Caption = "checkEdit1";
-            this.checkEdit1.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit1.TabIndex = 0;
-            // 
-            // checkEdit2
-            // 
-            this.checkEdit2.Location = new System.Drawing.Point(6, 44);
-            this.checkEdit2.Name = "checkEdit2";
-            this.checkEdit2.Properties.Caption = "checkEdit2";
-            this.checkEdit2.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit2.TabIndex = 1;
-            // 
-            // checkEdit3
-            // 
-            this.checkEdit3.Location = new System.Drawing.Point(6, 69);
-            this.checkEdit3.Name = "checkEdit3";
-            this.checkEdit3.Properties.Caption = "checkEdit3";
-            this.checkEdit3.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit3.TabIndex = 2;
-            // 
-            // checkEdit4
-            // 
-            this.checkEdit4.Location = new System.Drawing.Point(6, 94);
-            this.checkEdit4.Name = "checkEdit4";
-            this.checkEdit4.Properties.Caption = "checkEdit4";
-            this.checkEdit4.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit4.TabIndex = 3;
-            // 
-            // checkEdit5
-            // 
-            this.checkEdit5.Location = new System.Drawing.Point(6, 118);
-            this.checkEdit5.Name = "checkEdit5";
-            this.checkEdit5.Properties.Caption = "checkEdit5";
-            this.checkEdit5.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit5.TabIndex = 7;
-            // 
-            // checkEdit6
-            // 
-            this.checkEdit6.Location = new System.Drawing.Point(6, 141);
-            this.checkEdit6.Name = "checkEdit6";
-            this.checkEdit6.Properties.Caption = "checkEdit6";
-            this.checkEdit6.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit6.TabIndex = 6;
-            // 
-            // checkEdit7
-            // 
-            this.checkEdit7.Location = new System.Drawing.Point(6, 166);
-            this.checkEdit7.Name = "checkEdit7";
-            this.checkEdit7.Properties.Caption = "checkEdit7";
-            this.checkEdit7.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit7.TabIndex = 5;
-            // 
-            // checkEdit8
-            // 
-            this.checkEdit8.Location = new System.Drawing.Point(6, 192);
-            this.checkEdit8.Name = "checkEdit8";
-            this.checkEdit8.Properties.Caption = "checkEdit8";
-            this.checkEdit8.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit8.TabIndex = 4;
-            // 
-            // checkEdit9
-            // 
-            this.checkEdit9.Location = new System.Drawing.Point(100, 115);
-            this.checkEdit9.Name = "checkEdit9";
-            this.checkEdit9.Properties.Caption = "checkEdit9";
-            this.checkEdit9.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit9.TabIndex = 15;
-            // 
-            // checkEdit10
-            // 
-            this.checkEdit10.Location = new System.Drawing.Point(100, 140);
-            this.checkEdit10.Name = "checkEdit10";
-            this.checkEdit10.Properties.Caption = "checkEdit10";
-            this.checkEdit10.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit10.TabIndex = 14;
-            // 
-            // checkEdit11
-            // 
-            this.checkEdit11.Location = new System.Drawing.Point(100, 166);
-            this.checkEdit11.Name = "checkEdit11";
-            this.checkEdit11.Properties.Caption = "checkEdit11";
-            this.checkEdit11.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit11.TabIndex = 13;
-            // 
-            // checkEdit12
-            // 
-            this.checkEdit12.Location = new System.Drawing.Point(100, 191);
-            this.checkEdit12.Name = "checkEdit12";
-            this.checkEdit12.Properties.Caption = "checkEdit12";
-            this.checkEdit12.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit12.TabIndex = 12;
-            // 
-            // checkEdit13
-            // 
-            this.checkEdit13.Location = new System.Drawing.Point(100, 93);
-            this.checkEdit13.Name = "checkEdit13";
-            this.checkEdit13.Properties.Caption = "checkEdit13";
-            this.checkEdit13.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit13.TabIndex = 11;
-            // 
-            // checkEdit14
-            // 
-            this.checkEdit14.Location = new System.Drawing.Point(100, 69);
-            this.checkEdit14.Name = "checkEdit14";
-            this.checkEdit14.Properties.Caption = "checkEdit14";
-            this.checkEdit14.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit14.TabIndex = 10;
-            // 
-            // checkEdit15
-            // 
-            this.checkEdit15.Location = new System.Drawing.Point(100, 44);
-            this.checkEdit15.Name = "checkEdit15";
-            this.checkEdit15.Properties.Caption = "checkEdit15";
-            this.checkEdit15.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit15.TabIndex = 9;
-            // 
-            // checkEdit16
-            // 
-            this.checkEdit16.Location = new System.Drawing.Point(100, 19);
-            this.checkEdit16.Name = "checkEdit16";
-            this.checkEdit16.Properties.Caption = "checkEdit16";
-            this.checkEdit16.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit16.TabIndex = 8;
-            // 
-            // checkEdit17
-            // 
-            this.checkEdit17.Location = new System.Drawing.Point(203, 118);
-            this.checkEdit17.Name = "checkEdit17";
-            this.checkEdit17.Properties.Caption = "checkEdit17";
-            this.checkEdit17.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit17.TabIndex = 23;
-            // 
-            // checkEdit18
-            // 
-            this.checkEdit18.Location = new System.Drawing.Point(203, 142);
-            this.checkEdit18.Name = "checkEdit18";
-            this.checkEdit18.Properties.Caption = "checkEdit18";
-            this.checkEdit18.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit18.TabIndex = 22;
-            // 
-            // checkEdit19
-            // 
-            this.checkEdit19.Location = new System.Drawing.Point(203, 169);
-            this.checkEdit19.Name = "checkEdit19";
-            this.checkEdit19.Properties.Caption = "checkEdit19";
-            this.checkEdit19.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit19.TabIndex = 21;
-            // 
-            // checkEdit20
-            // 
-            this.checkEdit20.Location = new System.Drawing.Point(203, 194);
-            this.checkEdit20.Name = "checkEdit20";
-            this.checkEdit20.Properties.Caption = "checkEdit20";
-            this.checkEdit20.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit20.TabIndex = 20;
-            // 
-            // checkEdit21
-            // 
-            this.checkEdit21.Location = new System.Drawing.Point(203, 95);
-            this.checkEdit21.Name = "checkEdit21";
-            this.checkEdit21.Properties.Caption = "checkEdit21";
-            this.checkEdit21.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit21.TabIndex = 19;
-            // 
-            // checkEdit22
-            // 
-            this.checkEdit22.Location = new System.Drawing.Point(203, 69);
-            this.checkEdit22.Name = "checkEdit22";
-            this.checkEdit22.Properties.Caption = "checkEdit22";
-            this.checkEdit22.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit22.TabIndex = 18;
-            // 
-            // checkEdit23
-            // 
-            this.checkEdit23.Location = new System.Drawing.Point(203, 49);
-            this.checkEdit23.Name = "checkEdit23";
-            this.checkEdit23.Properties.Caption = "checkEdit23";
-            this.checkEdit23.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit23.TabIndex = 17;
-            // 
-            // checkEdit24
-            // 
-            this.checkEdit24.Location = new System.Drawing.Point(203, 20);
-            this.checkEdit24.Name = "checkEdit24";
-            this.checkEdit24.Properties.Caption = "checkEdit24";
-            this.checkEdit24.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit24.TabIndex = 16;
-            // 
-            // checkEdit25
-            // 
-            this.checkEdit25.Location = new System.Drawing.Point(298, 119);
-            this.checkEdit25.Name = "checkEdit25";
-            this.checkEdit25.Properties.Caption = "checkEdit25";
-            this.checkEdit25.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit25.TabIndex = 31;
-            // 
-            // checkEdit26
-            // 
-            this.checkEdit26.Location = new System.Drawing.Point(298, 143);
-            this.checkEdit26.Name = "checkEdit26";
-            this.checkEdit26.Properties.Caption = "checkEdit26";
-            this.checkEdit26.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit26.TabIndex = 30;
-            // 
-            // checkEdit27
-            // 
-            this.checkEdit27.Location = new System.Drawing.Point(298, 170);
-            this.checkEdit27.Name = "checkEdit27";
-            this.checkEdit27.Properties.Caption = "checkEdit27";
-            this.checkEdit27.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit27.TabIndex = 29;
-            // 
-            // checkEdit28
-            // 
-            this.checkEdit28.Location = new System.Drawing.Point(298, 195);
-            this.checkEdit28.Name = "checkEdit28";
-            this.checkEdit28.Properties.Caption = "checkEdit28";
-            this.checkEdit28.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit28.TabIndex = 28;
-            // 
-            // checkEdit29
-            // 
-            this.checkEdit29.Location = new System.Drawing.Point(298, 96);
-            this.checkEdit29.Name = "checkEdit29";
-            this.checkEdit29.Properties.Caption = "checkEdit29";
-            this.checkEdit29.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit29.TabIndex = 27;
-            // 
-            // checkEdit30
-            // 
-            this.checkEdit30.Location = new System.Drawing.Point(298, 70);
-            this.checkEdit30.Name = "checkEdit30";
-            this.checkEdit30.Properties.Caption = "checkEdit30";
-            this.checkEdit30.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit30.TabIndex = 26;
-            // 
-            // checkEdit31
-            // 
-            this.checkEdit31.Location = new System.Drawing.Point(298, 50);
-            this.checkEdit31.Name = "checkEdit31";
-            this.checkEdit31.Properties.Caption = "checkEdit31";
-            this.checkEdit31.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit31.TabIndex = 25;
-            // 
-            // checkEdit32
-            // 
-            this.checkEdit32.Location = new System.Drawing.Point(298, 21);
-            this.checkEdit32.Name = "checkEdit32";
-            this.checkEdit32.Properties.Caption = "checkEdit32";
-            this.checkEdit32.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit32.TabIndex = 24;
-            // 
-            // checkEdit33
-            // 
-            this.checkEdit33.Location = new System.Drawing.Point(395, 119);
-            this.checkEdit33.Name = "checkEdit33";
-            this.checkEdit33.Properties.Caption = "checkEdit33";
-            this.checkEdit33.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit33.TabIndex = 39;
-            // 
-            // checkEdit34
-            // 
-            this.checkEdit34.Location = new System.Drawing.Point(395, 143);
-            this.checkEdit34.Name = "checkEdit34";
-            this.checkEdit34.Properties.Caption = "checkEdit34";
-            this.checkEdit34.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit34.TabIndex = 38;
-            // 
-            // checkEdit35
-            // 
-            this.checkEdit35.Location = new System.Drawing.Point(395, 170);
-            this.checkEdit35.Name = "checkEdit35";
-            this.checkEdit35.Properties.Caption = "checkEdit35";
-            this.checkEdit35.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit35.TabIndex = 37;
-            // 
-            // checkEdit36
-            // 
-            this.checkEdit36.Location = new System.Drawing.Point(395, 195);
-            this.checkEdit36.Name = "checkEdit36";
-            this.checkEdit36.Properties.Caption = "checkEdit36";
-            this.checkEdit36.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit36.TabIndex = 36;
-            // 
-            // checkEdit37
-            // 
-            this.checkEdit37.Location = new System.Drawing.Point(395, 96);
-            this.checkEdit37.Name = "checkEdit37";
-            this.checkEdit37.Properties.Caption = "checkEdit37";
-            this.checkEdit37.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit37.TabIndex = 35;
-            // 
-            // checkEdit38
-            // 
-            this.checkEdit38.Location = new System.Drawing.Point(395, 70);
-            this.checkEdit38.Name = "checkEdit38";
-            this.checkEdit38.Properties.Caption = "checkEdit38";
-            this.checkEdit38.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit38.TabIndex = 34;
-            // 
-            // checkEdit39
-            // 
-            this.checkEdit39.Location = new System.Drawing.Point(395, 50);
-            this.checkEdit39.Name = "checkEdit39";
-            this.checkEdit39.Properties.Caption = "checkEdit39";
-            this.checkEdit39.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit39.TabIndex = 33;
-            // 
-            // checkEdit40
-            // 
-            this.checkEdit40.Location = new System.Drawing.Point(395, 21);
-            this.checkEdit40.Name = "checkEdit40";
-            this.checkEdit40.Properties.Caption = "checkEdit40";
-            this.checkEdit40.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit40.TabIndex = 32;
-            // 
-            // checkEdit41
-            // 
-            this.checkEdit41.Location = new System.Drawing.Point(373, 252);
-            this.checkEdit41.Name = "checkEdit41";
-            this.checkEdit41.Properties.Caption = "Exit";
-            this.checkEdit41.Size = new System.Drawing.Size(108, 19);
-            this.checkEdit41.TabIndex = 40;
-            // 
-            // checkEdit42
-            // 
-            this.checkEdit42.Location = new System.Drawing.Point(223, 254);
-            this.checkEdit42.Name = "checkEdit42";
-            this.checkEdit42.Properties.Caption = "My Account Settongs";
-            this.checkEdit42.Size = new System.Drawing.Size(135, 19);
-            this.checkEdit42.TabIndex = 41;
+            // chk_MyAcc
+            // 
+            this.chk_MyAcc.EditValue = true;
+            this.chk_MyAcc.Location = new System.Drawing.Point(6, 223);
+            this.chk_MyAcc.Name = "chk_MyAcc";
+            this.chk_MyAcc.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_MyAcc.Properties.Appearance.Options.UseFont = true;
+            this.chk_MyAcc.Properties.Caption = "My Account Settings";
+            this.chk_MyAcc.Size = new System.Drawing.Size(126, 19);
+            this.chk_MyAcc.TabIndex = 41;
+            // 
+            // chk_Exit
+            // 
+            this.chk_Exit.EditValue = true;
+            this.chk_Exit.Location = new System.Drawing.Point(145, 223);
+            this.chk_Exit.Name = "chk_Exit";
+            this.chk_Exit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_Exit.Properties.Appearance.Options.UseFont = true;
+            this.chk_Exit.Properties.Caption = "Exit";
+            this.chk_Exit.Size = new System.Drawing.Size(42, 19);
+            this.chk_Exit.TabIndex = 40;
+            // 
+            // chk_Reports
+            // 
+            this.chk_Reports.Location = new System.Drawing.Point(345, 18);
+            this.chk_Reports.Name = "chk_Reports";
+            this.chk_Reports.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_Reports.Properties.Appearance.Options.UseFont = true;
+            this.chk_Reports.Properties.Caption = "Reports";
+            this.chk_Reports.Size = new System.Drawing.Size(108, 19);
+            this.chk_Reports.TabIndex = 32;
+            this.chk_Reports.CheckedChanged += new System.EventHandler(this.chk_Reports_CheckedChanged);
+            // 
+            // chk_srch
+            // 
+            this.chk_srch.Location = new System.Drawing.Point(268, 40);
+            this.chk_srch.Name = "chk_srch";
+            this.chk_srch.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_srch.Properties.Appearance.Options.UseFont = true;
+            this.chk_srch.Properties.Caption = "Search";
+            this.chk_srch.Size = new System.Drawing.Size(78, 19);
+            this.chk_srch.TabIndex = 25;
+            // 
+            // chk_Search
+            // 
+            this.chk_Search.Location = new System.Drawing.Point(259, 18);
+            this.chk_Search.Name = "chk_Search";
+            this.chk_Search.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_Search.Properties.Appearance.Options.UseFont = true;
+            this.chk_Search.Properties.Caption = "Search";
+            this.chk_Search.Size = new System.Drawing.Size(80, 19);
+            this.chk_Search.TabIndex = 24;
+            this.chk_Search.CheckedChanged += new System.EventHandler(this.chk_Search_CheckedChanged);
+            // 
+            // chk_cust
+            // 
+            this.chk_cust.Location = new System.Drawing.Point(158, 114);
+            this.chk_cust.Name = "chk_cust";
+            this.chk_cust.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_cust.Properties.Appearance.Options.UseFont = true;
+            this.chk_cust.Properties.Caption = "Customers";
+            this.chk_cust.Size = new System.Drawing.Size(108, 19);
+            this.chk_cust.TabIndex = 15;
+            // 
+            // chk_cm
+            // 
+            this.chk_cm.Location = new System.Drawing.Point(158, 139);
+            this.chk_cm.Name = "chk_cm";
+            this.chk_cm.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_cm.Properties.Appearance.Options.UseFont = true;
+            this.chk_cm.Properties.Caption = "Car Maintainance";
+            this.chk_cm.Size = new System.Drawing.Size(108, 19);
+            this.chk_cm.TabIndex = 14;
+            // 
+            // chk_pi
+            // 
+            this.chk_pi.Location = new System.Drawing.Point(158, 92);
+            this.chk_pi.Name = "chk_pi";
+            this.chk_pi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_pi.Properties.Appearance.Options.UseFont = true;
+            this.chk_pi.Properties.Caption = "Print Invoice";
+            this.chk_pi.Size = new System.Drawing.Size(108, 19);
+            this.chk_pi.TabIndex = 11;
+            // 
+            // chk_sc
+            // 
+            this.chk_sc.Location = new System.Drawing.Point(158, 68);
+            this.chk_sc.Name = "chk_sc";
+            this.chk_sc.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_sc.Properties.Appearance.Options.UseFont = true;
+            this.chk_sc.Properties.Caption = "Sell Car";
+            this.chk_sc.Size = new System.Drawing.Size(108, 19);
+            this.chk_sc.TabIndex = 10;
+            // 
+            // chk_bc
+            // 
+            this.chk_bc.Location = new System.Drawing.Point(158, 43);
+            this.chk_bc.Name = "chk_bc";
+            this.chk_bc.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_bc.Properties.Appearance.Options.UseFont = true;
+            this.chk_bc.Properties.Caption = "Buy Car";
+            this.chk_bc.Size = new System.Drawing.Size(108, 19);
+            this.chk_bc.TabIndex = 9;
+            // 
+            // chk_Operations
+            // 
+            this.chk_Operations.Location = new System.Drawing.Point(145, 18);
+            this.chk_Operations.Name = "chk_Operations";
+            this.chk_Operations.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_Operations.Properties.Appearance.Options.UseFont = true;
+            this.chk_Operations.Properties.Caption = "Operations";
+            this.chk_Operations.Size = new System.Drawing.Size(108, 19);
+            this.chk_Operations.TabIndex = 8;
+            this.chk_Operations.CheckedChanged += new System.EventHandler(this.chk_Operations_CheckedChanged);
+            // 
+            // chk_dsc
+            // 
+            this.chk_dsc.Location = new System.Drawing.Point(15, 148);
+            this.chk_dsc.Name = "chk_dsc";
+            this.chk_dsc.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_dsc.Properties.Appearance.Options.UseFont = true;
+            this.chk_dsc.Properties.Caption = "Define Source Car";
+            this.chk_dsc.Size = new System.Drawing.Size(115, 19);
+            this.chk_dsc.TabIndex = 7;
+            // 
+            // chk_pc
+            // 
+            this.chk_pc.Location = new System.Drawing.Point(15, 171);
+            this.chk_pc.Name = "chk_pc";
+            this.chk_pc.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_pc.Properties.Appearance.Options.UseFont = true;
+            this.chk_pc.Properties.Caption = "Paint Codes";
+            this.chk_pc.Size = new System.Drawing.Size(108, 19);
+            this.chk_pc.TabIndex = 6;
+            // 
+            // chk_tc
+            // 
+            this.chk_tc.Location = new System.Drawing.Point(15, 196);
+            this.chk_tc.Name = "chk_tc";
+            this.chk_tc.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_tc.Properties.Appearance.Options.UseFont = true;
+            this.chk_tc.Properties.Caption = "Tax Categories";
+            this.chk_tc.Size = new System.Drawing.Size(108, 19);
+            this.chk_tc.TabIndex = 5;
+            // 
+            // chk_pm
+            // 
+            this.chk_pm.Location = new System.Drawing.Point(15, 124);
+            this.chk_pm.Name = "chk_pm";
+            this.chk_pm.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_pm.Properties.Appearance.Options.UseFont = true;
+            this.chk_pm.Properties.Caption = "Payment Methods";
+            this.chk_pm.Size = new System.Drawing.Size(108, 19);
+            this.chk_pm.TabIndex = 3;
+            // 
+            // chk_emm
+            // 
+            this.chk_emm.Location = new System.Drawing.Point(15, 65);
+            this.chk_emm.Name = "chk_emm";
+            this.chk_emm.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_emm.Properties.Appearance.Options.UseFont = true;
+            this.chk_emm.Properties.Caption = "Edit Make Model";
+            this.chk_emm.Size = new System.Drawing.Size(108, 19);
+            this.chk_emm.TabIndex = 2;
+            // 
+            // chk_dmm
+            // 
+            this.chk_dmm.Location = new System.Drawing.Point(15, 40);
+            this.chk_dmm.Name = "chk_dmm";
+            this.chk_dmm.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_dmm.Properties.Appearance.Options.UseFont = true;
+            this.chk_dmm.Properties.Caption = "Define Make Model";
+            this.chk_dmm.Size = new System.Drawing.Size(115, 19);
+            this.chk_dmm.TabIndex = 1;
+            // 
+            // chk_Settings
+            // 
+            this.chk_Settings.Location = new System.Drawing.Point(6, 18);
+            this.chk_Settings.Name = "chk_Settings";
+            this.chk_Settings.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_Settings.Properties.Appearance.Options.UseFont = true;
+            this.chk_Settings.Properties.Caption = "Settings";
+            this.chk_Settings.Size = new System.Drawing.Size(86, 19);
+            this.chk_Settings.TabIndex = 0;
+            this.chk_Settings.CheckedChanged += new System.EventHandler(this.chk_Settings_CheckedChanged);
+            // 
+            // chk_rpt
+            // 
+            this.chk_rpt.Location = new System.Drawing.Point(358, 40);
+            this.chk_rpt.Name = "chk_rpt";
+            this.chk_rpt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_rpt.Properties.Appearance.Options.UseFont = true;
+            this.chk_rpt.Properties.Caption = "Reports";
+            this.chk_rpt.Size = new System.Drawing.Size(108, 19);
+            this.chk_rpt.TabIndex = 42;
+            // 
+            // chk_systemMange
+            // 
+            this.chk_systemMange.Location = new System.Drawing.Point(476, 18);
+            this.chk_systemMange.Name = "chk_systemMange";
+            this.chk_systemMange.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_systemMange.Properties.Appearance.Options.UseFont = true;
+            this.chk_systemMange.Properties.Caption = "System Management";
+            this.chk_systemMange.Size = new System.Drawing.Size(131, 19);
+            this.chk_systemMange.TabIndex = 43;
+            this.chk_systemMange.CheckedChanged += new System.EventHandler(this.chk_systemMange_CheckedChanged);
+            // 
+            // chk_sysinfo
+            // 
+            this.chk_sysinfo.Location = new System.Drawing.Point(490, 43);
+            this.chk_sysinfo.Name = "chk_sysinfo";
+            this.chk_sysinfo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_sysinfo.Properties.Appearance.Options.UseFont = true;
+            this.chk_sysinfo.Properties.Caption = "System Info";
+            this.chk_sysinfo.Size = new System.Drawing.Size(98, 19);
+            this.chk_sysinfo.TabIndex = 44;
+            // 
+            // chk_us
+            // 
+            this.chk_us.Location = new System.Drawing.Point(490, 65);
+            this.chk_us.Name = "chk_us";
+            this.chk_us.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_us.Properties.Appearance.Options.UseFont = true;
+            this.chk_us.Properties.Caption = "Users Settings";
+            this.chk_us.Size = new System.Drawing.Size(98, 19);
+            this.chk_us.TabIndex = 45;
+            // 
+            // chk_admin
+            // 
+            this.chk_admin.Location = new System.Drawing.Point(193, 94);
+            this.chk_admin.Name = "chk_admin";
+            this.chk_admin.Properties.Caption = "Admin";
+            this.chk_admin.Size = new System.Drawing.Size(55, 19);
+            this.chk_admin.TabIndex = 46;
+            this.chk_admin.CheckedChanged += new System.EventHandler(this.checkEdit1_CheckedChanged);
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.BackColor = System.Drawing.SystemColors.Control;
+            this.metroLabel5.CustomBackground = true;
+            this.metroLabel5.CustomForeColor = true;
+            this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel5.Location = new System.Drawing.Point(135, 252);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(379, 50);
+            this.metroLabel5.TabIndex = 60;
+            this.metroLabel5.Text = "Hint : You Must Select Main Menu If you need to\r\n Grant any sub Menu of Menus.";
+            this.metroLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel5.UseStyleColors = true;
+            // 
+            // chk_sv
+            // 
+            this.chk_sv.Location = new System.Drawing.Point(15, 86);
+            this.chk_sv.Name = "chk_sv";
+            this.chk_sv.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_sv.Properties.Appearance.Options.UseFont = true;
+            this.chk_sv.Properties.Caption = "Services";
+            this.chk_sv.Size = new System.Drawing.Size(108, 19);
+            this.chk_sv.TabIndex = 61;
+            // 
+            // chk_esv
+            // 
+            this.chk_esv.Location = new System.Drawing.Point(15, 106);
+            this.chk_esv.Name = "chk_esv";
+            this.chk_esv.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_esv.Properties.Appearance.Options.UseFont = true;
+            this.chk_esv.Properties.Caption = "Edit Services";
+            this.chk_esv.Size = new System.Drawing.Size(108, 19);
+            this.chk_esv.TabIndex = 62;
+            // 
+            // simpleButton5
+            // 
+            this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
+            this.simpleButton5.Location = new System.Drawing.Point(22, 265);
+            this.simpleButton5.Name = "simpleButton5";
+            this.simpleButton5.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton5.TabIndex = 60;
+            this.simpleButton5.Text = "Add";
+            this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
             // 
             // frmUsersManagment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(876, 340);
+            this.ClientSize = new System.Drawing.Size(902, 340);
+            this.Controls.Add(this.simpleButton5);
+            this.Controls.Add(this.chk_admin);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.simpleButton4);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.adminCheck);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.txt_pass);
             this.Controls.Add(this.metroLabel3);
@@ -685,48 +574,32 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmUsersManagment_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.cbo_userid.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit8.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit10.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit11.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit12.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit13.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit14.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit15.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit16.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit17.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit18.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit19.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit20.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit21.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit22.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit23.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit24.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit25.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit26.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit27.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit28.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit29.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit30.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit31.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit32.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit33.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit34.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit35.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit36.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit37.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit38.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit39.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit40.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit41.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit42.Properties)).EndInit();
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_MyAcc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_Exit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_Reports.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_srch.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_Search.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_cust.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_cm.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_pi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_sc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_bc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_Operations.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_dsc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_pc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_tc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_pm.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_emm.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_dmm.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_Settings.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_rpt.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_systemMange.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_sysinfo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_us.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_admin.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_sv.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_esv.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -742,53 +615,37 @@
         private System.Windows.Forms.TextBox txt_username;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private System.Windows.Forms.TextBox txt_pass;
-        private System.Windows.Forms.CheckBox adminCheck;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private System.Windows.Forms.GroupBox groupBox1;
-        private DevExpress.XtraEditors.CheckEdit checkEdit17;
-        private DevExpress.XtraEditors.CheckEdit checkEdit18;
-        private DevExpress.XtraEditors.CheckEdit checkEdit19;
-        private DevExpress.XtraEditors.CheckEdit checkEdit20;
-        private DevExpress.XtraEditors.CheckEdit checkEdit21;
-        private DevExpress.XtraEditors.CheckEdit checkEdit22;
-        private DevExpress.XtraEditors.CheckEdit checkEdit23;
-        private DevExpress.XtraEditors.CheckEdit checkEdit24;
-        private DevExpress.XtraEditors.CheckEdit checkEdit9;
-        private DevExpress.XtraEditors.CheckEdit checkEdit10;
-        private DevExpress.XtraEditors.CheckEdit checkEdit11;
-        private DevExpress.XtraEditors.CheckEdit checkEdit12;
-        private DevExpress.XtraEditors.CheckEdit checkEdit13;
-        private DevExpress.XtraEditors.CheckEdit checkEdit14;
-        private DevExpress.XtraEditors.CheckEdit checkEdit15;
-        private DevExpress.XtraEditors.CheckEdit checkEdit16;
-        private DevExpress.XtraEditors.CheckEdit checkEdit5;
-        private DevExpress.XtraEditors.CheckEdit checkEdit6;
-        private DevExpress.XtraEditors.CheckEdit checkEdit7;
-        private DevExpress.XtraEditors.CheckEdit checkEdit8;
-        private DevExpress.XtraEditors.CheckEdit checkEdit4;
-        private DevExpress.XtraEditors.CheckEdit checkEdit3;
-        private DevExpress.XtraEditors.CheckEdit checkEdit2;
-        private DevExpress.XtraEditors.CheckEdit checkEdit1;
-        private DevExpress.XtraEditors.CheckEdit checkEdit42;
-        private DevExpress.XtraEditors.CheckEdit checkEdit41;
-        private DevExpress.XtraEditors.CheckEdit checkEdit33;
-        private DevExpress.XtraEditors.CheckEdit checkEdit34;
-        private DevExpress.XtraEditors.CheckEdit checkEdit35;
-        private DevExpress.XtraEditors.CheckEdit checkEdit36;
-        private DevExpress.XtraEditors.CheckEdit checkEdit37;
-        private DevExpress.XtraEditors.CheckEdit checkEdit38;
-        private DevExpress.XtraEditors.CheckEdit checkEdit39;
-        private DevExpress.XtraEditors.CheckEdit checkEdit40;
-        private DevExpress.XtraEditors.CheckEdit checkEdit25;
-        private DevExpress.XtraEditors.CheckEdit checkEdit26;
-        private DevExpress.XtraEditors.CheckEdit checkEdit27;
-        private DevExpress.XtraEditors.CheckEdit checkEdit28;
-        private DevExpress.XtraEditors.CheckEdit checkEdit29;
-        private DevExpress.XtraEditors.CheckEdit checkEdit30;
-        private DevExpress.XtraEditors.CheckEdit checkEdit31;
-        private DevExpress.XtraEditors.CheckEdit checkEdit32;
+        private DevExpress.XtraEditors.CheckEdit chk_cust;
+        private DevExpress.XtraEditors.CheckEdit chk_cm;
+        private DevExpress.XtraEditors.CheckEdit chk_pi;
+        private DevExpress.XtraEditors.CheckEdit chk_sc;
+        private DevExpress.XtraEditors.CheckEdit chk_bc;
+        private DevExpress.XtraEditors.CheckEdit chk_Operations;
+        private DevExpress.XtraEditors.CheckEdit chk_dsc;
+        private DevExpress.XtraEditors.CheckEdit chk_pc;
+        private DevExpress.XtraEditors.CheckEdit chk_tc;
+        private DevExpress.XtraEditors.CheckEdit chk_pm;
+        private DevExpress.XtraEditors.CheckEdit chk_emm;
+        private DevExpress.XtraEditors.CheckEdit chk_dmm;
+        private DevExpress.XtraEditors.CheckEdit chk_Settings;
+        private DevExpress.XtraEditors.CheckEdit chk_MyAcc;
+        private DevExpress.XtraEditors.CheckEdit chk_Exit;
+        private DevExpress.XtraEditors.CheckEdit chk_Reports;
+        private DevExpress.XtraEditors.CheckEdit chk_srch;
+        private DevExpress.XtraEditors.CheckEdit chk_Search;
+        private DevExpress.XtraEditors.CheckEdit chk_us;
+        private DevExpress.XtraEditors.CheckEdit chk_sysinfo;
+        private DevExpress.XtraEditors.CheckEdit chk_systemMange;
+        private DevExpress.XtraEditors.CheckEdit chk_rpt;
+        private DevExpress.XtraEditors.CheckEdit chk_admin;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private DevExpress.XtraEditors.CheckEdit chk_esv;
+        private DevExpress.XtraEditors.CheckEdit chk_sv;
+        private DevExpress.XtraEditors.SimpleButton simpleButton5;
     }
 }

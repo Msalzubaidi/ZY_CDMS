@@ -79,6 +79,9 @@ namespace ZY_CDMS.Forms
 
         private void cbo_userid_TextChanged(object sender, EventArgs e)
         {
+            simpleButton1.Visible = true;
+            simpleButton5.Visible = false;
+            simpleButton4.Visible = true;
             if (string.IsNullOrEmpty(cbo_userid.Text) || r.isDigitsOnly(cbo_userid.Text) == false)
             {
                 // MessageBox.Show(Resources.digitOnlyError, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -119,7 +122,9 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-
+            simpleButton1.Visible = false;
+            simpleButton5.Visible = true;
+            simpleButton4.Visible = false;
             cbo_userid.ResetText();
             txt_userid.Clear();
             txt_username.Clear();
@@ -129,5 +134,83 @@ namespace ZY_CDMS.Forms
             
 
         }
+       
+        private void chk_Settings_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk_Settings.Checked)
+            {
+                chk_dmm.Checked = true;
+                chk_emm.Checked = true;
+                chk_sv.Checked = true;
+                chk_esv.Checked = true;
+                chk_pm.Checked = true;
+                chk_dsc.Checked = true;
+                chk_pc.Checked = true;
+                chk_tc.Checked = true;
+            }
+
+        }
+
+        private void chk_Operations_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk_Operations.Checked)
+            {
+                chk_bc.Checked = true;
+                chk_sc.Checked = true;
+                chk_pi.Checked = true;
+                chk_cust.Checked = true;
+                chk_cm.Checked = true;
+            }
+        }
+
+        private void chk_Search_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk_Search.Checked)
+            {
+               
+                chk_srch.Checked = true;
+            }
+        }
+
+        private void chk_Reports_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk_Reports.Checked)
+            {
+           
+                chk_rpt.Checked = true;
+            }
+        }
+
+        private void chk_systemMange_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk_systemMange.Checked)
+            {
+              
+                chk_sysinfo.Checked = true;
+                chk_us.Checked = true;
+            }
+        }
+
+        private void checkEdit1_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void simpleButton5_Click(object sender, EventArgs e)
+        {
+            // 25 Variables 
+           if (chk_admin.Checked)
+            {
+                //Check All
+
+            }
+            else
+            {
+                if (chk_Settings.Checked)
+                {
+
+                }
+            }
+        } 
     }
 }
