@@ -230,20 +230,20 @@ namespace ZY_CDMS.Forms
                 lic.Visible = true;
                 lic.ForeColor = Color.Azure;
 
-                logo.ForeColor = Color.Azure;
+               
 
                 flag = 0;
-                logo.Text = Resources.Logo ;
-                lic.Text = Resources.AppName + " - Licensed for ( " + " " + titleform.ToString() + " ) "+ "License Active to " + dt.ToShortDateString(); ;
+                
+                lic.Text = Resources.Logo + " " + Resources.AppName + " - Licensed for ( " + " " + titleform.ToString() + " ) "+nl+ "License Active to " + dt.ToShortDateString(); ;
 
             }
             if (NrOfDays <= 30)
             {
                 lic.Visible = true;
                 lic.ForeColor = Color.Azure;
-                logo.ForeColor = Color.Azure;
-                logo.Text = Resources.Logo;
-                lic.Text = Resources.AppName + " - Licensed for ( " + " " + titleform.ToString() + " ) " +  "License will be Expired by " + "" + NrOfDays.ToString() + " " + "Days";
+              
+               
+                lic.Text = Resources.Logo + " " + Resources.AppName + " - Licensed for ( " + " " + titleform.ToString() + " ) " + nl + "License will be Expired by " + "" + NrOfDays.ToString() + " " + "Days";
 
                 flag = 0;
             }
@@ -251,9 +251,9 @@ namespace ZY_CDMS.Forms
             {
                 lic.Visible = true;
                 lic.ForeColor = Color.Red;
-                logo.ForeColor = Color.Red;
-                logo.Text = Resources.Logo;
-                lic.Text = Resources.AppName + " - Licensed for ( " + " " + titleform.ToString() + " )  " + "License Expired in " + "" + dt.ToShortDateString();
+                
+               
+                lic.Text = Resources.Logo + " " + Resources.AppName + " - Licensed for ( " + " " + titleform.ToString() + " )  " + nl + "License Expired in " + "" + dt.ToShortDateString();
                 
 
 

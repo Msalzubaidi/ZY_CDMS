@@ -73,7 +73,6 @@
             this.mnu_exit = new System.Windows.Forms.ToolStripMenuItem();
             this.lic = new MetroFramework.Controls.MetroLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.logo = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -437,7 +436,7 @@
             this.lic.CustomForeColor = true;
             this.lic.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lic.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lic.Location = new System.Drawing.Point(256, 676);
+            this.lic.Location = new System.Drawing.Point(255, 645);
             this.lic.Name = "lic";
             this.lic.Size = new System.Drawing.Size(104, 25);
             this.lic.TabIndex = 45;
@@ -450,22 +449,6 @@
             // 
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
-            // logo
-            // 
-            this.logo.AutoSize = true;
-            this.logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(61)))), ((int)(((byte)(137)))));
-            this.logo.CustomBackground = true;
-            this.logo.CustomForeColor = true;
-            this.logo.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.logo.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.logo.Location = new System.Drawing.Point(256, 651);
-            this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(104, 25);
-            this.logo.TabIndex = 47;
-            this.logo.Text = "licenseinfo";
-            this.toolTip1.SetToolTip(this.logo, "Double Click To Know More");
-            this.logo.UseStyleColors = true;
-            // 
             // frmHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -473,7 +456,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(936, 721);
-            this.Controls.Add(this.logo);
             this.Controls.Add(this.lic);
             this.Controls.Add(this.accordionControl1);
             this.Controls.Add(this.menuStrip1);
@@ -538,6 +520,5 @@
         private System.Windows.Forms.ToolStripMenuItem defineTaxCategoriesToolStripMenuItem;
         private MetroFramework.Controls.MetroLabel lic;
         private System.Windows.Forms.ToolTip toolTip1;
-        private MetroFramework.Controls.MetroLabel logo;
     }
 }

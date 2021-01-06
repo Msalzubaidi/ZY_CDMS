@@ -42,6 +42,12 @@
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chk_esv = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_sv = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_us = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_sysinfo = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_systemMange = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_rpt = new DevExpress.XtraEditors.CheckEdit();
             this.chk_MyAcc = new DevExpress.XtraEditors.CheckEdit();
             this.chk_Exit = new DevExpress.XtraEditors.CheckEdit();
             this.chk_Reports = new DevExpress.XtraEditors.CheckEdit();
@@ -60,17 +66,16 @@
             this.chk_emm = new DevExpress.XtraEditors.CheckEdit();
             this.chk_dmm = new DevExpress.XtraEditors.CheckEdit();
             this.chk_Settings = new DevExpress.XtraEditors.CheckEdit();
-            this.chk_rpt = new DevExpress.XtraEditors.CheckEdit();
-            this.chk_systemMange = new DevExpress.XtraEditors.CheckEdit();
-            this.chk_sysinfo = new DevExpress.XtraEditors.CheckEdit();
-            this.chk_us = new DevExpress.XtraEditors.CheckEdit();
             this.chk_admin = new DevExpress.XtraEditors.CheckEdit();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.chk_sv = new DevExpress.XtraEditors.CheckEdit();
-            this.chk_esv = new DevExpress.XtraEditors.CheckEdit();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_userid.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_esv.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_sv.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_us.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_sysinfo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_systemMange.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_rpt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_MyAcc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_Exit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_Reports.Properties)).BeginInit();
@@ -89,13 +94,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chk_emm.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_dmm.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_Settings.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_rpt.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_systemMange.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_sysinfo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_us.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_admin.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_sv.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_esv.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // cbo_userid
@@ -197,7 +196,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 55;
             this.simpleButton1.Text = "Update";
-            this.simpleButton1.Visible = false;
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // simpleButton2
             // 
@@ -227,13 +226,12 @@
             this.simpleButton4.Size = new System.Drawing.Size(75, 23);
             this.simpleButton4.TabIndex = 58;
             this.simpleButton4.Text = "Delete";
-            this.simpleButton4.Visible = false;
+            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.chk_esv);
             this.groupBox1.Controls.Add(this.chk_sv);
-            this.groupBox1.Controls.Add(this.metroLabel5);
             this.groupBox1.Controls.Add(this.chk_us);
             this.groupBox1.Controls.Add(this.chk_sysinfo);
             this.groupBox1.Controls.Add(this.chk_systemMange);
@@ -263,6 +261,67 @@
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Permissions";
+            // 
+            // chk_esv
+            // 
+            this.chk_esv.Location = new System.Drawing.Point(15, 106);
+            this.chk_esv.Name = "chk_esv";
+            this.chk_esv.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_esv.Properties.Appearance.Options.UseFont = true;
+            this.chk_esv.Properties.Caption = "Edit Services";
+            this.chk_esv.Size = new System.Drawing.Size(108, 19);
+            this.chk_esv.TabIndex = 62;
+            // 
+            // chk_sv
+            // 
+            this.chk_sv.Location = new System.Drawing.Point(15, 86);
+            this.chk_sv.Name = "chk_sv";
+            this.chk_sv.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_sv.Properties.Appearance.Options.UseFont = true;
+            this.chk_sv.Properties.Caption = "Services";
+            this.chk_sv.Size = new System.Drawing.Size(108, 19);
+            this.chk_sv.TabIndex = 61;
+            // 
+            // chk_us
+            // 
+            this.chk_us.Location = new System.Drawing.Point(490, 65);
+            this.chk_us.Name = "chk_us";
+            this.chk_us.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_us.Properties.Appearance.Options.UseFont = true;
+            this.chk_us.Properties.Caption = "Users Settings";
+            this.chk_us.Size = new System.Drawing.Size(98, 19);
+            this.chk_us.TabIndex = 45;
+            // 
+            // chk_sysinfo
+            // 
+            this.chk_sysinfo.Location = new System.Drawing.Point(490, 43);
+            this.chk_sysinfo.Name = "chk_sysinfo";
+            this.chk_sysinfo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_sysinfo.Properties.Appearance.Options.UseFont = true;
+            this.chk_sysinfo.Properties.Caption = "System Info";
+            this.chk_sysinfo.Size = new System.Drawing.Size(98, 19);
+            this.chk_sysinfo.TabIndex = 44;
+            // 
+            // chk_systemMange
+            // 
+            this.chk_systemMange.Location = new System.Drawing.Point(476, 18);
+            this.chk_systemMange.Name = "chk_systemMange";
+            this.chk_systemMange.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_systemMange.Properties.Appearance.Options.UseFont = true;
+            this.chk_systemMange.Properties.Caption = "System Management";
+            this.chk_systemMange.Size = new System.Drawing.Size(131, 19);
+            this.chk_systemMange.TabIndex = 43;
+            this.chk_systemMange.CheckedChanged += new System.EventHandler(this.chk_systemMange_CheckedChanged);
+            // 
+            // chk_rpt
+            // 
+            this.chk_rpt.Location = new System.Drawing.Point(358, 40);
+            this.chk_rpt.Name = "chk_rpt";
+            this.chk_rpt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_rpt.Properties.Appearance.Options.UseFont = true;
+            this.chk_rpt.Properties.Caption = "Reports";
+            this.chk_rpt.Size = new System.Drawing.Size(108, 19);
+            this.chk_rpt.TabIndex = 42;
             // 
             // chk_MyAcc
             // 
@@ -450,47 +509,6 @@
             this.chk_Settings.TabIndex = 0;
             this.chk_Settings.CheckedChanged += new System.EventHandler(this.chk_Settings_CheckedChanged);
             // 
-            // chk_rpt
-            // 
-            this.chk_rpt.Location = new System.Drawing.Point(358, 40);
-            this.chk_rpt.Name = "chk_rpt";
-            this.chk_rpt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_rpt.Properties.Appearance.Options.UseFont = true;
-            this.chk_rpt.Properties.Caption = "Reports";
-            this.chk_rpt.Size = new System.Drawing.Size(108, 19);
-            this.chk_rpt.TabIndex = 42;
-            // 
-            // chk_systemMange
-            // 
-            this.chk_systemMange.Location = new System.Drawing.Point(476, 18);
-            this.chk_systemMange.Name = "chk_systemMange";
-            this.chk_systemMange.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_systemMange.Properties.Appearance.Options.UseFont = true;
-            this.chk_systemMange.Properties.Caption = "System Management";
-            this.chk_systemMange.Size = new System.Drawing.Size(131, 19);
-            this.chk_systemMange.TabIndex = 43;
-            this.chk_systemMange.CheckedChanged += new System.EventHandler(this.chk_systemMange_CheckedChanged);
-            // 
-            // chk_sysinfo
-            // 
-            this.chk_sysinfo.Location = new System.Drawing.Point(490, 43);
-            this.chk_sysinfo.Name = "chk_sysinfo";
-            this.chk_sysinfo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_sysinfo.Properties.Appearance.Options.UseFont = true;
-            this.chk_sysinfo.Properties.Caption = "System Info";
-            this.chk_sysinfo.Size = new System.Drawing.Size(98, 19);
-            this.chk_sysinfo.TabIndex = 44;
-            // 
-            // chk_us
-            // 
-            this.chk_us.Location = new System.Drawing.Point(490, 65);
-            this.chk_us.Name = "chk_us";
-            this.chk_us.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_us.Properties.Appearance.Options.UseFont = true;
-            this.chk_us.Properties.Caption = "Users Settings";
-            this.chk_us.Size = new System.Drawing.Size(98, 19);
-            this.chk_us.TabIndex = 45;
-            // 
             // chk_admin
             // 
             this.chk_admin.Location = new System.Drawing.Point(193, 94);
@@ -499,41 +517,6 @@
             this.chk_admin.Size = new System.Drawing.Size(55, 19);
             this.chk_admin.TabIndex = 46;
             this.chk_admin.CheckedChanged += new System.EventHandler(this.checkEdit1_CheckedChanged);
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.BackColor = System.Drawing.SystemColors.Control;
-            this.metroLabel5.CustomBackground = true;
-            this.metroLabel5.CustomForeColor = true;
-            this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel5.Location = new System.Drawing.Point(135, 252);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(379, 50);
-            this.metroLabel5.TabIndex = 60;
-            this.metroLabel5.Text = "Hint : You Must Select Main Menu If you need to\r\n Grant any sub Menu of Menus.";
-            this.metroLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroLabel5.UseStyleColors = true;
-            // 
-            // chk_sv
-            // 
-            this.chk_sv.Location = new System.Drawing.Point(15, 86);
-            this.chk_sv.Name = "chk_sv";
-            this.chk_sv.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_sv.Properties.Appearance.Options.UseFont = true;
-            this.chk_sv.Properties.Caption = "Services";
-            this.chk_sv.Size = new System.Drawing.Size(108, 19);
-            this.chk_sv.TabIndex = 61;
-            // 
-            // chk_esv
-            // 
-            this.chk_esv.Location = new System.Drawing.Point(15, 106);
-            this.chk_esv.Name = "chk_esv";
-            this.chk_esv.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_esv.Properties.Appearance.Options.UseFont = true;
-            this.chk_esv.Properties.Caption = "Edit Services";
-            this.chk_esv.Size = new System.Drawing.Size(108, 19);
-            this.chk_esv.TabIndex = 62;
             // 
             // simpleButton5
             // 
@@ -574,7 +557,12 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmUsersManagment_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.cbo_userid.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_esv.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_sv.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_us.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_sysinfo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_systemMange.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_rpt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_MyAcc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_Exit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_Reports.Properties)).EndInit();
@@ -593,13 +581,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chk_emm.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_dmm.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_Settings.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_rpt.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_systemMange.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_sysinfo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_us.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_admin.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_sv.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_esv.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -643,7 +625,6 @@
         private DevExpress.XtraEditors.CheckEdit chk_systemMange;
         private DevExpress.XtraEditors.CheckEdit chk_rpt;
         private DevExpress.XtraEditors.CheckEdit chk_admin;
-        private MetroFramework.Controls.MetroLabel metroLabel5;
         private DevExpress.XtraEditors.CheckEdit chk_esv;
         private DevExpress.XtraEditors.CheckEdit chk_sv;
         private DevExpress.XtraEditors.SimpleButton simpleButton5;

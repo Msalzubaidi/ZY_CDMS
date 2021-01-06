@@ -16,7 +16,7 @@ namespace ZY_CDMS.Classes
           public static string usernamecon=Connection.un;
           public static string passwordcon=Connection.ps;
           */
-          
+        Rules r = new Rules();
         public static string servercon =Resources.servercon; 
         public static string dbnamecon = Resources.dbnamecon;
         public static string usernamecon = Resources.usernamecon;
@@ -65,6 +65,7 @@ namespace ZY_CDMS.Classes
 
         }
 
+      
         public DataTable ViewSysinfo(int id)
         {
             SqlConnection con = new SqlConnection(connstring);
@@ -101,11 +102,99 @@ namespace ZY_CDMS.Classes
 
         }
 
+        public int AddUserPer(int unum , int settings, int makemodel, int editmakemodel, int service, int editservice, int paymethods, int sourcecar, int paintcodes, int taxCat, int operations, int buycar, int sellcar, int printinvoice, int customers, int carMain, int searchMain, int search, int Reports, int rpt, int systemMange, int sysinfo, int usersettings, int MyAcc, int pExit, int admin)
+        {
+
+            SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
+            SqlCommand cmd = new SqlCommand("INSERT INTO User_permission(user_id ,  settings,  makemodel,  editmakemodel,  service,  editservice,  paymethods,  sourcecar,  paintcodes,  taxCat,  operations,  buycar,  sellcar,  printinvoice,  customers,  carMain,  searchMain,  search,  Reports,  rpt,  systemMange,  sysinfo,  usersettings,  MyAcc,  pExit ,  admin) VALUES(@userid ,  @settings,  @makemodel,  @editmakemodel,  @service,  @editservice,  @paymethods,  @sourcecar,  @paintcodes,  @taxCat,  @operations,  @buycar,  @sellcar,  @printinvoice,  @customers,  @carMain,  @searchMain,  @search,  @Reports,  @rpt,  @systemMange,  @sysinfo,  @usersettings,  @MyAcc,  @pExit ,  @admin)", con); // sql command to so get data from data bas
+           
+            cmd.Parameters.Add(new SqlParameter("@userid", unum));
+            cmd.Parameters.Add(new SqlParameter("@settings", settings));
+            cmd.Parameters.Add(new SqlParameter("@makemodel", makemodel));
+            cmd.Parameters.Add(new SqlParameter("@editmakemodel", editmakemodel));
+            cmd.Parameters.Add(new SqlParameter("@service", service));
+            cmd.Parameters.Add(new SqlParameter("@editservice", editservice));
+            cmd.Parameters.Add(new SqlParameter("@paymethods", paymethods));
+            cmd.Parameters.Add(new SqlParameter("@sourcecar", sourcecar));
+            cmd.Parameters.Add(new SqlParameter("@paintcodes", paintcodes));
+            cmd.Parameters.Add(new SqlParameter("@taxCat", taxCat));
+            cmd.Parameters.Add(new SqlParameter("@operations", operations));
+            cmd.Parameters.Add(new SqlParameter("@buycar", buycar));
+            cmd.Parameters.Add(new SqlParameter("@sellcar", sellcar));
+            cmd.Parameters.Add(new SqlParameter("@printinvoice", printinvoice));
+            cmd.Parameters.Add(new SqlParameter("@customers", customers));
+            cmd.Parameters.Add(new SqlParameter("@carMain", carMain));
+            cmd.Parameters.Add(new SqlParameter("@searchMain", searchMain));
+            cmd.Parameters.Add(new SqlParameter("@search", search));
+            cmd.Parameters.Add(new SqlParameter("@Reports", Reports));
+            cmd.Parameters.Add(new SqlParameter("@rpt", rpt));
+            cmd.Parameters.Add(new SqlParameter("@systemMange", systemMange));
+            cmd.Parameters.Add(new SqlParameter("@sysinfo", sysinfo));
+            cmd.Parameters.Add(new SqlParameter("@usersettings", usersettings));
+            cmd.Parameters.Add(new SqlParameter("@MyAcc", MyAcc));
+            cmd.Parameters.Add(new SqlParameter("@pExit", pExit));
+            cmd.Parameters.Add(new SqlParameter("@admin", admin));
+
+
+
+
+
+            con.Open();
+
+            return cmd.ExecuteNonQuery();
+        }
+
+
+        public int DeleteUser(int unum)
+        {
+
+            SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
+            SqlCommand cmd = new SqlCommand("delete from Users where user_id=@unum", con); // sql command to so get data from data bas
+
+            cmd.Parameters.Add(new SqlParameter("@unum", unum));
+
+
+            DataBase d = new DataBase();
+            con.Open();
+
+
+            int y = this.checkexist(unum);
+            if (y > 0)
+                return cmd.ExecuteNonQuery();
+            
+            else
+                return -1;
+
+          
+
+
+        }
+
+        public int DeleteUserPermissions(int unum)
+        {
+
+            SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
+            SqlCommand cmd = new SqlCommand("delete from User_permission where user_id=@unum", con); // sql command to so get data from data bas
+
+            cmd.Parameters.Add(new SqlParameter("@unum", unum));
+
+
+
+            con.Open();
+
+                return cmd.ExecuteNonQuery();
+
+          
+
+
+
+        }
+
         public DataTable ViewUserper(int id)
         {
             SqlConnection con = new SqlConnection(connstring);
 
-            SqlCommand cmd = new SqlCommand("select * from User_permission where userid=@id", con); // sql command to so get data from data base
+            SqlCommand cmd = new SqlCommand("select * from User_permission where user_id=@id", con); // sql command to so get data from data base
 
             cmd.Parameters.AddWithValue("@id", id); //store data in parametageers to prevent sql injection (get from Password textbox)
 
@@ -184,22 +273,7 @@ namespace ZY_CDMS.Classes
             return cmd.ExecuteNonQuery();
         }
 
-        public DataTable userpermession(int uid)
-        {
-            SqlConnection con = new SqlConnection(connstring);
-
-            SqlCommand cmd = new SqlCommand("select * from User_permission where userid=@id", con); // sql command to so get data from data base
-
-            cmd.Parameters.AddWithValue("@id", uid); //store data in parameters to prevent sql injection (get from Password textbox)
-            SqlDataAdapter sda = new SqlDataAdapter(cmd);
-
-            System.Data.DataTable dt = new System.Data.DataTable();
-            sda.Fill(dt);
-
-            con.Open();
-            return dt;
-
-        }
+       
 
         public DataSet viewLogo(int id)
         {
@@ -255,25 +329,9 @@ namespace ZY_CDMS.Classes
             return cmd.ExecuteNonQuery();
         }
 
-        public DataTable ViewActivateInfo()
-        {
-            SqlConnection con = new SqlConnection(connstring);
-            SqlCommand cmd = new SqlCommand(" Select * from ActivationApp ", con);
-            SqlDataAdapter sda = new SqlDataAdapter(cmd);
-            sda.SelectCommand = cmd;
-            DataTable dt = new System.Data.DataTable();
-            sda.Fill(dt);
-            con.Open();
-            return dt;
-        }
+       
 
-        public int Activate()
-        {
-            SqlConnection con = new SqlConnection(connstring);
-            SqlCommand cmd = new SqlCommand("update ActivationApp set Activated = 1", con);
-            con.Open();
-            return cmd.ExecuteNonQuery();
-        }
+       
 
         public DataTable search(string parameteresearch , int method , DateTime from , DateTime to)
         {
