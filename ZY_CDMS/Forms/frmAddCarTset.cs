@@ -389,7 +389,7 @@ namespace ZY_CDMS.Forms
             { 
             double taxPer = double.Parse(cbo_tax.EditValue.ToString());
 
-            double taxval = double.Parse(txt_pay.Text.ToString()) * taxPer ;
+            double taxval = double.Parse(txt_pay.Text.ToString()) * (taxPer / 100) ;
 
             txt_tax.Text = taxval.ToString();
 

@@ -156,7 +156,6 @@ namespace ZY_CDMS.Forms
         private void credInfo_Click_1(object sender, EventArgs e)
         {
             txt_userid.Text = "1";
-            txt_username.Text = "admin";
             txt_password.Text = DateTime.Now.ToString("ddMMyyyy");
         }
 

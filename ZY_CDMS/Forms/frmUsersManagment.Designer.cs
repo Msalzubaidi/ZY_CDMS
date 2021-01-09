@@ -68,6 +68,7 @@
             this.chk_Settings = new DevExpress.XtraEditors.CheckEdit();
             this.chk_admin = new DevExpress.XtraEditors.CheckEdit();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.chk_asc = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_userid.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chk_esv.Properties)).BeginInit();
@@ -95,6 +96,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chk_dmm.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_Settings.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_admin.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_asc.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // cbo_userid
@@ -230,6 +232,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chk_asc);
             this.groupBox1.Controls.Add(this.chk_esv);
             this.groupBox1.Controls.Add(this.chk_sv);
             this.groupBox1.Controls.Add(this.chk_us);
@@ -379,7 +382,7 @@
             // 
             // chk_cust
             // 
-            this.chk_cust.Location = new System.Drawing.Point(158, 114);
+            this.chk_cust.Location = new System.Drawing.Point(158, 132);
             this.chk_cust.Name = "chk_cust";
             this.chk_cust.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_cust.Properties.Appearance.Options.UseFont = true;
@@ -389,7 +392,7 @@
             // 
             // chk_cm
             // 
-            this.chk_cm.Location = new System.Drawing.Point(158, 139);
+            this.chk_cm.Location = new System.Drawing.Point(158, 157);
             this.chk_cm.Name = "chk_cm";
             this.chk_cm.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_cm.Properties.Appearance.Options.UseFont = true;
@@ -399,7 +402,7 @@
             // 
             // chk_pi
             // 
-            this.chk_pi.Location = new System.Drawing.Point(158, 92);
+            this.chk_pi.Location = new System.Drawing.Point(158, 110);
             this.chk_pi.Name = "chk_pi";
             this.chk_pi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_pi.Properties.Appearance.Options.UseFont = true;
@@ -409,7 +412,7 @@
             // 
             // chk_sc
             // 
-            this.chk_sc.Location = new System.Drawing.Point(158, 68);
+            this.chk_sc.Location = new System.Drawing.Point(158, 86);
             this.chk_sc.Name = "chk_sc";
             this.chk_sc.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_sc.Properties.Appearance.Options.UseFont = true;
@@ -528,6 +531,16 @@
             this.simpleButton5.Text = "Add";
             this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
             // 
+            // chk_asc
+            // 
+            this.chk_asc.Location = new System.Drawing.Point(157, 66);
+            this.chk_asc.Name = "chk_asc";
+            this.chk_asc.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_asc.Properties.Appearance.Options.UseFont = true;
+            this.chk_asc.Properties.Caption = "Add service to car";
+            this.chk_asc.Size = new System.Drawing.Size(121, 19);
+            this.chk_asc.TabIndex = 63;
+            // 
             // frmUsersManagment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -582,6 +595,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chk_dmm.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_Settings.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_admin.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_asc.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -628,5 +642,6 @@
         private DevExpress.XtraEditors.CheckEdit chk_esv;
         private DevExpress.XtraEditors.CheckEdit chk_sv;
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
+        private DevExpress.XtraEditors.CheckEdit chk_asc;
     }
 }

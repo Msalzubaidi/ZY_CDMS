@@ -24,9 +24,10 @@ namespace ZY_CDMS.Forms
         DataBase db = new DataBase();
 
         public static int selectedReport = -1;
+        public static int CusVersion = 0 ; 
 
-        public static DateTime dtf;
-        public static DateTime dtt;
+      
+
         string server = DataBase.servercon;
         string dbname = DataBase.dbnamecon;
         string username = DataBase.usernamecon;
@@ -73,8 +74,9 @@ namespace ZY_CDMS.Forms
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             frmReportViewer rv = null;
-            from = dtp_from.DateTime;
-            to = dtp_to.DateTime;
+           
+            DataTable datatable = db.ViewSysinfo(1);
+            int version = int.Parse(datatable.Rows[0]["version"].ToString());//6
 
             if (string.IsNullOrEmpty(cbo_reports.EditValue.ToString()) || (cbo_reports.SelectedIndex < 0 || cbo_reports.SelectedIndex > 15))
             {
@@ -84,7 +86,11 @@ namespace ZY_CDMS.Forms
             {
                 if (cbo_reports.SelectedIndex == 0 )
                 {
-                    selectedReport = 0;
+                
+                        selectedReport = 0;
+                    from = dtp_from.DateTime;
+                    to = dtp_to.DateTime;
+
                     rv = new frmReportViewer();
                     rv.Show();
 
@@ -92,16 +98,197 @@ namespace ZY_CDMS.Forms
                 else if (cbo_reports.SelectedIndex == 1)
                 {
                     selectedReport = 1;
+                    from = dtp_from.DateTime;
+                    to = dtp_to.DateTime;
+                    rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+
+                else if (cbo_reports.SelectedIndex == 2)
+                {
+                    selectedReport = 2;
+                    from = dtp_from.DateTime;
+                    to = dtp_to.DateTime;
+                    rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+                else if (cbo_reports.SelectedIndex == 3)
+                {
+                    selectedReport = 3;
+                    from = dtp_from.DateTime;
+                    to = dtp_to.DateTime;
+                    rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+
+                else if (cbo_reports.SelectedIndex == 4)
+                {
+                    selectedReport = 4;
+                    from = dtp_from.DateTime;
+                    to = dtp_to.DateTime;
+                    rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+
+                else if (cbo_reports.SelectedIndex == 5)
+                {
+                    selectedReport = 5;
+                    from = dtp_from.DateTime;
+                    to = dtp_to.DateTime;
+                    rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+                else if (cbo_reports.SelectedIndex == 6)
+                {
+                    selectedReport = 6;
+                    from = dtp_from.DateTime;
+                    to = dtp_to.DateTime;
+                    rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+
+                else if (cbo_reports.SelectedIndex == 7)
+                {
+                    selectedReport = 7;
+                    from = dtp_from.DateTime;
+                    to = dtp_to.DateTime;
+                    rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+
+                else if (cbo_reports.SelectedIndex == 8)
+                {
+                    selectedReport = 8;
+                    from = dtp_from.DateTime;
+                    to = dtp_to.DateTime;
+                    rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+
+                else if (cbo_reports.SelectedIndex == 9)
+                {
+                    selectedReport = 9;
+                    from = dtp_from.DateTime;
+                    to = dtp_to.DateTime;
+                    rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+
+                else if (cbo_reports.SelectedIndex ==10)
+                {
+                    selectedReport = 10;
+                    from = dtp_from.DateTime;
+                    to = dtp_to.DateTime;
+                    rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+                else if (cbo_reports.SelectedIndex == 11)
+                {
+                    selectedReport = 11;
+                    from = dtp_from.DateTime;
+                    to = dtp_to.DateTime;
+                    rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+
+                else if (cbo_reports.SelectedIndex == 12)
+                {
+                    selectedReport = 12;
+                    from = dtp_from.DateTime;
+                    to = dtp_to.DateTime;
+                    rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+
+                else if (cbo_reports.SelectedIndex == 13)
+                {
+                    selectedReport = 13;
+                    from = dtp_from.DateTime;
+                    to = dtp_to.DateTime;
+                    rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+
+                else if (cbo_reports.SelectedIndex == 14)
+                {
+                    selectedReport = 14;
+                    from = dtp_from.DateTime;
+                    to = dtp_to.DateTime;
+                    rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+                else if (cbo_reports.SelectedIndex == 15)
+                {
+                    selectedReport =15;
+                    from = dtp_from.DateTime;
+                    to = dtp_to.DateTime;
+                    rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+                else if (cbo_reports.SelectedIndex == 0  && (version.ToString() == Resources.JordanCleaningVersion))
+                {
+                    selectedReport =0;
+                    from = dtp_from.DateTime;
+                    to = dtp_to.DateTime;
+                    CusVersion = version;
+
+                    rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+                else if (cbo_reports.SelectedIndex == 1 && (version.ToString() == Resources.JordanCleaningVersion))
+                {
+                    selectedReport = 1;
+                    from = dtp_from.DateTime;
+                    to = dtp_to.DateTime;
+                    CusVersion = version;
+                    rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+                else if (cbo_reports.SelectedIndex == 2 && (version.ToString() == Resources.JordanCleaningVersion))
+                {
+                    selectedReport = 2;
+                    from = dtp_from.DateTime;
+                    to = dtp_to.DateTime;
+                    CusVersion = version;
+                    rv = new frmReportViewer();
+                    rv.Show();
+
+                }
+                else if (cbo_reports.SelectedIndex == 3 && (version.ToString() == Resources.JordanCleaningVersion))
+                {
+                    selectedReport = 3;
+                    from = dtp_from.DateTime;
+                    to = dtp_to.DateTime;
+                    CusVersion = version;
                     rv = new frmReportViewer();
                     rv.Show();
 
                 }
 
 
-            }
 
 
             }
+
+
+        }
 
         private void simpleButton4_Click(object sender, EventArgs e)
         {

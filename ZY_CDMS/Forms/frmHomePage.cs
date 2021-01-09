@@ -22,6 +22,9 @@ namespace ZY_CDMS.Forms
         Operations o = new Operations();
         string table = "SystemInfo";
 
+        DataBase d = new DataBase();
+
+
         private void defineMakeModelToolStripMenuItem_Click(object sender, EventArgs e)
         {
             bool isopen = false;
@@ -209,8 +212,9 @@ namespace ZY_CDMS.Forms
 
         private void frmHomePage_Load(object sender, EventArgs e)
         {
-
-
+            int x = int.Parse(DataBase.Unum.ToString());
+            string logedusername = DataBase.Username.ToString();
+            DataTable userPermission = d.ViewUserper(x);
             DataTable datatable = o.SelctData(table,0,"");
 
             int version = int.Parse(datatable.Rows[0]["version"].ToString());//6
@@ -221,7 +225,190 @@ namespace ZY_CDMS.Forms
             double NrOfDays = t.TotalDays;
 
             string nl = "\r\n";
-            
+
+            if (userPermission.Rows.Count != null)
+            { 
+            ///////////////////////////  User Permission //////////////////////////////
+
+               
+            int Settings = int.Parse(userPermission.Rows[0]["settings"].ToString());
+            int MakeModel = int.Parse(userPermission.Rows[0]["makemodel"].ToString());
+            int EditMakeModel = int.Parse(userPermission.Rows[0]["editmakemodel"].ToString());
+            int Services = int.Parse(userPermission.Rows[0]["service"].ToString());
+            int EditServices = int.Parse(userPermission.Rows[0]["editservice"].ToString());
+            int Paymethods = int.Parse(userPermission.Rows[0]["paymethods"].ToString());
+            int SourceCar = int.Parse(userPermission.Rows[0]["sourcecar"].ToString());
+            int PaintCodes = int.Parse(userPermission.Rows[0]["paintcodes"].ToString());
+            int TaxCat = int.Parse(userPermission.Rows[0]["taxCat"].ToString());
+            int Operations = int.Parse(userPermission.Rows[0]["operations"].ToString());
+            int BuyCar = int.Parse(userPermission.Rows[0]["buycar"].ToString());
+            int addserivetocar = int.Parse(userPermission.Rows[0]["addserivetocar"].ToString());
+            int SellCar = int.Parse(userPermission.Rows[0]["sellcar"].ToString());
+            int PrintInvoice = int.Parse(userPermission.Rows[0]["printinvoice"].ToString());
+            int Customers = int.Parse(userPermission.Rows[0]["customers"].ToString());
+            int CarMaintainance = int.Parse(userPermission.Rows[0]["carMain"].ToString());
+            int Search = int.Parse(userPermission.Rows[0]["searchMain"].ToString());
+            int search = int.Parse(userPermission.Rows[0]["search"].ToString());
+            int Reports = int.Parse(userPermission.Rows[0]["Reports"].ToString());
+            int report = int.Parse(userPermission.Rows[0]["rpt"].ToString());
+            int SystemManage = int.Parse(userPermission.Rows[0]["systemMange"].ToString());
+            int sysinfo = int.Parse(userPermission.Rows[0]["sysinfo"].ToString());
+            int userSettings = int.Parse(userPermission.Rows[0]["usersettings"].ToString());
+            int MyAccountSettings = int.Parse(userPermission.Rows[0]["MyAcc"].ToString());
+            int Exit = int.Parse(userPermission.Rows[0]["pExit"].ToString());
+         
+
+            if (Settings == 0)
+                mun_settings.Visible = false;
+            if (MakeModel == 0)
+                defineMakeModelToolStripMenuItem.Visible = false;
+            if (EditMakeModel == 0)
+                editMakeModelToolStripMenuItem.Visible = false;
+            if (Services == 0)
+                defineServicesToolStripMenuItem.Visible = false;
+            if (EditServices == 0)
+                editServicesToolStripMenuItem .Visible = false;
+            if (Paymethods == 0)
+                    definePayMethodsToolStripMenuItem.Visible = false;
+
+            if (SourceCar == 0 )
+                    defineSourceCarToolStripMenuItem.Visible = false;
+
+            if (PaintCodes == 0 )
+
+                    definePaintCodesToolStripMenuItem.Visible = false;
+
+                if (TaxCat == 0)
+
+                    defineTaxCategoriesToolStripMenuItem.Visible = false;
+            if (Operations == 0)
+                { 
+                        mnu_operations.Visible = false;
+                accordionControlElement1.Visible = false;
+                }
+
+                if (BuyCar == 0)
+                {
+                    buyCarToolStripMenuItem.Visible = false;
+                    accordionControlElement5.Visible = false;
+                }
+
+
+                if (SellCar == 0  )
+                {
+                    sellCarToolStripMenuItem.Visible = false;
+                    accordionControlElement6.Visible = false;
+                }
+                   
+
+                if (addserivetocar == 0)
+                {
+                    addServiceToCarToolStripMenuItem.Visible = false;
+                    accordionControlElement9.Visible = false;
+                }
+                   
+
+
+                if (PrintInvoice == 0)
+                {
+                    printInvoiceToolStripMenuItem.Visible = false;
+                    accordionControlElement8.Visible = false;
+                }
+                   
+
+
+                if (Customers == 0)
+                {
+                    addCustomerToolStripMenuItem.Visible = false;
+                    accordionControlElement10.Visible = false;
+                }
+                    
+
+
+                if (CarMaintainance == 0 )
+                {
+                    carMaintainanceToolStripMenuItem.Visible = false;
+                    accordionControlElement12.Visible = false;
+                }
+                   
+
+                if (Search == 0)
+                {
+
+                    tab_cars.Visible = false;
+                    accordionControlElement2.Visible = false;
+                }
+
+
+                if (search == 0)
+                {
+
+                    carsToolStripMenuItem.Visible = false;
+                    accordionControlElement14.Visible = false;
+                }
+
+                if (Reports == 0)
+
+                {
+                    mnu_reports.Visible = false;
+                    accordionControlElement3.Visible = false;
+
+                }
+
+                if (report == 0)
+                {
+                    tab_reports.Visible = false;
+                    accordionControlElement17.Visible = false;
+                }
+                    
+
+                if (SystemManage == 0)
+                    mun_sysmanage.Visible = false;
+
+            if (sysinfo == 0)
+
+                    tab_sysinfo.Visible = false;
+            if (userSettings == 0)
+
+                    tab_usersettings.Visible = false; 
+            if (MyAccountSettings == 0 || MyAccountSettings == 1 )
+             mnu_myaccount.Visible = true ;
+            if (Exit == 0 || Exit == 1)
+                mnu_exit.Visible = true;
+           
+
+           }
+
+            else
+            {
+                mnu_operations.Visible = false;
+                mnu_reports.Visible = false;
+                mun_settings.Visible = false;
+                tab_cars.Visible = false;
+                mun_sysmanage.Visible = false;
+                accordionControlElement1.Visible = false;
+                accordionControlElement2.Visible = false;
+                accordionControlElement3.Visible = false;
+
+                MessageBox.Show(logedusername + " Hasn't Permissions", Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+
+            }
+            /////////////////////////////////
+
+            if (version.ToString() == Resources.JordanCleaningVersion)
+            {
+                carMaintainanceToolStripMenuItem.Visible = true;
+                accordionControlElement12.Visible = true;
+                buyCarToolStripMenuItem.Visible = false;
+                sellCarToolStripMenuItem.Visible = false;
+                accordionControlElement5.Visible = false;
+                accordionControlElement6.Visible = false;
+                definePayMethodsToolStripMenuItem.Visible = false;
+                defineSourceCarToolStripMenuItem.Visible = false;
+            }
+
+
 
             int flag = 0;
 
@@ -255,9 +442,6 @@ namespace ZY_CDMS.Forms
                
                 lic.Text = Resources.Logo + " " + Resources.AppName + " - Licensed for ( " + " " + titleform.ToString() + " )  " + nl + "License Expired in " + "" + dt.ToShortDateString();
                 
-
-
-
 
             }
 
@@ -400,25 +584,66 @@ namespace ZY_CDMS.Forms
 
         private void printInvoiceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            bool isopen = false;
-            foreach (Form f in Application.OpenForms)
+            DataTable datatable = o.SelctData(table, 0, "");
+
+            int version = int.Parse(datatable.Rows[0]["version"].ToString());//6
+
+           
+
+            switch (version)
             {
-                if (f.Text == "Print Invoice")
-                {
-                    isopen = true;
-                    f.BringToFront();
+                case 10: // AZ
+
+                    bool isopen = false;
+                    foreach (Form f in Application.OpenForms)
+                    {
+                        if (f.Text == "Print Invoice")
+                        {
+                            isopen = true;
+                            f.BringToFront();
+                            break;
+                        }
+                    }
+
+                    if (isopen == false)
+                    {
+                        frmPrintInvoice pi = new frmPrintInvoice();
+
+                        pi.Show();
+
+                    }
+
                     break;
-                }
+                case 20: // JOClean
+
+                    bool isopen2 = false;
+                    foreach (Form f in Application.OpenForms)
+                    {
+                        if (f.Text == "Add Car Test")
+                        {
+                            isopen2 = true;
+                            f.BringToFront();
+                            break;
+                        }
+                    }
+
+                    if (isopen2 == false)
+                    {
+                        frmAddCarTset act = new frmAddCarTset();
+                        act.Show();
+
+                    }
+
+                    break;
+
+                default:
+                    MessageBox.Show("Please Contact With : +962790480266 -  Mohammad Alzubaidi ");
+                    break;
             }
 
-            if (isopen == false)
-            {
-                frmPrintInvoice pi = new frmPrintInvoice();
-                
-                pi.Show();
-
-            }
-        }
+        }            
+          
+        
 
         private void carMaintainanceToolStripMenuItem_Click(object sender, EventArgs e)
         {

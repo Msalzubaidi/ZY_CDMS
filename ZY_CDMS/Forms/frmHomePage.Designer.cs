@@ -156,6 +156,7 @@
             this.accordionControlElement12.Name = "accordionControlElement12";
             this.accordionControlElement12.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement12.Text = "Car Maintainance";
+            this.accordionControlElement12.Visible = false;
             this.accordionControlElement12.Click += new System.EventHandler(this.accordionControlElement12_Click);
             // 
             // accordionControlElement2
@@ -351,6 +352,7 @@
             this.carMaintainanceToolStripMenuItem.Name = "carMaintainanceToolStripMenuItem";
             this.carMaintainanceToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.carMaintainanceToolStripMenuItem.Text = "Car Maintainance";
+            this.carMaintainanceToolStripMenuItem.Visible = false;
             this.carMaintainanceToolStripMenuItem.Click += new System.EventHandler(this.carMaintainanceToolStripMenuItem_Click);
             // 
             // tab_cars
@@ -364,7 +366,7 @@
             // carsToolStripMenuItem
             // 
             this.carsToolStripMenuItem.Name = "carsToolStripMenuItem";
-            this.carsToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
+            this.carsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.carsToolStripMenuItem.Text = "Cars";
             this.carsToolStripMenuItem.Click += new System.EventHandler(this.carsToolStripMenuItem_Click);
             // 

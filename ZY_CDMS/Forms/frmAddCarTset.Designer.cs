@@ -846,6 +846,7 @@
             this.Controls.Add(this.txt_vin);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmAddCarTset";
             this.Text = "Add Car Test";

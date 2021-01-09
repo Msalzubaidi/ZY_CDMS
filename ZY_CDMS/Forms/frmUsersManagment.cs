@@ -117,6 +117,7 @@ namespace ZY_CDMS.Forms
                     int PaintCodes = int.Parse(dtp.Rows[0]["paintcodes"].ToString());
                     int TaxCat = int.Parse(dtp.Rows[0]["taxCat"].ToString());
                     int Operations = int.Parse(dtp.Rows[0]["operations"].ToString());
+                    int servicetocar = int.Parse(dtp.Rows[0]["addserivetocar"].ToString());
                     int BuyCar = int.Parse(dtp.Rows[0]["buycar"].ToString());
                     int SellCar = int.Parse(dtp.Rows[0]["sellcar"].ToString());
                     int PrintInvoice = int.Parse(dtp.Rows[0]["printinvoice"].ToString());
@@ -131,7 +132,7 @@ namespace ZY_CDMS.Forms
                     int userSettings = int.Parse(dtp.Rows[0]["usersettings"].ToString());
                     int MyAccountSettings = int.Parse(dtp.Rows[0]["MyAcc"].ToString());
                     int Exit = int.Parse(dtp.Rows[0]["pExit"].ToString());
-                    int Admin = int.Parse(dtp.Rows[0]["admin"].ToString());
+                    int Admin = int.Parse(dtp.Rows[0]["admin"].ToString()); 
                     if (Settings == 1)
                         chk_Settings.Checked = true;
                     if (MakeModel == 1)
@@ -144,7 +145,9 @@ namespace ZY_CDMS.Forms
                         chk_esv.Checked = true;
                     if (Paymethods == 1)
                         chk_pm.Checked = true;
-                 
+                    if (servicetocar == 1)
+                        chk_asc.Checked = true;
+
                     if (SourceCar == 1)
                         chk_dsc.Checked = true;
                     if (PaintCodes == 1)
@@ -239,6 +242,7 @@ namespace ZY_CDMS.Forms
                 chk_pi.Checked = false;
                 chk_cust.Checked = false;
                 chk_cm.Checked = false;
+                chk_asc.Checked = false; 
 
             
             chk_Search.Checked = false;
@@ -286,6 +290,7 @@ namespace ZY_CDMS.Forms
                 chk_pi.Checked = true;
                 chk_cust.Checked = true;
                 chk_cm.Checked = true;
+                chk_asc.Checked = true;
             }
         }
 
@@ -355,6 +360,7 @@ namespace ZY_CDMS.Forms
             int SellCar = 0;
             int PrintInvoice = 0;
             int Customers = 0;
+            int addserivetocar = 0;
             int CarMaintainance = 0;
             int Search = 0;
             int search = 0;
@@ -401,7 +407,7 @@ namespace ZY_CDMS.Forms
                  PrintInvoice = 1;
                  Customers = 1;
                  CarMaintainance = 1;
-                
+                addserivetocar = 1;
                  search = 1;
 
                 
@@ -476,7 +482,15 @@ namespace ZY_CDMS.Forms
                 Operations = 1;
                 Customers = 1;
                 }
-                if (chk_cm.Checked == true)
+
+            if (chk_asc.Checked == true)
+            {
+                Operations = 1;
+                addserivetocar = 1;
+            }
+
+
+            if (chk_cm.Checked == true)
             {
                 Operations = 1;
                 CarMaintainance = 1;
@@ -529,7 +543,7 @@ namespace ZY_CDMS.Forms
                     if (add > 0)
                     {
                         MessageBox.Show(table + Resources.AddedSuccessfully, Resources.MessageTitle, 0, MessageBoxIcon.Information);
-                    d.AddUserPer(userid , Settings , MakeModel , EditMakeModel , Services , EditServices , Paymethods , SourceCar , PaintCodes , TaxCat , Operations ,BuyCar ,SellCar  ,  PrintInvoice  , Customers  , CarMaintainance , Search , search , Reports , report , SystemManage , sysinfo , userSettings , MyAccountSettings , Exit , Admin);
+                    d.AddUserPer(userid , Settings , MakeModel , EditMakeModel , Services , EditServices , Paymethods , SourceCar , PaintCodes , TaxCat , Operations ,BuyCar ,SellCar  ,  PrintInvoice  , addserivetocar, Customers  , CarMaintainance , Search , search , Reports , report , SystemManage , sysinfo , userSettings , MyAccountSettings , Exit , Admin);
                     simpleButton3.PerformClick();
                     
 
