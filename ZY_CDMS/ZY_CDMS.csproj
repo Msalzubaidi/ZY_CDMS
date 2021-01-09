@@ -347,6 +347,9 @@
     <EmbeddedResource Include="Forms\frmAbout.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAccountSetttings.ar-JO.resx">
+      <DependentUpon>frmAccountSetttings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAccountSetttings.resx">
       <DependentUpon>frmAccountSetttings.cs</DependentUpon>
     </EmbeddedResource>
@@ -392,14 +395,23 @@
     <EmbeddedResource Include="Forms\frmEditServices.resx">
       <DependentUpon>frmEditServices.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmHomePage.ar-JO.resx">
+      <DependentUpon>frmHomePage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmHomePage.resx">
       <DependentUpon>frmHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLogin.ar-JO.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmPrintInvoice.resx">
       <DependentUpon>frmPrintInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReports.ar-JO.resx">
+      <DependentUpon>frmReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmReports.resx">
       <DependentUpon>frmReports.cs</DependentUpon>

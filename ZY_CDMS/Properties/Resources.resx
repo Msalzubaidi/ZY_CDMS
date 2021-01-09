@@ -192,4 +192,10 @@
   <data name="JordanCleaningVersion" xml:space="preserve">
     <value>20</value>
   </data>
+  <data name="AppNameAR" xml:space="preserve">
+    <value>نظام إدارة محلات تجارة وصيانة السيارات</value>
+  </data>
+  <data name="LogoAR" xml:space="preserve">
+    <value>زد واي لحلول تكنولوجيا المعلومات </value>
+  </data>
 </root>

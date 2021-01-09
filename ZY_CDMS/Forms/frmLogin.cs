@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Resources;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
@@ -25,6 +26,7 @@ namespace ZY_CDMS.Forms
 
         DataBase db = new DataBase();
         Rules rule = new Rules();
+        public static int languagearabic = 0; 
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
@@ -91,10 +93,19 @@ namespace ZY_CDMS.Forms
 
                     this.Hide();
                     frmHomePage hp = new frmHomePage();
-
-                    string info = Resources.AppName + " " + Resources.AppVersion + "   " + ay.ToString();
-                    hp.Text = titleform.ToString() + "      " + info.ToString() + "        " + DataBase.Username.ToString();
-                    hp.Show();
+                    if (languagearabic == 1 )
+                    {
+                        string info = Resources.AppNameAR + " " + Resources.AppVersion + "   " + ay.ToString();
+                        hp.Text = titleform.ToString() + "      " + info.ToString() + "        " + DataBase.Username.ToString();
+                        hp.Show();
+                    }
+                    else
+                    {
+                        string info = Resources.AppName + " " + Resources.AppVersion + "   " + ay.ToString();
+                        hp.Text = titleform.ToString() + "      " + info.ToString() + "        " + DataBase.Username.ToString();
+                        hp.Show();
+                    }
+                   
                 }
                 else if (result == 0)
                 {
@@ -183,6 +194,20 @@ namespace ZY_CDMS.Forms
         private void txt_password_Leave(object sender, EventArgs e)
         {
             simpleButton1.PerformClick();
+        }
+
+        private void metroLabel5_Click(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("ar-jo");
+            languagearabic = 1; 
+            this.Controls.Clear();
+            InitializeComponent();
+        }
+
+        private void metroLabel6_Click(object sender, EventArgs e)
+        {
+          
+           
         }
     }
 }

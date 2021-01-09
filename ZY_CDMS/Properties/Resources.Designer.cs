@@ -88,6 +88,15 @@ namespace ZY_CDMS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to نظام إدارة محلات تجارة وصيانة السيارات.
+        /// </summary>
+        internal static string AppNameAR {
+            get {
+                return ResourceManager.GetString("AppNameAR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to V 1.0.5.2.
         /// </summary>
         internal static string AppVersion {
@@ -183,6 +192,15 @@ namespace ZY_CDMS.Properties {
         internal static string Logo {
             get {
                 return ResourceManager.GetString("Logo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to زد واي لحلول تكنولوجيا المعلومات .
+        /// </summary>
+        internal static string LogoAR {
+            get {
+                return ResourceManager.GetString("LogoAR", resourceCulture);
             }
         }
         

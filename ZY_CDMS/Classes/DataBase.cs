@@ -17,10 +17,10 @@ namespace ZY_CDMS.Classes
           public static string passwordcon=Connection.ps;
           */
         Rules r = new Rules();
-        public static string servercon =Resources.servercon; 
+        public static string servercon = Resources.servercon; 
         public static string dbnamecon = Resources.dbnamecon;
         public static string usernamecon = Resources.usernamecon;
-        public static string passwordcon =Resources.passwordcon;
+        public static string passwordcon = Resources.passwordcon;
         public static int ZYTECH = 0;
         public static int AZAuto = 10;
         public static int JordanCleaning = 20;
@@ -631,7 +631,7 @@ namespace ZY_CDMS.Classes
 
             if (reportserial == 2 && (version.ToString() == Resources.JordanCleaningVersion))
             {
-               qry = "select * from FROM CarTest ,SystemInfo where trans_date  >= @dtf  and trans_date  <=@dtt  ";
+               qry = "select * from  CarTest , SystemInfo where trans_date >= @dtf and trans_date  <=@dtt  ";
             }
             if (reportserial == 3 && (version.ToString() == Resources.JordanCleaningVersion))
             {

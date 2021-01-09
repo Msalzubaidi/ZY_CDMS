@@ -80,7 +80,10 @@ namespace ZY_CDMS.Forms
 
             if (string.IsNullOrEmpty(cbo_reports.EditValue.ToString()) || (cbo_reports.SelectedIndex < 0 || cbo_reports.SelectedIndex > 15))
             {
-                MessageBox.Show("Please Select Vin  to view Data !!! ", Resources.MessageTitle, 0, MessageBoxIcon.Warning);
+                if (frmLogin.languagearabic == 1)
+                    MessageBox.Show("الرجاء إختيار تقرير لعرضه ", "زد واي لتكنولجيا المعلومات ", 0, MessageBoxIcon.Warning);
+                else
+                    MessageBox.Show("Please Select Vin  to view Data !!! ", Resources.MessageTitle, 0, MessageBoxIcon.Warning);
             }
             else
             {
@@ -90,7 +93,7 @@ namespace ZY_CDMS.Forms
                         selectedReport = 0;
                     from = dtp_from.DateTime;
                     to = dtp_to.DateTime;
-
+                    CusVersion = version;
                     rv = new frmReportViewer();
                     rv.Show();
 
@@ -100,6 +103,7 @@ namespace ZY_CDMS.Forms
                     selectedReport = 1;
                     from = dtp_from.DateTime;
                     to = dtp_to.DateTime;
+                    CusVersion = version;
                     rv = new frmReportViewer();
                     rv.Show();
 
@@ -110,6 +114,7 @@ namespace ZY_CDMS.Forms
                     selectedReport = 2;
                     from = dtp_from.DateTime;
                     to = dtp_to.DateTime;
+                    CusVersion = version;
                     rv = new frmReportViewer();
                     rv.Show();
 
@@ -119,6 +124,7 @@ namespace ZY_CDMS.Forms
                     selectedReport = 3;
                     from = dtp_from.DateTime;
                     to = dtp_to.DateTime;
+                    CusVersion = version;
                     rv = new frmReportViewer();
                     rv.Show();
 
@@ -129,6 +135,7 @@ namespace ZY_CDMS.Forms
                     selectedReport = 4;
                     from = dtp_from.DateTime;
                     to = dtp_to.DateTime;
+                    CusVersion = version;
                     rv = new frmReportViewer();
                     rv.Show();
 
@@ -139,6 +146,7 @@ namespace ZY_CDMS.Forms
                     selectedReport = 5;
                     from = dtp_from.DateTime;
                     to = dtp_to.DateTime;
+                    CusVersion = version;
                     rv = new frmReportViewer();
                     rv.Show();
 
@@ -148,6 +156,7 @@ namespace ZY_CDMS.Forms
                     selectedReport = 6;
                     from = dtp_from.DateTime;
                     to = dtp_to.DateTime;
+                    CusVersion = version;
                     rv = new frmReportViewer();
                     rv.Show();
 
@@ -158,6 +167,7 @@ namespace ZY_CDMS.Forms
                     selectedReport = 7;
                     from = dtp_from.DateTime;
                     to = dtp_to.DateTime;
+                    CusVersion = version;
                     rv = new frmReportViewer();
                     rv.Show();
 
@@ -168,6 +178,7 @@ namespace ZY_CDMS.Forms
                     selectedReport = 8;
                     from = dtp_from.DateTime;
                     to = dtp_to.DateTime;
+                    CusVersion = version;
                     rv = new frmReportViewer();
                     rv.Show();
 
@@ -178,6 +189,7 @@ namespace ZY_CDMS.Forms
                     selectedReport = 9;
                     from = dtp_from.DateTime;
                     to = dtp_to.DateTime;
+                    CusVersion = version;
                     rv = new frmReportViewer();
                     rv.Show();
 
@@ -188,6 +200,7 @@ namespace ZY_CDMS.Forms
                     selectedReport = 10;
                     from = dtp_from.DateTime;
                     to = dtp_to.DateTime;
+                    CusVersion = version;
                     rv = new frmReportViewer();
                     rv.Show();
 
@@ -197,6 +210,7 @@ namespace ZY_CDMS.Forms
                     selectedReport = 11;
                     from = dtp_from.DateTime;
                     to = dtp_to.DateTime;
+                    CusVersion = version;
                     rv = new frmReportViewer();
                     rv.Show();
 
@@ -207,6 +221,7 @@ namespace ZY_CDMS.Forms
                     selectedReport = 12;
                     from = dtp_from.DateTime;
                     to = dtp_to.DateTime;
+                    CusVersion = version;
                     rv = new frmReportViewer();
                     rv.Show();
 
@@ -217,6 +232,7 @@ namespace ZY_CDMS.Forms
                     selectedReport = 13;
                     from = dtp_from.DateTime;
                     to = dtp_to.DateTime;
+                    CusVersion = version;
                     rv = new frmReportViewer();
                     rv.Show();
 
@@ -227,6 +243,7 @@ namespace ZY_CDMS.Forms
                     selectedReport = 14;
                     from = dtp_from.DateTime;
                     to = dtp_to.DateTime;
+                    CusVersion = version;
                     rv = new frmReportViewer();
                     rv.Show();
 
@@ -236,6 +253,7 @@ namespace ZY_CDMS.Forms
                     selectedReport =15;
                     from = dtp_from.DateTime;
                     to = dtp_to.DateTime;
+                    CusVersion = version;
                     rv = new frmReportViewer();
                     rv.Show();
 
@@ -314,6 +332,9 @@ namespace ZY_CDMS.Forms
             int version = int.Parse(datatable.Rows[0]["version"].ToString());//6
             if (string.IsNullOrEmpty(cbo_reports.EditValue.ToString()) || (cbo_reports.SelectedIndex < 0  ||  cbo_reports.SelectedIndex > 15 ))
             {
+                if (frmLogin.languagearabic == 1 )
+                    MessageBox.Show("الرجاء إختيار تقرير لعرضه ", "زد واي لتكنولجيا المعلومات ", 0, MessageBoxIcon.Warning);
+                else
                 MessageBox.Show("Please Select Vin  to view Data !!! ", Resources.MessageTitle, 0, MessageBoxIcon.Warning);
             }
             else

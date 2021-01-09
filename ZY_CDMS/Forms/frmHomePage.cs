@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZY_CDMS.Classes;
@@ -373,9 +374,12 @@ namespace ZY_CDMS.Forms
                     tab_usersettings.Visible = false; 
             if (MyAccountSettings == 0 || MyAccountSettings == 1 )
              mnu_myaccount.Visible = true ;
-            if (Exit == 0 || Exit == 1)
-                mnu_exit.Visible = true;
-           
+                if (Exit == 0 || Exit == 1)
+                {
+                    mnu_exit.Visible = true;
+
+                
+                }
 
            }
 
@@ -421,16 +425,33 @@ namespace ZY_CDMS.Forms
 
                 flag = 0;
                 
-                lic.Text = Resources.Logo + " " + Resources.AppName + " - Licensed for ( " + " " + titleform.ToString() + " ) "+nl+ "License Active to " + dt.ToShortDateString(); ;
+                if (frmLogin.languagearabic == 1 )
+                {
+                    lic.Text = Resources.LogoAR + " " + Resources.AppNameAR + " - نسخة مرخصة  ل ( " + " " + titleform.ToString() + " ) " + nl + "الرخصة فعالة لغاية  " + dt.ToShortDateString(); ;
+                }
+                else
+                {
+                    lic.Text = Resources.Logo + " " + Resources.AppName + " - Licensed for ( " + " " + titleform.ToString() + " ) " + nl + "License Active to " + dt.ToShortDateString(); ;
+                }
 
             }
             if (NrOfDays <= 30)
             {
                 lic.Visible = true;
                 lic.ForeColor = Color.Azure;
-              
-               
-                lic.Text = Resources.Logo + " " + Resources.AppName + " - Licensed for ( " + " " + titleform.ToString() + " ) " + nl + "License will be Expired by " + "" + NrOfDays.ToString() + " " + "Days";
+
+                if (frmLogin.languagearabic == 1)
+                {
+                    lic.Text = Resources.LogoAR + " " + Resources.AppNameAR + " - نسخة مرخصة ل ( " + " " + titleform.ToString() + " ) " + nl + "ستنتهي صلاحية الرخصة خلال " + "" + NrOfDays.ToString() + " " + "يوم";
+                }
+                else
+                {
+                    lic.Text = Resources.Logo + " " + Resources.AppName + " - Licensed for ( " + " " + titleform.ToString() + " ) " + nl + "License will be Expired by " + "" + NrOfDays.ToString() + " " + "Days";
+                }
+
+
+
+             
 
                 flag = 0;
             }
@@ -438,10 +459,28 @@ namespace ZY_CDMS.Forms
             {
                 lic.Visible = true;
                 lic.ForeColor = Color.Red;
-                
+
+
+                if (frmLogin.languagearabic == 1)
+                {
+                    lic.Text = Resources.LogoAR + " " + Resources.AppNameAR + " - نسخة مرخصة ل  ( " + " " + titleform.ToString() + " )  " + nl + "انتهت صلاحية الرخصة في  " + "" + dt.ToShortDateString();
+                }
+                else
+                {
+                    lic.Text = Resources.Logo + " " + Resources.AppName + " - Licensed for ( " + " " + titleform.ToString() + " )  " + nl + "License Expired in " + "" + dt.ToShortDateString();
+                }
+
+
+
                
-                lic.Text = Resources.Logo + " " + Resources.AppName + " - Licensed for ( " + " " + titleform.ToString() + " )  " + nl + "License Expired in " + "" + dt.ToShortDateString();
-                
+                mnu_operations.Visible = false;
+                mnu_reports.Visible = false;
+                mun_settings.Visible = false;
+                tab_cars.Visible = false;
+             
+                accordionControlElement1.Visible = false;
+                accordionControlElement2.Visible = false;
+                accordionControlElement3.Visible = false;
 
             }
 
@@ -801,7 +840,7 @@ namespace ZY_CDMS.Forms
             bool isopen = false;
             foreach (Form f in Application.OpenForms)
             {
-                if (f.Text == "System Info")
+                if (f.Text == "Reports")
                 {
                     isopen = true;
                     f.BringToFront();
@@ -821,6 +860,11 @@ namespace ZY_CDMS.Forms
         private void accordionControlElement17_Click(object sender, EventArgs e)
         {
             tab_reports.PerformClick();
+        }
+
+        private void عربيToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

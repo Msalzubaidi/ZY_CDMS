@@ -118,39 +118,53 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="simpleButton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>245, 195</value>
+  <data name="metroLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>298, 24</value>
   </data>
   <data name="metroLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 19</value>
+    <value>82, 19</value>
   </data>
-  <data name="&gt;&gt;txt_oldpass.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="metroLabel2.Text" xml:space="preserve">
+    <value>رمز المستخدم</value>
   </data>
-  <data name="&gt;&gt;simpleButton2.Name" xml:space="preserve">
-    <value>simpleButton2</value>
+  <data name="txt_userid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 25</value>
   </data>
-  <data name="txt_newpass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 20</value>
+  <data name="metroLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>298, 66</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="metroLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
+  <data name="metroLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 19</value>
   </data>
-  <data name="&gt;&gt;metroLabel1.Name" xml:space="preserve">
-    <value>metroLabel1</value>
+  <data name="metroLabel1.Text" xml:space="preserve">
+    <value>اسم المستخدم</value>
   </data>
-  <data name="simpleButton2.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="txt_username.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 67</value>
   </data>
-  <data name="&gt;&gt;metroLabel4.Name" xml:space="preserve">
-    <value>metroLabel4</value>
+  <data name="metroLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>298, 110</value>
   </data>
-  <data name="&gt;&gt;metroLabel3.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  <data name="metroLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 19</value>
   </data>
-  <data name="&gt;&gt;simpleButton1.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="metroLabel3.Text" xml:space="preserve">
+    <value>كلمة المرور القديمة</value>
+  </data>
+  <data name="txt_oldpass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 110</value>
+  </data>
+  <data name="metroLabel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>298, 154</value>
+  </data>
+  <data name="metroLabel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 19</value>
+  </data>
+  <data name="metroLabel4.Text" xml:space="preserve">
+    <value>كلمة المرور الجديدة</value>
+  </data>
+  <data name="txt_newpass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 154</value>
   </data>
   <data name="simpleButton1.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -174,161 +188,39 @@
         IjxB8Ph/fceYhPoHAkQRj5PgdPMAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="&gt;&gt;metroLabel1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="simpleButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 196</value>
   </data>
   <data name="simpleButton1.Text" xml:space="preserve">
-    <value>Save</value>
+    <value>حفظ</value>
   </data>
-  <data name="&gt;&gt;txt_username.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="simpleButton2.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACN0RVh0VGl0
+        bGUAQ2FuY2VsO1N0b3A7RXhpdDtCYXJzO1JpYmJvbjtMlpayAAADmklEQVQ4TyWTf1CTdRzHvwim2KS6
+        0k5iXWAbIg6GbG2gHmPGhMEs+CMsT70yE1BGx3F5kCReFE7uNAMu7og6MBFk/LCEOZ15WUkXw8aAcgsE
+        +SHC9mzABtuR3rvv8/C9ez33vs/n834/3+9zz5d4TK3Ec7uDeO9cJXQF/pZ7RGQrKqh6cKLQMl5c9ISF
+        1X8XamsMHxwU05kgSoDHpCcLxhZCA/SsMYCy2qrNKx799BP/7Ldfw93eAM/tTngp7vZGzNRXYezkCb/5
+        2NFSOruWsooLoCtAK5fxho7nmcYryuC51Y757ouY66iHq6UGruYauNvqMPdTI+jLMHH2cwwcz/1FEyl8
+        gQ1hA4LMHx7+ZrS8lBovwVKUj7pwEYyZmXA2noOz4RxuZmVxNUvhMS5o7Msy/HH4/cvUu5Z0ZmVKrbk5
+        Txj9d7hXkIMG1TswdZvRnFOCbnUGDOkaTpu6ermeOf8juK7UwZqf97Q+NTWJmDI0tSNfnMTj2grU8aPw
+        wD4Fh2sJ9lEGLdrTHPepnnZ6MWyb4mamq8sxcroEhrR0Pbm5Rz1sP/ouRrT7cUPzFv7UnYd36T84532w
+        PWRgG2MwO+fDwuIy1zNq9mI4Lxu2I9m4oUp7SK4rVMv/ZKdg6O0dsB+iW969Gz26C5hx+zBDd/LYTWF8
+        +L3iKxiUStw/kIbBjAQMZiXBoEhZJlflScuW1DcwoJZhaG8irkm2w3jqLN3yEh45FzHl8FKWcL1Uh2vx
+        2zGQLod1jxT9KglYL2kSy8d6lSuFrthtaPu4DAP/OjA56wWz4AMz78f4jBf99lnoC06hKyYaljfj0KsQ
+        oylWNkVqheLvTTtksCjFuBQuhHPaiUnHIlwLfvRfqOZYCfHA8cjJzfyVFIOfEyWoFsR2kqLQiF0Xo+Ke
+        mnduw12lHLcOHIKfYXBPVwmjLJ4i4TRbY3t3k2XoS4zGD1vEyH/5NTX7IwVXviK8fCVyKyzJsehJlqJV
+        GAmTLI5+Fzl3ZlaztR6FFBZFDPSRUTizScBenvVswKqta9ZtqNy4ua8pQgDzLhE1JaA/RYK+hCjKFnrm
+        eAyqE9C3U4TmzQKc2RhhFa15lk+9gWSi4D02JDD+Gd6msuf4LVUbwtEuiMAd8evoldJAyq9Ud9BaNe19
+        9jz/x+jVwa9ST9C4dh8h7IMTKxeDd3DdS6oSXmhreUjYhC6ED11IGMrXh00W80Lb9ge/qKEzIZTAFd8+
+        8j91kUbX3K/WKgAAAABJRU5ErkJggg==
+</value>
   </data>
-  <data name="metroLabel2.Text" xml:space="preserve">
-    <value>User ID</value>
-  </data>
-  <data name="txt_username.Location" type="System.Drawing.Point, System.Drawing">
-    <value>122, 67</value>
-  </data>
-  <data name="&gt;&gt;simpleButton1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;txt_username.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="txt_username.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="metroLabel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 19</value>
-  </data>
-  <data name="metroLabel4.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="&gt;&gt;txt_newpass.Name" xml:space="preserve">
-    <value>txt_newpass</value>
-  </data>
-  <data name="&gt;&gt;metroLabel4.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;txt_userid.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="simpleButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 196</value>
   </data>
   <data name="simpleButton2.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="txt_userid.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 20</value>
-  </data>
-  <data name="txt_oldpass.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="metroLabel4.Text" xml:space="preserve">
-    <value>New Password</value>
-  </data>
-  <data name="metroLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 68</value>
-  </data>
-  <data name="&gt;&gt;txt_username.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txt_userid.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;simpleButton2.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="metroLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 26</value>
-  </data>
-  <data name="&gt;&gt;simpleButton2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="metroLabel1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;metroLabel3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="txt_newpass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>122, 154</value>
-  </data>
-  <data name="metroLabel2.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;metroLabel1.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="txt_username.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 20</value>
-  </data>
-  <data name="&gt;&gt;txt_oldpass.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txt_userid.Name" xml:space="preserve">
-    <value>txt_userid</value>
-  </data>
-  <data name="&gt;&gt;metroLabel2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txt_userid.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;simpleButton1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="metroLabel4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="metroLabel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 156</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>frmAccountSetttings</value>
-  </data>
-  <data name="&gt;&gt;metroLabel4.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txt_userid.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="metroLabel2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;txt_newpass.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_oldpass.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;txt_oldpass.Name" xml:space="preserve">
-    <value>txt_oldpass</value>
-  </data>
-  <data name="&gt;&gt;metroLabel2.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;txt_newpass.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;metroLabel2.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="metroLabel3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="metroLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 19</value>
-  </data>
-  <data name="metroLabel1.Text" xml:space="preserve">
-    <value>Username</value>
-  </data>
-  <data name="txt_oldpass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 20</value>
-  </data>
-  <data name="txt_oldpass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>122, 110</value>
+    <value>الغاء</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1462,101 +1354,7 @@
         //////////////////////////////////8=
 </value>
   </data>
-  <data name="simpleButton1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="txt_userid.Location" type="System.Drawing.Point, System.Drawing">
-    <value>122, 25</value>
-  </data>
-  <data name="metroLabel3.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;metroLabel2.Name" xml:space="preserve">
-    <value>metroLabel2</value>
-  </data>
-  <data name="&gt;&gt;metroLabel3.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>My Account Setttings</value>
+    <value>إعدادات حسابي</value>
   </data>
-  <data name="metroLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 112</value>
-  </data>
-  <data name="&gt;&gt;metroLabel1.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;txt_username.Name" xml:space="preserve">
-    <value>txt_username</value>
-  </data>
-  <data name="&gt;&gt;simpleButton2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="simpleButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="metroLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 19</value>
-  </data>
-  <data name="&gt;&gt;txt_newpass.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;simpleButton1.Name" xml:space="preserve">
-    <value>simpleButton1</value>
-  </data>
-  <data name="txt_userid.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="simpleButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>140, 195</value>
-  </data>
-  <data name="&gt;&gt;metroLabel4.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>428, 231</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;metroLabel3.Name" xml:space="preserve">
-    <value>metroLabel3</value>
-  </data>
-  <data name="metroLabel3.Text" xml:space="preserve">
-    <value>Old Password</value>
-  </data>
-  <data name="simpleButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="simpleButton2.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACN0RVh0VGl0
-        bGUAQ2FuY2VsO1N0b3A7RXhpdDtCYXJzO1JpYmJvbjtMlpayAAADmklEQVQ4TyWTf1CTdRzHvwim2KS6
-        0k5iXWAbIg6GbG2gHmPGhMEs+CMsT70yE1BGx3F5kCReFE7uNAMu7og6MBFk/LCEOZ15WUkXw8aAcgsE
-        +SHC9mzABtuR3rvv8/C9ez33vs/n834/3+9zz5d4TK3Ec7uDeO9cJXQF/pZ7RGQrKqh6cKLQMl5c9ISF
-        1X8XamsMHxwU05kgSoDHpCcLxhZCA/SsMYCy2qrNKx799BP/7Ldfw93eAM/tTngp7vZGzNRXYezkCb/5
-        2NFSOruWsooLoCtAK5fxho7nmcYryuC51Y757ouY66iHq6UGruYauNvqMPdTI+jLMHH2cwwcz/1FEyl8
-        gQ1hA4LMHx7+ZrS8lBovwVKUj7pwEYyZmXA2noOz4RxuZmVxNUvhMS5o7Msy/HH4/cvUu5Z0ZmVKrbk5
-        Txj9d7hXkIMG1TswdZvRnFOCbnUGDOkaTpu6ermeOf8juK7UwZqf97Q+NTWJmDI0tSNfnMTj2grU8aPw
-        wD4Fh2sJ9lEGLdrTHPepnnZ6MWyb4mamq8sxcroEhrR0Pbm5Rz1sP/ouRrT7cUPzFv7UnYd36T84532w
-        PWRgG2MwO+fDwuIy1zNq9mI4Lxu2I9m4oUp7SK4rVMv/ZKdg6O0dsB+iW969Gz26C5hx+zBDd/LYTWF8
-        +L3iKxiUStw/kIbBjAQMZiXBoEhZJlflScuW1DcwoJZhaG8irkm2w3jqLN3yEh45FzHl8FKWcL1Uh2vx
-        2zGQLod1jxT9KglYL2kSy8d6lSuFrthtaPu4DAP/OjA56wWz4AMz78f4jBf99lnoC06hKyYaljfj0KsQ
-        oylWNkVqheLvTTtksCjFuBQuhHPaiUnHIlwLfvRfqOZYCfHA8cjJzfyVFIOfEyWoFsR2kqLQiF0Xo+Ke
-        mnduw12lHLcOHIKfYXBPVwmjLJ4i4TRbY3t3k2XoS4zGD1vEyH/5NTX7IwVXviK8fCVyKyzJsehJlqJV
-        GAmTLI5+Fzl3ZlaztR6FFBZFDPSRUTizScBenvVswKqta9ZtqNy4ua8pQgDzLhE1JaA/RYK+hCjKFnrm
-        eAyqE9C3U4TmzQKc2RhhFa15lk+9gWSi4D02JDD+Gd6msuf4LVUbwtEuiMAd8evoldJAyq9Ud9BaNe19
-        9jz/x+jVwa9ST9C4dh8h7IMTKxeDd3DdS6oSXmhreUjYhC6ED11IGMrXh00W80Lb9ge/qKEzIZTAFd8+
-        8j91kUbX3K/WKgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="txt_newpass.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>ar-JO</value>
-  </metadata>
 </root>

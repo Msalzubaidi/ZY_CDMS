@@ -53,7 +53,7 @@ namespace ZY_CDMS.Forms
 
      
 
-            if (frmReports.selectedReport == 0)
+            if (frmReports.selectedReport == 0 && frmReports.CusVersion.ToString() == Resources.AZversion )
             {
                 rptAllCars ac = new rptAllCars();
                 DataTable dt = db.DataSourceReportBuilder(0 , Resources.AZversion , frmReports.from.Date , frmReports.to.Date);
@@ -68,7 +68,7 @@ namespace ZY_CDMS.Forms
 
                 crystalReportViewer1.ReportSource = ac;
             }
-            if (frmReports.selectedReport == 1)
+            if (frmReports.selectedReport == 1 && frmReports.CusVersion.ToString() == Resources.AZversion )
             {
                 rptAllSelledCars asc = new rptAllSelledCars();
                 DataTable dt = db.DataSourceReportBuilder(1 , Resources.AZversion , frmReports.from.Date, frmReports.to.Date);
@@ -85,7 +85,7 @@ namespace ZY_CDMS.Forms
                 crystalReportViewer1.ReportSource = asc;
             }
 
-            if (frmReports.selectedReport == 2)
+            if (frmReports.selectedReport == 2 && frmReports.CusVersion.ToString() == Resources.AZversion)
             {
                 rptAllSelledCars asc1 = new rptAllSelledCars();
                 DataTable dt = db.DataSourceReportBuilder(2 , Resources.AZversion , frmReports.from.Date, frmReports.to.Date);
@@ -103,7 +103,7 @@ namespace ZY_CDMS.Forms
                 crystalReportViewer1.ReportSource = asc1;
             }
 
-            if (frmReports.selectedReport == 3)
+            if (frmReports.selectedReport == 3 && frmReports.CusVersion.ToString() == Resources.AZversion)
             {
                 rptAllSelledCars asc2 = new rptAllSelledCars();
                 DataTable dt = db.DataSourceReportBuilder(3, Resources.AZversion, frmReports.from.Date, frmReports.to.Date);

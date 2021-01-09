@@ -46,6 +46,7 @@
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.credInfo = new MetroFramework.Controls.MetroLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
@@ -57,183 +58,201 @@
             // 
             // txt_username
             // 
-            this.txt_username.Enabled = false;
-            this.txt_username.Location = new System.Drawing.Point(104, 136);
+            resources.ApplyResources(this.txt_username, "txt_username");
             this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(179, 20);
-            this.txt_username.TabIndex = 1;
+            this.toolTip4.SetToolTip(this.txt_username, resources.GetString("txt_username.ToolTip"));
+            this.toolTip2.SetToolTip(this.txt_username, resources.GetString("txt_username.ToolTip1"));
+            this.toolTip1.SetToolTip(this.txt_username, resources.GetString("txt_username.ToolTip2"));
+            this.toolTip3.SetToolTip(this.txt_username, resources.GetString("txt_username.ToolTip3"));
             // 
             // txt_password
             // 
-            this.txt_password.Location = new System.Drawing.Point(104, 162);
+            resources.ApplyResources(this.txt_password, "txt_password");
             this.txt_password.Name = "txt_password";
-            this.txt_password.Size = new System.Drawing.Size(179, 20);
-            this.txt_password.TabIndex = 2;
+            this.toolTip4.SetToolTip(this.txt_password, resources.GetString("txt_password.ToolTip"));
+            this.toolTip2.SetToolTip(this.txt_password, resources.GetString("txt_password.ToolTip1"));
+            this.toolTip1.SetToolTip(this.txt_password, resources.GetString("txt_password.ToolTip2"));
+            this.toolTip3.SetToolTip(this.txt_password, resources.GetString("txt_password.ToolTip3"));
             this.txt_password.UseSystemPasswordChar = true;
             this.txt_password.Leave += new System.EventHandler(this.txt_password_Leave);
             // 
             // txt_userid
             // 
-            this.txt_userid.Location = new System.Drawing.Point(104, 110);
+            resources.ApplyResources(this.txt_userid, "txt_userid");
             this.txt_userid.Name = "txt_userid";
-            this.txt_userid.Size = new System.Drawing.Size(179, 20);
-            this.txt_userid.TabIndex = 0;
+            this.toolTip4.SetToolTip(this.txt_userid, resources.GetString("txt_userid.ToolTip"));
+            this.toolTip2.SetToolTip(this.txt_userid, resources.GetString("txt_userid.ToolTip1"));
+            this.toolTip1.SetToolTip(this.txt_userid, resources.GetString("txt_userid.ToolTip2"));
+            this.toolTip3.SetToolTip(this.txt_userid, resources.GetString("txt_userid.ToolTip3"));
             this.txt_userid.TextChanged += new System.EventHandler(this.txt_userid_TextChanged);
             this.txt_userid.Leave += new System.EventHandler(this.simpleButton3_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(668, 273);
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            this.toolTip3.SetToolTip(this.pictureBox1, "ZY Tech Instagram Page");
+            this.toolTip2.SetToolTip(this.pictureBox1, resources.GetString("pictureBox1.ToolTip"));
+            this.toolTip1.SetToolTip(this.pictureBox1, resources.GetString("pictureBox1.ToolTip1"));
+            this.toolTip3.SetToolTip(this.pictureBox1, resources.GetString("pictureBox1.ToolTip2"));
+            this.toolTip4.SetToolTip(this.pictureBox1, resources.GetString("pictureBox1.ToolTip3"));
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(630, 273);
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
-            this.toolTip2.SetToolTip(this.pictureBox2, "ZY Tech Web Site");
+            this.toolTip2.SetToolTip(this.pictureBox2, resources.GetString("pictureBox2.ToolTip"));
+            this.toolTip1.SetToolTip(this.pictureBox2, resources.GetString("pictureBox2.ToolTip1"));
+            this.toolTip3.SetToolTip(this.pictureBox2, resources.GetString("pictureBox2.ToolTip2"));
+            this.toolTip4.SetToolTip(this.pictureBox2, resources.GetString("pictureBox2.ToolTip3"));
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(706, 273);
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(36, 32);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
-            this.toolTip4.SetToolTip(this.pictureBox3, "Send Mail To ZY Tech");
+            this.toolTip2.SetToolTip(this.pictureBox3, resources.GetString("pictureBox3.ToolTip"));
+            this.toolTip1.SetToolTip(this.pictureBox3, resources.GetString("pictureBox3.ToolTip1"));
+            this.toolTip3.SetToolTip(this.pictureBox3, resources.GetString("pictureBox3.ToolTip2"));
+            this.toolTip4.SetToolTip(this.pictureBox3, resources.GetString("pictureBox3.ToolTip3"));
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // simpleButton1
             // 
+            resources.ApplyResources(this.simpleButton1, "simpleButton1");
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(69, 223);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(106, 36);
-            this.simpleButton1.TabIndex = 3;
-            this.simpleButton1.Text = "Login";
+            this.toolTip3.SetToolTip(this.simpleButton1, resources.GetString("simpleButton1.ToolTip"));
+            this.toolTip1.SetToolTip(this.simpleButton1, resources.GetString("simpleButton1.ToolTip2"));
+            this.toolTip2.SetToolTip(this.simpleButton1, resources.GetString("simpleButton1.ToolTip3"));
+            this.toolTip4.SetToolTip(this.simpleButton1, resources.GetString("simpleButton1.ToolTip4"));
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // simpleButton2
             // 
+            resources.ApplyResources(this.simpleButton2, "simpleButton2");
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(188, 223);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(106, 36);
-            this.simpleButton2.TabIndex = 4;
-            this.simpleButton2.Text = "Exit";
+            this.toolTip3.SetToolTip(this.simpleButton2, resources.GetString("simpleButton2.ToolTip"));
+            this.toolTip1.SetToolTip(this.simpleButton2, resources.GetString("simpleButton2.ToolTip2"));
+            this.toolTip2.SetToolTip(this.simpleButton2, resources.GetString("simpleButton2.ToolTip3"));
+            this.toolTip4.SetToolTip(this.simpleButton2, resources.GetString("simpleButton2.ToolTip4"));
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(592, 273);
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(36, 32);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 15;
             this.pictureBox4.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox4, "ZY Tech Facebook Page");
+            this.toolTip2.SetToolTip(this.pictureBox4, resources.GetString("pictureBox4.ToolTip"));
+            this.toolTip1.SetToolTip(this.pictureBox4, resources.GetString("pictureBox4.ToolTip1"));
+            this.toolTip3.SetToolTip(this.pictureBox4, resources.GetString("pictureBox4.ToolTip2"));
+            this.toolTip4.SetToolTip(this.pictureBox4, resources.GetString("pictureBox4.ToolTip3"));
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // lic
             // 
-            this.lic.AutoSize = true;
+            resources.ApplyResources(this.lic, "lic");
             this.lic.BackColor = System.Drawing.Color.White;
             this.lic.CustomBackground = true;
             this.lic.CustomForeColor = true;
             this.lic.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lic.Location = new System.Drawing.Point(165, 71);
             this.lic.Name = "lic";
-            this.lic.Size = new System.Drawing.Size(59, 25);
-            this.lic.TabIndex = 46;
-            this.lic.Text = "Log in";
+            this.toolTip2.SetToolTip(this.lic, resources.GetString("lic.ToolTip"));
+            this.toolTip1.SetToolTip(this.lic, resources.GetString("lic.ToolTip1"));
+            this.toolTip3.SetToolTip(this.lic, resources.GetString("lic.ToolTip2"));
+            this.toolTip4.SetToolTip(this.lic, resources.GetString("lic.ToolTip3"));
             this.lic.UseStyleColors = true;
             // 
             // metroLabel1
             // 
-            this.metroLabel1.AutoSize = true;
+            resources.ApplyResources(this.metroLabel1, "metroLabel1");
             this.metroLabel1.BackColor = System.Drawing.Color.Black;
             this.metroLabel1.CustomBackground = true;
             this.metroLabel1.CustomForeColor = true;
             this.metroLabel1.ForeColor = System.Drawing.Color.White;
-            this.metroLabel1.Location = new System.Drawing.Point(371, 278);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(205, 19);
-            this.metroLabel1.TabIndex = 47;
-            this.metroLabel1.Text = "ZY Technologies Solutions © 2021";
+            this.toolTip2.SetToolTip(this.metroLabel1, resources.GetString("metroLabel1.ToolTip"));
+            this.toolTip1.SetToolTip(this.metroLabel1, resources.GetString("metroLabel1.ToolTip1"));
+            this.toolTip3.SetToolTip(this.metroLabel1, resources.GetString("metroLabel1.ToolTip2"));
+            this.toolTip4.SetToolTip(this.metroLabel1, resources.GetString("metroLabel1.ToolTip3"));
             this.metroLabel1.UseStyleColors = true;
             // 
             // metroLabel2
             // 
-            this.metroLabel2.AutoSize = true;
+            resources.ApplyResources(this.metroLabel2, "metroLabel2");
             this.metroLabel2.BackColor = System.Drawing.Color.White;
             this.metroLabel2.CustomBackground = true;
             this.metroLabel2.CustomForeColor = true;
-            this.metroLabel2.Location = new System.Drawing.Point(27, 110);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(51, 19);
-            this.metroLabel2.TabIndex = 48;
-            this.metroLabel2.Text = "User ID";
+            this.toolTip2.SetToolTip(this.metroLabel2, resources.GetString("metroLabel2.ToolTip"));
+            this.toolTip1.SetToolTip(this.metroLabel2, resources.GetString("metroLabel2.ToolTip1"));
+            this.toolTip3.SetToolTip(this.metroLabel2, resources.GetString("metroLabel2.ToolTip2"));
+            this.toolTip4.SetToolTip(this.metroLabel2, resources.GetString("metroLabel2.ToolTip3"));
             this.metroLabel2.UseStyleColors = true;
             // 
             // metroLabel3
             // 
-            this.metroLabel3.AutoSize = true;
+            resources.ApplyResources(this.metroLabel3, "metroLabel3");
             this.metroLabel3.BackColor = System.Drawing.Color.White;
             this.metroLabel3.CustomBackground = true;
             this.metroLabel3.CustomForeColor = true;
-            this.metroLabel3.Location = new System.Drawing.Point(25, 137);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(75, 19);
-            this.metroLabel3.TabIndex = 49;
-            this.metroLabel3.Text = "User Name";
+            this.toolTip2.SetToolTip(this.metroLabel3, resources.GetString("metroLabel3.ToolTip"));
+            this.toolTip1.SetToolTip(this.metroLabel3, resources.GetString("metroLabel3.ToolTip1"));
+            this.toolTip3.SetToolTip(this.metroLabel3, resources.GetString("metroLabel3.ToolTip2"));
+            this.toolTip4.SetToolTip(this.metroLabel3, resources.GetString("metroLabel3.ToolTip3"));
             this.metroLabel3.UseStyleColors = true;
             // 
             // metroLabel4
             // 
-            this.metroLabel4.AutoSize = true;
+            resources.ApplyResources(this.metroLabel4, "metroLabel4");
             this.metroLabel4.BackColor = System.Drawing.Color.White;
             this.metroLabel4.CustomBackground = true;
             this.metroLabel4.CustomForeColor = true;
-            this.metroLabel4.Location = new System.Drawing.Point(25, 162);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(63, 19);
-            this.metroLabel4.TabIndex = 50;
-            this.metroLabel4.Text = "Password";
+            this.toolTip2.SetToolTip(this.metroLabel4, resources.GetString("metroLabel4.ToolTip"));
+            this.toolTip1.SetToolTip(this.metroLabel4, resources.GetString("metroLabel4.ToolTip1"));
+            this.toolTip3.SetToolTip(this.metroLabel4, resources.GetString("metroLabel4.ToolTip2"));
+            this.toolTip4.SetToolTip(this.metroLabel4, resources.GetString("metroLabel4.ToolTip3"));
             this.metroLabel4.UseStyleColors = true;
             // 
             // credInfo
             // 
-            this.credInfo.AutoSize = true;
+            resources.ApplyResources(this.credInfo, "credInfo");
             this.credInfo.BackColor = System.Drawing.Color.White;
             this.credInfo.CustomBackground = true;
             this.credInfo.CustomForeColor = true;
             this.credInfo.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.credInfo.Location = new System.Drawing.Point(12, 9);
             this.credInfo.Name = "credInfo";
-            this.credInfo.Size = new System.Drawing.Size(109, 25);
-            this.credInfo.TabIndex = 51;
-            this.credInfo.Text = "Admin Login";
+            this.toolTip2.SetToolTip(this.credInfo, resources.GetString("credInfo.ToolTip"));
+            this.toolTip1.SetToolTip(this.credInfo, resources.GetString("credInfo.ToolTip1"));
+            this.toolTip3.SetToolTip(this.credInfo, resources.GetString("credInfo.ToolTip2"));
+            this.toolTip4.SetToolTip(this.credInfo, resources.GetString("credInfo.ToolTip3"));
             this.credInfo.UseStyleColors = true;
             this.credInfo.Click += new System.EventHandler(this.credInfo_Click_1);
             // 
             // toolTip1
             // 
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
+            // metroLabel5
+            // 
+            resources.ApplyResources(this.metroLabel5, "metroLabel5");
+            this.metroLabel5.BackColor = System.Drawing.Color.White;
+            this.metroLabel5.CustomBackground = true;
+            this.metroLabel5.CustomForeColor = true;
+            this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel5.Name = "metroLabel5";
+            this.toolTip2.SetToolTip(this.metroLabel5, resources.GetString("metroLabel5.ToolTip"));
+            this.toolTip1.SetToolTip(this.metroLabel5, resources.GetString("metroLabel5.ToolTip1"));
+            this.toolTip3.SetToolTip(this.metroLabel5, resources.GetString("metroLabel5.ToolTip2"));
+            this.toolTip4.SetToolTip(this.metroLabel5, resources.GetString("metroLabel5.ToolTip3"));
+            this.metroLabel5.UseStyleColors = true;
+            this.metroLabel5.Click += new System.EventHandler(this.metroLabel5_Click);
             // 
             // toolTip2
             // 
@@ -249,11 +268,9 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(759, 317);
+            this.Controls.Add(this.metroLabel5);
             this.Controls.Add(this.credInfo);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.metroLabel3);
@@ -271,11 +288,12 @@
             this.Controls.Add(this.txt_username);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmLogin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
+            this.toolTip4.SetToolTip(this, resources.GetString("$this.ToolTip"));
+            this.toolTip2.SetToolTip(this, resources.GetString("$this.ToolTip1"));
+            this.toolTip3.SetToolTip(this, resources.GetString("$this.ToolTip2"));
+            this.toolTip1.SetToolTip(this, resources.GetString("$this.ToolTip3"));
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmLogin_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -308,5 +326,6 @@
         private System.Windows.Forms.ToolTip toolTip2;
         private System.Windows.Forms.ToolTip toolTip4;
         private System.Windows.Forms.ToolTip toolTip1;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
     }
 }
