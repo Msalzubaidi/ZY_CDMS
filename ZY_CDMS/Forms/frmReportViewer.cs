@@ -56,7 +56,7 @@ namespace ZY_CDMS.Forms
             if (frmReports.selectedReport == 0 && frmReports.CusVersion.ToString() == Resources.AZversion )
             {
                 rptAllCars ac = new rptAllCars();
-                DataTable dt = db.DataSourceReportBuilder(0 , Resources.AZversion , frmReports.from.Date , frmReports.to.Date);
+                DataTable dt = db.DataSourceReportBuilder(0 , Resources.AZversion , frmReports.from.Date , frmReports.to.Date , frmAddCarTset.carvin);
                 ac.SetDataSource(dt); 
                 ac.Refresh();
                 ac.SetDatabaseLogon(username, pass, server, dbname, false);
@@ -66,12 +66,13 @@ namespace ZY_CDMS.Forms
                 ac.SetParameterValue("Address", address.ToString());
                 ac.SetParameterValue("Mobile", mobile.ToString());
 
+                ac.Refresh();
                 crystalReportViewer1.ReportSource = ac;
             }
             if (frmReports.selectedReport == 1 && frmReports.CusVersion.ToString() == Resources.AZversion )
             {
                 rptAllSelledCars asc = new rptAllSelledCars();
-                DataTable dt = db.DataSourceReportBuilder(1 , Resources.AZversion , frmReports.from.Date, frmReports.to.Date);
+                DataTable dt = db.DataSourceReportBuilder(1 , Resources.AZversion , frmReports.from.Date, frmReports.to.Date , frmAddCarTset.carvin);
                 asc.SetDataSource(dt);
                 asc.Refresh();
                 asc.SetDatabaseLogon(username, pass, server, dbname, false);
@@ -88,7 +89,7 @@ namespace ZY_CDMS.Forms
             if (frmReports.selectedReport == 2 && frmReports.CusVersion.ToString() == Resources.AZversion)
             {
                 rptAllSelledCars asc1 = new rptAllSelledCars();
-                DataTable dt = db.DataSourceReportBuilder(2 , Resources.AZversion , frmReports.from.Date, frmReports.to.Date);
+                DataTable dt = db.DataSourceReportBuilder(2 , Resources.AZversion , frmReports.from.Date, frmReports.to.Date , frmAddCarTset.carvin);
                 asc1.SetDataSource(dt);
                 asc1.Refresh();
                 asc1.SetDatabaseLogon(username, pass, server, dbname, false);
@@ -106,7 +107,7 @@ namespace ZY_CDMS.Forms
             if (frmReports.selectedReport == 3 && frmReports.CusVersion.ToString() == Resources.AZversion)
             {
                 rptAllSelledCars asc2 = new rptAllSelledCars();
-                DataTable dt = db.DataSourceReportBuilder(3, Resources.AZversion, frmReports.from.Date, frmReports.to.Date);
+                DataTable dt = db.DataSourceReportBuilder(3, Resources.AZversion, frmReports.from.Date, frmReports.to.Date , frmAddCarTset.carvin);
                 asc2.SetDataSource(dt);
                 asc2.Refresh();
                 asc2.SetDatabaseLogon(username, pass, server, dbname, false);
@@ -124,7 +125,7 @@ namespace ZY_CDMS.Forms
             if (frmReports.selectedReport == 4)
             {
                 rptBuyCar bc1 = new rptBuyCar(); 
-                DataTable dt = db.DataSourceReportBuilder( 4 , Resources.AZversion, frmReports.from.Date, frmReports.to.Date);
+                DataTable dt = db.DataSourceReportBuilder( 4 , Resources.AZversion, frmReports.from.Date, frmReports.to.Date , frmAddCarTset.carvin);
                 bc1.SetDataSource(dt);
                 bc1.Refresh();
                 bc1.SetDatabaseLogon(username, pass, server, dbname, false);
@@ -142,7 +143,7 @@ namespace ZY_CDMS.Forms
             if (frmReports.selectedReport == 5)
             {
                 rptBuyCar bc2 = new rptBuyCar();
-                DataTable dt = db.DataSourceReportBuilder(5, Resources.AZversion, frmReports.from.Date, frmReports.to.Date);
+                DataTable dt = db.DataSourceReportBuilder(5, Resources.AZversion, frmReports.from.Date, frmReports.to.Date , frmAddCarTset.carvin);
                 bc2.SetDataSource(dt);
                 bc2.Refresh();
                 bc2.SetDatabaseLogon(username, pass, server, dbname, false);
@@ -161,7 +162,7 @@ namespace ZY_CDMS.Forms
             if (frmReports.selectedReport == 6)
             {
                 rptBuyCar bc3 = new rptBuyCar();
-                DataTable dt = db.DataSourceReportBuilder(6, Resources.AZversion, frmReports.from.Date, frmReports.to.Date);
+                DataTable dt = db.DataSourceReportBuilder(6, Resources.AZversion, frmReports.from.Date, frmReports.to.Date , frmAddCarTset.carvin);
                 bc3.SetDataSource(dt);
                 bc3.Refresh();
                 bc3.SetDatabaseLogon(username, pass, server, dbname, false);
@@ -179,7 +180,7 @@ namespace ZY_CDMS.Forms
             if (frmReports.selectedReport == 7)
             {
                 Transactions t1 = new Transactions();
-                DataTable dt = db.DataSourceReportBuilder(7, Resources.AZversion, frmReports.from.Date, frmReports.to.Date);
+                DataTable dt = db.DataSourceReportBuilder(7, Resources.AZversion, frmReports.from.Date, frmReports.to.Date , frmAddCarTset.carvin);
                 t1.SetDataSource(dt);
                 t1.Refresh();
                 t1.SetDatabaseLogon(username, pass, server, dbname, false);
@@ -197,7 +198,7 @@ namespace ZY_CDMS.Forms
             if (frmReports.selectedReport == 8)
             {
                 Transactions t2 = new Transactions();
-                DataTable dt = db.DataSourceReportBuilder(8, Resources.AZversion, frmReports.from.Date, frmReports.to.Date);
+                DataTable dt = db.DataSourceReportBuilder(8, Resources.AZversion, frmReports.from.Date, frmReports.to.Date , frmAddCarTset.carvin);
                 t2.SetDataSource(dt);
                 t2.Refresh();
                 t2.SetDatabaseLogon(username, pass, server, dbname, false);
@@ -215,7 +216,7 @@ namespace ZY_CDMS.Forms
             if (frmReports.selectedReport == 9)
             {
                 Transactions t3 = new Transactions();
-                DataTable dt = db.DataSourceReportBuilder(9, Resources.AZversion, frmReports.from.Date, frmReports.to.Date);
+                DataTable dt = db.DataSourceReportBuilder(9, Resources.AZversion, frmReports.from.Date, frmReports.to.Date , frmAddCarTset.carvin);
                 t3.SetDataSource(dt);
                 t3.Refresh();
                 t3.SetDatabaseLogon(username, pass , server, dbname, false);
@@ -233,7 +234,7 @@ namespace ZY_CDMS.Forms
             if (frmReports.selectedReport == 10)
             {
                 Transactions t4 = new Transactions();
-                DataTable dt = db.DataSourceReportBuilder(10, Resources.AZversion, frmReports.from.Date, frmReports.to.Date);
+                DataTable dt = db.DataSourceReportBuilder(10, Resources.AZversion, frmReports.from.Date, frmReports.to.Date , frmAddCarTset.carvin);
                 t4.SetDataSource(dt);
                 t4.Refresh();
                 t4.SetDatabaseLogon(username, pass, server, dbname, false);
@@ -251,7 +252,7 @@ namespace ZY_CDMS.Forms
             if (frmReports.selectedReport == 11)
             {
                 Transactions t5 = new Transactions();
-                DataTable dt = db.DataSourceReportBuilder(11, Resources.AZversion, frmReports.from.Date, frmReports.to.Date);
+                DataTable dt = db.DataSourceReportBuilder(11, Resources.AZversion, frmReports.from.Date, frmReports.to.Date , frmAddCarTset.carvin);
                 t5.SetDataSource(dt);
                 t5.Refresh();
                 t5.SetDatabaseLogon(username, pass, server, dbname, false);
@@ -269,7 +270,7 @@ namespace ZY_CDMS.Forms
             if (frmReports.selectedReport == 12)
             {
                 Transactions t6 = new Transactions();
-                DataTable dt = db.DataSourceReportBuilder(12, Resources.AZversion, frmReports.from.Date, frmReports.to.Date);
+                DataTable dt = db.DataSourceReportBuilder(12, Resources.AZversion, frmReports.from.Date, frmReports.to.Date , frmAddCarTset.carvin);
                 t6.SetDataSource(dt);
                 t6.Refresh();
                 t6.SetDatabaseLogon(username, pass, server, dbname, false);
@@ -287,7 +288,7 @@ namespace ZY_CDMS.Forms
             if (frmReports.selectedReport == 13)
             {
                 Transactions t7 = new Transactions();
-                DataTable dt = db.DataSourceReportBuilder(13, Resources.AZversion, frmReports.from.Date, frmReports.to.Date);
+                DataTable dt = db.DataSourceReportBuilder(13, Resources.AZversion, frmReports.from.Date, frmReports.to.Date , frmAddCarTset.carvin);
                 t7.SetDataSource(dt);
                 t7.Refresh();
                 t7.SetDatabaseLogon(username, pass, server, dbname, false);
@@ -305,7 +306,7 @@ namespace ZY_CDMS.Forms
             if (frmReports.selectedReport == 14)
             {
                 TransactionsServies ts1 = new TransactionsServies();
-                DataTable dt = db.DataSourceReportBuilder(14, Resources.AZversion, frmReports.from.Date, frmReports.to.Date);
+                DataTable dt = db.DataSourceReportBuilder(14, Resources.AZversion, frmReports.from.Date, frmReports.to.Date , frmAddCarTset.carvin);
                 ts1.SetDataSource(dt);
                 ts1.Refresh();
                 ts1.SetDatabaseLogon(username, pass, server, dbname, false);
@@ -323,7 +324,7 @@ namespace ZY_CDMS.Forms
             if (frmReports.selectedReport == 15 )
             {
                 rptCustomers ct1 = new rptCustomers();
-                DataTable dt = db.DataSourceReportBuilder(15, Resources.AZversion, frmReports.from.Date, frmReports.to.Date);
+                DataTable dt = db.DataSourceReportBuilder(15, Resources.AZversion, frmReports.from.Date, frmReports.to.Date , frmAddCarTset.carvin);
                 ct1.SetDataSource(dt);
                 ct1.Refresh();
                 ct1.SetDatabaseLogon(username, pass, server, dbname, false);
@@ -341,7 +342,7 @@ namespace ZY_CDMS.Forms
             if (frmReports.selectedReport == 0 && (frmReports.CusVersion.ToString() == Resources.JordanCleaningVersion))
             {
                 CarTests  cts = new CarTests();
-                DataTable dt = db.DataSourceReportBuilder(0, Resources.JordanCleaningVersion, frmReports.from.Date, frmReports.to.Date);
+                DataTable dt = db.DataSourceReportBuilder(0, Resources.JordanCleaningVersion, frmReports.from.Date, frmReports.to.Date , frmAddCarTset.carvin);
                 cts.SetDataSource(dt);
                 cts.Refresh();
                 cts.SetDatabaseLogon(username, pass, server, dbname, false);
@@ -359,7 +360,7 @@ namespace ZY_CDMS.Forms
             if (frmReports.selectedReport == 1 && (frmReports.CusVersion.ToString() == Resources.JordanCleaningVersion))
             {
                 TransactionsServies ts2 = new TransactionsServies();
-                DataTable dt = db.DataSourceReportBuilder(1, Resources.JordanCleaningVersion, frmReports.from.Date, frmReports.to.Date);
+                DataTable dt = db.DataSourceReportBuilder(1, Resources.JordanCleaningVersion, frmReports.from.Date, frmReports.to.Date , frmAddCarTset.carvin);
                 ts2.SetDataSource(dt);
                 ts2.Refresh();
                 ts2.SetDatabaseLogon(username, pass, server, dbname, false);
@@ -377,7 +378,7 @@ namespace ZY_CDMS.Forms
             if (frmReports.selectedReport == 2 && (frmReports.CusVersion.ToString() == Resources.JordanCleaningVersion))
             {
                 CarTestsTax ctst = new CarTestsTax();
-                DataTable dt = db.DataSourceReportBuilder(2, Resources.JordanCleaningVersion, frmReports.from.Date, frmReports.to.Date);
+                DataTable dt = db.DataSourceReportBuilder(2, Resources.JordanCleaningVersion, frmReports.from.Date, frmReports.to.Date , frmAddCarTset.carvin);
                 ctst.SetDataSource(dt);
                 ctst.Refresh();
                 ctst.SetDatabaseLogon(username, pass, server, dbname, false);
@@ -396,7 +397,7 @@ namespace ZY_CDMS.Forms
             {
 
                 rptCustomers ct2 = new rptCustomers();
-                DataTable dt = db.DataSourceReportBuilder(3, Resources.JordanCleaningVersion, frmReports.from.Date, frmReports.to.Date);
+                DataTable dt = db.DataSourceReportBuilder(3, Resources.JordanCleaningVersion, frmReports.from.Date, frmReports.to.Date , frmAddCarTset.carvin);
                 ct2.SetDataSource(dt);
                 ct2.Refresh();
                 ct2.SetDatabaseLogon(username, pass, server, dbname, false);
@@ -409,6 +410,27 @@ namespace ZY_CDMS.Forms
 
 
                 crystalReportViewer1.ReportSource = ct2;
+            }
+
+
+            if (frmAddCarTset.selectedReport == 4 && ((frmAddCarTset.CustVer.ToString() == Resources.JordanCleaningVersion)))
+            {
+
+                JorInvoice inv = new JorInvoice();
+                DataTable dt = db.FatoraView(4 , frmAddCarTset.CustVer.ToString() , frmAddCarTset.carvin);
+                inv.SetDataSource(dt);
+                
+                inv.Refresh();
+                inv.SetDatabaseLogon(username, pass, server, dbname, false);
+
+                inv.SetParameterValue("ComName", comname.ToString());
+                inv.SetParameterValue("Address", address.ToString());
+                inv.SetParameterValue("Mobile", mobile.ToString());
+                inv.SetParameterValue("Taxno", taxNo.ToString());
+
+                
+                crystalReportViewer1.ReportSource = inv;
+              
             }
         }
     }

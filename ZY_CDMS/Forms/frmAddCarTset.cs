@@ -29,7 +29,10 @@ namespace ZY_CDMS.Forms
         string imglocationB = "";
         string imglocationC = "";
         string imglocationD = "";
-        public static string carvin;
+        public static string carvin = "";
+        DataBase db = new DataBase();
+       public static string CustVer = "";
+        public static int selectedReport = 0; 
 
         private void frmAddCarTset_KeyDown(object sender, KeyEventArgs e)
         {
@@ -129,7 +132,7 @@ namespace ZY_CDMS.Forms
 
             }
 
-           
+
 
 
             SqlConnection conc = new SqlConnection(connstring);
@@ -139,7 +142,7 @@ namespace ZY_CDMS.Forms
             string qryc = "select* from CarTest";
 
             conc.Open();
-           
+
 
             cmdc = new SqlCommand(qryc, conc);
             drc = cmdc.ExecuteReader();
@@ -188,7 +191,7 @@ namespace ZY_CDMS.Forms
             txt_bal.Clear();
             txt_pay.Clear();
             txt_tax.Clear();
-            cbo_tax.Enabled = false; 
+            cbo_tax.Enabled = false;
             cbo_year.EditValue = "";
             cbo_color.EditValue = "";
             cbo_makemodel.EditValue = "";
@@ -386,14 +389,14 @@ namespace ZY_CDMS.Forms
         private void cbo_tax_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(cbo_tax.EditValue.ToString()) == false || string.IsNullOrEmpty(txt_pay.Text) == false)
-            { 
-            double taxPer = double.Parse(cbo_tax.EditValue.ToString());
+            {
+                double taxPer = double.Parse(cbo_tax.EditValue.ToString());
 
-            double taxval = double.Parse(txt_pay.Text.ToString()) * (taxPer / 100) ;
+                double taxval = double.Parse(txt_pay.Text.ToString()) * (taxPer / 100);
 
-            txt_tax.Text = taxval.ToString();
+                txt_tax.Text = taxval.ToString();
 
-                double total =  taxval + double.Parse(txt_pay.Text.ToString());
+                double total = taxval + double.Parse(txt_pay.Text.ToString());
                 txt_total.Text = total.ToString();
             }
 
@@ -408,7 +411,7 @@ namespace ZY_CDMS.Forms
 
         private void txt_pay_TextChanged(object sender, EventArgs e)
         {
-            cbo_tax.Enabled = true; 
+            cbo_tax.Enabled = true;
 
         }
 
@@ -416,18 +419,18 @@ namespace ZY_CDMS.Forms
         {
             if (string.IsNullOrWhiteSpace(cbo_vin.EditValue.ToString()))
             {
-               
-               
+
+
             }
             else
             {
                 simpleButton1.Visible = false;
                 simpleButton9.Visible = false;
                 simpleButton4.Visible = true;
-                cbo_tax.Enabled = false; 
+                cbo_tax.Enabled = false;
                 carvin = cbo_vin.EditValue.ToString();
                 string condition = "carvin=" + "'" + @carvin + "'";
-                DataTable dt = o.SelctData(testTable , 1, condition );
+                DataTable dt = o.SelctData(testTable, 1, condition);
 
                 if (dt.Rows.Count > 0)
                 {
@@ -436,7 +439,7 @@ namespace ZY_CDMS.Forms
                     txt_custname.Text = dt.Rows[0]["cust_name"].ToString();
                     txt_custmobile.Text = dt.Rows[0]["cust_mobile"].ToString();
                     dtp_date.EditValue = DateTime.Parse(dt.Rows[0]["trans_date"].ToString());
-                   
+
                     cbo_makemodel.EditValue = dt.Rows[0]["makeModel"].ToString();
                     cbo_color.EditValue = dt.Rows[0]["color"].ToString();
                     cbo_paints.EditValue = dt.Rows[0]["paintCode"].ToString();
@@ -451,7 +454,7 @@ namespace ZY_CDMS.Forms
                     txt_tax.Text = dt.Rows[0]["tax"].ToString();
 
                     string vins = cbo_vin.EditValue.ToString();
-                    DataSet dsA = o.viewLogo(vins , 'A');
+                    DataSet dsA = o.viewLogo(vins, 'A');
                     MemoryStream msA = new MemoryStream((byte[])dsA.Tables[0].Rows[0]["ImageA"]);
                     imageA.Image = new Bitmap(msA);
 
@@ -473,10 +476,45 @@ namespace ZY_CDMS.Forms
                 {
                     MessageBox.Show(testTable + Resources.notExist, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    
+
                 }
 
 
+            }
+        }
+
+        private void simpleButton4_Click(object sender, EventArgs e)
+        {
+            frmReportViewer rv = null;
+
+            DataTable datatable = db.ViewSysinfo(1);
+            int version = int.Parse(datatable.Rows[0]["version"].ToString());//6
+
+            if (string.IsNullOrEmpty(cbo_vin.EditValue.ToString()))
+            {
+                if (frmLogin.languagearabic == 1)
+                    MessageBox.Show("الرجاء اختيار السيارة للطباعة", "زد واي لتكنولوجيا المعلومات ", 0, MessageBoxIcon.Warning);
+                else
+                    MessageBox.Show("Please Select Vin  to Print !!! ", Resources.MessageTitle, 0, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (cbo_vin.SelectedItem.ToString() != " ")
+                {
+                   selectedReport = 4;
+                    carvin = cbo_vin.SelectedItem.ToString();
+                    CustVer = version.ToString();
+                    rv = new frmReportViewer();
+                    rv.Show();
+                }
+                else
+                {
+
+                    if (frmLogin.languagearabic == 1)
+                        MessageBox.Show("الرجاء اختيار السيارة للطباعة", "زد واي لتكنولوجيا المعلومات ", 0, MessageBoxIcon.Warning);
+                    else
+                        MessageBox.Show("Please Select Vin  to Print !!! ", Resources.MessageTitle, 0, MessageBoxIcon.Warning);
+                }
             }
         }
     }

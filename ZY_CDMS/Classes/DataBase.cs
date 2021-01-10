@@ -501,18 +501,34 @@ namespace ZY_CDMS.Classes
 
         }
 
-        public DataTable FatoraView(string vin)
+        public DataTable FatoraView( int seraial  , string version ,  string vin)
         {
 
+            string qry = "";
+            SqlCommand cmd = null;
+
+
             SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
-                                                                          /// SqlCommand cmd = new SqlCommand("SELECT  * FROM SellTransactions RIGHT JOIN customersInfo ON SellTransactions.custid = customersInfo.custid where SellTransactions.VIN=@vin ; ", con); // sql command to so get data from data base
-            SqlCommand cmd = new SqlCommand("select * from  SellTransactions where VIN=@vin ", con); // sql command to so get data from data base
+
+            if (seraial == 4 && (version.ToString() == Resources.JordanCleaningVersion))
+            {
+                qry = "select *  from CarTest where carvin=@vin ";
+            }
+
+            else if (seraial == 5 && (version.ToString() == Resources.AZversion))
+            {
+                qry = "select *  from SellTransactions where vin=@vin ";
+            }
+
+            cmd = new SqlCommand(qry , con); // sql command to so get data from data base
+
 
             cmd.Parameters.AddWithValue("@vin", vin);
 
+         
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
 
-            DataTable dt = new DataTable();
+            System.Data.DataTable dt = new System.Data.DataTable();
             sda.Fill(dt);
 
             con.Open();
@@ -520,7 +536,7 @@ namespace ZY_CDMS.Classes
 
         }
 
-        public DataTable DataSourceReportBuilder (int reportserial, string version, DateTime dtf , DateTime dtt)
+        public DataTable DataSourceReportBuilder (int reportserial, string version, DateTime dtf , DateTime dtt , string vin )
         {
 
             SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
@@ -638,6 +654,7 @@ namespace ZY_CDMS.Classes
                qry = "select *  from customersInfo ";
             }
 
+           
 
             cmd = new SqlCommand(qry , con); 
 

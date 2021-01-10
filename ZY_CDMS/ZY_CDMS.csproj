@@ -308,6 +308,12 @@
       <DependentUpon>CarTests.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reports\JorInvoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JorInvoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\rptBuyCar.cs">
       <DependentUpon>rptBuyCar.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -458,6 +464,10 @@
     <EmbeddedResource Include="Reports\CarTests.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CarTests.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JorInvoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>JorInvoice.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\rptBuyCar.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

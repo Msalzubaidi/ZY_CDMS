@@ -793,6 +793,7 @@
             this.simpleButton4.Size = new System.Drawing.Size(105, 31);
             this.simpleButton4.TabIndex = 156;
             this.simpleButton4.Text = "Print";
+            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
             // frmAddCarTset
             // 
