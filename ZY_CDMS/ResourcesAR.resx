@@ -118,19 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AppName" xml:space="preserve">
-    <value>Car Dealers Mangment System</value>
-  </data>
-  <data name="AppVersion" xml:space="preserve">
-    <value>V 1.0.5.2</value>
+    <value>نظام إدارة محلات تجارة وصيانة السيارات</value>
   </data>
   <data name="dbnamecon" xml:space="preserve">
     <value>Auto2020</value>
-  </data>
-  <data name="Logo" xml:space="preserve">
-    <value>ZY Technologies Solutions © 2020</value>
-  </data>
-  <data name="MessageTitle" xml:space="preserve">
-    <value>ZY Technologies Solutions</value>
   </data>
   <data name="passwordcon" xml:space="preserve">
     <value>1</value>
@@ -142,49 +133,49 @@
     <value>sa</value>
   </data>
   <data name="AddedSuccessfully" xml:space="preserve">
-    <value> Added Successfully</value>
+    <value>تم الاضافة بنجاح</value>
   </data>
   <data name="CancelByUser" xml:space="preserve">
-    <value>User Canceled Operation</value>
+    <value>تم الغاء العملية من قبل العميل</value>
   </data>
   <data name="Completed" xml:space="preserve">
-    <value>Completed Operation</value>
+    <value>إكتملت العملية</value>
   </data>
   <data name="FaieldLogin" xml:space="preserve">
-    <value>Invalid Username Or Password</value>
+    <value>خطأ في كلمة المرور أو اسم المستخدم</value>
   </data>
   <data name="invalidData" xml:space="preserve">
-    <value>Invalid Data</value>
+    <value>خطأ في البيانات المدخلة</value>
   </data>
   <data name="missingTextboxes" xml:space="preserve">
-    <value>Please Fill Missed Boxes</value>
+    <value>الرجاء ملىْ البيانات المطلوبة</value>
   </data>
   <data name="NoData" xml:space="preserve">
-    <value>No Data</value>
+    <value>لا يوجد بيانات</value>
   </data>
   <data name="Noselection" xml:space="preserve">
-    <value>Please Select Source You Need</value>
+    <value>الرجاء إختيار المطلوب</value>
   </data>
   <data name="digitOnlyError" xml:space="preserve">
-    <value>Please Type Digit Only </value>
+    <value>يسمح للأرقام فقط</value>
   </data>
   <data name="Exist" xml:space="preserve">
-    <value> Already Exist</value>
+    <value>موجود مسبقا</value>
   </data>
   <data name="notExist" xml:space="preserve">
-    <value>  Not Exist</value>
+    <value>غير موجود</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Please Try Again </value>
+    <value>الرجاء المحاولة مرة أخرى</value>
   </data>
   <data name="Updated" xml:space="preserve">
-    <value> Updated Successfully</value>
+    <value>تم التحديث بنجاح</value>
   </data>
   <data name="activationneeded" xml:space="preserve">
-    <value>Your License not Valid</value>
+    <value>انتهت الرخضة</value>
   </data>
   <data name="pleaseActive" xml:space="preserve">
-    <value>Please Activate App</value>
+    <value>الرجاء تفعيل التطبيق قبل البدء بالاستخدام </value>
   </data>
   <data name="AZversion" xml:space="preserve">
     <value>10</value>
@@ -192,16 +183,10 @@
   <data name="JordanCleaningVersion" xml:space="preserve">
     <value>20</value>
   </data>
-  <data name="AppNameAR" xml:space="preserve">
-    <value>نظام إدارة محلات تجارة وصيانة السيارات</value>
+  <data name="Logo" xml:space="preserve">
+    <value>زد واي لحلول تكنولوجيا المعلومات © 2021</value>
   </data>
-  <data name="LogoAR" xml:space="preserve">
-    <value>زد واي لحلول تكنولوجيا المعلومات </value>
-  </data>
-  <data name="ExitPromtAr" xml:space="preserve">
+  <data name="ExitPromt" xml:space="preserve">
     <value>هل تريد الخروج ؟ </value>
-  </data>
-  <data name="ExitPromtEng" xml:space="preserve">
-    <value>Do you want to Exit ?</value>
   </data>
 </root>

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ZY_CDMS.Properties {
+namespace ZY_CDMS {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace ZY_CDMS.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    internal class ResourcesAR {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        internal ResourcesAR() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ZY_CDMS.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ZY_CDMS.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ZY_CDMS.ResourcesAR", typeof(ResourcesAR).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace ZY_CDMS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your License not Valid.
+        ///   Looks up a localized string similar to انتهت الرخضة.
         /// </summary>
         internal static string activationneeded {
             get {
@@ -70,7 +70,7 @@ namespace ZY_CDMS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  Added Successfully.
+        ///   Looks up a localized string similar to تم الاضافة بنجاح.
         /// </summary>
         internal static string AddedSuccessfully {
             get {
@@ -79,29 +79,11 @@ namespace ZY_CDMS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Car Dealers Mangment System.
+        ///   Looks up a localized string similar to نظام إدارة محلات تجارة وصيانة السيارات.
         /// </summary>
         internal static string AppName {
             get {
                 return ResourceManager.GetString("AppName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to نظام إدارة محلات تجارة وصيانة السيارات.
-        /// </summary>
-        internal static string AppNameAR {
-            get {
-                return ResourceManager.GetString("AppNameAR", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to V 1.0.5.2.
-        /// </summary>
-        internal static string AppVersion {
-            get {
-                return ResourceManager.GetString("AppVersion", resourceCulture);
             }
         }
         
@@ -115,7 +97,7 @@ namespace ZY_CDMS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to User Canceled Operation.
+        ///   Looks up a localized string similar to تم الغاء العملية من قبل العميل.
         /// </summary>
         internal static string CancelByUser {
             get {
@@ -124,7 +106,7 @@ namespace ZY_CDMS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Completed Operation.
+        ///   Looks up a localized string similar to إكتملت العملية.
         /// </summary>
         internal static string Completed {
             get {
@@ -142,7 +124,7 @@ namespace ZY_CDMS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please Type Digit Only .
+        ///   Looks up a localized string similar to يسمح للأرقام فقط.
         /// </summary>
         internal static string digitOnlyError {
             get {
@@ -151,7 +133,7 @@ namespace ZY_CDMS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  Already Exist.
+        ///   Looks up a localized string similar to موجود مسبقا.
         /// </summary>
         internal static string Exist {
             get {
@@ -162,23 +144,14 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to هل تريد الخروج ؟ .
         /// </summary>
-        internal static string ExitPromtAr {
+        internal static string ExitPromt {
             get {
-                return ResourceManager.GetString("ExitPromtAr", resourceCulture);
+                return ResourceManager.GetString("ExitPromt", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Do you want to Exit ?.
-        /// </summary>
-        internal static string ExitPromtEng {
-            get {
-                return ResourceManager.GetString("ExitPromtEng", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid Username Or Password.
+        ///   Looks up a localized string similar to خطأ في كلمة المرور أو اسم المستخدم.
         /// </summary>
         internal static string FaieldLogin {
             get {
@@ -187,7 +160,7 @@ namespace ZY_CDMS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Invalid Data.
+        ///   Looks up a localized string similar to خطأ في البيانات المدخلة.
         /// </summary>
         internal static string invalidData {
             get {
@@ -205,7 +178,7 @@ namespace ZY_CDMS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ZY Technologies Solutions © 2020.
+        ///   Looks up a localized string similar to زد واي لحلول تكنولوجيا المعلومات © 2021.
         /// </summary>
         internal static string Logo {
             get {
@@ -214,25 +187,7 @@ namespace ZY_CDMS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to زد واي لحلول تكنولوجيا المعلومات .
-        /// </summary>
-        internal static string LogoAR {
-            get {
-                return ResourceManager.GetString("LogoAR", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to ZY Technologies Solutions.
-        /// </summary>
-        internal static string MessageTitle {
-            get {
-                return ResourceManager.GetString("MessageTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please Fill Missed Boxes.
+        ///   Looks up a localized string similar to الرجاء ملىْ البيانات المطلوبة.
         /// </summary>
         internal static string missingTextboxes {
             get {
@@ -241,7 +196,7 @@ namespace ZY_CDMS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No Data.
+        ///   Looks up a localized string similar to لا يوجد بيانات.
         /// </summary>
         internal static string NoData {
             get {
@@ -250,7 +205,7 @@ namespace ZY_CDMS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please Select Source You Need.
+        ///   Looks up a localized string similar to الرجاء إختيار المطلوب.
         /// </summary>
         internal static string Noselection {
             get {
@@ -259,7 +214,7 @@ namespace ZY_CDMS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to   Not Exist.
+        ///   Looks up a localized string similar to غير موجود.
         /// </summary>
         internal static string notExist {
             get {
@@ -277,7 +232,7 @@ namespace ZY_CDMS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please Activate App.
+        ///   Looks up a localized string similar to الرجاء تفعيل التطبيق قبل البدء بالاستخدام .
         /// </summary>
         internal static string pleaseActive {
             get {
@@ -295,7 +250,7 @@ namespace ZY_CDMS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please Try Again .
+        ///   Looks up a localized string similar to الرجاء المحاولة مرة أخرى.
         /// </summary>
         internal static string TryAgain {
             get {
@@ -304,7 +259,7 @@ namespace ZY_CDMS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  Updated Successfully.
+        ///   Looks up a localized string similar to تم التحديث بنجاح.
         /// </summary>
         internal static string Updated {
             get {

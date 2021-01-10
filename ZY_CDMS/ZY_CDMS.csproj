@@ -350,6 +350,11 @@
       <DependentUpon>Transactions.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ResourcesAR.Designer.cs">
+      <DependentUpon>ResourcesAR.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <EmbeddedResource Include="Forms\frmAbout.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </EmbeddedResource>
@@ -362,8 +367,17 @@
     <EmbeddedResource Include="Forms\frmActivationApp.resx">
       <DependentUpon>frmActivationApp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddBrand.ar-JO.resx">
+      <DependentUpon>frmAddBrand.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAddBrand.resx">
       <DependentUpon>frmAddBrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddCarSource.ar-JO.resx">
+      <DependentUpon>frmAddCarSource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddCarSource.ar-LY.resx">
+      <DependentUpon>frmAddCarSource.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAddCarSource.resx">
       <DependentUpon>frmAddCarSource.cs</DependentUpon>
@@ -408,6 +422,9 @@
       <DependentUpon>frmHomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLogin.ar-JO.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLogin.en.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLogin.resx">
@@ -492,6 +509,11 @@
     <EmbeddedResource Include="Reports\Transactions.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Transactions.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourcesAR.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourcesAR.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -50,6 +50,7 @@
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -266,10 +267,26 @@
             // 
             this.toolTip4.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
+            // metroLabel6
+            // 
+            resources.ApplyResources(this.metroLabel6, "metroLabel6");
+            this.metroLabel6.BackColor = System.Drawing.Color.White;
+            this.metroLabel6.CustomBackground = true;
+            this.metroLabel6.CustomForeColor = true;
+            this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel6.Name = "metroLabel6";
+            this.toolTip2.SetToolTip(this.metroLabel6, resources.GetString("metroLabel6.ToolTip"));
+            this.toolTip1.SetToolTip(this.metroLabel6, resources.GetString("metroLabel6.ToolTip1"));
+            this.toolTip3.SetToolTip(this.metroLabel6, resources.GetString("metroLabel6.ToolTip2"));
+            this.toolTip4.SetToolTip(this.metroLabel6, resources.GetString("metroLabel6.ToolTip3"));
+            this.metroLabel6.UseStyleColors = true;
+            this.metroLabel6.Click += new System.EventHandler(this.metroLabel6_Click_1);
+            // 
             // frmLogin
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.metroLabel5);
             this.Controls.Add(this.credInfo);
             this.Controls.Add(this.metroLabel4);
@@ -327,5 +344,6 @@
         private System.Windows.Forms.ToolTip toolTip4;
         private System.Windows.Forms.ToolTip toolTip1;
         private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
     }
 }

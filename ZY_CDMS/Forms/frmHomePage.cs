@@ -70,11 +70,21 @@ namespace ZY_CDMS.Forms
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(" Do you want to exit ?  ", Resources.MessageTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
+            String prt = "";
+            if (frmLogin.languagearabic == 1 )
+            {
+                prt = ResourcesAR.ExitPromt; ;
+             
+            }
+            else
+            {
+                prt = Resources.ExitPromtEng; ;
+            }
+            DialogResult result = MessageBox.Show(prt.ToString() ,  Resources.MessageTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes )
             {
 
-               // MessageBox.Show("Please Close All Open Forms ", Resources.MessageTitle, 0  , MessageBoxIcon.Warning);
+             
                 Application.Exit();
               
 

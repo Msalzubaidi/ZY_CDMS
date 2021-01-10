@@ -199,15 +199,23 @@ namespace ZY_CDMS.Forms
         private void metroLabel5_Click(object sender, EventArgs e)
         {
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("ar-jo");
-            languagearabic = 1; 
+            languagearabic = 1;
+            metroLabel6.Visible = true;
+            metroLabel5.Visible = false;
             this.Controls.Clear();
             InitializeComponent();
         }
 
-        private void metroLabel6_Click(object sender, EventArgs e)
+     
+
+        private void metroLabel6_Click_1(object sender, EventArgs e)
         {
-          
-           
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("En-US");
+            languagearabic = 0;
+            metroLabel6.Visible = false;
+            metroLabel5.Visible = true;
+            this.Controls.Clear();
+            InitializeComponent();
         }
     }
 }
