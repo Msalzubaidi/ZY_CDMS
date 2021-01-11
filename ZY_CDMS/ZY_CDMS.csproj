@@ -296,6 +296,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\AZINVOICEE.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AZINVOICEE.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\CarTestsTax.cs">
       <DependentUpon>CarTestsTax.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -474,6 +480,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\AZINVOICEE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AZINVOICEE.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\CarTestsTax.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CarTestsTax.cs</LastGenOutput>
