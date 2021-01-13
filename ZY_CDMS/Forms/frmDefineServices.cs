@@ -49,6 +49,12 @@ namespace ZY_CDMS.Forms
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             
+        
+
+        }
+
+        private void simpleButton4_Click(object sender, EventArgs e)
+        {
             if (string.IsNullOrEmpty(txt_sid.Text) || r.isDigitsOnly(txt_sid.Text) == false || string.IsNullOrEmpty(txt_sdesc.Text) || string.IsNullOrEmpty(txt_scost.Text) || r.isDigitsOnly(txt_scost.Text) == false)
             {
                 MessageBox.Show(Resources.invalidData, Resources.MessageTitle, 0, MessageBoxIcon.Warning);
@@ -69,9 +75,9 @@ namespace ZY_CDMS.Forms
                 }
                 else if (rest > 0)
                 {
-                    MessageBox.Show(table+Resources.AddedSuccessfully, Resources.MessageTitle, 0, MessageBoxIcon.Information);
+                    MessageBox.Show(table + Resources.AddedSuccessfully, Resources.MessageTitle, 0, MessageBoxIcon.Information);
                     simpleButton2.PerformClick();
-                   
+
 
                 }
                 else
@@ -79,7 +85,6 @@ namespace ZY_CDMS.Forms
                     MessageBox.Show(Resources.TryAgain, Resources.MessageTitle, 0, MessageBoxIcon.Error);
                 }
             }
-
         }
     }
 }

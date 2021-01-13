@@ -29,6 +29,14 @@ namespace ZY_CDMS.Forms
         DataBase db = new DataBase();
 
         string cartest = "CarTest";
+
+        public static string carvin = "";
+
+        public static string CustVerpc = "";
+        public static int selectedReportpc = 0;
+
+        public static int readytoprint = 0; 
+
         private void frmAddServicecs_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -48,6 +56,7 @@ namespace ZY_CDMS.Forms
             cbo_vin.Focus();
             int et = r.FindMax(table);
             txt_transid.Text = et.ToString();
+            simpleButton2.Visible = true; 
 
 
         }
@@ -134,15 +143,21 @@ namespace ZY_CDMS.Forms
                 int servid = int.Parse(cbo_service.SelectedItem.ToString());
                 double cost = double.Parse(txt_sercost.Text);
                 string vin = cbo_vin.SelectedItem.ToString();
+                string cinfo = txt_carinfo.ToString();
                 int tr_id = int.Parse(txt_transid.Text);
 
-                int u = o.newService(servid, cost, vin, servdesc, date , tr_id);
+                int u = o.newService(servid, cost, vin, servdesc, date , tr_id , cinfo );
 
                 if (u > 0)
                 {
+                    readytoprint = 1;
                     MessageBox.Show(servicetable + Resources.AddedSuccessfully, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    simpleButton6.Visible = true;
+                    simpleButton6.PerformClick();
                     simpleButton2.PerformClick();
-
+                  
+                    
+                 
                 }
 
                 else if (u <= 0)
@@ -235,6 +250,39 @@ namespace ZY_CDMS.Forms
               
                 }
             }
+
+        private void simpleButton6_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_carinfo.Text) || string.IsNullOrEmpty(cbo_vin.SelectedItem.ToString()) || string.IsNullOrEmpty(txt_sercost.Text) || string.IsNullOrEmpty(txt_serviceinfo.Text) || readytoprint == 0 )
+            {
+                MessageBox.Show(Resources.invalidData + " To Print " , Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else
+            {
+                frmReportViewer rv = null; 
+                DataTable datatable = db.ViewSysinfo(1);
+                int version = int.Parse(datatable.Rows[0]["version"].ToString()); 
+
+                if (cbo_vin.SelectedItem.ToString() != " ")
+                {
+                    selectedReportpc = 17;
+                    carvin = cbo_vin.SelectedItem.ToString();
+                    CustVerpc = version.ToString();
+                    rv = new frmReportViewer();
+                    rv.Show();
+                }
+                else
+                {
+
+                    if (frmLogin.languagearabic == 1)
+                        MessageBox.Show("الرجاء اختيار السيارة للطباعة", "زد واي لتكنولوجيا المعلومات ", 0, MessageBoxIcon.Warning);
+                    else
+                        MessageBox.Show("Please Select Vin  to Print !!! ", Resources.MessageTitle, 0, MessageBoxIcon.Warning);
+                }
+
+            }
+        }
     }
     }
 

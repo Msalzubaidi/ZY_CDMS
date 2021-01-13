@@ -25,6 +25,10 @@ namespace ZY_CDMS.Forms
         string table = "SellTransactions";
 
         Operations o = new Operations();
+        DataBase db = new DataBase();
+
+        public static string CustVerp = "";
+        public static int selectedReportp = 0;
 
         private void frmPrintInvoice_KeyDown(object sender, KeyEventArgs e)
         {
@@ -129,9 +133,38 @@ namespace ZY_CDMS.Forms
         {
             if (string.IsNullOrEmpty(txt_carinfo.Text) == false)
             {
-               // Report.y = 16;
-                frmReportViewer rv = new frmReportViewer();
-                rv.Show();
+
+                frmReportViewer rv = null;
+
+                DataTable datatable = db.ViewSysinfo(1);
+                int version = int.Parse(datatable.Rows[0]["version"].ToString());//6
+
+                if (string.IsNullOrEmpty(cbo_vin.EditValue.ToString()))
+                {
+                    if (frmLogin.languagearabic == 1)
+                        MessageBox.Show("الرجاء اختيار السيارة للطباعة", "زد واي لتكنولوجيا المعلومات ", 0, MessageBoxIcon.Warning);
+                    else
+                        MessageBox.Show("Please Select Vin  to Print !!! ", Resources.MessageTitle, 0, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    if (cbo_vin.SelectedItem.ToString() != " ")
+                    {
+                        selectedReportp = 16 ;
+                        carvin = cbo_vin.SelectedItem.ToString();
+                        CustVerp = version.ToString();
+                        rv = new frmReportViewer();
+                        rv.Show();
+                    }
+                    else
+                    {
+
+                        if (frmLogin.languagearabic == 1)
+                            MessageBox.Show("الرجاء اختيار السيارة للطباعة", "زد واي لتكنولوجيا المعلومات ", 0, MessageBoxIcon.Warning);
+                        else
+                            MessageBox.Show("Please Select Vin  to Print !!! ", Resources.MessageTitle, 0, MessageBoxIcon.Warning);
+                    }
+                }
 
             }
             if (string.IsNullOrEmpty(txt_carinfo.Text))

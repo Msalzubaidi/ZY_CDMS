@@ -142,8 +142,7 @@ namespace ZY_CDMS.Forms
 
                     else
                     {
-
-                       
+                   
                         string bm = dtable.Rows[0]["makeModel"].ToString();
 
                         string year = dtable.Rows[0]["years"].ToString();
@@ -371,6 +370,9 @@ namespace ZY_CDMS.Forms
                     o.newTransaction(transno, transtype, vinn, total, spm, desc, date);
                     o.updatecarStatus(vinn, cstat, carsttext);
                     simpleButton2.PerformClick();
+
+                    frmPrintInvoice pi = new frmPrintInvoice();
+                    pi.Show();
                   
                     
 

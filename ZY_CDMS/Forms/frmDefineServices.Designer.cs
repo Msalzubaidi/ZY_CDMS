@@ -35,9 +35,9 @@
             this.txt_scost = new System.Windows.Forms.TextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.txt_sdesc = new System.Windows.Forms.TextBox();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.SuspendLayout();
             // 
             // lic
@@ -107,15 +107,6 @@
             this.txt_sdesc.TabIndex = 1;
             this.txt_sdesc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Location = new System.Drawing.Point(22, 135);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton1.TabIndex = 2;
-            this.simpleButton1.Text = "Add";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
             // simpleButton2
             // 
             this.simpleButton2.Location = new System.Drawing.Point(109, 135);
@@ -134,14 +125,24 @@
             this.simpleButton3.Text = "Cancel";
             this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
+            // simpleButton4
+            // 
+            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.simpleButton4.Location = new System.Drawing.Point(22, 136);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton4.TabIndex = 38;
+            this.simpleButton4.Text = "Add";
+            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
+            // 
             // frmDefineServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(300, 171);
+            this.Controls.Add(this.simpleButton4);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.txt_sdesc);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.txt_scost);
@@ -168,8 +169,8 @@
         private System.Windows.Forms.TextBox txt_scost;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private System.Windows.Forms.TextBox txt_sdesc;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton4;
     }
 }

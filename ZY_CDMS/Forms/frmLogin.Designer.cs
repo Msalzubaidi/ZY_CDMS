@@ -47,10 +47,10 @@
             this.credInfo = new MetroFramework.Controls.MetroLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -255,18 +255,6 @@
             this.metroLabel5.UseStyleColors = true;
             this.metroLabel5.Click += new System.EventHandler(this.metroLabel5_Click);
             // 
-            // toolTip2
-            // 
-            this.toolTip2.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            // 
-            // toolTip3
-            // 
-            this.toolTip3.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            // 
-            // toolTip4
-            // 
-            this.toolTip4.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            // 
             // metroLabel6
             // 
             resources.ApplyResources(this.metroLabel6, "metroLabel6");
@@ -281,6 +269,18 @@
             this.toolTip4.SetToolTip(this.metroLabel6, resources.GetString("metroLabel6.ToolTip3"));
             this.metroLabel6.UseStyleColors = true;
             this.metroLabel6.Click += new System.EventHandler(this.metroLabel6_Click_1);
+            // 
+            // toolTip2
+            // 
+            this.toolTip2.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
+            // toolTip3
+            // 
+            this.toolTip3.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
+            // toolTip4
+            // 
+            this.toolTip4.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
             // frmLogin
             // 

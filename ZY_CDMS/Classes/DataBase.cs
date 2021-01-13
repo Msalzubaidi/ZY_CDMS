@@ -515,7 +515,7 @@ namespace ZY_CDMS.Classes
                 qry = "select *  from CarTest where carvin=@vin ";
             }
 
-            else if (seraial == 5 && (version.ToString() == Resources.AZversion))
+            else if (seraial == 16 && (version.ToString() == Resources.AZversion))
             {
                 qry = "select *  from SellTransactions where vin=@vin ";
             }

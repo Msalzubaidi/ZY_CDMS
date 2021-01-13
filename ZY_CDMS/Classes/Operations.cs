@@ -260,11 +260,11 @@ namespace ZY_CDMS.Classes
 
         }
 
-        public int newService(int servid, double servcost, string vin, string serdesc, DateTime sdate , int tr_id)
+        public int newService(int servid, double servcost, string vin, string serdesc, DateTime sdate , int tr_id , string cinfo )
         {
 
             SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
-            SqlCommand cmd = new SqlCommand("INSERT INTO TransServices ( Servid , Servcost , vin , serdesc , servdate , trans_id) VALUES(@srid , @srcost, @vin , @serdesc , @sdate , @trans_id)", con); // sql command to so get data from data bas
+            SqlCommand cmd = new SqlCommand("INSERT INTO TransServices ( Servid , Servcost , vin , serdesc , servdate , trans_id , carinfo) VALUES(@srid , @srcost, @vin , @serdesc , @sdate , @trans_id , @cinfo)", con); // sql command to so get data from data bas
 
             cmd.Parameters.Add(new SqlParameter("@srid", servid));
             cmd.Parameters.Add(new SqlParameter("@srcost", servcost));
@@ -272,8 +272,9 @@ namespace ZY_CDMS.Classes
             cmd.Parameters.Add(new SqlParameter("@serdesc", serdesc));
             cmd.Parameters.Add(new SqlParameter("@sdate", sdate));
             cmd.Parameters.Add(new SqlParameter("@trans_id", tr_id));
+            cmd.Parameters.Add(new SqlParameter("@cinfo", cinfo));
 
-           
+
 
 
 

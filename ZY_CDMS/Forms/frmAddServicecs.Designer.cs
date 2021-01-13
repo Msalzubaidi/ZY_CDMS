@@ -242,7 +242,7 @@
             this.metroLabel6.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel6.CustomBackground = true;
             this.metroLabel6.CustomForeColor = true;
-            this.metroLabel6.Location = new System.Drawing.Point(12, 20);
+            this.metroLabel6.Location = new System.Drawing.Point(12, 18);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(54, 19);
             this.metroLabel6.TabIndex = 37;
@@ -252,7 +252,7 @@
             // txt_transid
             // 
             this.txt_transid.Enabled = false;
-            this.txt_transid.Location = new System.Drawing.Point(12, 42);
+            this.txt_transid.Location = new System.Drawing.Point(12, 40);
             this.txt_transid.Name = "txt_transid";
             this.txt_transid.Size = new System.Drawing.Size(64, 20);
             this.txt_transid.TabIndex = 38;
@@ -261,11 +261,13 @@
             // simpleButton6
             // 
             this.simpleButton6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.ImageOptions.Image")));
-            this.simpleButton6.Location = new System.Drawing.Point(251, 135);
+            this.simpleButton6.Location = new System.Drawing.Point(251, 160);
             this.simpleButton6.Name = "simpleButton6";
             this.simpleButton6.Size = new System.Drawing.Size(102, 23);
             this.simpleButton6.TabIndex = 39;
             this.simpleButton6.Text = "Save and Print";
+            this.simpleButton6.Visible = false;
+            this.simpleButton6.Click += new System.EventHandler(this.simpleButton6_Click);
             // 
             // frmAddServicecs
             // 

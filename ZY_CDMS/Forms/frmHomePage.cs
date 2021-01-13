@@ -25,6 +25,8 @@ namespace ZY_CDMS.Forms
 
         DataBase d = new DataBase();
 
+        public static int viewcbo = 0 ;
+
 
         private void defineMakeModelToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -678,6 +680,7 @@ namespace ZY_CDMS.Forms
 
                     if (isopen2 == false)
                     {
+                        viewcbo = 1;
                         frmAddCarTset act = new frmAddCarTset();
                         act.Show();
 

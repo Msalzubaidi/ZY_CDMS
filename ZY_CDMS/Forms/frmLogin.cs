@@ -34,7 +34,7 @@ namespace ZY_CDMS.Forms
 
             if (strComputerName == "MZUBAIDI")
             {
-                credInfo.Visible = true;
+                credInfo.Visible = false;
             }
             else
             {

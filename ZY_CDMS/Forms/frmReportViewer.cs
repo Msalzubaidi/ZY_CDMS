@@ -30,6 +30,7 @@ namespace ZY_CDMS.Forms
         public static DateTime dtf ;
         public static DateTime dtt;
 
+        string cartabel = "Cars";
       
 
         private void frmReportViewer_Load(object sender, EventArgs e)
@@ -339,6 +340,68 @@ namespace ZY_CDMS.Forms
                 crystalReportViewer1.ReportSource = ct1;
             }
 
+
+            if (frmPrintInvoice.selectedReportp == 16 && ((frmPrintInvoice.CustVerp.ToString() == Resources.AZversion)))
+            {
+                DataTable dtablef = new DataTable();
+                string vin = frmPrintInvoice.carvin;
+                string condition = "VIN=" + "'" + @vin + "'";
+                dtablef = o.SelctData(cartabel, 1, condition);
+
+                string bm = dtablef.Rows[0]["makeModel"].ToString();
+
+                string year = dtablef.Rows[0]["years"].ToString();
+                string mill = dtablef.Rows[0]["Millages"].ToString();
+                string col = dtablef.Rows[0]["color"].ToString();
+
+
+                string millages = dtablef.Rows[0]["Millages"].ToString();
+
+
+                AZINVOICEE ainv = new AZINVOICEE();
+                DataTable dt = db.FatoraView(16 , frmPrintInvoice.CustVerp.ToString(), frmPrintInvoice.carvin);
+                ainv.SetDataSource(dt);
+
+                ainv.Refresh();
+                ainv.SetDatabaseLogon(username, pass, server, dbname, false);
+
+                ainv.SetParameterValue("ComName", comname.ToString());
+                ainv.SetParameterValue("Address", address.ToString());
+                ainv.SetParameterValue("Mobile", mobile.ToString());
+             //   ainv.SetParameterValue("Taxno", taxNo.ToString());
+                ainv.SetParameterValue("year", year.ToString());
+                ainv.SetParameterValue("color", col.ToString());
+                ainv.SetParameterValue("mill", millages.ToString());
+                ainv.SetParameterValue("makemodel", bm.ToString());
+
+
+
+                crystalReportViewer1.ReportSource = ainv;
+
+            }
+
+
+            if (frmAddServicecs.selectedReportpc == 17)
+            {
+                rptServiceInv sinv = new rptServiceInv();
+                string vin = frmAddServicecs.carvin; 
+                string condition = "vin=" + "'" + @vin + "'";
+
+                DataTable dt = o.SelctData("TransServices", 1 , condition);
+                sinv.SetDataSource(dt);
+                sinv.Refresh();
+                sinv.SetDatabaseLogon(username, pass, server, dbname, false);
+
+                sinv.SetParameterValue("ComName", comname.ToString());
+                sinv.SetParameterValue("Address", address.ToString());
+                sinv.SetParameterValue("Mobile", mobile.ToString());
+                sinv.SetParameterValue("RptName", "Service Invoice");
+                
+                crystalReportViewer1.ReportSource = sinv;
+
+            }
+
+
             if (frmReports.selectedReport == 0 && (frmReports.CusVersion.ToString() == Resources.JordanCleaningVersion))
             {
                 CarTests  cts = new CarTests();
@@ -415,7 +478,7 @@ namespace ZY_CDMS.Forms
 
             if (frmAddCarTset.selectedReport == 4 && ((frmAddCarTset.CustVer.ToString() == Resources.JordanCleaningVersion)))
             {
-
+                
                 JorInvoice inv = new JorInvoice();
                 DataTable dt = db.FatoraView(4 , frmAddCarTset.CustVer.ToString() , frmAddCarTset.carvin);
                 inv.SetDataSource(dt);
@@ -427,7 +490,7 @@ namespace ZY_CDMS.Forms
                 inv.SetParameterValue("Address", address.ToString());
                 inv.SetParameterValue("Mobile", mobile.ToString());
                 inv.SetParameterValue("Taxno", taxNo.ToString());
-
+               
                 
                 crystalReportViewer1.ReportSource = inv;
               

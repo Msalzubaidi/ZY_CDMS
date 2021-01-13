@@ -16,14 +16,14 @@ namespace ZY_CDMS.Reports {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class AZINVOICEE : ReportClass {
+    public class rptServiceInv : ReportClass {
         
-        public AZINVOICEE() {
+        public rptServiceInv() {
         }
         
         public override string ResourceName {
             get {
-                return "AZINVOICEE.rpt";
+                return "rptServiceInv.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace ZY_CDMS.Reports {
         
         public override string FullResourceName {
             get {
-                return "ZY_CDMS.Reports.AZINVOICEE.rpt";
+                return "ZY_CDMS.Reports.rptServiceInv.rpt";
             }
             set {
                 // Do nothing
@@ -143,12 +143,20 @@ namespace ZY_CDMS.Reports {
                 return this.DataDefinition.ParameterFields[6];
             }
         }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_RptName {
+            get {
+                return this.DataDefinition.ParameterFields[7];
+            }
+        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedAZINVOICEE : Component, ICachedReport {
+    public class CachedrptServiceInv : Component, ICachedReport {
         
-        public CachedAZINVOICEE() {
+        public CachedrptServiceInv() {
         }
         
         [Browsable(false)]
@@ -185,7 +193,7 @@ namespace ZY_CDMS.Reports {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            AZINVOICEE rpt = new AZINVOICEE();
+            rptServiceInv rpt = new rptServiceInv();
             rpt.Site = this.Site;
             return rpt;
         }
