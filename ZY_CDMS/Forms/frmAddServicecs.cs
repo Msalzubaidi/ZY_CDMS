@@ -56,8 +56,9 @@ namespace ZY_CDMS.Forms
             cbo_vin.Focus();
             int et = r.FindMax(table);
             txt_transid.Text = et.ToString();
-            simpleButton2.Visible = true; 
-
+     
+            simpleButton1.Visible = true;
+            simpleButton6.Visible = false;
 
         }
 
@@ -125,6 +126,28 @@ namespace ZY_CDMS.Forms
                 string item1F = dr4.GetValue(0).ToString();
               
                 cbo_service.Properties.Items.Add(item1F);
+               
+
+            }
+
+            SqlConnection con5 = new SqlConnection(connstring);
+            SqlCommand cmd5;
+            SqlDataReader dr5;
+
+            string qry5 = "select * from TransServices";
+            con5.Open();
+
+
+
+            cmd5 = new SqlCommand(qry5, con5);
+            dr5 = cmd5.ExecuteReader();
+
+            while (dr5.Read())
+            {
+                string item1F = dr5.GetValue(0).ToString();
+
+               cbo_id.Properties.Items.Add(item1F);
+
 
             }
         }
@@ -143,7 +166,7 @@ namespace ZY_CDMS.Forms
                 int servid = int.Parse(cbo_service.SelectedItem.ToString());
                 double cost = double.Parse(txt_sercost.Text);
                 string vin = cbo_vin.SelectedItem.ToString();
-                string cinfo = txt_carinfo.ToString();
+                string cinfo = txt_carinfo.Text;
                 int tr_id = int.Parse(txt_transid.Text);
 
                 int u = o.newService(servid, cost, vin, servdesc, date , tr_id , cinfo );
@@ -152,8 +175,7 @@ namespace ZY_CDMS.Forms
                 {
                     readytoprint = 1;
                     MessageBox.Show(servicetable + Resources.AddedSuccessfully, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    simpleButton6.Visible = true;
-                    simpleButton6.PerformClick();
+            
                     simpleButton2.PerformClick();
                   
                     
@@ -253,7 +275,7 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton6_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_carinfo.Text) || string.IsNullOrEmpty(cbo_vin.SelectedItem.ToString()) || string.IsNullOrEmpty(txt_sercost.Text) || string.IsNullOrEmpty(txt_serviceinfo.Text) || readytoprint == 0 )
+            if (string.IsNullOrEmpty(txt_carinfo.Text) || string.IsNullOrEmpty(cbo_vin.SelectedItem.ToString()) || string.IsNullOrEmpty(txt_sercost.Text) || string.IsNullOrEmpty(txt_serviceinfo.Text) )
             {
                 MessageBox.Show(Resources.invalidData + " To Print " , Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -282,6 +304,59 @@ namespace ZY_CDMS.Forms
                 }
 
             }
+        }
+
+        private void cbo_id_TextChanged(object sender, EventArgs e)
+        {
+            DataTable datatable = db.ViewSysinfo(1);
+            int version = int.Parse(datatable.Rows[0]["version"].ToString());//6
+            DataTable dtable = null;
+            string condition = "";
+            if (string.IsNullOrEmpty(cbo_id.SelectedItem.ToString()))
+            {
+                // MessageBox.Show(Resources.invalidData, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+
+            else
+            {
+                int trid = int.Parse(cbo_id.SelectedItem.ToString());
+
+                if (version.ToString() == Resources.AZversion)
+                {
+                    condition = "trans_id=" + "" + trid + "";
+                    dtable = o.SelctData("TransServices", 1, condition);
+                }
+                if (version.ToString() == Resources.JordanCleaningVersion)
+                {
+                    condition = "trans_id=" + "" + trid + "";
+                    dtable = o.SelctData("TransServices", 1, condition);
+                }
+
+
+
+                if (dtable != null && dtable.Rows.Count > 0)
+                {
+                  
+                    txt_carinfo.Text = dtable.Rows[0]["carinfo"].ToString();
+                    txt_sercost.Text = dtable.Rows[0]["Servcost"].ToString();
+                    txt_serviceinfo.Text = dtable.Rows[0]["serdesc"].ToString();
+                    txt_transid.Text = dtable.Rows[0]["trans_id"].ToString();
+                    cbo_vin.Text = dtable.Rows[0]["vin"].ToString();
+                    dtp_date.DateTime = DateTime.Parse(dtable.Rows[0]["servdate"].ToString());
+                    cbo_service.Text = dtable.Rows[0]["Servid"].ToString();
+
+                    simpleButton1.Visible = false;
+                    simpleButton6.Visible = true; 
+                }
+
+                else
+                {
+
+
+                }
+            }
+
         }
     }
     }

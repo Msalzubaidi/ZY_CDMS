@@ -357,6 +357,8 @@ namespace ZY_CDMS.Forms
 
                 string millages = dtablef.Rows[0]["Millages"].ToString();
 
+             
+
 
                 AZINVOICEE ainv = new AZINVOICEE();
                 DataTable dt = db.FatoraView(16 , frmPrintInvoice.CustVerp.ToString(), frmPrintInvoice.carvin);
@@ -373,6 +375,7 @@ namespace ZY_CDMS.Forms
                 ainv.SetParameterValue("color", col.ToString());
                 ainv.SetParameterValue("mill", millages.ToString());
                 ainv.SetParameterValue("makemodel", bm.ToString());
+               
 
 
 
@@ -383,11 +386,17 @@ namespace ZY_CDMS.Forms
 
             if (frmAddServicecs.selectedReportpc == 17)
             {
+
+           
                 rptServiceInv sinv = new rptServiceInv();
                 string vin = frmAddServicecs.carvin; 
                 string condition = "vin=" + "'" + @vin + "'";
+                string conditionqty =@vin;
 
                 DataTable dt = o.SelctData("TransServices", 1 , condition);
+
+                int qty = int.Parse(dt.Rows.Count.ToString());
+                //  DataTable qty = o.SelctData("TransServices", 11 , conditionqty);
                 sinv.SetDataSource(dt);
                 sinv.Refresh();
                 sinv.SetDatabaseLogon(username, pass, server, dbname, false);
@@ -395,6 +404,7 @@ namespace ZY_CDMS.Forms
                 sinv.SetParameterValue("ComName", comname.ToString());
                 sinv.SetParameterValue("Address", address.ToString());
                 sinv.SetParameterValue("Mobile", mobile.ToString());
+                sinv.SetParameterValue("qty", qty.ToString());
                 sinv.SetParameterValue("RptName", "Service Invoice");
                 
                 crystalReportViewer1.ReportSource = sinv;

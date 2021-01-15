@@ -149,6 +149,7 @@ namespace ZY_CDMS.Forms
 
 
                     txt_username.Text = dtable.Rows[0]["user_name"].ToString();
+                    txt_password.Focus();
 
                 }
 

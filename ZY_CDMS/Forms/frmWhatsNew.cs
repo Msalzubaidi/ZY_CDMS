@@ -18,9 +18,16 @@ namespace ZY_CDMS.Forms
             InitializeComponent();
         }
 
+
+        public static int show = 0;
         private void frmWhatsNew_Load(object sender, EventArgs e)
         {
             metroLabel7.Text = "In this Version : " + Resources.AppVersion;
+        }
+
+        private void showagain_CheckedChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

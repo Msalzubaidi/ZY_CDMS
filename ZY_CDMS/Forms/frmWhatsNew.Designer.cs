@@ -79,6 +79,7 @@
             this.showagain.TabIndex = 35;
             this.showagain.Text = "Don\'t Show Again";
             this.showagain.UseVisualStyleBackColor = true;
+            this.showagain.CheckedChanged += new System.EventHandler(this.showagain_CheckedChanged);
             // 
             // frmWhatsNew
             // 

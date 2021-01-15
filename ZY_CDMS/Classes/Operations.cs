@@ -42,6 +42,15 @@ namespace ZY_CDMS.Classes
                 qry = "select sum(Servcost) as 'Servcost' from " + table_name + " where " + qrycondition;
             }
 
+            if (x == 11)
+            {
+                //select count(vin)  from TransServices where vin = 'Mohammad1020'Group by vin
+                qry = " select count(vin) from TransServices where vin = "+ "'" + @qrycondition  + "'" + " Group by vin " ; 
+
+
+                
+            }
+
             SqlConnection con = new SqlConnection(DataBase.connstring);
             SqlCommand cmd = new SqlCommand(qry , con); // sql command to so get data from data base
 

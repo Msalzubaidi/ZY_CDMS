@@ -118,25 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="txt_username.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 136</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="txt_username.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
-  </data>
-  <data name="txt_password.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 162</value>
-  </data>
-  <data name="txt_password.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
-  </data>
-  <data name="txt_userid.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 110</value>
-  </data>
-  <data name="txt_userid.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
-  </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAkGBxIQERAPEBMPDxUQDw8QEBIQEBAQEBUQFhYYFhUVFRMY
@@ -250,12 +231,6 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//9k=
 </value>
-  </data>
-  <data name="pictureBox1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pictureBox1.ToolTip2" xml:space="preserve">
-    <value>صفحتنا في الانستغرام</value>
   </data>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2247,9 +2222,6 @@
         iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAC
         iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD//Z
 </value>
-  </data>
-  <data name="pictureBox2.ToolTip" xml:space="preserve">
-    <value>موقعنا الالكتروني</value>
   </data>
   <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -5590,12 +5562,6 @@
         AABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBox3.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pictureBox3.ToolTip3" xml:space="preserve">
-    <value>راسلنا </value>
-  </data>
   <data name="simpleButton1.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACF0RVh0VGl0
@@ -5648,12 +5614,6 @@
         g8c8x+84Rh3/P5oQ/wKtHXLtkLLsUQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="simpleButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>166, 218</value>
-  </data>
-  <data name="simpleButton1.Text" xml:space="preserve">
-    <value>دخول</value>
-  </data>
   <data name="simpleButton2.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
@@ -5666,12 +5626,6 @@
         hBRhGCk3UiNWAi7uwVs1+oCeckONeAfdPyTX4Ksas+WW4UecwU3bQ1YCwWXCEVydKicuhyOYIcuJFC0I
         8P/Qn7tosvK/5TOR4kykOBMpzqPsfgBphQ1j4i+mWAAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="simpleButton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 218</value>
-  </data>
-  <data name="simpleButton2.Text" xml:space="preserve">
-    <value>خروج</value>
   </data>
   <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -5810,67 +5764,6 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHLt
         Ax/4f86hMJkJMm3XAAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="pictureBox4.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pictureBox4.ToolTip1" xml:space="preserve">
-    <value>صفحتنا على الفيسبوك </value>
-  </data>
-  <data name="lic.Location" type="System.Drawing.Point, System.Drawing">
-    <value>92, 69</value>
-  </data>
-  <data name="lic.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 25</value>
-  </data>
-  <data name="lic.Text" xml:space="preserve">
-    <value>تسجيل الدخول</value>
-  </data>
-  <data name="metroLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>229, 110</value>
-  </data>
-  <data name="metroLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 19</value>
-  </data>
-  <data name="metroLabel2.Text" xml:space="preserve">
-    <value>رمز المستخدم</value>
-  </data>
-  <data name="metroLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>229, 136</value>
-  </data>
-  <data name="metroLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 19</value>
-  </data>
-  <data name="metroLabel3.Text" xml:space="preserve">
-    <value>اسم المستخدم</value>
-  </data>
-  <data name="metroLabel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>231, 162</value>
-  </data>
-  <data name="metroLabel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 19</value>
-  </data>
-  <data name="metroLabel4.Text" xml:space="preserve">
-    <value>كلمة المرور</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="credInfo.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="metroLabel5.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="metroLabel6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="metroLabel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>166, 283</value>
-  </data>
-  <data name="metroLabel6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 25</value>
-  </data>
-  <data name="metroLabel6.Text" xml:space="preserve">
-    <value>English Language</value>
   </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

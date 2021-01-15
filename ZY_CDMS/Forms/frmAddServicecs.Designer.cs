@@ -49,10 +49,12 @@
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.txt_transid = new System.Windows.Forms.TextBox();
             this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
+            this.cbo_id = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_vin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_service.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_date.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_date.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbo_id.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -61,7 +63,7 @@
             this.metroLabel1.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel1.CustomBackground = true;
             this.metroLabel1.CustomForeColor = true;
-            this.metroLabel1.Location = new System.Drawing.Point(93, 20);
+            this.metroLabel1.Location = new System.Drawing.Point(93, 28);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(27, 19);
             this.metroLabel1.TabIndex = 19;
@@ -74,7 +76,7 @@
             this.lic.BackColor = System.Drawing.SystemColors.Control;
             this.lic.CustomBackground = true;
             this.lic.CustomForeColor = true;
-            this.lic.Location = new System.Drawing.Point(226, 20);
+            this.lic.Location = new System.Drawing.Point(226, 28);
             this.lic.Name = "lic";
             this.lic.Size = new System.Drawing.Size(51, 19);
             this.lic.TabIndex = 17;
@@ -83,7 +85,7 @@
             // 
             // cbo_vin
             // 
-            this.cbo_vin.Location = new System.Drawing.Point(93, 42);
+            this.cbo_vin.Location = new System.Drawing.Point(93, 50);
             this.cbo_vin.Name = "cbo_vin";
             this.cbo_vin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -93,7 +95,7 @@
             // 
             // cbo_service
             // 
-            this.cbo_service.Location = new System.Drawing.Point(226, 42);
+            this.cbo_service.Location = new System.Drawing.Point(226, 50);
             this.cbo_service.Name = "cbo_service";
             this.cbo_service.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -104,7 +106,7 @@
             // dtp_date
             // 
             this.dtp_date.EditValue = null;
-            this.dtp_date.Location = new System.Drawing.Point(359, 42);
+            this.dtp_date.Location = new System.Drawing.Point(359, 50);
             this.dtp_date.Name = "dtp_date";
             this.dtp_date.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -119,7 +121,7 @@
             this.metroLabel2.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel2.CustomBackground = true;
             this.metroLabel2.CustomForeColor = true;
-            this.metroLabel2.Location = new System.Drawing.Point(359, 20);
+            this.metroLabel2.Location = new System.Drawing.Point(359, 28);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(36, 19);
             this.metroLabel2.TabIndex = 23;
@@ -242,7 +244,7 @@
             this.metroLabel6.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel6.CustomBackground = true;
             this.metroLabel6.CustomForeColor = true;
-            this.metroLabel6.Location = new System.Drawing.Point(12, 18);
+            this.metroLabel6.Location = new System.Drawing.Point(12, 10);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(54, 19);
             this.metroLabel6.TabIndex = 37;
@@ -252,7 +254,7 @@
             // txt_transid
             // 
             this.txt_transid.Enabled = false;
-            this.txt_transid.Location = new System.Drawing.Point(12, 40);
+            this.txt_transid.Location = new System.Drawing.Point(72, 9);
             this.txt_transid.Name = "txt_transid";
             this.txt_transid.Size = new System.Drawing.Size(64, 20);
             this.txt_transid.TabIndex = 38;
@@ -269,11 +271,22 @@
             this.simpleButton6.Visible = false;
             this.simpleButton6.Click += new System.EventHandler(this.simpleButton6_Click);
             // 
+            // cbo_id
+            // 
+            this.cbo_id.Location = new System.Drawing.Point(12, 47);
+            this.cbo_id.Name = "cbo_id";
+            this.cbo_id.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbo_id.Size = new System.Drawing.Size(64, 20);
+            this.cbo_id.TabIndex = 40;
+            this.cbo_id.TextChanged += new System.EventHandler(this.cbo_id_TextChanged);
+            // 
             // frmAddServicecs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(521, 212);
+            this.Controls.Add(this.cbo_id);
             this.Controls.Add(this.simpleButton6);
             this.Controls.Add(this.txt_transid);
             this.Controls.Add(this.metroLabel6);
@@ -305,6 +318,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbo_service.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_date.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_date.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbo_id.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,5 +346,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private System.Windows.Forms.TextBox txt_transid;
         private DevExpress.XtraEditors.SimpleButton simpleButton6;
+        private DevExpress.XtraEditors.ComboBoxEdit cbo_id;
     }
 }
