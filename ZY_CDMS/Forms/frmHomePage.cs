@@ -765,23 +765,7 @@ namespace ZY_CDMS.Forms
 
         private void lic_DoubleClick(object sender, EventArgs e)
         {
-            bool isopen = false;
-            foreach (Form f in Application.OpenForms)
-            {
-                if (f.Text == "About")
-                {
-                    isopen = true;
-                    f.BringToFront();
-                    break;
-                }
-            }
-
-            if (isopen == false)
-            {
-                frmAbout about = new frmAbout();
-              
-                about.Show();
-            }
+           
         }
 
         private void accordionControlElement12_Click(object sender, EventArgs e)
@@ -878,6 +862,32 @@ namespace ZY_CDMS.Forms
         private void عربيToolStripMenuItem_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void accordionControlElement11_Click_1(object sender, EventArgs e)
+        {
+            bool isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "About")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+
+            if (isopen == false)
+            {
+                frmAbout about = new frmAbout();
+
+                about.Show();
+            }
+        }
+
+        private void accordionControlElement13_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("mailto:dev.mzubaidi@gmail.com");
         }
     }
 }

@@ -44,6 +44,7 @@
             this.accordionControlElement17 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement11 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mun_settings = new System.Windows.Forms.ToolStripMenuItem();
             this.defineMakeModelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,6 +74,7 @@
             this.mnu_exit = new System.Windows.Forms.ToolStripMenuItem();
             this.lic = new MetroFramework.Controls.MetroLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.accordionControlElement13 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -85,11 +87,12 @@
             this.accordionControlElement2,
             this.accordionControlElement3,
             this.accordionControlElement7,
-            this.accordionControlElement4});
+            this.accordionControlElement4,
+            this.accordionControlElement11,
+            this.accordionControlElement13});
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.OptionsMinimizing.State = DevExpress.XtraBars.Navigation.AccordionControlState.Minimized;
             this.accordionControl1.ShowFilterControl = DevExpress.XtraBars.Navigation.ShowFilterControl.Always;
-            this.toolTip1.SetToolTip(this.accordionControl1, resources.GetString("accordionControl1.ToolTip"));
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
             // accordionControlElement1
@@ -102,57 +105,57 @@
             this.accordionControlElement10,
             this.accordionControlElement12});
             this.accordionControlElement1.Expanded = true;
-            resources.ApplyResources(this.accordionControlElement1, "accordionControlElement1");
             this.accordionControlElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement1.ImageOptions.Image")));
             this.accordionControlElement1.Name = "accordionControlElement1";
+            resources.ApplyResources(this.accordionControlElement1, "accordionControlElement1");
             this.accordionControlElement1.Click += new System.EventHandler(this.accordionControlElement1_Click);
             // 
             // accordionControlElement5
             // 
-            resources.ApplyResources(this.accordionControlElement5, "accordionControlElement5");
             this.accordionControlElement5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement5.ImageOptions.Image")));
             this.accordionControlElement5.Name = "accordionControlElement5";
             this.accordionControlElement5.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            resources.ApplyResources(this.accordionControlElement5, "accordionControlElement5");
             this.accordionControlElement5.Click += new System.EventHandler(this.accordionControlElement5_Click);
             // 
             // accordionControlElement6
             // 
-            resources.ApplyResources(this.accordionControlElement6, "accordionControlElement6");
             this.accordionControlElement6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement6.ImageOptions.Image")));
             this.accordionControlElement6.Name = "accordionControlElement6";
             this.accordionControlElement6.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            resources.ApplyResources(this.accordionControlElement6, "accordionControlElement6");
             this.accordionControlElement6.Click += new System.EventHandler(this.accordionControlElement6_Click);
             // 
             // accordionControlElement8
             // 
-            resources.ApplyResources(this.accordionControlElement8, "accordionControlElement8");
             this.accordionControlElement8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement8.ImageOptions.Image")));
             this.accordionControlElement8.Name = "accordionControlElement8";
             this.accordionControlElement8.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            resources.ApplyResources(this.accordionControlElement8, "accordionControlElement8");
             this.accordionControlElement8.Click += new System.EventHandler(this.accordionControlElement8_Click);
             // 
             // accordionControlElement9
             // 
-            resources.ApplyResources(this.accordionControlElement9, "accordionControlElement9");
             this.accordionControlElement9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement9.ImageOptions.Image")));
             this.accordionControlElement9.Name = "accordionControlElement9";
             this.accordionControlElement9.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            resources.ApplyResources(this.accordionControlElement9, "accordionControlElement9");
             this.accordionControlElement9.Click += new System.EventHandler(this.accordionControlElement9_Click);
             // 
             // accordionControlElement10
             // 
-            resources.ApplyResources(this.accordionControlElement10, "accordionControlElement10");
             this.accordionControlElement10.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement10.ImageOptions.Image")));
             this.accordionControlElement10.Name = "accordionControlElement10";
             this.accordionControlElement10.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            resources.ApplyResources(this.accordionControlElement10, "accordionControlElement10");
             this.accordionControlElement10.Click += new System.EventHandler(this.accordionControlElement10_Click);
             // 
             // accordionControlElement12
             // 
-            resources.ApplyResources(this.accordionControlElement12, "accordionControlElement12");
             this.accordionControlElement12.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement12.ImageOptions.Image")));
             this.accordionControlElement12.Name = "accordionControlElement12";
             this.accordionControlElement12.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            resources.ApplyResources(this.accordionControlElement12, "accordionControlElement12");
             this.accordionControlElement12.Visible = false;
             this.accordionControlElement12.Click += new System.EventHandler(this.accordionControlElement12_Click);
             // 
@@ -161,16 +164,16 @@
             this.accordionControlElement2.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement14});
             this.accordionControlElement2.Expanded = true;
-            resources.ApplyResources(this.accordionControlElement2, "accordionControlElement2");
             this.accordionControlElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement2.ImageOptions.Image")));
             this.accordionControlElement2.Name = "accordionControlElement2";
+            resources.ApplyResources(this.accordionControlElement2, "accordionControlElement2");
             // 
             // accordionControlElement14
             // 
-            resources.ApplyResources(this.accordionControlElement14, "accordionControlElement14");
             this.accordionControlElement14.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement14.ImageOptions.Image")));
             this.accordionControlElement14.Name = "accordionControlElement14";
             this.accordionControlElement14.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            resources.ApplyResources(this.accordionControlElement14, "accordionControlElement14");
             this.accordionControlElement14.Click += new System.EventHandler(this.accordionControlElement14_Click);
             // 
             // accordionControlElement3
@@ -178,34 +181,42 @@
             this.accordionControlElement3.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement17});
             this.accordionControlElement3.Expanded = true;
-            resources.ApplyResources(this.accordionControlElement3, "accordionControlElement3");
             this.accordionControlElement3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement3.ImageOptions.Image")));
             this.accordionControlElement3.Name = "accordionControlElement3";
+            resources.ApplyResources(this.accordionControlElement3, "accordionControlElement3");
             this.accordionControlElement3.Click += new System.EventHandler(this.accordionControlElement3_Click);
             // 
             // accordionControlElement17
             // 
-            resources.ApplyResources(this.accordionControlElement17, "accordionControlElement17");
             this.accordionControlElement17.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement17.ImageOptions.Image")));
             this.accordionControlElement17.Name = "accordionControlElement17";
             this.accordionControlElement17.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            resources.ApplyResources(this.accordionControlElement17, "accordionControlElement17");
             this.accordionControlElement17.Click += new System.EventHandler(this.accordionControlElement17_Click);
             // 
             // accordionControlElement7
             // 
-            resources.ApplyResources(this.accordionControlElement7, "accordionControlElement7");
             this.accordionControlElement7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement7.ImageOptions.Image")));
             this.accordionControlElement7.Name = "accordionControlElement7";
             this.accordionControlElement7.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            resources.ApplyResources(this.accordionControlElement7, "accordionControlElement7");
             this.accordionControlElement7.Click += new System.EventHandler(this.accordionControlElement7_Click);
             // 
             // accordionControlElement4
             // 
-            resources.ApplyResources(this.accordionControlElement4, "accordionControlElement4");
             this.accordionControlElement4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement4.ImageOptions.Image")));
             this.accordionControlElement4.Name = "accordionControlElement4";
             this.accordionControlElement4.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            resources.ApplyResources(this.accordionControlElement4, "accordionControlElement4");
             this.accordionControlElement4.Click += new System.EventHandler(this.accordionControlElement4_Click);
+            // 
+            // accordionControlElement11
+            // 
+            this.accordionControlElement11.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement11.ImageOptions.Image")));
+            this.accordionControlElement11.Name = "accordionControlElement11";
+            this.accordionControlElement11.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            resources.ApplyResources(this.accordionControlElement11, "accordionControlElement11");
+            this.accordionControlElement11.Click += new System.EventHandler(this.accordionControlElement11_Click_1);
             // 
             // menuStrip1
             // 
@@ -219,11 +230,9 @@
             this.mnu_myaccount,
             this.mnu_exit});
             this.menuStrip1.Name = "menuStrip1";
-            this.toolTip1.SetToolTip(this.menuStrip1, resources.GetString("menuStrip1.ToolTip"));
             // 
             // mun_settings
             // 
-            resources.ApplyResources(this.mun_settings, "mun_settings");
             this.mun_settings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.defineMakeModelToolStripMenuItem,
             this.editMakeModelToolStripMenuItem,
@@ -234,58 +243,58 @@
             this.definePaintCodesToolStripMenuItem,
             this.defineTaxCategoriesToolStripMenuItem});
             this.mun_settings.Name = "mun_settings";
+            resources.ApplyResources(this.mun_settings, "mun_settings");
             // 
             // defineMakeModelToolStripMenuItem
             // 
-            resources.ApplyResources(this.defineMakeModelToolStripMenuItem, "defineMakeModelToolStripMenuItem");
             this.defineMakeModelToolStripMenuItem.Name = "defineMakeModelToolStripMenuItem";
+            resources.ApplyResources(this.defineMakeModelToolStripMenuItem, "defineMakeModelToolStripMenuItem");
             this.defineMakeModelToolStripMenuItem.Click += new System.EventHandler(this.defineMakeModelToolStripMenuItem_Click);
             // 
             // editMakeModelToolStripMenuItem
             // 
-            resources.ApplyResources(this.editMakeModelToolStripMenuItem, "editMakeModelToolStripMenuItem");
             this.editMakeModelToolStripMenuItem.Name = "editMakeModelToolStripMenuItem";
+            resources.ApplyResources(this.editMakeModelToolStripMenuItem, "editMakeModelToolStripMenuItem");
             this.editMakeModelToolStripMenuItem.Click += new System.EventHandler(this.editMakeModelToolStripMenuItem_Click);
             // 
             // defineServicesToolStripMenuItem
             // 
-            resources.ApplyResources(this.defineServicesToolStripMenuItem, "defineServicesToolStripMenuItem");
             this.defineServicesToolStripMenuItem.Name = "defineServicesToolStripMenuItem";
+            resources.ApplyResources(this.defineServicesToolStripMenuItem, "defineServicesToolStripMenuItem");
             this.defineServicesToolStripMenuItem.Click += new System.EventHandler(this.defineServicesToolStripMenuItem_Click);
             // 
             // editServicesToolStripMenuItem
             // 
-            resources.ApplyResources(this.editServicesToolStripMenuItem, "editServicesToolStripMenuItem");
             this.editServicesToolStripMenuItem.Name = "editServicesToolStripMenuItem";
+            resources.ApplyResources(this.editServicesToolStripMenuItem, "editServicesToolStripMenuItem");
             this.editServicesToolStripMenuItem.Click += new System.EventHandler(this.editServicesToolStripMenuItem_Click);
             // 
             // definePayMethodsToolStripMenuItem
             // 
-            resources.ApplyResources(this.definePayMethodsToolStripMenuItem, "definePayMethodsToolStripMenuItem");
             this.definePayMethodsToolStripMenuItem.Name = "definePayMethodsToolStripMenuItem";
+            resources.ApplyResources(this.definePayMethodsToolStripMenuItem, "definePayMethodsToolStripMenuItem");
             this.definePayMethodsToolStripMenuItem.Click += new System.EventHandler(this.definePayMethodsToolStripMenuItem_Click);
             // 
             // defineSourceCarToolStripMenuItem
             // 
-            resources.ApplyResources(this.defineSourceCarToolStripMenuItem, "defineSourceCarToolStripMenuItem");
             this.defineSourceCarToolStripMenuItem.Name = "defineSourceCarToolStripMenuItem";
+            resources.ApplyResources(this.defineSourceCarToolStripMenuItem, "defineSourceCarToolStripMenuItem");
             this.defineSourceCarToolStripMenuItem.Click += new System.EventHandler(this.defineSourceCarToolStripMenuItem_Click);
             // 
             // definePaintCodesToolStripMenuItem
             // 
-            resources.ApplyResources(this.definePaintCodesToolStripMenuItem, "definePaintCodesToolStripMenuItem");
             this.definePaintCodesToolStripMenuItem.Name = "definePaintCodesToolStripMenuItem";
+            resources.ApplyResources(this.definePaintCodesToolStripMenuItem, "definePaintCodesToolStripMenuItem");
             this.definePaintCodesToolStripMenuItem.Click += new System.EventHandler(this.definePaintCodesToolStripMenuItem_Click);
             // 
             // defineTaxCategoriesToolStripMenuItem
             // 
-            resources.ApplyResources(this.defineTaxCategoriesToolStripMenuItem, "defineTaxCategoriesToolStripMenuItem");
             this.defineTaxCategoriesToolStripMenuItem.Name = "defineTaxCategoriesToolStripMenuItem";
+            resources.ApplyResources(this.defineTaxCategoriesToolStripMenuItem, "defineTaxCategoriesToolStripMenuItem");
             this.defineTaxCategoriesToolStripMenuItem.Click += new System.EventHandler(this.defineTaxCategoriesToolStripMenuItem_Click);
             // 
             // mnu_operations
             // 
-            resources.ApplyResources(this.mnu_operations, "mnu_operations");
             this.mnu_operations.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.buyCarToolStripMenuItem,
             this.sellCarToolStripMenuItem,
@@ -294,106 +303,107 @@
             this.addCustomerToolStripMenuItem,
             this.carMaintainanceToolStripMenuItem});
             this.mnu_operations.Name = "mnu_operations";
+            resources.ApplyResources(this.mnu_operations, "mnu_operations");
             // 
             // buyCarToolStripMenuItem
             // 
-            resources.ApplyResources(this.buyCarToolStripMenuItem, "buyCarToolStripMenuItem");
             this.buyCarToolStripMenuItem.Name = "buyCarToolStripMenuItem";
+            resources.ApplyResources(this.buyCarToolStripMenuItem, "buyCarToolStripMenuItem");
             this.buyCarToolStripMenuItem.Click += new System.EventHandler(this.buyCarToolStripMenuItem_Click);
             // 
             // sellCarToolStripMenuItem
             // 
-            resources.ApplyResources(this.sellCarToolStripMenuItem, "sellCarToolStripMenuItem");
             this.sellCarToolStripMenuItem.Name = "sellCarToolStripMenuItem";
+            resources.ApplyResources(this.sellCarToolStripMenuItem, "sellCarToolStripMenuItem");
             this.sellCarToolStripMenuItem.Click += new System.EventHandler(this.sellCarToolStripMenuItem_Click);
             // 
             // addServiceToCarToolStripMenuItem
             // 
-            resources.ApplyResources(this.addServiceToCarToolStripMenuItem, "addServiceToCarToolStripMenuItem");
             this.addServiceToCarToolStripMenuItem.Name = "addServiceToCarToolStripMenuItem";
+            resources.ApplyResources(this.addServiceToCarToolStripMenuItem, "addServiceToCarToolStripMenuItem");
             this.addServiceToCarToolStripMenuItem.Click += new System.EventHandler(this.addServiceToCarToolStripMenuItem_Click);
             // 
             // printInvoiceToolStripMenuItem
             // 
-            resources.ApplyResources(this.printInvoiceToolStripMenuItem, "printInvoiceToolStripMenuItem");
             this.printInvoiceToolStripMenuItem.Name = "printInvoiceToolStripMenuItem";
+            resources.ApplyResources(this.printInvoiceToolStripMenuItem, "printInvoiceToolStripMenuItem");
             this.printInvoiceToolStripMenuItem.Click += new System.EventHandler(this.printInvoiceToolStripMenuItem_Click);
             // 
             // addCustomerToolStripMenuItem
             // 
-            resources.ApplyResources(this.addCustomerToolStripMenuItem, "addCustomerToolStripMenuItem");
             this.addCustomerToolStripMenuItem.Name = "addCustomerToolStripMenuItem";
+            resources.ApplyResources(this.addCustomerToolStripMenuItem, "addCustomerToolStripMenuItem");
             this.addCustomerToolStripMenuItem.Click += new System.EventHandler(this.addCustomerToolStripMenuItem_Click);
             // 
             // carMaintainanceToolStripMenuItem
             // 
-            resources.ApplyResources(this.carMaintainanceToolStripMenuItem, "carMaintainanceToolStripMenuItem");
             this.carMaintainanceToolStripMenuItem.Name = "carMaintainanceToolStripMenuItem";
+            resources.ApplyResources(this.carMaintainanceToolStripMenuItem, "carMaintainanceToolStripMenuItem");
             this.carMaintainanceToolStripMenuItem.Click += new System.EventHandler(this.carMaintainanceToolStripMenuItem_Click);
             // 
             // tab_cars
             // 
-            resources.ApplyResources(this.tab_cars, "tab_cars");
             this.tab_cars.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.carsToolStripMenuItem});
             this.tab_cars.Name = "tab_cars";
+            resources.ApplyResources(this.tab_cars, "tab_cars");
             // 
             // carsToolStripMenuItem
             // 
-            resources.ApplyResources(this.carsToolStripMenuItem, "carsToolStripMenuItem");
             this.carsToolStripMenuItem.Name = "carsToolStripMenuItem";
+            resources.ApplyResources(this.carsToolStripMenuItem, "carsToolStripMenuItem");
             this.carsToolStripMenuItem.Click += new System.EventHandler(this.carsToolStripMenuItem_Click);
             // 
             // mnu_reports
             // 
-            resources.ApplyResources(this.mnu_reports, "mnu_reports");
             this.mnu_reports.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tab_reports});
             this.mnu_reports.Name = "mnu_reports";
+            resources.ApplyResources(this.mnu_reports, "mnu_reports");
             // 
             // tab_reports
             // 
-            resources.ApplyResources(this.tab_reports, "tab_reports");
             this.tab_reports.Name = "tab_reports";
+            resources.ApplyResources(this.tab_reports, "tab_reports");
             this.tab_reports.Click += new System.EventHandler(this.tab_reports_Click);
             // 
             // mun_sysmanage
             // 
-            resources.ApplyResources(this.mun_sysmanage, "mun_sysmanage");
             this.mun_sysmanage.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tab_sysinfo,
             this.tab_usersettings});
             this.mun_sysmanage.Name = "mun_sysmanage";
+            resources.ApplyResources(this.mun_sysmanage, "mun_sysmanage");
             // 
             // tab_sysinfo
             // 
-            resources.ApplyResources(this.tab_sysinfo, "tab_sysinfo");
             this.tab_sysinfo.Name = "tab_sysinfo";
+            resources.ApplyResources(this.tab_sysinfo, "tab_sysinfo");
             this.tab_sysinfo.Click += new System.EventHandler(this.tab_sysinfo_Click);
             // 
             // tab_usersettings
             // 
-            resources.ApplyResources(this.tab_usersettings, "tab_usersettings");
             this.tab_usersettings.Name = "tab_usersettings";
+            resources.ApplyResources(this.tab_usersettings, "tab_usersettings");
             this.tab_usersettings.Click += new System.EventHandler(this.tab_usersettings_Click);
             // 
             // mnu_myaccount
             // 
-            resources.ApplyResources(this.mnu_myaccount, "mnu_myaccount");
             this.mnu_myaccount.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tab_accountsettings});
             this.mnu_myaccount.Name = "mnu_myaccount";
+            resources.ApplyResources(this.mnu_myaccount, "mnu_myaccount");
             // 
             // tab_accountsettings
             // 
-            resources.ApplyResources(this.tab_accountsettings, "tab_accountsettings");
             this.tab_accountsettings.Name = "tab_accountsettings";
+            resources.ApplyResources(this.tab_accountsettings, "tab_accountsettings");
             this.tab_accountsettings.Click += new System.EventHandler(this.myAccountSettingsToolStripMenuItem_Click);
             // 
             // mnu_exit
             // 
-            resources.ApplyResources(this.mnu_exit, "mnu_exit");
             this.mnu_exit.Name = "mnu_exit";
+            resources.ApplyResources(this.mnu_exit, "mnu_exit");
             this.mnu_exit.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // lic
@@ -413,6 +423,14 @@
             // 
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
+            // accordionControlElement13
+            // 
+            this.accordionControlElement13.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement13.ImageOptions.Image")));
+            this.accordionControlElement13.Name = "accordionControlElement13";
+            this.accordionControlElement13.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            resources.ApplyResources(this.accordionControlElement13, "accordionControlElement13");
+            this.accordionControlElement13.Click += new System.EventHandler(this.accordionControlElement13_Click);
+            // 
             // frmHomePage
             // 
             resources.ApplyResources(this, "$this");
@@ -423,7 +441,6 @@
             this.HelpButton = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmHomePage";
-            this.toolTip1.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmHomePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
@@ -479,5 +496,7 @@
         private System.Windows.Forms.ToolStripMenuItem defineTaxCategoriesToolStripMenuItem;
         private MetroFramework.Controls.MetroLabel lic;
         private System.Windows.Forms.ToolTip toolTip1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement11;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement13;
     }
 }
