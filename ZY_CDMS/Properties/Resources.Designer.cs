@@ -22,7 +22,7 @@ namespace ZY_CDMS.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace ZY_CDMS.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ZY_CDMS.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace ZY_CDMS.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your License not Valid.
         /// </summary>
-        internal static string activationneeded {
+        public static string activationneeded {
             get {
                 return ResourceManager.GetString("activationneeded", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to  Added Successfully.
         /// </summary>
-        internal static string AddedSuccessfully {
+        public static string AddedSuccessfully {
             get {
                 return ResourceManager.GetString("AddedSuccessfully", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Car Dealers Mangment System.
         /// </summary>
-        internal static string AppName {
+        public static string AppName {
             get {
                 return ResourceManager.GetString("AppName", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to نظام إدارة محلات تجارة وصيانة السيارات.
         /// </summary>
-        internal static string AppNameAR {
+        public static string AppNameAR {
             get {
                 return ResourceManager.GetString("AppNameAR", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to V 1.0.0.0.
         /// </summary>
-        internal static string AppVersion {
+        public static string AppVersion {
             get {
                 return ResourceManager.GetString("AppVersion", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to 10.
         /// </summary>
-        internal static string AZversion {
+        public static string AZversion {
             get {
                 return ResourceManager.GetString("AZversion", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to User Canceled Operation.
         /// </summary>
-        internal static string CancelByUser {
+        public static string CancelByUser {
             get {
                 return ResourceManager.GetString("CancelByUser", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Completed Operation.
         /// </summary>
-        internal static string Completed {
+        public static string Completed {
             get {
                 return ResourceManager.GetString("Completed", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Auto2020.
         /// </summary>
-        internal static string dbnamecon {
+        public static string dbnamecon {
             get {
                 return ResourceManager.GetString("dbnamecon", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Please Type Digit Only .
         /// </summary>
-        internal static string digitOnlyError {
+        public static string digitOnlyError {
             get {
                 return ResourceManager.GetString("digitOnlyError", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to  Already Exist.
         /// </summary>
-        internal static string Exist {
+        public static string Exist {
             get {
                 return ResourceManager.GetString("Exist", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to هل تريد الخروج ؟ .
         /// </summary>
-        internal static string ExitPromtAr {
+        public static string ExitPromtAr {
             get {
                 return ResourceManager.GetString("ExitPromtAr", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Do you want to Exit ?.
         /// </summary>
-        internal static string ExitPromtEng {
+        public static string ExitPromtEng {
             get {
                 return ResourceManager.GetString("ExitPromtEng", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Invalid Username Or Password.
         /// </summary>
-        internal static string FaieldLogin {
+        public static string FaieldLogin {
             get {
                 return ResourceManager.GetString("FaieldLogin", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Invalid Data.
         /// </summary>
-        internal static string invalidData {
+        public static string invalidData {
             get {
                 return ResourceManager.GetString("invalidData", resourceCulture);
             }
@@ -198,7 +198,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to 20.
         /// </summary>
-        internal static string JordanCleaningVersion {
+        public static string JordanCleaningVersion {
             get {
                 return ResourceManager.GetString("JordanCleaningVersion", resourceCulture);
             }
@@ -207,7 +207,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to ZY Technologies Solutions © 2020.
         /// </summary>
-        internal static string Logo {
+        public static string Logo {
             get {
                 return ResourceManager.GetString("Logo", resourceCulture);
             }
@@ -216,7 +216,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to زد واي لحلول تكنولوجيا المعلومات .
         /// </summary>
-        internal static string LogoAR {
+        public static string LogoAR {
             get {
                 return ResourceManager.GetString("LogoAR", resourceCulture);
             }
@@ -225,7 +225,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to ZY Technologies Solutions.
         /// </summary>
-        internal static string MessageTitle {
+        public static string MessageTitle {
             get {
                 return ResourceManager.GetString("MessageTitle", resourceCulture);
             }
@@ -234,7 +234,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Please Fill Missed Boxes.
         /// </summary>
-        internal static string missingTextboxes {
+        public static string missingTextboxes {
             get {
                 return ResourceManager.GetString("missingTextboxes", resourceCulture);
             }
@@ -243,7 +243,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to No Data.
         /// </summary>
-        internal static string NoData {
+        public static string NoData {
             get {
                 return ResourceManager.GetString("NoData", resourceCulture);
             }
@@ -252,7 +252,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Please Select Source You Need.
         /// </summary>
-        internal static string Noselection {
+        public static string Noselection {
             get {
                 return ResourceManager.GetString("Noselection", resourceCulture);
             }
@@ -261,7 +261,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to   Not Exist.
         /// </summary>
-        internal static string notExist {
+        public static string notExist {
             get {
                 return ResourceManager.GetString("notExist", resourceCulture);
             }
@@ -270,7 +270,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to zy@admin2021.
         /// </summary>
-        internal static string passwordcon {
+        public static string passwordcon {
             get {
                 return ResourceManager.GetString("passwordcon", resourceCulture);
             }
@@ -279,7 +279,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Please Activate App.
         /// </summary>
-        internal static string pleaseActive {
+        public static string pleaseActive {
             get {
                 return ResourceManager.GetString("pleaseActive", resourceCulture);
             }
@@ -288,7 +288,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to MZUBAIDI.
         /// </summary>
-        internal static string servercon {
+        public static string servercon {
             get {
                 return ResourceManager.GetString("servercon", resourceCulture);
             }
@@ -297,7 +297,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Please Try Again .
         /// </summary>
-        internal static string TryAgain {
+        public static string TryAgain {
             get {
                 return ResourceManager.GetString("TryAgain", resourceCulture);
             }
@@ -306,7 +306,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to  Updated Successfully.
         /// </summary>
-        internal static string Updated {
+        public static string Updated {
             get {
                 return ResourceManager.GetString("Updated", resourceCulture);
             }
@@ -315,7 +315,7 @@ namespace ZY_CDMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to sa.
         /// </summary>
-        internal static string usernamecon {
+        public static string usernamecon {
             get {
                 return ResourceManager.GetString("usernamecon", resourceCulture);
             }
