@@ -97,7 +97,7 @@ namespace ZY_CDMS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to V 1.0.5.2.
+        ///   Looks up a localized string similar to V 1.0.0.0.
         /// </summary>
         internal static string AppVersion {
             get {
