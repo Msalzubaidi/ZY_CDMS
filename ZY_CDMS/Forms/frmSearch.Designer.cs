@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSearch));
             this.cbo_makemodel = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cbo_vin = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
@@ -48,9 +47,12 @@
             this.millfrom = new System.Windows.Forms.TextBox();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.MyGrid = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_makemodel.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_vin.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // cbo_makemodel
@@ -72,14 +74,6 @@
             this.cbo_vin.Size = new System.Drawing.Size(244, 20);
             this.cbo_vin.TabIndex = 47;
             this.cbo_vin.TextChanged += new System.EventHandler(this.cbo_vin_TextChanged);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(8, 89);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(872, 240);
-            this.dataGridView1.TabIndex = 49;
             // 
             // metroLabel1
             // 
@@ -132,7 +126,7 @@
             this.selled.AutoSize = true;
             this.selled.Location = new System.Drawing.Point(110, 41);
             this.selled.Name = "selled";
-            this.selled.Size = new System.Drawing.Size(55, 17);
+            this.selled.Size = new System.Drawing.Size(54, 17);
             this.selled.TabIndex = 54;
             this.selled.Text = "Selled";
             this.selled.UseVisualStyleBackColor = true;
@@ -249,11 +243,28 @@
             this.metroLabel4.Text = "By Filters";
             this.metroLabel4.UseStyleColors = true;
             // 
+            // MyGrid
+            // 
+            this.MyGrid.Location = new System.Drawing.Point(3, 89);
+            this.MyGrid.MainView = this.gridView1;
+            this.MyGrid.Name = "MyGrid";
+            this.MyGrid.Size = new System.Drawing.Size(871, 240);
+            this.MyGrid.TabIndex = 127;
+            this.MyGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.MyGrid;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
             // frmSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(886, 341);
+            this.Controls.Add(this.MyGrid);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.millto);
@@ -270,7 +281,6 @@
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cbo_vin);
             this.Controls.Add(this.cbo_makemodel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -282,7 +292,8 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmSearch_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.cbo_makemodel.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_vin.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,7 +303,6 @@
 
         private DevExpress.XtraEditors.ComboBoxEdit cbo_makemodel;
         private DevExpress.XtraEditors.ComboBoxEdit cbo_vin;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
@@ -309,5 +319,7 @@
         private System.Windows.Forms.TextBox millfrom;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private MetroFramework.Controls.MetroLabel metroLabel4;
+        private DevExpress.XtraGrid.GridControl MyGrid;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }

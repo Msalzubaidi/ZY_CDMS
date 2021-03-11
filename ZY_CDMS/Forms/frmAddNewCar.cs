@@ -23,7 +23,7 @@ namespace ZY_CDMS.Forms
         SysSettings s = new SysSettings();
         Rules r = new Rules();
         string table = "Cars";
-        string TarnsTabletable = "TransActions";
+    
         Operations o = new Operations();
         
 

@@ -45,6 +45,7 @@
             this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement11 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement13 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mun_settings = new System.Windows.Forms.ToolStripMenuItem();
             this.defineMakeModelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,7 +75,6 @@
             this.mnu_exit = new System.Windows.Forms.ToolStripMenuItem();
             this.lic = new MetroFramework.Controls.MetroLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.accordionControlElement13 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -217,6 +217,14 @@
             this.accordionControlElement11.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             resources.ApplyResources(this.accordionControlElement11, "accordionControlElement11");
             this.accordionControlElement11.Click += new System.EventHandler(this.accordionControlElement11_Click_1);
+            // 
+            // accordionControlElement13
+            // 
+            this.accordionControlElement13.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement13.ImageOptions.Image")));
+            this.accordionControlElement13.Name = "accordionControlElement13";
+            this.accordionControlElement13.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            resources.ApplyResources(this.accordionControlElement13, "accordionControlElement13");
+            this.accordionControlElement13.Click += new System.EventHandler(this.accordionControlElement13_Click);
             // 
             // menuStrip1
             // 
@@ -422,14 +430,6 @@
             // toolTip1
             // 
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            // 
-            // accordionControlElement13
-            // 
-            this.accordionControlElement13.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement13.ImageOptions.Image")));
-            this.accordionControlElement13.Name = "accordionControlElement13";
-            this.accordionControlElement13.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            resources.ApplyResources(this.accordionControlElement13, "accordionControlElement13");
-            this.accordionControlElement13.Click += new System.EventHandler(this.accordionControlElement13_Click);
             // 
             // frmHomePage
             // 

@@ -40,13 +40,15 @@
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.MyGrid = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_reports.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_from.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_from.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_to.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_to.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // cbo_reports
@@ -73,8 +75,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dtp_from.Properties.Buttons"))))});
             this.dtp_from.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dtp_from.Properties.CalendarTimeProperties.Buttons"))))});
-            this.dtp_from.Properties.CalendarTimeProperties.Mask.EditMask = resources.GetString("dtp_from.Properties.CalendarTimeProperties.Mask.EditMask");
-            this.dtp_from.Properties.Mask.EditMask = resources.GetString("dtp_from.Properties.Mask.EditMask");
             // 
             // dtp_to
             // 
@@ -84,8 +84,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dtp_to.Properties.Buttons"))))});
             this.dtp_to.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dtp_to.Properties.CalendarTimeProperties.Buttons"))))});
-            this.dtp_to.Properties.CalendarTimeProperties.Mask.EditMask = resources.GetString("dtp_to.Properties.CalendarTimeProperties.Mask.EditMask");
-            this.dtp_to.Properties.Mask.EditMask = resources.GetString("dtp_to.Properties.Mask.EditMask");
             // 
             // metroLabel2
             // 
@@ -116,43 +114,51 @@
             // 
             // simpleButton1
             // 
-            resources.ApplyResources(this.simpleButton1, "simpleButton1");
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            resources.ApplyResources(this.simpleButton1, "simpleButton1");
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // simpleButton2
             // 
-            resources.ApplyResources(this.simpleButton2, "simpleButton2");
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            resources.ApplyResources(this.simpleButton2, "simpleButton2");
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // simpleButton3
             // 
-            resources.ApplyResources(this.simpleButton3, "simpleButton3");
             this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            resources.ApplyResources(this.simpleButton3, "simpleButton3");
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // simpleButton4
             // 
-            resources.ApplyResources(this.simpleButton4, "simpleButton4");
             this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            resources.ApplyResources(this.simpleButton4, "simpleButton4");
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
-            // dataGridView1
+            // MyGrid
             // 
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Name = "dataGridView1";
+            resources.ApplyResources(this.MyGrid, "MyGrid");
+            this.MyGrid.MainView = this.gridView1;
+            this.MyGrid.Name = "MyGrid";
+            this.MyGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.MyGrid;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // frmReports
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.MyGrid);
             this.Controls.Add(this.simpleButton4);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
@@ -172,7 +178,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtp_from.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_to.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_to.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,6 +198,7 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private DevExpress.XtraGrid.GridControl MyGrid;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }

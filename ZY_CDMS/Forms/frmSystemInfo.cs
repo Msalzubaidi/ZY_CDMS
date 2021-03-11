@@ -65,14 +65,14 @@ namespace ZY_CDMS.Forms
 
 
 
-            int flag = 0;
+            
 
             if (NrOfDays > 30)
             {
                 Licence.Visible = true;
                 Licence.ForeColor = Color.Black;
                 //  days.Visible = false;
-                flag = 0;
+               
                 Licence.Text = "Licenced for ( " + " " + titleform.ToString() + " )";
 
             }
@@ -82,7 +82,7 @@ namespace ZY_CDMS.Forms
                 Licence.ForeColor = Color.Red;
                 Licence.Text = "Licenced for ( " + " " + titleform.ToString() + " )" + " licence will be ended by " + " " + NrOfDays.ToString() + " " + "Days";
                 //  days.Visible = true;
-                flag = 0;
+                
             }
             if (NrOfDays <= 0)
             {

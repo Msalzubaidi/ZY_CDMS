@@ -239,7 +239,7 @@ namespace ZY_CDMS.Forms
 
             string nl = "\r\n";
 
-            if (userPermission.Rows.Count != null)
+            if (userPermission.Rows.Count > 0 )
             { 
             ///////////////////////////  User Permission //////////////////////////////
 
@@ -426,7 +426,7 @@ namespace ZY_CDMS.Forms
 
 
 
-            int flag = 0;
+          
 
             if (NrOfDays > 30)
             {
@@ -435,7 +435,7 @@ namespace ZY_CDMS.Forms
 
                
 
-                flag = 0;
+               
                 
                 if (frmLogin.languagearabic == 1 )
                 {
@@ -465,7 +465,7 @@ namespace ZY_CDMS.Forms
 
              
 
-                flag = 0;
+              
             }
             if (NrOfDays <= 0)
             {
@@ -888,6 +888,11 @@ namespace ZY_CDMS.Forms
         private void accordionControlElement13_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("mailto:dev.mzubaidi@gmail.com");
+        }
+
+        private void jjjToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

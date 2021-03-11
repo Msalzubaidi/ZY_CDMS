@@ -92,7 +92,7 @@ namespace ZY_CDMS.Forms
 
                
                 DataTable dt = d.search(vinnum , 0 , DateTime.Now , DateTime.Now );
-                dataGridView1.DataSource = dt;
+                MyGrid.DataSource = dt;
 
             }
         }
@@ -110,7 +110,7 @@ namespace ZY_CDMS.Forms
 
 
                 DataTable dt = d.search(vinnum, 1 , DateTime.Now , DateTime.Now);
-                dataGridView1.DataSource = dt;
+                MyGrid.DataSource = dt;
 
             }
         }
@@ -155,16 +155,16 @@ namespace ZY_CDMS.Forms
                
 
                 DataTable dt = d.search(con, 2, DateTime.Now , DateTime.Now);
-                dataGridView1.DataSource = dt;
+                MyGrid.DataSource = dt;
 
             }
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = null;
-            dataGridView1.Rows.Clear();
-            dataGridView1.Refresh();
+            MyGrid.DataSource = null;
+            gridView1.Columns.Clear();
+            
         }
     }
 }

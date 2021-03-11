@@ -83,7 +83,7 @@ namespace ZY_CDMS.Forms
                 if (frmLogin.languagearabic == 1)
                     MessageBox.Show("الرجاء إختيار تقرير لعرضه ", "زد واي لتكنولجيا المعلومات ", 0, MessageBoxIcon.Warning);
                 else
-                    MessageBox.Show("Please Select Vin  to view Data !!! ", Resources.MessageTitle, 0, MessageBoxIcon.Warning);
+                    MessageBox.Show("Please Select Report  to view Data !!! ", Resources.MessageTitle, 0, MessageBoxIcon.Warning);
             }
             else
             {
@@ -317,9 +317,9 @@ namespace ZY_CDMS.Forms
         {
             dtp_from.EditValue = DateTime.Now;
             dtp_to.EditValue = DateTime.Now;
-            dataGridView1.DataSource = null;
-            dataGridView1.Rows.Clear();
-            dataGridView1.Refresh();
+            MyGrid.DataSource = null;
+            gridView1.Columns.Clear();
+            MyGrid.Refresh();
             cbo_reports.ResetText();
             cbo_reports.Focus();
 
@@ -335,15 +335,20 @@ namespace ZY_CDMS.Forms
                 if (frmLogin.languagearabic == 1 )
                     MessageBox.Show("الرجاء إختيار تقرير لعرضه ", "زد واي لتكنولجيا المعلومات ", 0, MessageBoxIcon.Warning);
                 else
-                MessageBox.Show("Please Select Vin  to view Data !!! ", Resources.MessageTitle, 0, MessageBoxIcon.Warning);
+                MessageBox.Show("Please Select Report  to view Data !!! ", Resources.MessageTitle, 0, MessageBoxIcon.Warning);
             }
             else
             {
                
                     dt = db.ReportSerach( cbo_reports.SelectedIndex , version.ToString() ,DateTime.Parse(dtp_from.EditValue.ToString()) , DateTime.Parse(dtp_to.EditValue.ToString()));
-                
-                
-                dataGridView1.DataSource = dt;
+
+
+                MyGrid.DataSource = null;
+                gridView1.Columns.Clear();
+                MyGrid.Refresh();
+
+                MyGrid.DataSource = dt; 
+
 
             }
         }

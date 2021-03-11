@@ -440,17 +440,17 @@
   </data>
   <data name="accordionControlElement13.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAEXRFWHRUaXRsZQBCdWc7UmVw
-        b3J0O7GwFz0AAAHOSURBVFhHxZYxTsNAEEVTIBJBwz24Bm2g4QbcgDvQAB1IVLkDlLR0QLoUcAXoQAIh
-        gWT+t2aj2d1v7NjGKZ5iv50/M3ESKaOiKNaKlEMi5fPRXh074Mrd85rO10SoOURK1cCxCR5A4Ryv7wHP
-        fO0SNYdIqRo4jgEHpgsQnvnaJWoOkVI1cMxB1QKPzkWoOURKC5VNhf8IZ4JPkPYKZ5EPSMniEBR+7Qv4
-        jyCFZ2mvcBb5gJTEBad2Pwan4Nu8gmdnYGyZqXnc6jlSkhA0DsFt4v6CtcwsXdo/ICUC0fY9wF5ylpQs
-        NvpYohxO1CwpQwBsgFegGjeBWfZYbQFioQOgGq8Ce8gZJBMo7vOzTyl/UZ7ohgVJ4D+IlkgXiArBS+La
-        8AaiN+ZnVi0Qvrk/znUherp+ZtUCvCbvzrWFTyD0K52fWbmA3S+ca8vCetUvEGCxvc5CqAMz3zNFSsIA
-        OLEmXWAPOYNIyQDo8ydZfqnVrEyw0AKqURfkEplgkQuRfXCduCbcAGa9y+ZlgkUuUG4NtsCduSawdhsw
-        659mNi8TFsoCuJ4A/tup+0d0DiZ1/QKZ8IGKs11wAZ7Al8HrS8CzKGO55gsMjZRDIuVwFKNfUcI4nBvN
-        fbMAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAARdEVYdFRpdGxlAEJ1ZztSZXBvcnQ7sbAXPQAAAc5J
+        REFUWEfFljFOw0AQRVMgEkHDPbgGbaDhBtyAO9AAHUhUuQOUtHRAuhRwBehAAiGBZP63ZqPZ3W/s2MYp
+        nmK/nT8zcRIpo6Io1oqUQyLl89FeHTvgyt3zms7XRKg5RErVwLEJHkDhHK/vAc987RI1h0ipGjiOAQem
+        CxCe+dolag6RUjVwzEHVAo/ORag5REoLlU2F/whngk+Q9gpnkQ9IyeIQFH7tC/iPIIVnaa9wFvmAlMQF
+        p3Y/Bqfg27yCZ2dgbJmpedzqOVKSEDQOwW3i/oK1zCxd2j8gJQLR9j3AXnKWlCw2+liiHE7ULClDAGyA
+        V6AaN4FZ9lhtAWKhA6AarwJ7yBkkEyju87NPKX9RnuiGBUngP4iWSBeICsFL4trwBqI35mdWLRC+uT/O
+        dSF6un5m1QK8Ju/OtYVPIPQrnZ9ZuYDdL5xry8J61S8QYLG9zkKoAzPfM0VKwgA4sSZdYA85g0jJAOjz
+        J1l+qdWsTLDQAqpRF+QSmWCRC5F9cJ24JtwAZr3L5mWCRS5Qbg22wJ25JrB2GzDrn2Y2LxMWygK4ngD+
+        26n7R3QOJnX9ApnwgYqzXXABnsCXwetLwLMoY7nmCwyNlEMi5XAUo19RwjicG819swAAAABJRU5ErkJg
+        gg==
 </value>
   </data>
   <data name="accordionControlElement13.Text" xml:space="preserve">
@@ -676,8 +676,11 @@
   <data name="lic.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lic.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
   <data name="lic.Location" type="System.Drawing.Point, System.Drawing">
-    <value>255, 645</value>
+    <value>40, 696</value>
   </data>
   <data name="lic.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 25</value>
@@ -2768,6 +2771,12 @@
   <data name="&gt;&gt;accordionControlElement11.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Navigation.AccordionControlElement, DevExpress.XtraBars.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;accordionControlElement13.Name" xml:space="preserve">
+    <value>accordionControlElement13</value>
+  </data>
+  <data name="&gt;&gt;accordionControlElement13.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Navigation.AccordionControlElement, DevExpress.XtraBars.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;mun_settings.Name" xml:space="preserve">
     <value>mun_settings</value>
   </data>
@@ -2929,12 +2938,6 @@
   </data>
   <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;accordionControlElement13.Name" xml:space="preserve">
-    <value>accordionControlElement13</value>
-  </data>
-  <data name="&gt;&gt;accordionControlElement13.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Navigation.AccordionControlElement, DevExpress.XtraBars.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmHomePage</value>

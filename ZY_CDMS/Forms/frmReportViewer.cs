@@ -57,6 +57,7 @@ namespace ZY_CDMS.Forms
             if (frmReports.selectedReport == 0 && frmReports.CusVersion.ToString() == Resources.AZversion )
             {
                 rptAllCars ac = new rptAllCars();
+               
                 DataTable dt = db.DataSourceReportBuilder(0 , Resources.AZversion , frmReports.from.Date , frmReports.to.Date , frmAddCarTset.carvin);
                 ac.SetDataSource(dt); 
                 ac.Refresh();
@@ -69,6 +70,8 @@ namespace ZY_CDMS.Forms
 
                 ac.Refresh();
                 crystalReportViewer1.ReportSource = ac;
+              
+
             }
             if (frmReports.selectedReport == 1 && frmReports.CusVersion.ToString() == Resources.AZversion )
             {
@@ -505,6 +508,16 @@ namespace ZY_CDMS.Forms
                 crystalReportViewer1.ReportSource = inv;
               
             }
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -26,7 +26,7 @@ namespace ZY_CDMS.Forms
         Rules r = new Rules();
         SysSettings s = new SysSettings();
         string table = "Cars";
-        string TarnsTabletable = "TransActions";
+    
         string cutsTabel = "customersInfo";
         string servicetable = "TransServices";
         string selltable = "SellTransactions";
