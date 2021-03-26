@@ -413,6 +413,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmSystemInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "System Info";
             this.Load += new System.EventHandler(this.frmSystemInfo_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmSystemInfo_KeyDown);

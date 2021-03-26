@@ -354,7 +354,7 @@ namespace ZY_CDMS.Forms
                 string custnamee = txt_custname.Text;
                 string custmob = txt_custmobile.Text;
                 string custaddres = txt_custaddress.Text;
-
+                string cheqNo = "Cheq No. " + txt_chqno.Text;
 
 
                 int g = o.newSellTransaction(transno, transtype, date, vinn, spm, price, ser, tax, total, carinfoo, custnum, custnamee, custaddres, custmob , pmethod);

@@ -368,7 +368,7 @@ namespace ZY_CDMS.Forms
 
                 int rest = o.AddCarTest((Trans_id + InvoiceBegFrom), Trans_type, Cust_id, Custname, Custmobile, Carvin, TransDate, MakeModel, year, color, paintCode, pay, balance, cardirty, carclean, rdesc, tax, total);
 
-                if (rest > 0)
+                if (rest > 0 )
                 {
                     MessageBox.Show("Car Test For : " + MakeModel + " -  " + year + "  Added Successfully - Thank You  ", Resources.MessageTitle, 0, MessageBoxIcon.Information);
                     o.newTransaction(Trans_id, Trans_type, Carvin, pay, 1, "Car Maintainance", TransDate);
@@ -380,7 +380,7 @@ namespace ZY_CDMS.Forms
 
                 else if (rest <= 0)
                 {
-                    MessageBox.Show("Error At Data Entry - Invalid info - Try Again ", Resources.MessageTitle, 0, MessageBoxIcon.Information);
+                    MessageBox.Show("Error At Data Entry - Invalid info -  Exist Info - Try Again ", Resources.MessageTitle, 0, MessageBoxIcon.Information);
                 }
 
             }

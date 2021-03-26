@@ -66,7 +66,7 @@ namespace ZY_CDMS.Forms
             if (string.IsNullOrEmpty(txt_userid.Text) || string.IsNullOrEmpty(txt_password.Text) || string.IsNullOrEmpty(txt_username.Text) || rule.isDigitsOnly(txt_userid.Text) == false)
             {
 
-                MessageBox.Show(Resources.invalidData, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+             //   MessageBox.Show(Resources.invalidData, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_password.Clear();
                 txt_userid.Clear();
                 txt_username.Clear();
@@ -134,7 +134,7 @@ namespace ZY_CDMS.Forms
         {
             if (string.IsNullOrEmpty(txt_userid.Text) || rule.isDigitsOnly(txt_userid.Text) == false)
             {
-                MessageBox.Show(Resources.digitOnlyError, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //  MessageBox.Show(Resources.digitOnlyError, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
 

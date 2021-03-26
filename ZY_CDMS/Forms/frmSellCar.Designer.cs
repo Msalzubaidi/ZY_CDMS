@@ -698,6 +698,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmSellCar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sell Car";
             this.Load += new System.EventHandler(this.frmSellCar_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmSellCar_KeyDown);

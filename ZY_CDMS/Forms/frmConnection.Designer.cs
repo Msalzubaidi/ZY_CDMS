@@ -40,6 +40,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmConnection";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Connection";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmConnection_KeyDown);
             this.ResumeLayout(false);

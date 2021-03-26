@@ -29,5 +29,10 @@ namespace ZY_CDMS.Forms
         {
            
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

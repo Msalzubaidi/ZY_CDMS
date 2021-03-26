@@ -118,11 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="simpleButton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>245, 195</value>
-  </data>
   <data name="metroLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 19</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>428, 231</value>
   </data>
   <data name="&gt;&gt;txt_oldpass.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -143,14 +143,17 @@
   <data name="simpleButton2.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
+  <data name="simpleButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
   <data name="&gt;&gt;metroLabel4.Name" xml:space="preserve">
     <value>metroLabel4</value>
   </data>
-  <data name="&gt;&gt;metroLabel3.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
   <data name="&gt;&gt;simpleButton1.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmAccountSetttings</value>
   </data>
   <data name="simpleButton1.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -222,6 +225,9 @@
   <data name="txt_userid.Size" type="System.Drawing.Size, System.Drawing">
     <value>209, 20</value>
   </data>
+  <data name="metroLabel3.Text" xml:space="preserve">
+    <value>Old Password</value>
+  </data>
   <data name="txt_oldpass.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
@@ -282,12 +288,6 @@
   <data name="metroLabel4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="metroLabel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 156</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>frmAccountSetttings</value>
-  </data>
   <data name="&gt;&gt;metroLabel4.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -312,17 +312,11 @@
   <data name="&gt;&gt;txt_newpass.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;metroLabel2.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
   <data name="metroLabel3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="metroLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 19</value>
-  </data>
-  <data name="metroLabel1.Text" xml:space="preserve">
-    <value>Username</value>
   </data>
   <data name="txt_oldpass.Size" type="System.Drawing.Size, System.Drawing">
     <value>209, 20</value>
@@ -1462,8 +1456,8 @@
         //////////////////////////////////8=
 </value>
   </data>
-  <data name="simpleButton1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="metroLabel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 156</value>
   </data>
   <data name="txt_userid.Location" type="System.Drawing.Point, System.Drawing">
     <value>122, 25</value>
@@ -1476,6 +1470,9 @@
   </data>
   <data name="&gt;&gt;metroLabel3.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="&gt;&gt;metroLabel3.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>My Account Setttings</value>
@@ -1492,11 +1489,14 @@
   <data name="&gt;&gt;simpleButton2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="simpleButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+  <data name="metroLabel1.Text" xml:space="preserve">
+    <value>Username</value>
   </data>
   <data name="metroLabel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 19</value>
+  </data>
+  <data name="simpleButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="&gt;&gt;txt_newpass.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1513,8 +1513,8 @@
   <data name="&gt;&gt;metroLabel4.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>428, 231</value>
+  <data name="simpleButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>245, 195</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1522,8 +1522,8 @@
   <data name="&gt;&gt;metroLabel3.Name" xml:space="preserve">
     <value>metroLabel3</value>
   </data>
-  <data name="metroLabel3.Text" xml:space="preserve">
-    <value>Old Password</value>
+  <data name="&gt;&gt;metroLabel2.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
   <data name="simpleButton2.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>

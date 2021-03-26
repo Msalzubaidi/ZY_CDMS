@@ -49,6 +49,7 @@
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.MyGrid = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_makemodel.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_vin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyGrid)).BeginInit();
@@ -259,11 +260,22 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
+            // simpleButton4
+            // 
+            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.simpleButton4.Location = new System.Drawing.Point(686, 12);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton4.TabIndex = 128;
+            this.simpleButton4.Text = "To Excel";
+            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
+            // 
             // frmSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(886, 341);
+            this.Controls.Add(this.simpleButton4);
             this.Controls.Add(this.MyGrid);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.simpleButton3);
@@ -287,6 +299,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmSearch";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Search";
             this.Load += new System.EventHandler(this.frmSearch_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmSearch_KeyDown);
@@ -321,5 +334,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private DevExpress.XtraGrid.GridControl MyGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton4;
     }
 }

@@ -158,6 +158,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmAddPaintsCode";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Paints Code";
             this.Load += new System.EventHandler(this.frmAddPaintsCode_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmAddPaintsCode_KeyDown);

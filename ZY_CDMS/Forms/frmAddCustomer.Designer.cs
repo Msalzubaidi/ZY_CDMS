@@ -236,6 +236,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmAddCustomer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customers";
             this.Load += new System.EventHandler(this.frmAddCustomer_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmAddCustomer_KeyDown);

@@ -60,6 +60,8 @@
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
             this.txt_dbpass = new System.Windows.Forms.TextBox();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
             this.SuspendLayout();
             // 
             // metroLabel3
@@ -227,7 +229,7 @@
             // simpleButton1
             // 
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(390, 200);
+            this.simpleButton1.Location = new System.Drawing.Point(341, 220);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(113, 23);
             this.simpleButton1.TabIndex = 50;
@@ -237,7 +239,7 @@
             // simpleButton2
             // 
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(390, 141);
+            this.simpleButton2.Location = new System.Drawing.Point(427, 81);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(113, 23);
             this.simpleButton2.TabIndex = 51;
@@ -267,7 +269,7 @@
             // simpleButton3
             // 
             this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(390, 170);
+            this.simpleButton3.Location = new System.Drawing.Point(656, 224);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(113, 23);
             this.simpleButton3.TabIndex = 54;
@@ -277,7 +279,7 @@
             // simpleButton4
             // 
             this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(390, 253);
+            this.simpleButton4.Location = new System.Drawing.Point(656, 283);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(113, 23);
             this.simpleButton4.TabIndex = 55;
@@ -367,18 +369,38 @@
             // simpleButton5
             // 
             this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
-            this.simpleButton5.Location = new System.Drawing.Point(390, 226);
+            this.simpleButton5.Location = new System.Drawing.Point(655, 253);
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Size = new System.Drawing.Size(113, 23);
             this.simpleButton5.TabIndex = 64;
             this.simpleButton5.Text = "View Info";
             this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
             // 
+            // simpleButton6
+            // 
+            this.simpleButton6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.ImageOptions.Image")));
+            this.simpleButton6.Location = new System.Drawing.Point(655, 184);
+            this.simpleButton6.Name = "simpleButton6";
+            this.simpleButton6.Size = new System.Drawing.Size(113, 23);
+            this.simpleButton6.TabIndex = 67;
+            this.simpleButton6.Text = "Update Table";
+            // 
+            // simpleButton8
+            // 
+            this.simpleButton8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton8.ImageOptions.Image")));
+            this.simpleButton8.Location = new System.Drawing.Point(656, 155);
+            this.simpleButton8.Name = "simpleButton8";
+            this.simpleButton8.Size = new System.Drawing.Size(113, 23);
+            this.simpleButton8.TabIndex = 65;
+            this.simpleButton8.Text = "delete From";
+            // 
             // frmAppSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(549, 331);
+            this.ClientSize = new System.Drawing.Size(781, 331);
+            this.Controls.Add(this.simpleButton6);
+            this.Controls.Add(this.simpleButton8);
             this.Controls.Add(this.simpleButton5);
             this.Controls.Add(this.metroLabel13);
             this.Controls.Add(this.txt_dbpass);
@@ -413,6 +435,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmAppSettings";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "App Settings";
             this.Load += new System.EventHandler(this.frmAppSettings_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmAppSettings_KeyDown);
@@ -454,5 +477,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel13;
         private System.Windows.Forms.TextBox txt_dbpass;
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
+        private DevExpress.XtraEditors.SimpleButton simpleButton6;
+        private DevExpress.XtraEditors.SimpleButton simpleButton8;
     }
 }

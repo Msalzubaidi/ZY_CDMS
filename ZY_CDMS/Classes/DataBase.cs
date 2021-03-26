@@ -671,6 +671,87 @@ namespace ZY_CDMS.Classes
 
         }
 
+        public DataTable CustomSelectQuery(string Colums , string table , string Condition, int Conditional)
+        {
+            SqlConnection con = new SqlConnection(DataBase.connstring);   
+
+            SqlCommand cmd = null;
+            string Qry = "";
+
+            DataTable dt = new DataTable();
+            if (Conditional == 0)
+            {   
+                Qry = "Select " + Colums + " from "  +" " + table;
+            }
+            if (Conditional == 1)
+            {
+                Qry = "Select " + Colums + " from " + " " + table + " " + "where " + Condition;
+            }
+
+            cmd = new SqlCommand(Qry, con);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+
+            sda.Fill(dt);
+
+            con.Open();
+
+            return dt;
+        }
+
+        public int CustomDeleteQuery( string table, string Condition, int Conditional)
+        {
+            SqlConnection con = new SqlConnection(DataBase.connstring);
+
+            SqlCommand cmd = null;
+            string Qry = "";
+
+            DataTable dt = new DataTable();
+            if (Conditional == 0)
+            {
+                Qry = "Delete " + " from "  + table;
+            }
+            if (Conditional == 1)
+            {
+                Qry = "Delete " +" from " + table + " where " + Condition;
+            }
+
+            cmd = new SqlCommand(Qry, con);
+          
+
+           
+
+            con.Open();
+
+            return cmd.ExecuteNonQuery();
+        }
+
+
+        public int CustomUpdateQuery(string Colums, string table, string Condition, int Conditional)
+        {
+            SqlConnection con = new SqlConnection(DataBase.connstring);
+
+            SqlCommand cmd = null;
+            string Qry = "";
+
+          
+            if (Conditional == 0)
+            {
+                Qry = "Update " + table +" set " + Colums ;
+            }
+            if (Conditional == 1)
+            {
+                Qry = "Update " + table + " set " + Colums + " where " + Condition ;
+            }
+
+            cmd = new SqlCommand(Qry, con);
+            
+
+            con.Open();
+
+            return cmd.ExecuteNonQuery();
+        }
+
+
 
     }
 }

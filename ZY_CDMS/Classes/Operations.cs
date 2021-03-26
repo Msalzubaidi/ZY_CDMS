@@ -395,8 +395,21 @@ namespace ZY_CDMS.Classes
             cmd.Parameters.Add(new SqlParameter("@total", total));
 
 
+            //DataBase db = new DataBase();
+            //DataTable dt = db.CustomSelectQuery("carvin", "CarTest" , "carvin="+vin , 1 );
             con.Open();
+            //int RowsCount = dt.Rows.Count; 
+            //if (RowsCount > 0 )
+            //{
+            //    return -150; 
+            //}
+            //else
+            //{
+            //    
+            //}
+
             return cmd.ExecuteNonQuery();
+
 
 
 

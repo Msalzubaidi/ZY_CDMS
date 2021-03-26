@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -165,6 +166,15 @@ namespace ZY_CDMS.Forms
             MyGrid.DataSource = null;
             gridView1.Columns.Clear();
             
+        }
+
+        private void simpleButton4_Click(object sender, EventArgs e)
+        {
+            string path = "Report.xlsx";
+            gridView1.ExportToXlsx(path);
+            // Open the created XLSX file with the default application.
+            MessageBox.Show("Search Result Exported To Excel Successfully ... ", Resources.MessageTitle, 0, MessageBoxIcon.Information);
+            Process.Start(path);
         }
     }
 }

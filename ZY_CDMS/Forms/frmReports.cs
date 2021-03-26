@@ -1,8 +1,10 @@
-﻿using System;
+﻿using DevExpress.XtraVerticalGrid;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -315,7 +317,7 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-            dtp_from.EditValue = DateTime.Now;
+           // dtp_from.EditValue = DateTime.Now;
             dtp_to.EditValue = DateTime.Now;
             MyGrid.DataSource = null;
             gridView1.Columns.Clear();
@@ -330,10 +332,10 @@ namespace ZY_CDMS.Forms
             DataTable dt = null;
             DataTable datatable = db.ViewSysinfo(1);
             int version = int.Parse(datatable.Rows[0]["version"].ToString());//6
-            if (string.IsNullOrEmpty(cbo_reports.EditValue.ToString()) || (cbo_reports.SelectedIndex < 0  ||  cbo_reports.SelectedIndex > 15 ))
+            if (string.IsNullOrEmpty(cbo_reports.EditValue.ToString()) || string.IsNullOrWhiteSpace(dtp_from.EditValue.ToString()) || string.IsNullOrWhiteSpace(dtp_to.EditValue.ToString()) || (cbo_reports.SelectedIndex < 0  ||  cbo_reports.SelectedIndex > 15 ))
             {
-                if (frmLogin.languagearabic == 1 )
-                    MessageBox.Show("الرجاء إختيار تقرير لعرضه ", "زد واي لتكنولجيا المعلومات ", 0, MessageBoxIcon.Warning);
+                if (frmLogin.languagearabic == 1)
+                MessageBox.Show("الرجاء إختيار تقرير لعرضه ", "زد واي لتكنولجيا المعلومات ", 0, MessageBoxIcon.Warning);
                 else
                 MessageBox.Show("Please Select Report  to view Data !!! ", Resources.MessageTitle, 0, MessageBoxIcon.Warning);
             }
@@ -351,6 +353,16 @@ namespace ZY_CDMS.Forms
 
 
             }
+        }
+
+        private void simpleButton5_Click(object sender, EventArgs e)
+        {
+            string path = cbo_reports.EditValue.ToString()+" Report.xlsx";
+            gridView1.ExportToXlsx(path);
+            // Open the created XLSX file with the default application.
+            MessageBox.Show("Report Exported To Excel Successfully ... ", Resources.MessageTitle, 0, MessageBoxIcon.Information);
+            Process.Start(path);
+         
         }
     }
 }

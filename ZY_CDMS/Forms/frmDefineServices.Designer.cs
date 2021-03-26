@@ -153,6 +153,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmDefineServices";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Define Services";
             this.Load += new System.EventHandler(this.simpleButton2_Click);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmDefineServices_KeyDown);

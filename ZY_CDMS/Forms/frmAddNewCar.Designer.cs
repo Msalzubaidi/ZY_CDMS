@@ -504,6 +504,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmAddNewCar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add New Car";
             this.Load += new System.EventHandler(this.frmAddNewCar_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmAddNewCar_KeyDown);

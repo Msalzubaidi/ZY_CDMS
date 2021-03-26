@@ -159,6 +159,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmUpdateBrandInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Brand Info";
             this.Load += new System.EventHandler(this.frmUpdateBrandInfo_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmUpdateBrandInfo_KeyDown);

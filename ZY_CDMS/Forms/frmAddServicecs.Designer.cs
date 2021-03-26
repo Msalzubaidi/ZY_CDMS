@@ -311,6 +311,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmAddServicecs";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Servicecs";
             this.Load += new System.EventHandler(this.frmAddServicecs_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmAddServicecs_KeyDown);

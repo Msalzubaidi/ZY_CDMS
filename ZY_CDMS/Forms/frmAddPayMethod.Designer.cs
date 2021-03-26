@@ -142,6 +142,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmAddPayMethod";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Pay Method";
             this.Load += new System.EventHandler(this.frmAddPayMethod_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmAddPayMethod_KeyDown);

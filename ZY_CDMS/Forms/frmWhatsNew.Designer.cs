@@ -69,13 +69,14 @@
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 34;
             this.simpleButton1.Text = "OK, Close";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // showagain
             // 
             this.showagain.AutoSize = true;
             this.showagain.Location = new System.Drawing.Point(24, 179);
             this.showagain.Name = "showagain";
-            this.showagain.Size = new System.Drawing.Size(111, 17);
+            this.showagain.Size = new System.Drawing.Size(110, 17);
             this.showagain.TabIndex = 35;
             this.showagain.Text = "Don\'t Show Again";
             this.showagain.UseVisualStyleBackColor = true;
@@ -93,6 +94,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmWhatsNew";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Whats New";
             this.Load += new System.EventHandler(this.frmWhatsNew_Load);
             this.ResumeLayout(false);

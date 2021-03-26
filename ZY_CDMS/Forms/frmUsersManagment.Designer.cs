@@ -42,6 +42,7 @@
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chk_asc = new DevExpress.XtraEditors.CheckEdit();
             this.chk_esv = new DevExpress.XtraEditors.CheckEdit();
             this.chk_sv = new DevExpress.XtraEditors.CheckEdit();
             this.chk_us = new DevExpress.XtraEditors.CheckEdit();
@@ -68,9 +69,9 @@
             this.chk_Settings = new DevExpress.XtraEditors.CheckEdit();
             this.chk_admin = new DevExpress.XtraEditors.CheckEdit();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
-            this.chk_asc = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_userid.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_asc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_esv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_sv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_us.Properties)).BeginInit();
@@ -96,7 +97,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chk_dmm.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_Settings.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_admin.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_asc.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // cbo_userid
@@ -264,6 +264,16 @@
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Permissions";
+            // 
+            // chk_asc
+            // 
+            this.chk_asc.Location = new System.Drawing.Point(157, 66);
+            this.chk_asc.Name = "chk_asc";
+            this.chk_asc.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_asc.Properties.Appearance.Options.UseFont = true;
+            this.chk_asc.Properties.Caption = "Add service to car";
+            this.chk_asc.Size = new System.Drawing.Size(121, 19);
+            this.chk_asc.TabIndex = 63;
             // 
             // chk_esv
             // 
@@ -531,16 +541,6 @@
             this.simpleButton5.Text = "Add";
             this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
             // 
-            // chk_asc
-            // 
-            this.chk_asc.Location = new System.Drawing.Point(157, 66);
-            this.chk_asc.Name = "chk_asc";
-            this.chk_asc.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_asc.Properties.Appearance.Options.UseFont = true;
-            this.chk_asc.Properties.Caption = "Add service to car";
-            this.chk_asc.Size = new System.Drawing.Size(121, 19);
-            this.chk_asc.TabIndex = 63;
-            // 
             // frmUsersManagment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -565,11 +565,13 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmUsersManagment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Users Managment";
             this.Load += new System.EventHandler(this.frmUsersManagment_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmUsersManagment_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.cbo_userid.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chk_asc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_esv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_sv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_us.Properties)).EndInit();
@@ -595,7 +597,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chk_dmm.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_Settings.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_admin.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_asc.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

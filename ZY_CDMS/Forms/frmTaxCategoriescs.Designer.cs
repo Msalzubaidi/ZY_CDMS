@@ -155,6 +155,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmTaxCategoriescs";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tax Categories";
             this.Load += new System.EventHandler(this.frmTaxCategoriescs_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmTaxCategoriescs_KeyDown);

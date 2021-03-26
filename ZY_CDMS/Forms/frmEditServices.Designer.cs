@@ -185,6 +185,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmEditServices";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit Services";
             this.Load += new System.EventHandler(this.frmEditServices_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmEditServices_KeyDown);
