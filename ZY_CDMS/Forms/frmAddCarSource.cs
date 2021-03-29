@@ -79,6 +79,7 @@ namespace ZY_CDMS.Forms
                 else if (rest > 0)
                 {
                     MessageBox.Show(Resources.AddedSuccessfully, Resources.MessageTitle, 0, MessageBoxIcon.Information);
+                    o.UserLogTransactions(DataBase.Username.ToString(), " Add Car Source ", DateTime.Now, Environment.MachineName);
                     simpleButton2.PerformClick();
 
 

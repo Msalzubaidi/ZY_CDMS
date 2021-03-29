@@ -373,6 +373,7 @@ namespace ZY_CDMS.Forms
                     MessageBox.Show("Car Test For : " + MakeModel + " -  " + year + "  Added Successfully - Thank You  ", Resources.MessageTitle, 0, MessageBoxIcon.Information);
                     o.newTransaction(Trans_id, Trans_type, Carvin, pay, 1, "Car Maintainance", TransDate);
                     o.UploaDCarTestImages(Carvin, logoA, logoB, logoC, logoD);
+                    o.UserLogTransactions(DataBase.Username.ToString(), " Add Car Test ", DateTime.Now, Environment.MachineName);
                     simpleButton2.PerformClick();
 
 

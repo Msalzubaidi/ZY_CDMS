@@ -21,6 +21,7 @@ namespace ZY_CDMS.Forms
 
         String table = "Brands";
         Rules r = new Rules();
+        Operations o = new Operations();
         SysSettings si = new SysSettings();
         
 
@@ -68,6 +69,7 @@ namespace ZY_CDMS.Forms
                 else if (rest > 0)
                 {
                     MessageBox.Show(table + Resources.AddedSuccessfully, Resources.MessageTitle, 0, MessageBoxIcon.Information);
+                    o.UserLogTransactions(DataBase.Username.ToString(), " Add Brand ", DateTime.Now, Environment.MachineName);
                     simpleButton2.PerformClick();
 
 

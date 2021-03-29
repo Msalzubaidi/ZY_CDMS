@@ -26,7 +26,13 @@ namespace ZY_CDMS.Forms
 
         DataBase db = new DataBase();
         Rules rule = new Rules();
-        public static int languagearabic = 0; 
+        Operations o = new Operations();
+        public static int languagearabic = 0;
+        public static string Conserver ="";
+        public static string Condbname = "";
+        public static string Conusername = "";
+        public static string Conpassword = "";
+
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
@@ -40,6 +46,19 @@ namespace ZY_CDMS.Forms
             {
                 credInfo.Visible = false;
             }
+
+            DataTable datatable = o.SelctData("ConnectionInfo", 0, "");
+
+           server.Text = datatable.Rows[0]["server"].ToString();//6
+            dbname.Text = datatable.Rows[0]["dbname"].ToString();
+            username.Text = datatable.Rows[0]["username"].ToString();
+           password.Text = datatable.Rows[0]["password"].ToString();
+            //-------------------------------------------------------------------
+            Conserver = datatable.Rows[0]["server"].ToString();//6
+            Condbname = datatable.Rows[0]["dbname"].ToString();
+            Conusername = datatable.Rows[0]["username"].ToString();
+            Conpassword = datatable.Rows[0]["password"].ToString();
+
 
         }
 
@@ -98,12 +117,15 @@ namespace ZY_CDMS.Forms
                         string info = Resources.AppNameAR + " " + Resources.AppVersion + "   " + ay.ToString();
                         hp.Text = titleform.ToString() + "      " + info.ToString() + "        " + DataBase.Username.ToString();
                         hp.Show();
+                        o.UserLogTransactions(username , "Log in" , DateTime.Now , Environment.MachineName );
+                        
                     }
                     else
                     {
                         string info = Resources.AppName + " " + Resources.AppVersion + "   " + ay.ToString();
                         hp.Text = titleform.ToString() + "      " + info.ToString() + "        " + DataBase.Username.ToString();
                         hp.Show();
+                        o.UserLogTransactions(username, "Log in", DateTime.Now, Environment.MachineName);
                     }
                    
                 }

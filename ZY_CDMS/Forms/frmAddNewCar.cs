@@ -87,6 +87,7 @@ namespace ZY_CDMS.Forms
 
                     MessageBox.Show(table + Resources.AddedSuccessfully, Resources.MessageTitle, 0, MessageBoxIcon.Information);
                     o.newTransaction(transno, transtype, Vin, Price, paytype, desc, date);
+                    o.UserLogTransactions(DataBase.Username.ToString(), " Add Car ", DateTime.Now, Environment.MachineName);
                     simpleButton5.PerformClick();
                   
                 }

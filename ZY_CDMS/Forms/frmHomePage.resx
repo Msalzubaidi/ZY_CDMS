@@ -611,16 +611,22 @@
     <value>Reports</value>
   </data>
   <data name="tab_sysinfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 22</value>
+    <value>199, 22</value>
   </data>
   <data name="tab_sysinfo.Text" xml:space="preserve">
     <value>System Information</value>
   </data>
   <data name="tab_usersettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 22</value>
+    <value>199, 22</value>
   </data>
   <data name="tab_usersettings.Text" xml:space="preserve">
     <value>Users Settings</value>
+  </data>
+  <data name="usersLogTransactionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 22</value>
+  </data>
+  <data name="usersLogTransactionsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Users Log Transactions</value>
   </data>
   <data name="mun_sysmanage.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 20</value>
@@ -2913,6 +2919,12 @@
     <value>tab_usersettings</value>
   </data>
   <data name="&gt;&gt;tab_usersettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;usersLogTransactionsToolStripMenuItem.Name" xml:space="preserve">
+    <value>usersLogTransactionsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;usersLogTransactionsToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;mnu_myaccount.Name" xml:space="preserve">

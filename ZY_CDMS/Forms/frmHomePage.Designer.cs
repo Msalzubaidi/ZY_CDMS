@@ -70,6 +70,7 @@
             this.mun_sysmanage = new System.Windows.Forms.ToolStripMenuItem();
             this.tab_sysinfo = new System.Windows.Forms.ToolStripMenuItem();
             this.tab_usersettings = new System.Windows.Forms.ToolStripMenuItem();
+            this.usersLogTransactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_myaccount = new System.Windows.Forms.ToolStripMenuItem();
             this.tab_accountsettings = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_exit = new System.Windows.Forms.ToolStripMenuItem();
@@ -379,7 +380,8 @@
             // 
             this.mun_sysmanage.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tab_sysinfo,
-            this.tab_usersettings});
+            this.tab_usersettings,
+            this.usersLogTransactionsToolStripMenuItem});
             this.mun_sysmanage.Name = "mun_sysmanage";
             resources.ApplyResources(this.mun_sysmanage, "mun_sysmanage");
             // 
@@ -394,6 +396,12 @@
             this.tab_usersettings.Name = "tab_usersettings";
             resources.ApplyResources(this.tab_usersettings, "tab_usersettings");
             this.tab_usersettings.Click += new System.EventHandler(this.tab_usersettings_Click);
+            // 
+            // usersLogTransactionsToolStripMenuItem
+            // 
+            this.usersLogTransactionsToolStripMenuItem.Name = "usersLogTransactionsToolStripMenuItem";
+            resources.ApplyResources(this.usersLogTransactionsToolStripMenuItem, "usersLogTransactionsToolStripMenuItem");
+            this.usersLogTransactionsToolStripMenuItem.Click += new System.EventHandler(this.usersLogTransactionsToolStripMenuItem_Click);
             // 
             // mnu_myaccount
             // 
@@ -498,5 +506,6 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement11;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement13;
+        private System.Windows.Forms.ToolStripMenuItem usersLogTransactionsToolStripMenuItem;
     }
 }

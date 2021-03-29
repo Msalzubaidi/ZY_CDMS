@@ -43,6 +43,7 @@
             this.MyGrid = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_reports.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_from.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_from.Properties)).BeginInit();
@@ -162,10 +163,18 @@
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
             // 
+            // simpleButton6
+            // 
+            this.simpleButton6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.ImageOptions.Image")));
+            resources.ApplyResources(this.simpleButton6, "simpleButton6");
+            this.simpleButton6.Name = "simpleButton6";
+            this.simpleButton6.Click += new System.EventHandler(this.simpleButton6_Click);
+            // 
             // frmReports
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.simpleButton6);
             this.Controls.Add(this.simpleButton5);
             this.Controls.Add(this.MyGrid);
             this.Controls.Add(this.simpleButton4);
@@ -210,5 +219,6 @@
         private DevExpress.XtraGrid.GridControl MyGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
+        private DevExpress.XtraEditors.SimpleButton simpleButton6;
     }
 }

@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ZY_CDMS.Forms;
 using ZY_CDMS.Properties;
 
 namespace ZY_CDMS.Classes
@@ -17,10 +18,17 @@ namespace ZY_CDMS.Classes
           public static string passwordcon=Connection.ps;
           */
         Rules r = new Rules();
-        public static string servercon = Resources.servercon; 
+        // Original Connection 
+        public static string servercon = Resources.servercon;
         public static string dbnamecon = Resources.dbnamecon;
         public static string usernamecon = Resources.usernamecon;
         public static string passwordcon = Resources.passwordcon;
+
+        //public static string servercon = frmLogin.Conserver;
+        //public static string dbnamecon = frmLogin.Condbname;
+        //public static string usernamecon = frmLogin.Conusername;
+        //public static string passwordcon = frmLogin.Conpassword;
+
         public static int ZYTECH = 0;
         public static int AZAuto = 10;
         public static int JordanCleaning = 20;
@@ -371,7 +379,7 @@ namespace ZY_CDMS.Classes
 
         }
 
-        public DataTable ReportSerach( int reportserial , string version , DateTime dtf, DateTime dtt)
+        public DataTable ReportSerach( int reportserial , string version , DateTime dtf, DateTime dtt )
         {
             SqlConnection con = new SqlConnection(DataBase.connstring);
 
@@ -485,11 +493,13 @@ namespace ZY_CDMS.Classes
                 cmd = new SqlCommand("select custid as 'Customer ID' , custname as 'Customer Name' , liceNo as 'License No.' ,   mobilenum as 'Mobile Number' , note as 'Address'  from customersInfo ", con);
             }
 
+          
 
 
             cmd.Parameters.AddWithValue("@dtf", dtf);
             cmd.Parameters.AddWithValue("@dtt", dtt);
             
+
 
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
 
@@ -749,6 +759,42 @@ namespace ZY_CDMS.Classes
             con.Open();
 
             return cmd.ExecuteNonQuery();
+        }
+
+
+        public DataTable ViewUserLogs(DateTime from , DateTime to ,  string transfilter , int newquery )
+        {
+            SqlConnection con = new SqlConnection(connstring);
+            DataTable dt = new DataTable () ;
+            string Qry = ""; 
+            SqlCommand cmd = null;
+            
+            if (newquery == 55 )
+            {
+                Qry = "select * from UserLogTransactions";
+            }
+            else
+            {
+                Qry = "select * from UserLogTransactions where transDate  >= @dtf  and transDate  <=@dtt and transType=@trans";
+            }
+                
+
+            cmd = new SqlCommand(Qry, con);
+
+            cmd.Parameters.AddWithValue("@dtf", from); 
+            cmd.Parameters.AddWithValue("@dtt", to);
+            cmd.Parameters.AddWithValue("@trans", transfilter);
+
+
+           
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+
+            sda.Fill(dt);
+
+            con.Open();
+
+            return dt;
+
         }
 
 

@@ -86,7 +86,7 @@ namespace ZY_CDMS.Forms
             if (result == DialogResult.Yes )
             {
 
-             
+                o.UserLogTransactions(DataBase.Username.ToString() , "Log out", DateTime.Now, Environment.MachineName);
                 Application.Exit();
               
 
@@ -893,6 +893,26 @@ namespace ZY_CDMS.Forms
         private void jjjToolStripMenuItem_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void usersLogTransactionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Users Log Transactions")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+
+            if (isopen == false)
+            {
+                UsersLogTransactions ult = new UsersLogTransactions();
+                ult.Show();
+            }
         }
     }
 }

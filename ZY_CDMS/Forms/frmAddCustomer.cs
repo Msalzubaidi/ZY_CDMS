@@ -129,6 +129,7 @@ namespace ZY_CDMS.Forms
                 if (rest > 0)
                 {
                     MessageBox.Show(table + Resources.AddedSuccessfully, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    o.UserLogTransactions(DataBase.Username.ToString(), " Add Customer ", DateTime.Now, Environment.MachineName);
                     simpleButton2.PerformClick();
                 }
                 else if (rest == -1)
@@ -167,6 +168,7 @@ namespace ZY_CDMS.Forms
                 {
                     MessageBox.Show(Resources.Updated, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     o.UpdateCustomerinfatora(cid, cname, lic, mobile, note);
+                    o.UserLogTransactions(DataBase.Username.ToString(), " Update Customer ", DateTime.Now, Environment.MachineName);
                     simpleButton2.PerformClick();
                 }
                 else if (rest <= 0)

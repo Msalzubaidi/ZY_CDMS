@@ -175,7 +175,7 @@ namespace ZY_CDMS.Forms
                 {
                     readytoprint = 1;
                     MessageBox.Show(servicetable + Resources.AddedSuccessfully, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
+                    o.UserLogTransactions(DataBase.Username.ToString(), " Add New Paid Service ", DateTime.Now, Environment.MachineName);
                     simpleButton2.PerformClick();
                   
                     

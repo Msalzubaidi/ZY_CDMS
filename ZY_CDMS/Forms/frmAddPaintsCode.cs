@@ -98,7 +98,7 @@ namespace ZY_CDMS.Forms
                 else if (rest > 0)
                 {
                     MessageBox.Show(table + Resources.AddedSuccessfully, Resources.MessageTitle, 0, MessageBoxIcon.Information);
-
+                    o.UserLogTransactions(DataBase.Username.ToString(), " Add Color ", DateTime.Now, Environment.MachineName);
                     simpleButton2.PerformClick();
 
 

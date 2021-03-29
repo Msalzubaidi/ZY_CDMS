@@ -51,10 +51,20 @@
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.dbname = new System.Windows.Forms.TextBox();
+            this.password = new System.Windows.Forms.TextBox();
+            this.username = new System.Windows.Forms.TextBox();
+            this.server = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_username
@@ -281,6 +291,84 @@
             // 
             this.toolTip4.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.labelControl4);
+            this.groupBox1.Controls.Add(this.labelControl3);
+            this.groupBox1.Controls.Add(this.labelControl2);
+            this.groupBox1.Controls.Add(this.labelControl1);
+            this.groupBox1.Controls.Add(this.dbname);
+            this.groupBox1.Controls.Add(this.password);
+            this.groupBox1.Controls.Add(this.username);
+            this.groupBox1.Controls.Add(this.server);
+            this.groupBox1.Location = new System.Drawing.Point(356, 48);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(370, 133);
+            this.groupBox1.TabIndex = 54;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "ConnectionString";
+            this.groupBox1.Visible = false;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(6, 97);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(46, 13);
+            this.labelControl4.TabIndex = 7;
+            this.labelControl4.Text = "Password";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(8, 71);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(48, 13);
+            this.labelControl3.TabIndex = 6;
+            this.labelControl3.Text = "Username";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(8, 49);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(46, 13);
+            this.labelControl2.TabIndex = 5;
+            this.labelControl2.Text = "DataBase";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(8, 19);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(32, 13);
+            this.labelControl1.TabIndex = 4;
+            this.labelControl1.Text = "Server";
+            // 
+            // dbname
+            // 
+            this.dbname.Location = new System.Drawing.Point(61, 45);
+            this.dbname.Name = "dbname";
+            this.dbname.Size = new System.Drawing.Size(285, 20);
+            this.dbname.TabIndex = 3;
+            // 
+            // password
+            // 
+            this.password.Location = new System.Drawing.Point(61, 97);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(285, 20);
+            this.password.TabIndex = 2;
+            // 
+            // username
+            // 
+            this.username.Location = new System.Drawing.Point(61, 71);
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(285, 20);
+            this.username.TabIndex = 1;
+            // 
+            // server
+            // 
+            this.server.Location = new System.Drawing.Point(61, 19);
+            this.server.Name = "server";
+            this.server.Size = new System.Drawing.Size(285, 20);
+            this.server.TabIndex = 0;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -288,6 +376,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(759, 317);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.metroLabel5);
             this.Controls.Add(this.credInfo);
@@ -318,6 +407,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,5 +437,14 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel6;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private System.Windows.Forms.TextBox dbname;
+        private System.Windows.Forms.TextBox password;
+        private System.Windows.Forms.TextBox username;
+        private System.Windows.Forms.TextBox server;
     }
 }

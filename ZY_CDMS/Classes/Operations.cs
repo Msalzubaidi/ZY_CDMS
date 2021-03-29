@@ -187,6 +187,8 @@ namespace ZY_CDMS.Classes
 
         }
 
+
+
         public int newTransaction(int transNo, int transType, string VIN, double transValue, int payType, string transDesc, DateTime date)
         {
 
@@ -484,7 +486,29 @@ namespace ZY_CDMS.Classes
             con.Open();
             return cmd.ExecuteNonQuery();
         }
+
+        public int UserLogTransactions(string username , string transType , DateTime transDate ,  string ComputerName)
+        {
+
+            SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
+            SqlCommand cmd = new SqlCommand("INSERT INTO UserLogTransactions ( Username , TransType , transDate , ComputerName) VALUES( @username , @transType , @transDate , @ComputerName )", con); // sql command to so get data from data bas
+
+            cmd.Parameters.Add(new SqlParameter("@username", username));
+            cmd.Parameters.Add(new SqlParameter("@transType", transType));
+            cmd.Parameters.Add(new SqlParameter("@transDate", transDate));//
+            cmd.Parameters.Add(new SqlParameter("@ComputerName", ComputerName));
+
+
+
+            con.Open();
+
+            return cmd.ExecuteNonQuery();
+
+
+        }
+
     }
+
 
 
 }
