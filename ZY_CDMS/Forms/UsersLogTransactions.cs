@@ -101,14 +101,24 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton4_Click(object sender, EventArgs e)
         {
+            //if (!MyGrid.IsPrintingAvailable)
+            //{
+            //    MessageBox.Show("The 'DevExpress.XtraPrinting' library is not found", "Error");
+            //    return;
+            //}
+
+            //// Print.
+            //MyGrid.Print();
+
+
             if (!MyGrid.IsPrintingAvailable)
             {
                 MessageBox.Show("The 'DevExpress.XtraPrinting' library is not found", "Error");
                 return;
             }
 
-            // Print.
-            MyGrid.Print();
+            // Open the Preview window.
+            MyGrid.ShowPrintPreview();
         }
     }
 }

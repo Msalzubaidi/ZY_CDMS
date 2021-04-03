@@ -69,6 +69,8 @@
             this.chk_Settings = new DevExpress.XtraEditors.CheckEdit();
             this.chk_admin = new DevExpress.XtraEditors.CheckEdit();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.chk_lt = new DevExpress.XtraEditors.CheckEdit();
+            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_userid.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chk_asc.Properties)).BeginInit();
@@ -97,6 +99,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chk_dmm.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_Settings.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_admin.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_lt.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // cbo_userid
@@ -203,7 +206,7 @@
             // simpleButton2
             // 
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(184, 294);
+            this.simpleButton2.Location = new System.Drawing.Point(103, 294);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 56;
@@ -213,7 +216,7 @@
             // simpleButton3
             // 
             this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(103, 294);
+            this.simpleButton3.Location = new System.Drawing.Point(22, 294);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(75, 23);
             this.simpleButton3.TabIndex = 57;
@@ -223,15 +226,16 @@
             // simpleButton4
             // 
             this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(184, 265);
+            this.simpleButton4.Location = new System.Drawing.Point(181, 294);
             this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton4.Size = new System.Drawing.Size(87, 23);
             this.simpleButton4.TabIndex = 58;
-            this.simpleButton4.Text = "Delete";
+            this.simpleButton4.Text = "DeActivate";
             this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chk_lt);
             this.groupBox1.Controls.Add(this.chk_asc);
             this.groupBox1.Controls.Add(this.chk_esv);
             this.groupBox1.Controls.Add(this.chk_sv);
@@ -260,7 +264,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(277, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(613, 315);
+            this.groupBox1.Size = new System.Drawing.Size(613, 275);
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Permissions";
@@ -304,6 +308,7 @@
             this.chk_us.Properties.Caption = "Users Settings";
             this.chk_us.Size = new System.Drawing.Size(98, 19);
             this.chk_us.TabIndex = 45;
+            this.chk_us.CheckedChanged += new System.EventHandler(this.chk_us_CheckedChanged);
             // 
             // chk_sysinfo
             // 
@@ -541,11 +546,32 @@
             this.simpleButton5.Text = "Add";
             this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
             // 
+            // chk_lt
+            // 
+            this.chk_lt.Location = new System.Drawing.Point(490, 90);
+            this.chk_lt.Name = "chk_lt";
+            this.chk_lt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_lt.Properties.Appearance.Options.UseFont = true;
+            this.chk_lt.Properties.Caption = "Users Log Trans";
+            this.chk_lt.Size = new System.Drawing.Size(117, 19);
+            this.chk_lt.TabIndex = 64;
+            // 
+            // simpleButton6
+            // 
+            this.simpleButton6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.ImageOptions.Image")));
+            this.simpleButton6.Location = new System.Drawing.Point(184, 265);
+            this.simpleButton6.Name = "simpleButton6";
+            this.simpleButton6.Size = new System.Drawing.Size(84, 23);
+            this.simpleButton6.TabIndex = 61;
+            this.simpleButton6.Text = "Activate";
+            this.simpleButton6.Click += new System.EventHandler(this.simpleButton6_Click);
+            // 
             // frmUsersManagment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(902, 340);
+            this.Controls.Add(this.simpleButton6);
             this.Controls.Add(this.simpleButton5);
             this.Controls.Add(this.chk_admin);
             this.Controls.Add(this.groupBox1);
@@ -597,6 +623,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chk_dmm.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_Settings.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_admin.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_lt.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -644,5 +671,7 @@
         private DevExpress.XtraEditors.CheckEdit chk_sv;
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
         private DevExpress.XtraEditors.CheckEdit chk_asc;
+        private DevExpress.XtraEditors.CheckEdit chk_lt;
+        private DevExpress.XtraEditors.SimpleButton simpleButton6;
     }
 }

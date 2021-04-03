@@ -110,11 +110,11 @@ namespace ZY_CDMS.Classes
 
         }
 
-        public int AddUserPer(int unum , int settings, int makemodel, int editmakemodel, int service, int editservice, int paymethods, int sourcecar, int paintcodes, int taxCat, int operations, int buycar, int sellcar, int printinvoice, int addserivetocar,  int customers, int carMain, int searchMain, int search, int Reports, int rpt, int systemMange, int sysinfo, int usersettings, int MyAcc, int pExit, int admin)
+        public int AddUserPer(int unum , int settings, int makemodel, int editmakemodel, int service, int editservice, int paymethods, int sourcecar, int paintcodes, int taxCat, int operations, int buycar, int sellcar, int printinvoice, int addserivetocar,  int customers, int carMain, int searchMain, int search, int Reports, int rpt, int systemMange, int sysinfo, int usersettings, int MyAcc, int pExit, int admin , int usersLogTrans , int IsDeleted)
         {
 
             SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
-            SqlCommand cmd = new SqlCommand("INSERT INTO User_permission(user_id ,  settings,  makemodel,  editmakemodel,  service,  editservice,  paymethods,  sourcecar,  paintcodes,  taxCat,  operations,  buycar,  sellcar , addserivetocar ,   printinvoice,  customers,  carMain,  searchMain,  search,  Reports,  rpt,  systemMange,  sysinfo,  usersettings,  MyAcc,  pExit ,  admin) VALUES(@userid ,  @settings,  @makemodel,  @editmakemodel,  @service,  @editservice,  @paymethods,  @sourcecar,  @paintcodes,  @taxCat,  @operations,  @buycar,  @sellcar , @addserivetocar ,   @printinvoice,  @customers,  @carMain,  @searchMain,  @search,  @Reports,  @rpt,  @systemMange,  @sysinfo,  @usersettings,  @MyAcc,  @pExit ,  @admin)", con); // sql command to so get data from data bas
+            SqlCommand cmd = new SqlCommand("INSERT INTO User_permission(user_id ,  settings,  makemodel,  editmakemodel,  service,  editservice,  paymethods,  sourcecar,  paintcodes,  taxCat,  operations,  buycar,  sellcar , addserivetocar ,   printinvoice,  customers,  carMain,  searchMain,  search,  Reports,  rpt,  systemMange,  sysinfo,  usersettings,  MyAcc,  pExit ,  admin , usersLogTrans  , IsDeleted ) VALUES(@userid ,  @settings,  @makemodel,  @editmakemodel,  @service,  @editservice,  @paymethods,  @sourcecar,  @paintcodes,  @taxCat,  @operations,  @buycar,  @sellcar , @addserivetocar ,   @printinvoice,  @customers,  @carMain,  @searchMain,  @search,  @Reports,  @rpt,  @systemMange,  @sysinfo,  @usersettings,  @MyAcc,  @pExit ,  @admin , @usersLogTrans ,  @IsDeleted )", con); // sql command to so get data from data bas
            
             cmd.Parameters.Add(new SqlParameter("@userid", unum));
             cmd.Parameters.Add(new SqlParameter("@settings", settings));
@@ -143,6 +143,8 @@ namespace ZY_CDMS.Classes
             cmd.Parameters.Add(new SqlParameter("@MyAcc", MyAcc));
             cmd.Parameters.Add(new SqlParameter("@pExit", pExit));
             cmd.Parameters.Add(new SqlParameter("@admin", admin));
+            cmd.Parameters.Add(new SqlParameter("@usersLogTrans", usersLogTrans)); 
+                 cmd.Parameters.Add(new SqlParameter("@IsDeleted", IsDeleted)); 
 
 
 
@@ -154,11 +156,23 @@ namespace ZY_CDMS.Classes
         }
 
 
-        public int DeleteUser(int unum)
+        public int ActivateOrDeactivate(int unum , int trans )
         {
 
             SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
-            SqlCommand cmd = new SqlCommand("delete from Users where user_id=@unum", con); // sql command to so get data from data bas
+            SqlCommand cmd = null; 
+                if (trans == 10)
+            {
+               cmd =  new SqlCommand("update Users set IsDeleted = 1 where user_id=@unum", con); // sql command to so get data from data bas
+            }
+
+
+                if (trans == 20)
+            {
+               cmd =  new SqlCommand("update Users set IsDeleted = 0 where user_id=@unum", con); // sql command to so get data from data bas
+            }
+                
+               
 
             cmd.Parameters.Add(new SqlParameter("@unum", unum));
 
@@ -179,11 +193,21 @@ namespace ZY_CDMS.Classes
 
         }
 
-        public int DeleteUserPermissions(int unum)
+        public int ActivateDeActivatePermissions(int unum , int trans )
         {
-
             SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
-            SqlCommand cmd = new SqlCommand("delete from User_permission where user_id=@unum", con); // sql command to so get data from data bas
+            SqlCommand cmd = null; 
+            if (trans == 10)
+            {
+              cmd = new SqlCommand("update User_permission set IsDeleted = 1 where user_id=@unum", con);
+            }
+            if (trans == 20 )
+            {
+                 cmd = new SqlCommand("update User_permission set IsDeleted = 0 where user_id=@unum", con);
+            }
+
+         
+            // sql command to so get data from data bas
 
             cmd.Parameters.Add(new SqlParameter("@unum", unum));
 
@@ -218,15 +242,16 @@ namespace ZY_CDMS.Classes
         }
 
 
-        public int AddUser(int unum, string username, string password)
+        public int AddUser(int unum, string username, string password , int IsDeleted)
         {
 
             SqlConnection con = new SqlConnection(connstring);
-            SqlCommand cmd = new SqlCommand("INSERT INTO users(user_id,user_name , password) VALUES(@unum,@un,@psd)", con); // sql command to so get data from data bas
+            SqlCommand cmd = new SqlCommand("INSERT INTO users(user_id,user_name , password ,  IsDeleted ) VALUES(@unum,@un,@psd , @IsDeleted)", con); // sql command to so get data from data bas
 
             cmd.Parameters.Add(new SqlParameter("@unum", unum));
             cmd.Parameters.Add(new SqlParameter("@un", username));
             cmd.Parameters.Add(new SqlParameter("@psd", password));
+            cmd.Parameters.Add(new SqlParameter("@IsDeleted", IsDeleted));
 
 
 

@@ -165,8 +165,9 @@ namespace ZY_CDMS.Forms
 
                 DataTable dtable = db.ViewUSERinfo(int.Parse(txt_userid.Text));
                 int x = dtable.Rows.Count;
+                int deleted = int.Parse(dtable.Rows[0]["IsDeleted"].ToString());
 
-                if (dtable != null && dtable.Rows.Count > 0)
+                if (dtable != null && dtable.Rows.Count > 0 && deleted != 1  )
                 {
 
 
@@ -177,7 +178,7 @@ namespace ZY_CDMS.Forms
 
                 else
                 {
-                    MessageBox.Show("User " + Resources.notExist, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("User " + Resources.notExist + " Or Deleted / not Active ", Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txt_password.Clear();
                     txt_userid.Clear();
                     txt_username.Clear();

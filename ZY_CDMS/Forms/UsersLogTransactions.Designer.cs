@@ -83,6 +83,8 @@
             this.gridColumn1.Caption = "User Name";
             this.gridColumn1.FieldName = "Username";
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
+            this.gridColumn1.OptionsColumn.ReadOnly = true;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
             // 
@@ -91,6 +93,8 @@
             this.gridColumn2.Caption = "Transaction Type";
             this.gridColumn2.FieldName = "TransType";
             this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.AllowEdit = false;
+            this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
             // 
@@ -99,6 +103,8 @@
             this.gridColumn3.Caption = "Transaction Date";
             this.gridColumn3.FieldName = "transDate";
             this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.AllowEdit = false;
+            this.gridColumn3.OptionsColumn.ReadOnly = true;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
             // 
@@ -107,6 +113,8 @@
             this.gridColumn4.Caption = "Client / Device Name";
             this.gridColumn4.FieldName = "ComputerName";
             this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.OptionsColumn.AllowEdit = false;
+            this.gridColumn4.OptionsColumn.ReadOnly = true;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
             // 

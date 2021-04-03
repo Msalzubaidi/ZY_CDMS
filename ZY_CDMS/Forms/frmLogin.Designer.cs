@@ -263,6 +263,7 @@
             this.metroLabel5.TabIndex = 52;
             this.metroLabel5.Text = "اللغة العربية";
             this.metroLabel5.UseStyleColors = true;
+            this.metroLabel5.UseWaitCursor = true;
             this.metroLabel5.Visible = false;
             this.metroLabel5.Click += new System.EventHandler(this.metroLabel5_Click);
             // 
@@ -301,7 +302,7 @@
             this.groupBox1.Controls.Add(this.password);
             this.groupBox1.Controls.Add(this.username);
             this.groupBox1.Controls.Add(this.server);
-            this.groupBox1.Location = new System.Drawing.Point(356, 48);
+            this.groupBox1.Location = new System.Drawing.Point(377, 60);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(370, 133);
             this.groupBox1.TabIndex = 54;

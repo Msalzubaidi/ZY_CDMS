@@ -132,7 +132,8 @@ namespace ZY_CDMS.Forms
                     int userSettings = int.Parse(dtp.Rows[0]["usersettings"].ToString());
                     int MyAccountSettings = int.Parse(dtp.Rows[0]["MyAcc"].ToString());
                     int Exit = int.Parse(dtp.Rows[0]["pExit"].ToString());
-                    int Admin = int.Parse(dtp.Rows[0]["admin"].ToString()); 
+                    int Admin = int.Parse(dtp.Rows[0]["admin"].ToString());
+                    int UserLog = int.Parse(dtp.Rows[0]["usersLogTrans"].ToString());
                     if (Settings == 1)
                         chk_Settings.Checked = true;
                     if (MakeModel == 1)
@@ -183,6 +184,8 @@ namespace ZY_CDMS.Forms
                         chk_sysinfo.Checked = true;
                     if (userSettings == 1)
                         chk_us.Checked = true;
+                    if (UserLog == 1)
+                        chk_lt.Checked = true;
                     if (MyAccountSettings == 1)
                         chk_MyAcc.Checked = true;
                     if (Exit == 1)
@@ -234,7 +237,8 @@ namespace ZY_CDMS.Forms
                 chk_dsc.Checked = false;
                 chk_pc.Checked = false;
                 chk_tc.Checked = false;
-            
+            chk_lt.Checked = false;
+
             chk_Operations.Checked = false;
             
                 chk_bc.Checked = false;
@@ -319,6 +323,7 @@ namespace ZY_CDMS.Forms
               
                 chk_sysinfo.Checked = true;
                 chk_us.Checked = true;
+                chk_lt.Checked = true;
             }
         }
 
@@ -333,6 +338,7 @@ namespace ZY_CDMS.Forms
                 chk_systemMange.Checked = true;
                 chk_Reports.Checked = true;
                 chk_Search.Checked = true;
+                chk_lt.Checked = true;
 
             }
             else if (chk_admin.Checked ==false  )
@@ -372,6 +378,7 @@ namespace ZY_CDMS.Forms
             int MyAccountSettings = 1; 
             int Exit = 1;
             int Admin = 0;
+            int UserLog = 0;
             if (chk_admin.Checked == true )
             {
                 Admin = 1;
@@ -519,6 +526,7 @@ namespace ZY_CDMS.Forms
                     {
                 SystemManage = 1; 
                         sysinfo = 1;
+                UserLog = 1;
                     }
                     if (chk_us.Checked == true)
                     {
@@ -538,12 +546,12 @@ namespace ZY_CDMS.Forms
                     string username = txt_username.Text;
                     string password = txt_pass.Text;
 
-                    int add = d.AddUser(userid, username, password);
+                    int add = d.AddUser(userid, username, password , 0);
 
                     if (add > 0)
                     {
                         MessageBox.Show(table + Resources.AddedSuccessfully, Resources.MessageTitle, 0, MessageBoxIcon.Information);
-                    d.AddUserPer(userid , Settings , MakeModel , EditMakeModel , Services , EditServices , Paymethods , SourceCar , PaintCodes , TaxCat , Operations ,BuyCar ,SellCar  ,  PrintInvoice  , addserivetocar, Customers  , CarMaintainance , Search , search , Reports , report , SystemManage , sysinfo , userSettings , MyAccountSettings , Exit , Admin);
+                    d.AddUserPer(userid , Settings , MakeModel , EditMakeModel , Services , EditServices , Paymethods , SourceCar , PaintCodes , TaxCat , Operations ,BuyCar ,SellCar  ,  PrintInvoice  , addserivetocar, Customers  , CarMaintainance , Search , search , Reports , report , SystemManage , sysinfo , userSettings , MyAccountSettings , Exit , Admin , UserLog , 0 );
                     simpleButton3.PerformClick();
                     
 
@@ -560,13 +568,13 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton4_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Do you Want To Delete User ? ", Resources.MessageTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Do you Want To DeActivted User ? ", Resources.MessageTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
 
                 int num = int.Parse(txt_userid.Text);
-              
-                int rest = d.DeleteUser(num);
+
+                int rest = d.ActivateOrDeactivate(num, 10);
                 if (string.IsNullOrEmpty(txt_userid.Text))
                     MessageBox.Show("Invalid User id  ", Resources.MessageTitle, 0, MessageBoxIcon.Warning);
 
@@ -575,8 +583,8 @@ namespace ZY_CDMS.Forms
                 if (rest > 0)
                 {
              
-                    MessageBox.Show("User Deleted ", Resources.MessageTitle, 0, MessageBoxIcon.Information);
-                    d.DeleteUserPermissions(num);
+                    MessageBox.Show("User DeActivated ", Resources.MessageTitle, 0, MessageBoxIcon.Information);
+                    d.ActivateDeActivatePermissions(num, 10);
                     simpleButton3.PerformClick();
                 }
                 else if (rest <= 0)
@@ -600,6 +608,50 @@ namespace ZY_CDMS.Forms
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Sorry, You haven't Permission To Update Userinformation ", Resources.MessageTitle, 0, MessageBoxIcon.Exclamation);
+        }
+
+        private void chk_us_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void simpleButton6_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do you Want To Activte User ? ", Resources.MessageTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+
+                int num = int.Parse(txt_userid.Text);
+
+                int rest = d.ActivateOrDeactivate(num , 20 );
+                if (string.IsNullOrEmpty(txt_userid.Text))
+                    MessageBox.Show("Invalid User id  ", Resources.MessageTitle, 0, MessageBoxIcon.Warning);
+
+                else
+
+                if (rest > 0)
+                {
+
+                    MessageBox.Show("User Activted", Resources.MessageTitle, 0, MessageBoxIcon.Information);
+                    d.ActivateDeActivatePermissions(num , 20);
+                    simpleButton3.PerformClick();
+                }
+                else if (rest <= 0)
+                {
+                    MessageBox.Show("User Not Exist", Resources.MessageTitle, 0, MessageBoxIcon.Error);
+
+                }
+
+
+
+
+            }
+
+            else if (result == DialogResult.No)
+            {
+                MessageBox.Show("Operation Cancelled by User ", Resources.MessageTitle, 0, MessageBoxIcon.Exclamation);
+                simpleButton3.PerformClick();
+            }
         }
     } 
     }

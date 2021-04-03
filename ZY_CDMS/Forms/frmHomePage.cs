@@ -269,9 +269,11 @@ namespace ZY_CDMS.Forms
             int userSettings = int.Parse(userPermission.Rows[0]["usersettings"].ToString());
             int MyAccountSettings = int.Parse(userPermission.Rows[0]["MyAcc"].ToString());
             int Exit = int.Parse(userPermission.Rows[0]["pExit"].ToString());
-         
+            int UserLog = int.Parse(userPermission.Rows[0]["usersLogTrans"].ToString());
+            
 
-            if (Settings == 0)
+
+                if (Settings == 0)
                 mun_settings.Visible = false;
             if (MakeModel == 0)
                 defineMakeModelToolStripMenuItem.Visible = false;
@@ -378,13 +380,20 @@ namespace ZY_CDMS.Forms
                 if (SystemManage == 0)
                     mun_sysmanage.Visible = false;
 
+
             if (sysinfo == 0)
 
                     tab_sysinfo.Visible = false;
+
+
             if (userSettings == 0)
 
-                    tab_usersettings.Visible = false; 
-            if (MyAccountSettings == 0 || MyAccountSettings == 1 )
+                    tab_usersettings.Visible = false;
+
+                if (UserLog == 0)
+
+                    usersLogTransactionsToolStripMenuItem.Visible = false;
+                if (MyAccountSettings == 0 || MyAccountSettings == 1 )
              mnu_myaccount.Visible = true ;
                 if (Exit == 0 || Exit == 1)
                 {
@@ -406,7 +415,7 @@ namespace ZY_CDMS.Forms
                 accordionControlElement2.Visible = false;
                 accordionControlElement3.Visible = false;
 
-                MessageBox.Show(logedusername + " Hasn't Permissions", Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("[ "+logedusername +" ]"+ " Hasn't Permissions - Please Back To System Admin To Grant Permissions ", Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
 
             }
@@ -440,10 +449,12 @@ namespace ZY_CDMS.Forms
                 if (frmLogin.languagearabic == 1 )
                 {
                     lic.Text = Resources.LogoAR + " " + Resources.AppNameAR + " - نسخة مرخصة  ل ( " + " " + titleform.ToString() + " ) " + nl + "الرخصة فعالة لغاية  " + dt.ToShortDateString(); ;
+                   
                 }
                 else
                 {
                     lic.Text = Resources.Logo + " " + Resources.AppName + " - Licensed for ( " + " " + titleform.ToString() + " ) " + nl + "License Active to " + dt.ToShortDateString(); ;
+                    
                 }
 
             }
@@ -455,10 +466,12 @@ namespace ZY_CDMS.Forms
                 if (frmLogin.languagearabic == 1)
                 {
                     lic.Text = Resources.LogoAR + " " + Resources.AppNameAR + " - نسخة مرخصة ل ( " + " " + titleform.ToString() + " ) " + nl + "ستنتهي صلاحية الرخصة خلال " + "" + NrOfDays.ToString() + " " + "يوم";
+                    
                 }
                 else
                 {
                     lic.Text = Resources.Logo + " " + Resources.AppName + " - Licensed for ( " + " " + titleform.ToString() + " ) " + nl + "License will be Expired by " + "" + NrOfDays.ToString() + " " + "Days";
+                    
                 }
 
 
@@ -476,10 +489,12 @@ namespace ZY_CDMS.Forms
                 if (frmLogin.languagearabic == 1)
                 {
                     lic.Text = Resources.LogoAR + " " + Resources.AppNameAR + " - نسخة مرخصة ل  ( " + " " + titleform.ToString() + " )  " + nl + "انتهت صلاحية الرخصة في  " + "" + dt.ToShortDateString();
+                    
                 }
                 else
                 {
                     lic.Text = Resources.Logo + " " + Resources.AppName + " - Licensed for ( " + " " + titleform.ToString() + " )  " + nl + "License Expired in " + "" + dt.ToShortDateString();
+                    
                 }
 
 
@@ -493,9 +508,11 @@ namespace ZY_CDMS.Forms
                 accordionControlElement1.Visible = false;
                 accordionControlElement2.Visible = false;
                 accordionControlElement3.Visible = false;
+                
 
             }
 
+        
         }
 
         private void myAccountSettingsToolStripMenuItem_Click(object sender, EventArgs e)

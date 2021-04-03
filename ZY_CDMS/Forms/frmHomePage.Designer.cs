@@ -76,6 +76,7 @@
             this.mnu_exit = new System.Windows.Forms.ToolStripMenuItem();
             this.lic = new MetroFramework.Controls.MetroLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.progressPanel1 = new DevExpress.XtraWaitForm.ProgressPanel();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -439,10 +440,28 @@
             // 
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
+            // progressPanel1
+            // 
+            this.progressPanel1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.progressPanel1.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("progressPanel1.Appearance.Font")));
+            this.progressPanel1.Appearance.ForeColor = System.Drawing.Color.Aqua;
+            this.progressPanel1.Appearance.Options.UseBackColor = true;
+            this.progressPanel1.Appearance.Options.UseFont = true;
+            this.progressPanel1.Appearance.Options.UseForeColor = true;
+            this.progressPanel1.BarAnimationElementThickness = 2;
+            this.progressPanel1.FrameInterval = 2000;
+            this.progressPanel1.LineAnimationElementHeight = 50;
+            resources.ApplyResources(this.progressPanel1, "progressPanel1");
+            this.progressPanel1.Name = "progressPanel1";
+            this.progressPanel1.ShowCaption = false;
+            this.progressPanel1.ShowDescription = false;
+            this.progressPanel1.WaitAnimationType = DevExpress.Utils.Animation.WaitingAnimatorType.Line;
+            // 
             // frmHomePage
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.progressPanel1);
             this.Controls.Add(this.lic);
             this.Controls.Add(this.accordionControl1);
             this.Controls.Add(this.menuStrip1);
@@ -507,5 +526,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement11;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement13;
         private System.Windows.Forms.ToolStripMenuItem usersLogTransactionsToolStripMenuItem;
+        private DevExpress.XtraWaitForm.ProgressPanel progressPanel1;
     }
 }
