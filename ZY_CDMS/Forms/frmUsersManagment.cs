@@ -379,17 +379,21 @@ namespace ZY_CDMS.Forms
             int Exit = 1;
             int Admin = 0;
             int UserLog = 0;
+         
             if (chk_admin.Checked == true )
             {
                 Admin = 1;
+                
             }
             if (chk_Exit.Checked == true)
             {
                 Exit = 1;
+                
             }
             if (chk_MyAcc.Checked == true)
             {
                 MyAccountSettings = 1;
+               
             }
             if (chk_admin.Checked == true)
             {
@@ -425,6 +429,7 @@ namespace ZY_CDMS.Forms
 
                  MyAccountSettings = 1;
                  Exit = 1;
+              
             }
 
                 if (chk_dmm.Checked == true)
@@ -550,6 +555,7 @@ namespace ZY_CDMS.Forms
 
                     if (add > 0)
                     {
+                    
                         MessageBox.Show(table + Resources.AddedSuccessfully, Resources.MessageTitle, 0, MessageBoxIcon.Information);
                     d.AddUserPer(userid , Settings , MakeModel , EditMakeModel , Services , EditServices , Paymethods , SourceCar , PaintCodes , TaxCat , Operations ,BuyCar ,SellCar  ,  PrintInvoice  , addserivetocar, Customers  , CarMaintainance , Search , search , Reports , report , SystemManage , sysinfo , userSettings , MyAccountSettings , Exit , Admin , UserLog , 0 );
                     simpleButton3.PerformClick();

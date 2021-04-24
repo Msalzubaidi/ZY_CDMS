@@ -29,6 +29,9 @@ namespace ZY_CDMS.Forms
 
         public static string CustVerp = "";
         public static int selectedReportp = 0;
+        public static string VinToPrint = "";
+
+
 
         private void frmPrintInvoice_KeyDown(object sender, KeyEventArgs e)
         {
@@ -127,6 +130,9 @@ namespace ZY_CDMS.Forms
                 cbo_vin.Properties.Items.Add(item1);
 
             }
+
+
+          
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)

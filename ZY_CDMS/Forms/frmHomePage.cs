@@ -26,6 +26,7 @@ namespace ZY_CDMS.Forms
         DataBase d = new DataBase();
 
         public static int viewcbo = 0 ;
+        System.Diagnostics.Stopwatch timer = new System.Diagnostics.Stopwatch();
 
 
         private void defineMakeModelToolStripMenuItem_Click(object sender, EventArgs e)
@@ -238,7 +239,8 @@ namespace ZY_CDMS.Forms
             double NrOfDays = t.TotalDays;
 
             string nl = "\r\n";
-
+            menuStrip1.Visible = false;
+            accordionControl1.Visible = false;
             if (userPermission.Rows.Count > 0 )
             { 
             ///////////////////////////  User Permission //////////////////////////////
@@ -270,8 +272,8 @@ namespace ZY_CDMS.Forms
             int MyAccountSettings = int.Parse(userPermission.Rows[0]["MyAcc"].ToString());
             int Exit = int.Parse(userPermission.Rows[0]["pExit"].ToString());
             int UserLog = int.Parse(userPermission.Rows[0]["usersLogTrans"].ToString());
-            
 
+                int Permissions = 0; 
 
                 if (Settings == 0)
                 mun_settings.Visible = false;
@@ -929,6 +931,58 @@ namespace ZY_CDMS.Forms
             {
                 UsersLogTransactions ult = new UsersLogTransactions();
                 ult.Show();
+            }
+        }
+
+        private void reBuildMenusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            this.Refresh();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult YesOrNo = new DialogResult();
+
+            if (lblTimeElapsed.Text != "00:00:00")
+            {
+                YesOrNo = MessageBox.Show("Are You Sure To RESTART ?", "Rabbit Puzzle", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            }
+            if (YesOrNo == DialogResult.Yes || lblTimeElapsed.Text == "00:00:00")
+            {
+
+                timer.Reset();
+                lblTimeElapsed.Text = "00:00:00";
+
+
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (timer.Elapsed.ToString() != "00:00:00")
+                lblTimeElapsed.Text = timer.Elapsed.ToString().Remove(8);
+            if (timer.Elapsed.ToString() == "00:00:00")
+            {
+                menuStrip1.Visible = true;
+                progressPanel1.Visible = false;
+                accordionControl1.Visible = true;
+            }
+
+
+            else
+                menuStrip1.Visible = true;
+            accordionControl1.Visible = true;
+            progressPanel1.Visible = false;
+
+            if (timer.Elapsed.Minutes.ToString() == "1")
+            {
+                timer.Reset();
+
+                menuStrip1.Visible = true;
+                progressPanel1.Visible = false;
+                accordionControl1.Visible = true;
+
             }
         }
     }

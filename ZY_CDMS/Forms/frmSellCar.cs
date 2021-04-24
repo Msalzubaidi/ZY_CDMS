@@ -30,7 +30,7 @@ namespace ZY_CDMS.Forms
         string cutsTabel = "customersInfo";
         string servicetable = "TransServices";
         string selltable = "SellTransactions";
-
+      
 
 
 
@@ -371,10 +371,11 @@ namespace ZY_CDMS.Forms
                     o.updatecarStatus(vinn, cstat, carsttext);
                     simpleButton2.PerformClick();
 
+                    frmPrintInvoice.VinToPrint = txt_vin.Text;
+
                     frmPrintInvoice pi = new frmPrintInvoice();
                     pi.Show();
-                  
-                    
+      
 
                 }
 

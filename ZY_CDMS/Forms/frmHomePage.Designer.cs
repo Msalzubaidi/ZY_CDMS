@@ -73,10 +73,14 @@
             this.usersLogTransactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_myaccount = new System.Windows.Forms.ToolStripMenuItem();
             this.tab_accountsettings = new System.Windows.Forms.ToolStripMenuItem();
+            this.reBuildMenusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_exit = new System.Windows.Forms.ToolStripMenuItem();
             this.lic = new MetroFramework.Controls.MetroLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.progressPanel1 = new DevExpress.XtraWaitForm.ProgressPanel();
+            this.lblTimeElapsed = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -407,7 +411,8 @@
             // mnu_myaccount
             // 
             this.mnu_myaccount.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tab_accountsettings});
+            this.tab_accountsettings,
+            this.reBuildMenusToolStripMenuItem});
             this.mnu_myaccount.Name = "mnu_myaccount";
             resources.ApplyResources(this.mnu_myaccount, "mnu_myaccount");
             // 
@@ -416,6 +421,12 @@
             this.tab_accountsettings.Name = "tab_accountsettings";
             resources.ApplyResources(this.tab_accountsettings, "tab_accountsettings");
             this.tab_accountsettings.Click += new System.EventHandler(this.myAccountSettingsToolStripMenuItem_Click);
+            // 
+            // reBuildMenusToolStripMenuItem
+            // 
+            this.reBuildMenusToolStripMenuItem.Name = "reBuildMenusToolStripMenuItem";
+            resources.ApplyResources(this.reBuildMenusToolStripMenuItem, "reBuildMenusToolStripMenuItem");
+            this.reBuildMenusToolStripMenuItem.Click += new System.EventHandler(this.reBuildMenusToolStripMenuItem_Click);
             // 
             // mnu_exit
             // 
@@ -442,25 +453,53 @@
             // 
             // progressPanel1
             // 
+            resources.ApplyResources(this.progressPanel1, "progressPanel1");
+            this.progressPanel1.AnimationSpeed = 10F;
+            this.progressPanel1.AnimationToTextDistance = 3;
             this.progressPanel1.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.progressPanel1.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("progressPanel1.Appearance.Font")));
-            this.progressPanel1.Appearance.ForeColor = System.Drawing.Color.Aqua;
+            this.progressPanel1.Appearance.ForeColor = System.Drawing.Color.Black;
             this.progressPanel1.Appearance.Options.UseBackColor = true;
             this.progressPanel1.Appearance.Options.UseFont = true;
             this.progressPanel1.Appearance.Options.UseForeColor = true;
+            this.progressPanel1.Appearance.Options.UseTextOptions = true;
+            this.progressPanel1.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.progressPanel1.AppearanceCaption.Options.UseTextOptions = true;
+            this.progressPanel1.AppearanceCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.progressPanel1.AppearanceDescription.Options.UseTextOptions = true;
+            this.progressPanel1.AppearanceDescription.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.progressPanel1.BarAnimationElementThickness = 2;
-            this.progressPanel1.FrameInterval = 2000;
-            this.progressPanel1.LineAnimationElementHeight = 50;
-            resources.ApplyResources(this.progressPanel1, "progressPanel1");
+            this.progressPanel1.ContentAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.progressPanel1.LineAnimationElementHeight = 20;
             this.progressPanel1.Name = "progressPanel1";
-            this.progressPanel1.ShowCaption = false;
-            this.progressPanel1.ShowDescription = false;
+            this.progressPanel1.RingAnimationDiameter = 50;
             this.progressPanel1.WaitAnimationType = DevExpress.Utils.Animation.WaitingAnimatorType.Line;
+            // 
+            // lblTimeElapsed
+            // 
+            resources.ApplyResources(this.lblTimeElapsed, "lblTimeElapsed");
+            this.lblTimeElapsed.BackColor = System.Drawing.Color.Transparent;
+            this.lblTimeElapsed.Name = "lblTimeElapsed";
+            // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 7000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmHomePage
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblTimeElapsed);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.progressPanel1);
             this.Controls.Add(this.lic);
             this.Controls.Add(this.accordionControl1);
@@ -526,6 +565,10 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement11;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement13;
         private System.Windows.Forms.ToolStripMenuItem usersLogTransactionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reBuildMenusToolStripMenuItem;
         private DevExpress.XtraWaitForm.ProgressPanel progressPanel1;
+        private System.Windows.Forms.Label lblTimeElapsed;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
