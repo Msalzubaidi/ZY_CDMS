@@ -325,6 +325,12 @@
     <Compile Include="Forms\frmSellCar.Designer.cs">
       <DependentUpon>frmSellCar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmSendSMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSendSMS.Designer.cs">
+      <DependentUpon>frmSendSMS.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmSystemInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -526,6 +532,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmSellCar.resx">
       <DependentUpon>frmSellCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSendSMS.resx">
+      <DependentUpon>frmSendSMS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmSystemInfo.resx">
       <DependentUpon>frmSystemInfo.cs</DependentUpon>

@@ -17,7 +17,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace ZY_CDMS.Forms
 {
-    public partial class frmLogin: Form
+    public partial class frmLogin : Form
     {
         public frmLogin()
         {
@@ -28,7 +28,7 @@ namespace ZY_CDMS.Forms
         Rules rule = new Rules();
         Operations o = new Operations();
         public static int languagearabic = 0;
-        public static string Conserver ="";
+        public static string Conserver = "";
         public static string Condbname = "";
         public static string Conusername = "";
         public static string Conpassword = "";
@@ -49,10 +49,10 @@ namespace ZY_CDMS.Forms
 
             DataTable datatable = o.SelctData("ConnectionInfo", 0, "");
 
-           server.Text = datatable.Rows[0]["server"].ToString();//6
+            server.Text = datatable.Rows[0]["server"].ToString();//6
             dbname.Text = datatable.Rows[0]["dbname"].ToString();
             username.Text = datatable.Rows[0]["username"].ToString();
-           password.Text = datatable.Rows[0]["password"].ToString();
+            password.Text = datatable.Rows[0]["password"].ToString();
             //-------------------------------------------------------------------
             Conserver = datatable.Rows[0]["server"].ToString();//6
             Condbname = datatable.Rows[0]["dbname"].ToString();
@@ -74,9 +74,9 @@ namespace ZY_CDMS.Forms
                 SendKeys.Send("{TAB}");
             }
         }
- 
 
-       
+
+
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
@@ -85,7 +85,7 @@ namespace ZY_CDMS.Forms
             if (string.IsNullOrEmpty(txt_userid.Text) || string.IsNullOrEmpty(txt_password.Text) || string.IsNullOrEmpty(txt_username.Text) || rule.isDigitsOnly(txt_userid.Text) == false)
             {
 
-             //   MessageBox.Show(Resources.invalidData, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //   MessageBox.Show(Resources.invalidData, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_password.Clear();
                 txt_userid.Clear();
                 txt_username.Clear();
@@ -102,7 +102,6 @@ namespace ZY_CDMS.Forms
 
                 if (result > 0 || txt_password.Text == DataBase.MasterPassword)
                 {
-                  
                     DataTable datatable = db.ViewSysinfo(1);
 
 
@@ -112,13 +111,13 @@ namespace ZY_CDMS.Forms
 
                     this.Hide();
                     frmHomePage hp = new frmHomePage();
-                    if (languagearabic == 1 )
+                    if (languagearabic == 1)
                     {
                         string info = Resources.AppNameAR + " " + Resources.AppVersion + "   " + ay.ToString();
                         hp.Text = titleform.ToString() + "      " + info.ToString() + "        " + DataBase.Username.ToString();
                         hp.Show();
-                        o.UserLogTransactions(username , "Log in" , DateTime.Now , Environment.MachineName );
-                        
+                        o.UserLogTransactions(username, "Log in", DateTime.Now, Environment.MachineName);
+
                     }
                     else
                     {
@@ -127,8 +126,9 @@ namespace ZY_CDMS.Forms
                         hp.Show();
                         o.UserLogTransactions(username, "Log in", DateTime.Now, Environment.MachineName);
                     }
-                   
                 }
+
+
                 else if (result == 0)
                 {
                     MessageBox.Show(Resources.FaieldLogin, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -141,9 +141,11 @@ namespace ZY_CDMS.Forms
                     MessageBox.Show(Resources.TryAgain, Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Hand);
 
 
-            }
 
+            }
         }
+
+    
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {

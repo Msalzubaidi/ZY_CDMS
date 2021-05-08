@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAppSettings));
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.txt_comno = new System.Windows.Forms.TextBox();
@@ -62,6 +63,9 @@
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
+            this.chk_AddedOptions = new DevExpress.XtraEditors.CheckEdit();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.chk_AddedOptions.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // metroLabel3
@@ -394,11 +398,27 @@
             this.simpleButton8.TabIndex = 65;
             this.simpleButton8.Text = "delete From";
             // 
+            // chk_AddedOptions
+            // 
+            this.chk_AddedOptions.Location = new System.Drawing.Point(427, 108);
+            this.chk_AddedOptions.Name = "chk_AddedOptions";
+            this.chk_AddedOptions.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_AddedOptions.Properties.Appearance.Options.UseFont = true;
+            this.chk_AddedOptions.Properties.Caption = "Added Options";
+            this.chk_AddedOptions.Size = new System.Drawing.Size(117, 19);
+            this.chk_AddedOptions.TabIndex = 71;
+            this.chk_AddedOptions.ToolTip = "SMS - Autp Updates - UserLog Transactions ";
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
             // frmAppSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(781, 331);
+            this.Controls.Add(this.chk_AddedOptions);
             this.Controls.Add(this.simpleButton6);
             this.Controls.Add(this.simpleButton8);
             this.Controls.Add(this.simpleButton5);
@@ -439,6 +459,7 @@
             this.Text = "App Settings";
             this.Load += new System.EventHandler(this.frmAppSettings_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmAppSettings_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.chk_AddedOptions.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -479,5 +500,7 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
         private DevExpress.XtraEditors.SimpleButton simpleButton6;
         private DevExpress.XtraEditors.SimpleButton simpleButton8;
+        private DevExpress.XtraEditors.CheckEdit chk_AddedOptions;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

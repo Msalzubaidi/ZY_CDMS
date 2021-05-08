@@ -22,6 +22,8 @@ namespace ZY_CDMS.Forms
         Operations o = new Operations();
         string table = "SystemInfo";
         Rules r = new Rules();
+
+       
             
 
 

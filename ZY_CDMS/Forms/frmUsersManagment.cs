@@ -133,7 +133,12 @@ namespace ZY_CDMS.Forms
                     int MyAccountSettings = int.Parse(dtp.Rows[0]["MyAcc"].ToString());
                     int Exit = int.Parse(dtp.Rows[0]["pExit"].ToString());
                     int Admin = int.Parse(dtp.Rows[0]["admin"].ToString());
+                    int AddedOptions = int.Parse(dtp.Rows[0]["AddedOptions"].ToString());
                     int UserLog = int.Parse(dtp.Rows[0]["usersLogTrans"].ToString());
+                    int sms = int.Parse(dtp.Rows[0]["SendSMS"].ToString());
+                    int rmenus = int.Parse(dtp.Rows[0]["RebuildMenus"].ToString());
+                    int upgrdeDbase = int.Parse(dtp.Rows[0]["UpgradeDatabase"].ToString());
+
                     if (Settings == 1)
                         chk_Settings.Checked = true;
                     if (MakeModel == 1)
@@ -184,14 +189,23 @@ namespace ZY_CDMS.Forms
                         chk_sysinfo.Checked = true;
                     if (userSettings == 1)
                         chk_us.Checked = true;
-                    if (UserLog == 1)
-                        chk_lt.Checked = true;
+                    
                     if (MyAccountSettings == 1)
                         chk_MyAcc.Checked = true;
                     if (Exit == 1)
                         chk_Exit.Checked = true;
                     if (Admin == 1)
                         chk_admin.Checked = true;
+                    if (AddedOptions == 1)
+                        chk_AddedOptions.Checked = true;
+                    if (sms == 1)
+                        chk_sms.Checked = true;
+                    if (UserLog == 1)
+                        chk_lt.Checked = true;
+                    if (upgrdeDbase == 1)
+                        chk_updb.Checked = true;
+                    if (rmenus  == 1)
+                        chk_rebldmuus.Checked = true;
 
 
 
@@ -264,8 +278,11 @@ namespace ZY_CDMS.Forms
 
                 chk_sysinfo.Checked = false;
                 chk_us.Checked = false;
-            
 
+            chk_sms.Checked = false;
+            chk_rebldmuus.Checked = false;
+            chk_lt.Checked = false;
+            chk_updb.Checked = false;
 
         }
        
@@ -339,6 +356,7 @@ namespace ZY_CDMS.Forms
                 chk_Reports.Checked = true;
                 chk_Search.Checked = true;
                 chk_lt.Checked = true;
+                chk_AddedOptions.Checked = true; 
 
             }
             else if (chk_admin.Checked ==false  )
@@ -378,6 +396,10 @@ namespace ZY_CDMS.Forms
             int MyAccountSettings = 1; 
             int Exit = 1;
             int Admin = 0;
+            int AddedOptions = 0;
+            int UpgradeDatabase = 1;
+            int RebuildMenus = 1;
+            int SendSMS = 0;
             int UserLog = 0;
          
             if (chk_admin.Checked == true )
@@ -429,7 +451,12 @@ namespace ZY_CDMS.Forms
 
                  MyAccountSettings = 1;
                  Exit = 1;
-              
+                AddedOptions = 1;
+                SendSMS = 1;
+                UserLog = 1;
+                UpgradeDatabase = 1;
+                RebuildMenus = 1;
+
             }
 
                 if (chk_dmm.Checked == true)
@@ -531,17 +558,25 @@ namespace ZY_CDMS.Forms
                     {
                 SystemManage = 1; 
                         sysinfo = 1;
-                UserLog = 1;
+             
                     }
                     if (chk_us.Checked == true)
                     {
                 SystemManage = 1;
                 userSettings = 1;
                     }
-                
-            
-            
-                if (r.isDigitsOnly(txt_userid.Text) == false || string.IsNullOrEmpty(txt_userid.Text) || string.IsNullOrEmpty(txt_username.Text) || string.IsNullOrEmpty(txt_pass.Text))
+
+            if (chk_AddedOptions.Checked == true)
+            {
+                SendSMS = 1; 
+                UserLog = 1;
+                UpgradeDatabase = 1;
+                RebuildMenus = 1;
+            }
+
+
+
+            if (r.isDigitsOnly(txt_userid.Text) == false || string.IsNullOrEmpty(txt_userid.Text) || string.IsNullOrEmpty(txt_username.Text) || string.IsNullOrEmpty(txt_pass.Text))
                 {
                     MessageBox.Show(Resources.invalidData, Resources.MessageTitle, 0, MessageBoxIcon.Warning);
                 }
@@ -556,9 +591,9 @@ namespace ZY_CDMS.Forms
                     if (add > 0)
                     {
                     
-                        MessageBox.Show(table + Resources.AddedSuccessfully, Resources.MessageTitle, 0, MessageBoxIcon.Information);
-                    d.AddUserPer(userid , Settings , MakeModel , EditMakeModel , Services , EditServices , Paymethods , SourceCar , PaintCodes , TaxCat , Operations ,BuyCar ,SellCar  ,  PrintInvoice  , addserivetocar, Customers  , CarMaintainance , Search , search , Reports , report , SystemManage , sysinfo , userSettings , MyAccountSettings , Exit , Admin , UserLog , 0 );
-                    simpleButton3.PerformClick();
+                     MessageBox.Show(table + Resources.AddedSuccessfully, Resources.MessageTitle, 0, MessageBoxIcon.Information);
+                      d.AddUserPer(userid , Settings , MakeModel , EditMakeModel , Services , EditServices , Paymethods , SourceCar , PaintCodes , TaxCat , Operations ,BuyCar ,SellCar  ,  PrintInvoice  , addserivetocar, Customers  , CarMaintainance , Search , search , Reports , report , SystemManage , sysinfo , userSettings , MyAccountSettings , Exit , Admin , AddedOptions , UserLog , SendSMS , RebuildMenus , UpgradeDatabase ,  0 );
+                      simpleButton3.PerformClick();
                     
 
                     }
@@ -657,6 +692,18 @@ namespace ZY_CDMS.Forms
             {
                 MessageBox.Show("Operation Cancelled by User ", Resources.MessageTitle, 0, MessageBoxIcon.Exclamation);
                 simpleButton3.PerformClick();
+            }
+        }
+
+        private void chk_AddedOptions_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk_AddedOptions.Checked)
+            {
+
+                chk_sms.Checked = true;
+                chk_rebldmuus.Checked = true;
+                chk_lt.Checked = true;
+                chk_updb.Checked = true;
             }
         }
     } 

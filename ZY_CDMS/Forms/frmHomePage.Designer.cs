@@ -70,11 +70,17 @@
             this.mun_sysmanage = new System.Windows.Forms.ToolStripMenuItem();
             this.tab_sysinfo = new System.Windows.Forms.ToolStripMenuItem();
             this.tab_usersettings = new System.Windows.Forms.ToolStripMenuItem();
-            this.usersLogTransactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_myaccount = new System.Windows.Forms.ToolStripMenuItem();
             this.tab_accountsettings = new System.Windows.Forms.ToolStripMenuItem();
-            this.reBuildMenusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mun_AddedOptions = new System.Windows.Forms.ToolStripMenuItem();
+            this.rebuildMenusToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.upgradeDatabaseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.executeBackupToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.userLogTransactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sendSMSToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_exit = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lic = new MetroFramework.Controls.MetroLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.progressPanel1 = new DevExpress.XtraWaitForm.ProgressPanel();
@@ -242,6 +248,7 @@
             this.mnu_reports,
             this.mun_sysmanage,
             this.mnu_myaccount,
+            this.mun_AddedOptions,
             this.mnu_exit});
             this.menuStrip1.Name = "menuStrip1";
             // 
@@ -385,10 +392,10 @@
             // 
             this.mun_sysmanage.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tab_sysinfo,
-            this.tab_usersettings,
-            this.usersLogTransactionsToolStripMenuItem});
+            this.tab_usersettings});
             this.mun_sysmanage.Name = "mun_sysmanage";
             resources.ApplyResources(this.mun_sysmanage, "mun_sysmanage");
+            this.mun_sysmanage.Click += new System.EventHandler(this.mun_sysmanage_Click);
             // 
             // tab_sysinfo
             // 
@@ -402,17 +409,10 @@
             resources.ApplyResources(this.tab_usersettings, "tab_usersettings");
             this.tab_usersettings.Click += new System.EventHandler(this.tab_usersettings_Click);
             // 
-            // usersLogTransactionsToolStripMenuItem
-            // 
-            this.usersLogTransactionsToolStripMenuItem.Name = "usersLogTransactionsToolStripMenuItem";
-            resources.ApplyResources(this.usersLogTransactionsToolStripMenuItem, "usersLogTransactionsToolStripMenuItem");
-            this.usersLogTransactionsToolStripMenuItem.Click += new System.EventHandler(this.usersLogTransactionsToolStripMenuItem_Click);
-            // 
             // mnu_myaccount
             // 
             this.mnu_myaccount.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tab_accountsettings,
-            this.reBuildMenusToolStripMenuItem});
+            this.tab_accountsettings});
             this.mnu_myaccount.Name = "mnu_myaccount";
             resources.ApplyResources(this.mnu_myaccount, "mnu_myaccount");
             // 
@@ -422,17 +422,67 @@
             resources.ApplyResources(this.tab_accountsettings, "tab_accountsettings");
             this.tab_accountsettings.Click += new System.EventHandler(this.myAccountSettingsToolStripMenuItem_Click);
             // 
-            // reBuildMenusToolStripMenuItem
+            // mun_AddedOptions
             // 
-            this.reBuildMenusToolStripMenuItem.Name = "reBuildMenusToolStripMenuItem";
-            resources.ApplyResources(this.reBuildMenusToolStripMenuItem, "reBuildMenusToolStripMenuItem");
-            this.reBuildMenusToolStripMenuItem.Click += new System.EventHandler(this.reBuildMenusToolStripMenuItem_Click);
+            this.mun_AddedOptions.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.rebuildMenusToolStripMenuItem1,
+            this.upgradeDatabaseToolStripMenuItem1,
+            this.executeBackupToolStripMenuItem1,
+            this.userLogTransactionsToolStripMenuItem,
+            this.sendSMSToolStripMenuItem1});
+            this.mun_AddedOptions.Name = "mun_AddedOptions";
+            resources.ApplyResources(this.mun_AddedOptions, "mun_AddedOptions");
+            // 
+            // rebuildMenusToolStripMenuItem1
+            // 
+            this.rebuildMenusToolStripMenuItem1.Name = "rebuildMenusToolStripMenuItem1";
+            resources.ApplyResources(this.rebuildMenusToolStripMenuItem1, "rebuildMenusToolStripMenuItem1");
+            this.rebuildMenusToolStripMenuItem1.Click += new System.EventHandler(this.rebuildMenusToolStripMenuItem1_Click);
+            // 
+            // upgradeDatabaseToolStripMenuItem1
+            // 
+            this.upgradeDatabaseToolStripMenuItem1.Name = "upgradeDatabaseToolStripMenuItem1";
+            resources.ApplyResources(this.upgradeDatabaseToolStripMenuItem1, "upgradeDatabaseToolStripMenuItem1");
+            this.upgradeDatabaseToolStripMenuItem1.Click += new System.EventHandler(this.upgradeDatabaseToolStripMenuItem1_Click);
+            // 
+            // executeBackupToolStripMenuItem1
+            // 
+            this.executeBackupToolStripMenuItem1.Name = "executeBackupToolStripMenuItem1";
+            resources.ApplyResources(this.executeBackupToolStripMenuItem1, "executeBackupToolStripMenuItem1");
+            this.executeBackupToolStripMenuItem1.Click += new System.EventHandler(this.executeBackupToolStripMenuItem1_Click);
+            // 
+            // userLogTransactionsToolStripMenuItem
+            // 
+            this.userLogTransactionsToolStripMenuItem.Name = "userLogTransactionsToolStripMenuItem";
+            resources.ApplyResources(this.userLogTransactionsToolStripMenuItem, "userLogTransactionsToolStripMenuItem");
+            this.userLogTransactionsToolStripMenuItem.Click += new System.EventHandler(this.userLogTransactionsToolStripMenuItem_Click);
+            // 
+            // sendSMSToolStripMenuItem1
+            // 
+            this.sendSMSToolStripMenuItem1.Name = "sendSMSToolStripMenuItem1";
+            resources.ApplyResources(this.sendSMSToolStripMenuItem1, "sendSMSToolStripMenuItem1");
+            this.sendSMSToolStripMenuItem1.Click += new System.EventHandler(this.sendSMSToolStripMenuItem1_Click);
             // 
             // mnu_exit
             // 
+            this.mnu_exit.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.logOutToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.mnu_exit.Name = "mnu_exit";
             resources.ApplyResources(this.mnu_exit, "mnu_exit");
             this.mnu_exit.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            resources.ApplyResources(this.logOutToolStripMenuItem, "logOutToolStripMenuItem");
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click_1);
             // 
             // lic
             // 
@@ -564,11 +614,17 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement11;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement13;
-        private System.Windows.Forms.ToolStripMenuItem usersLogTransactionsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reBuildMenusToolStripMenuItem;
         private DevExpress.XtraWaitForm.ProgressPanel progressPanel1;
         private System.Windows.Forms.Label lblTimeElapsed;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mun_AddedOptions;
+        private System.Windows.Forms.ToolStripMenuItem rebuildMenusToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem upgradeDatabaseToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem executeBackupToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem userLogTransactionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sendSMSToolStripMenuItem1;
     }
 }

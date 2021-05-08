@@ -110,11 +110,11 @@ namespace ZY_CDMS.Classes
 
         }
 
-        public int AddUserPer(int unum , int settings, int makemodel, int editmakemodel, int service, int editservice, int paymethods, int sourcecar, int paintcodes, int taxCat, int operations, int buycar, int sellcar, int printinvoice, int addserivetocar,  int customers, int carMain, int searchMain, int search, int Reports, int rpt, int systemMange, int sysinfo, int usersettings, int MyAcc, int pExit, int admin , int usersLogTrans , int IsDeleted)
+        public int AddUserPer(int unum , int settings, int makemodel, int editmakemodel, int service, int editservice, int paymethods, int sourcecar, int paintcodes, int taxCat, int operations, int buycar, int sellcar, int printinvoice, int addserivetocar,  int customers, int carMain, int searchMain, int search, int Reports, int rpt, int systemMange, int sysinfo, int usersettings, int MyAcc, int pExit, int admin ,int  AddedOptions , int usersLogTrans, int SendSMS , int RebuildMenus ,int  UpgradeDatabase  , int IsDeleted)
         {
 
             SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
-            SqlCommand cmd = new SqlCommand("INSERT INTO User_permission(user_id ,  settings,  makemodel,  editmakemodel,  service,  editservice,  paymethods,  sourcecar,  paintcodes,  taxCat,  operations,  buycar,  sellcar , addserivetocar ,   printinvoice,  customers,  carMain,  searchMain,  search,  Reports,  rpt,  systemMange,  sysinfo,  usersettings,  MyAcc,  pExit ,  admin , usersLogTrans  , IsDeleted ) VALUES(@userid ,  @settings,  @makemodel,  @editmakemodel,  @service,  @editservice,  @paymethods,  @sourcecar,  @paintcodes,  @taxCat,  @operations,  @buycar,  @sellcar , @addserivetocar ,   @printinvoice,  @customers,  @carMain,  @searchMain,  @search,  @Reports,  @rpt,  @systemMange,  @sysinfo,  @usersettings,  @MyAcc,  @pExit ,  @admin , @usersLogTrans ,  @IsDeleted )", con); // sql command to so get data from data bas
+            SqlCommand cmd = new SqlCommand("INSERT INTO User_permission(user_id ,  settings,  makemodel,  editmakemodel,  service,  editservice,  paymethods,  sourcecar,  paintcodes,  taxCat,  operations,  buycar,  sellcar , addserivetocar ,   printinvoice,  customers,  carMain,  searchMain,  search,  Reports,  rpt,  systemMange,  sysinfo,  usersettings,  MyAcc,  pExit ,  admin ,   AddedOptions ,  usersLogTrans,  SendSMS ,  RebuildMenus ,  UpgradeDatabase  , IsDeleted ) VALUES(@userid ,  @settings,  @makemodel,  @editmakemodel,  @service,  @editservice,  @paymethods,  @sourcecar,  @paintcodes,  @taxCat,  @operations,  @buycar,  @sellcar , @addserivetocar ,   @printinvoice,  @customers,  @carMain,  @searchMain,  @search,  @Reports,  @rpt,  @systemMange,  @sysinfo,  @usersettings,  @MyAcc,  @pExit ,  @admin , @AddedOptions ,  @usersLogTrans,  @SendSMS ,  @RebuildMenus ,  @UpgradeDatabase ,  @IsDeleted )", con); // sql command to so get data from data bas
            
             cmd.Parameters.Add(new SqlParameter("@userid", unum));
             cmd.Parameters.Add(new SqlParameter("@settings", settings));
@@ -143,8 +143,12 @@ namespace ZY_CDMS.Classes
             cmd.Parameters.Add(new SqlParameter("@MyAcc", MyAcc));
             cmd.Parameters.Add(new SqlParameter("@pExit", pExit));
             cmd.Parameters.Add(new SqlParameter("@admin", admin));
-            cmd.Parameters.Add(new SqlParameter("@usersLogTrans", usersLogTrans)); 
-                 cmd.Parameters.Add(new SqlParameter("@IsDeleted", IsDeleted)); 
+            cmd.Parameters.Add(new SqlParameter("@usersLogTrans", usersLogTrans));
+            cmd.Parameters.Add(new SqlParameter("@AddedOptions", AddedOptions));
+            cmd.Parameters.Add(new SqlParameter("@SendSMS", SendSMS));
+            cmd.Parameters.Add(new SqlParameter("@RebuildMenus", RebuildMenus));
+            cmd.Parameters.Add(new SqlParameter("@UpgradeDatabase", UpgradeDatabase));
+            cmd.Parameters.Add(new SqlParameter("@IsDeleted", IsDeleted)); 
 
 
 

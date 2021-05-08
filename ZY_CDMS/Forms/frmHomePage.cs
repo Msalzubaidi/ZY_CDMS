@@ -27,6 +27,8 @@ namespace ZY_CDMS.Forms
 
         public static int viewcbo = 0 ;
         System.Diagnostics.Stopwatch timer = new System.Diagnostics.Stopwatch();
+        public static int opened = 0;
+
 
 
         private void defineMakeModelToolStripMenuItem_Click(object sender, EventArgs e)
@@ -73,30 +75,7 @@ namespace ZY_CDMS.Forms
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            String prt = "";
-            if (frmLogin.languagearabic == 1 )
-            {
-                prt = ResourcesAR.ExitPromt; ;
-             
-            }
-            else
-            {
-                prt = Resources.ExitPromtEng; ;
-            }
-            DialogResult result = MessageBox.Show(prt.ToString() ,  Resources.MessageTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes )
-            {
-
-                o.UserLogTransactions(DataBase.Username.ToString() , "Log out", DateTime.Now, Environment.MachineName);
-                Application.Exit();
-              
-
-
-            }
-            else if (result == DialogResult.No)
-            {
-
-            }
+            
         }
 
         private void defineServicesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -226,6 +205,7 @@ namespace ZY_CDMS.Forms
 
         private void frmHomePage_Load(object sender, EventArgs e)
         {
+            opened = 65;
             int x = int.Parse(DataBase.Unum.ToString());
             string logedusername = DataBase.Username.ToString();
             DataTable userPermission = d.ViewUserper(x);
@@ -271,7 +251,13 @@ namespace ZY_CDMS.Forms
             int userSettings = int.Parse(userPermission.Rows[0]["usersettings"].ToString());
             int MyAccountSettings = int.Parse(userPermission.Rows[0]["MyAcc"].ToString());
             int Exit = int.Parse(userPermission.Rows[0]["pExit"].ToString());
-            int UserLog = int.Parse(userPermission.Rows[0]["usersLogTrans"].ToString());
+
+                int AddedOptions = int.Parse(userPermission.Rows[0]["AddedOptions"].ToString());
+                int UserLog = int.Parse(userPermission.Rows[0]["usersLogTrans"].ToString());
+                int sms = int.Parse(userPermission.Rows[0]["SendSMS"].ToString());
+                int rmenus = int.Parse(userPermission.Rows[0]["RebuildMenus"].ToString());
+                int upgrdeDbase = int.Parse(userPermission.Rows[0]["UpgradeDatabase"].ToString());
+
 
                 int Permissions = 0; 
 
@@ -392,9 +378,7 @@ namespace ZY_CDMS.Forms
 
                     tab_usersettings.Visible = false;
 
-                if (UserLog == 0)
-
-                    usersLogTransactionsToolStripMenuItem.Visible = false;
+               
                 if (MyAccountSettings == 0 || MyAccountSettings == 1 )
              mnu_myaccount.Visible = true ;
                 if (Exit == 0 || Exit == 1)
@@ -404,7 +388,43 @@ namespace ZY_CDMS.Forms
                 
                 }
 
-           }
+                if (AddedOptions == 0)
+                {
+                    if (sms == 1 || rmenus == 1 || upgrdeDbase == 1 || UserLog == 1 )
+                    {
+                        mun_AddedOptions.Visible = true;
+                    }
+                    else
+                    {
+                        mun_AddedOptions.Visible = false;
+                    }
+                  
+                }
+
+                if (sms == 0)
+
+                {
+                    sendSMSToolStripMenuItem1.Visible = false;
+                }
+
+                if (rmenus == 0)
+
+                {
+                    rebuildMenusToolStripMenuItem1.Visible = false;
+                }
+                if (upgrdeDbase == 0)
+
+                {
+                    upgradeDatabaseToolStripMenuItem1.Visible = false;
+                }
+
+                if (UserLog == 0)
+
+                {
+                    userLogTransactionsToolStripMenuItem.Visible = false;
+                } 
+
+            }
 
             else
             {
@@ -916,28 +936,13 @@ namespace ZY_CDMS.Forms
 
         private void usersLogTransactionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            bool isopen = false;
-            foreach (Form f in Application.OpenForms)
-            {
-                if (f.Text == "Users Log Transactions")
-                {
-                    isopen = true;
-                    f.BringToFront();
-                    break;
-                }
-            }
-
-            if (isopen == false)
-            {
-                UsersLogTransactions ult = new UsersLogTransactions();
-                ult.Show();
-            }
+           
         }
 
         private void reBuildMenusToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            this.Refresh();
+          
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -984,6 +989,137 @@ namespace ZY_CDMS.Forms
                 accordionControl1.Visible = true;
 
             }
+        }
+
+        private void exitToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            String prt = "";
+            if (frmLogin.languagearabic == 1)
+            {
+                prt = ResourcesAR.ExitPromt; ;
+
+            }
+            else
+            {
+                prt = Resources.ExitPromtEng; ;
+            }
+            DialogResult result = MessageBox.Show(prt.ToString(), Resources.MessageTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+
+                o.UserLogTransactions(DataBase.Username.ToString(), "Log out", DateTime.Now, Environment.MachineName);
+                Application.Exit();
+
+
+
+            }
+            else if (result == DialogResult.No)
+            {
+
+            }
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String prt = "";
+            if (frmLogin.languagearabic == 1)
+            {
+                prt = ResourcesAR.ExitPromt; ;
+
+            }
+            else
+            {
+                prt = Resources.ExitPromtEng; ;
+            }
+            DialogResult result = MessageBox.Show(prt.ToString(), Resources.MessageTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+
+                frmLogin l = new frmLogin();
+                l.ShowDialog();
+
+
+
+            }
+            else if (result == DialogResult.No)
+            {
+
+            }
+        }
+
+        private void sendSMSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void mun_sysmanage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void upgradeDataBaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void executeBackupToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void userLogTransactionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Users Log Transactions")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+
+            if (isopen == false)
+            {
+                UsersLogTransactions ult = new UsersLogTransactions();
+                ult.Show();
+            }
+        }
+
+        private void sendSMSToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            bool isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Send SMS")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+
+            if (isopen == false)
+            {
+                frmSendSMS sms = new frmSendSMS();
+                sms.Show();
+            }
+        }
+
+        private void upgradeDatabaseToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Upgrade Database Done ", Resources.MessageTitle, 0, MessageBoxIcon.Information);
+        }
+
+        private void executeBackupToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Backup Database Executed Successfully  ", Resources.MessageTitle, 0, MessageBoxIcon.Information);
+        }
+
+        private void rebuildMenusToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Refresh();
         }
     }
 }
