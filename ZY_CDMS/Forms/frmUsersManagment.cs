@@ -107,6 +107,7 @@ namespace ZY_CDMS.Forms
                     txt_userid.Text = dtable.Rows[0]["user_id"].ToString();//1
                     txt_username.Text = dtable.Rows[0]["user_name"].ToString();//2
                     txt_pass.Text = dtable.Rows[0]["password"].ToString();
+                    txtemail.Text = dtable.Rows[0]["email"].ToString();//2
                     int Settings = int.Parse(dtp.Rows[0]["settings"].ToString());
                     int MakeModel = int.Parse(dtp.Rows[0]["makemodel"].ToString());
                     int EditMakeModel = int.Parse(dtp.Rows[0]["editmakemodel"].ToString());
@@ -576,7 +577,7 @@ namespace ZY_CDMS.Forms
 
 
 
-            if (r.isDigitsOnly(txt_userid.Text) == false || string.IsNullOrEmpty(txt_userid.Text) || string.IsNullOrEmpty(txt_username.Text) || string.IsNullOrEmpty(txt_pass.Text))
+            if (r.isDigitsOnly(txt_userid.Text) == false || string.IsNullOrEmpty(txtemail.Text) ||string.IsNullOrEmpty(txt_userid.Text) || string.IsNullOrEmpty(txt_username.Text) || string.IsNullOrEmpty(txt_pass.Text))
                 {
                     MessageBox.Show(Resources.invalidData, Resources.MessageTitle, 0, MessageBoxIcon.Warning);
                 }
@@ -585,8 +586,9 @@ namespace ZY_CDMS.Forms
                     int userid = int.Parse(txt_userid.Text);
                     string username = txt_username.Text;
                     string password = txt_pass.Text;
+                   string email = txtemail.Text; 
 
-                    int add = d.AddUser(userid, username, password , 0);
+                    int add = d.AddUser(userid, username, password , 0 ,  email);
 
                     if (add > 0)
                     {

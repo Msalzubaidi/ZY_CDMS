@@ -246,16 +246,18 @@ namespace ZY_CDMS.Classes
         }
 
 
-        public int AddUser(int unum, string username, string password , int IsDeleted)
+        public int AddUser(int unum, string username, string password , int IsDeleted , string email )
         {
 
             SqlConnection con = new SqlConnection(connstring);
-            SqlCommand cmd = new SqlCommand("INSERT INTO users(user_id,user_name , password ,  IsDeleted ) VALUES(@unum,@un,@psd , @IsDeleted)", con); // sql command to so get data from data bas
+            SqlCommand cmd = new SqlCommand("INSERT INTO users(user_id,user_name , password ,  IsDeleted , email  ) VALUES(@unum,@un,@psd , @IsDeleted , @email)", con); // sql command to so get data from data bas
 
             cmd.Parameters.Add(new SqlParameter("@unum", unum));
             cmd.Parameters.Add(new SqlParameter("@un", username));
             cmd.Parameters.Add(new SqlParameter("@psd", password));
             cmd.Parameters.Add(new SqlParameter("@IsDeleted", IsDeleted));
+            cmd.Parameters.Add(new SqlParameter("@email", email));
+      
 
 
 
@@ -824,6 +826,43 @@ namespace ZY_CDMS.Classes
 
             return dt;
 
+        }
+
+
+        public int ActivaApp()
+        {
+            SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
+            SqlCommand cmd = null;
+          
+                cmd = new SqlCommand("update ActivationApp set Activated = 1", con);
+            
+
+
+            // sql command to so get data from data bas
+
+       
+            con.Open();
+
+            return cmd.ExecuteNonQuery();
+
+
+
+
+
+        }
+
+        public int KeyAdd(string key  )
+        {
+
+            SqlConnection con = new SqlConnection(DataBase.connstring); // making connection  
+            SqlCommand cmd = new SqlCommand("Update  ActivationApp set ActivationKey=@key", con); // sql command to so get data from data bas
+
+            cmd.Parameters.Add(new SqlParameter("@key", key));
+         
+
+            con.Open();
+
+            return cmd.ExecuteNonQuery();
         }
 
 

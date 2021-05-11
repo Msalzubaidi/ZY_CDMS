@@ -243,5 +243,25 @@ namespace ZY_CDMS.Forms
             this.Controls.Clear();
             InitializeComponent();
         }
+
+        private void hyperlinkLabelControl1_Click(object sender, EventArgs e)
+        {
+            bool isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Reset Password")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+
+            if (isopen == false)
+            {
+                frmResetPassword rp = new frmResetPassword();
+                rp.Show();
+            }
+        }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZY_CDMS.Classes;
+using ZY_CDMS.Properties;
 
 namespace ZY_CDMS.Forms
 {
@@ -17,6 +18,10 @@ namespace ZY_CDMS.Forms
         {
             InitializeComponent();
         }
+
+        Operations o = new Operations();
+        string table = "SystemInfo";
+        string imglocation = "";
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -39,12 +44,44 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            /*        
-           Z(day)Y(month)C(first digit of year)D(second digit of year)M(third digit of year)S(fourth digit of year)
-           Z(25)Y(12)C(2)D(0)M(2)S(0)
-           Z25Y12C2D0M2S0 
+            DataBase db = new DataBase();
 
-            * */
+            if (master.Text == DataBase.MasterPassword || string.IsNullOrEmpty (master.Text)==false)
+            {
+                db.ActivaApp();
+
+                MessageBox.Show("Activated Done Successfully", Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                db.KeyAdd(key.Text);
+                this.Hide();
+                frmLogin l = new frmLogin();
+                l.Show();
+            }
+            else
+            {
+                MessageBox.Show("Try Again - Invalid Master Key or License", Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmActivationApp_Load(object sender, EventArgs e)
+        {
+            string condition = "";
+
+            DataTable dtable = o.SelctData(table, 0, condition);
+
+            DataTable dtable2 = o.SelctData("ActivationApp", 0, condition);
+
+            string comname = dtable.Rows[0]["name"].ToString();
+            int  ActiveStatus = int.Parse(dtable2.Rows[0]["Activated"].ToString());
+            txt_comname.Text = dtable.Rows[0]["name"].ToString();
+            from.Text = dtable.Rows[0]["licencefrom"].ToString();
+            to.Text = dtable.Rows[0]["licenceto"].ToString();
 
             string date = DateTime.Now.ToString("ddMMyyyy");
             string day = date[0] + "" + date[1];
@@ -68,25 +105,20 @@ namespace ZY_CDMS.Forms
             sb.Append('S');
             sb.Append(fth);
 
-            MessageBox.Show(sb.ToString());
-            key.Text = sb.ToString();
-
-
-        }
-
-        private void simpleButton2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void frmActivationApp_Load(object sender, EventArgs e)
-        {
+            string newcomname = comname.Replace(" ", String.Empty);
           
-           
+            key.Text = sb.ToString()+ newcomname.ToString();
+
+            if(ActiveStatus == 0 )
+            {
+                toggleSwitch1.IsOn = false; 
+            }
+            if (ActiveStatus == 1)
+            {
+                toggleSwitch1.IsOn = true;
+            }
 
 
-          
-            
 
         }
     }

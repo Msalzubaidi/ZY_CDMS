@@ -1114,7 +1114,25 @@ namespace ZY_CDMS.Forms
 
         private void executeBackupToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Backup Database Executed Successfully  ", Resources.MessageTitle, 0, MessageBoxIcon.Information);
+            
+
+
+            bool isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Backup")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+
+            if (isopen == false)
+            {
+                frmBackup b = new frmBackup();
+                b.Show();
+            }
         }
 
         private void rebuildMenusToolStripMenuItem1_Click(object sender, EventArgs e)

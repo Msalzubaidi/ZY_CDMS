@@ -18,9 +18,28 @@ namespace ZY_CDMS
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            Operations o = new Operations();
+            string table = "ActivationApp";
+       
+            string condition = "";
+
+       
+            DataTable dtable2 = o.SelctData(table, 0, condition);
+            int ActiveStatus = int.Parse(dtable2.Rows[0]["Activated"].ToString());
+            if (ActiveStatus == 0)
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new frmActivationApp());
+            }
+            if (ActiveStatus == 1)
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new frmLogin());
+            }
+
+         
           
         }
     }

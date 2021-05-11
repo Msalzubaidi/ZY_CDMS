@@ -42,6 +42,11 @@
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_updb = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_rebldmuus = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_AddedOptions = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_sms = new DevExpress.XtraEditors.CheckEdit();
             this.chk_lt = new DevExpress.XtraEditors.CheckEdit();
             this.chk_asc = new DevExpress.XtraEditors.CheckEdit();
             this.chk_esv = new DevExpress.XtraEditors.CheckEdit();
@@ -71,13 +76,15 @@
             this.chk_admin = new DevExpress.XtraEditors.CheckEdit();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
-            this.chk_sms = new DevExpress.XtraEditors.CheckEdit();
-            this.chk_AddedOptions = new DevExpress.XtraEditors.CheckEdit();
-            this.chk_rebldmuus = new DevExpress.XtraEditors.CheckEdit();
-            this.chk_updb = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.txtemail = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_userid.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_updb.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_rebldmuus.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_AddedOptions.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_sms.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_lt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_asc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_esv.Properties)).BeginInit();
@@ -105,11 +112,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chk_dmm.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_Settings.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_admin.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_sms.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_AddedOptions.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_rebldmuus.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_updb.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // cbo_userid
@@ -124,7 +126,7 @@
             // 
             // txt_userid
             // 
-            this.txt_userid.Location = new System.Drawing.Point(12, 93);
+            this.txt_userid.Location = new System.Drawing.Point(12, 89);
             this.txt_userid.Name = "txt_userid";
             this.txt_userid.Size = new System.Drawing.Size(175, 20);
             this.txt_userid.TabIndex = 46;
@@ -151,7 +153,7 @@
             this.metroLabel2.CustomBackground = true;
             this.metroLabel2.CustomForeColor = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.Location = new System.Drawing.Point(12, 65);
+            this.metroLabel2.Location = new System.Drawing.Point(12, 60);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(67, 25);
             this.metroLabel2.TabIndex = 48;
@@ -165,7 +167,7 @@
             this.metroLabel3.CustomBackground = true;
             this.metroLabel3.CustomForeColor = true;
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel3.Location = new System.Drawing.Point(12, 131);
+            this.metroLabel3.Location = new System.Drawing.Point(12, 112);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(97, 25);
             this.metroLabel3.TabIndex = 50;
@@ -174,7 +176,7 @@
             // 
             // txt_username
             // 
-            this.txt_username.Location = new System.Drawing.Point(12, 159);
+            this.txt_username.Location = new System.Drawing.Point(12, 141);
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(236, 20);
             this.txt_username.TabIndex = 49;
@@ -187,7 +189,7 @@
             this.metroLabel4.CustomBackground = true;
             this.metroLabel4.CustomForeColor = true;
             this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel4.Location = new System.Drawing.Point(12, 185);
+            this.metroLabel4.Location = new System.Drawing.Point(12, 163);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(82, 25);
             this.metroLabel4.TabIndex = 52;
@@ -196,7 +198,7 @@
             // 
             // txt_pass
             // 
-            this.txt_pass.Location = new System.Drawing.Point(12, 213);
+            this.txt_pass.Location = new System.Drawing.Point(12, 191);
             this.txt_pass.Name = "txt_pass";
             this.txt_pass.Size = new System.Drawing.Size(236, 20);
             this.txt_pass.TabIndex = 51;
@@ -206,7 +208,7 @@
             // simpleButton1
             // 
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(103, 265);
+            this.simpleButton1.Location = new System.Drawing.Point(100, 272);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 55;
@@ -216,7 +218,7 @@
             // simpleButton2
             // 
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(103, 294);
+            this.simpleButton2.Location = new System.Drawing.Point(100, 301);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 56;
@@ -226,7 +228,7 @@
             // simpleButton3
             // 
             this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(22, 294);
+            this.simpleButton3.Location = new System.Drawing.Point(19, 301);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(75, 23);
             this.simpleButton3.TabIndex = 57;
@@ -236,7 +238,7 @@
             // simpleButton4
             // 
             this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(181, 294);
+            this.simpleButton4.Location = new System.Drawing.Point(178, 301);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(87, 23);
             this.simpleButton4.TabIndex = 58;
@@ -283,6 +285,57 @@
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Permissions";
+            // 
+            // checkEdit1
+            // 
+            this.checkEdit1.Location = new System.Drawing.Point(485, 248);
+            this.checkEdit1.Name = "checkEdit1";
+            this.checkEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkEdit1.Properties.Appearance.Options.UseFont = true;
+            this.checkEdit1.Properties.Caption = "Execute Backup";
+            this.checkEdit1.Size = new System.Drawing.Size(117, 19);
+            this.checkEdit1.TabIndex = 69;
+            // 
+            // chk_updb
+            // 
+            this.chk_updb.Location = new System.Drawing.Point(485, 224);
+            this.chk_updb.Name = "chk_updb";
+            this.chk_updb.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_updb.Properties.Appearance.Options.UseFont = true;
+            this.chk_updb.Properties.Caption = "Upgrade Database";
+            this.chk_updb.Size = new System.Drawing.Size(117, 19);
+            this.chk_updb.TabIndex = 68;
+            // 
+            // chk_rebldmuus
+            // 
+            this.chk_rebldmuus.Location = new System.Drawing.Point(485, 199);
+            this.chk_rebldmuus.Name = "chk_rebldmuus";
+            this.chk_rebldmuus.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_rebldmuus.Properties.Appearance.Options.UseFont = true;
+            this.chk_rebldmuus.Properties.Caption = "Rebuild Menus";
+            this.chk_rebldmuus.Size = new System.Drawing.Size(117, 19);
+            this.chk_rebldmuus.TabIndex = 67;
+            // 
+            // chk_AddedOptions
+            // 
+            this.chk_AddedOptions.Location = new System.Drawing.Point(471, 124);
+            this.chk_AddedOptions.Name = "chk_AddedOptions";
+            this.chk_AddedOptions.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_AddedOptions.Properties.Appearance.Options.UseFont = true;
+            this.chk_AddedOptions.Properties.Caption = "Added Options";
+            this.chk_AddedOptions.Size = new System.Drawing.Size(117, 19);
+            this.chk_AddedOptions.TabIndex = 66;
+            this.chk_AddedOptions.CheckedChanged += new System.EventHandler(this.chk_AddedOptions_CheckedChanged);
+            // 
+            // chk_sms
+            // 
+            this.chk_sms.Location = new System.Drawing.Point(485, 149);
+            this.chk_sms.Name = "chk_sms";
+            this.chk_sms.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_sms.Properties.Appearance.Options.UseFont = true;
+            this.chk_sms.Properties.Caption = "Send SMS";
+            this.chk_sms.Size = new System.Drawing.Size(117, 19);
+            this.chk_sms.TabIndex = 65;
             // 
             // chk_lt
             // 
@@ -564,7 +617,7 @@
             // simpleButton5
             // 
             this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
-            this.simpleButton5.Location = new System.Drawing.Point(22, 265);
+            this.simpleButton5.Location = new System.Drawing.Point(19, 272);
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Size = new System.Drawing.Size(75, 23);
             this.simpleButton5.TabIndex = 60;
@@ -574,70 +627,43 @@
             // simpleButton6
             // 
             this.simpleButton6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.ImageOptions.Image")));
-            this.simpleButton6.Location = new System.Drawing.Point(184, 265);
+            this.simpleButton6.Location = new System.Drawing.Point(181, 272);
             this.simpleButton6.Name = "simpleButton6";
             this.simpleButton6.Size = new System.Drawing.Size(84, 23);
             this.simpleButton6.TabIndex = 61;
             this.simpleButton6.Text = "Activate";
             this.simpleButton6.Click += new System.EventHandler(this.simpleButton6_Click);
             // 
-            // chk_sms
+            // metroLabel5
             // 
-            this.chk_sms.Location = new System.Drawing.Point(485, 149);
-            this.chk_sms.Name = "chk_sms";
-            this.chk_sms.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_sms.Properties.Appearance.Options.UseFont = true;
-            this.chk_sms.Properties.Caption = "Send SMS";
-            this.chk_sms.Size = new System.Drawing.Size(117, 19);
-            this.chk_sms.TabIndex = 65;
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.BackColor = System.Drawing.SystemColors.Control;
+            this.metroLabel5.CustomBackground = true;
+            this.metroLabel5.CustomForeColor = true;
+            this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel5.Location = new System.Drawing.Point(12, 212);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(53, 25);
+            this.metroLabel5.TabIndex = 62;
+            this.metroLabel5.Text = "Email";
+            this.metroLabel5.UseStyleColors = true;
             // 
-            // chk_AddedOptions
+            // txtemail
             // 
-            this.chk_AddedOptions.Location = new System.Drawing.Point(471, 124);
-            this.chk_AddedOptions.Name = "chk_AddedOptions";
-            this.chk_AddedOptions.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_AddedOptions.Properties.Appearance.Options.UseFont = true;
-            this.chk_AddedOptions.Properties.Caption = "Added Options";
-            this.chk_AddedOptions.Size = new System.Drawing.Size(117, 19);
-            this.chk_AddedOptions.TabIndex = 66;
-            this.chk_AddedOptions.CheckedChanged += new System.EventHandler(this.chk_AddedOptions_CheckedChanged);
-            // 
-            // chk_rebldmuus
-            // 
-            this.chk_rebldmuus.Location = new System.Drawing.Point(485, 199);
-            this.chk_rebldmuus.Name = "chk_rebldmuus";
-            this.chk_rebldmuus.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_rebldmuus.Properties.Appearance.Options.UseFont = true;
-            this.chk_rebldmuus.Properties.Caption = "Rebuild Menus";
-            this.chk_rebldmuus.Size = new System.Drawing.Size(117, 19);
-            this.chk_rebldmuus.TabIndex = 67;
-            // 
-            // chk_updb
-            // 
-            this.chk_updb.Location = new System.Drawing.Point(485, 224);
-            this.chk_updb.Name = "chk_updb";
-            this.chk_updb.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_updb.Properties.Appearance.Options.UseFont = true;
-            this.chk_updb.Properties.Caption = "Upgrade Database";
-            this.chk_updb.Size = new System.Drawing.Size(117, 19);
-            this.chk_updb.TabIndex = 68;
-            // 
-            // checkEdit1
-            // 
-            this.checkEdit1.Location = new System.Drawing.Point(485, 248);
-            this.checkEdit1.Name = "checkEdit1";
-            this.checkEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkEdit1.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit1.Properties.Caption = "Execute Backup";
-            this.checkEdit1.Size = new System.Drawing.Size(117, 19);
-            this.checkEdit1.TabIndex = 69;
+            this.txtemail.Location = new System.Drawing.Point(12, 240);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(236, 20);
+            this.txtemail.TabIndex = 62;
+            this.txtemail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmUsersManagment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(902, 340);
+            this.Controls.Add(this.txtemail);
             this.Controls.Add(this.simpleButton6);
+            this.Controls.Add(this.metroLabel5);
             this.Controls.Add(this.simpleButton5);
             this.Controls.Add(this.chk_admin);
             this.Controls.Add(this.groupBox1);
@@ -663,6 +689,11 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmUsersManagment_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.cbo_userid.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_updb.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_rebldmuus.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_AddedOptions.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_sms.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_lt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_asc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_esv.Properties)).EndInit();
@@ -690,11 +721,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chk_dmm.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_Settings.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_admin.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_sms.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_AddedOptions.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_rebldmuus.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_updb.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -749,5 +775,7 @@
         private DevExpress.XtraEditors.CheckEdit chk_rebldmuus;
         private DevExpress.XtraEditors.CheckEdit chk_AddedOptions;
         private DevExpress.XtraEditors.CheckEdit checkEdit1;
+        private System.Windows.Forms.TextBox txtemail;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
     }
 }

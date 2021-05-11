@@ -261,6 +261,7 @@
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "UsersLogTransactions";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Users Log Transactions";
             this.Load += new System.EventHandler(this.UsersLogTransactions_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MyGrid)).EndInit();
