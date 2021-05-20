@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ZY_CDMS.Properties;
 
 namespace ZY_CDMS.Forms
 {
@@ -43,6 +44,11 @@ namespace ZY_CDMS.Forms
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmAbout_Load(object sender, EventArgs e)
+        {
+            metroLabel4.Text = Resources.AppVersion;
         }
     }
 }

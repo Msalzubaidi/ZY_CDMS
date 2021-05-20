@@ -210,7 +210,7 @@ namespace ZY_CDMS.Forms
             string logedusername = DataBase.Username.ToString();
             DataTable userPermission = d.ViewUserper(x);
             DataTable datatable = o.SelctData(table,0,"");
-
+      
             int version = int.Parse(datatable.Rows[0]["version"].ToString());//6
             DateTime dt = DateTime.Parse(datatable.Rows[0]["licenceto"].ToString());
             DateTime dt1 = DateTime.Parse(datatable.Rows[0]["licencefrom"].ToString());
@@ -221,6 +221,8 @@ namespace ZY_CDMS.Forms
             string nl = "\r\n";
             menuStrip1.Visible = false;
             accordionControl1.Visible = false;
+
+          
             if (userPermission.Rows.Count > 0 )
             { 
             ///////////////////////////  User Permission //////////////////////////////
@@ -534,7 +536,8 @@ namespace ZY_CDMS.Forms
 
             }
 
-        
+            
+
         }
 
         private void myAccountSettingsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -804,7 +807,25 @@ namespace ZY_CDMS.Forms
 
         private void lic_DoubleClick(object sender, EventArgs e)
         {
-           
+            bool isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "System Info")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+
+            if (isopen == false)
+            {
+                frmSystemInfo si = new frmSystemInfo();
+
+
+                si.Show();
+
+            }
         }
 
         private void accordionControlElement12_Click(object sender, EventArgs e)

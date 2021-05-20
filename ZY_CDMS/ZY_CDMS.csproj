@@ -447,6 +447,12 @@
       <DependentUpon>Transactions.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reports\ZYTechinvoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZYTechinvoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ResourcesAR.Designer.cs">
       <DependentUpon>ResourcesAR.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -628,6 +634,10 @@
     <EmbeddedResource Include="Reports\Transactions.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Transactions.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ZYTechinvoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ZYTechinvoice.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="ResourcesAR.resx">
       <Generator>ResXFileCodeGenerator</Generator>

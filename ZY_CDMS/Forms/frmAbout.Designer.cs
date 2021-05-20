@@ -35,6 +35,7 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.hyperlinkLabelControl1 = new DevExpress.XtraEditors.HyperlinkLabelControl();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // lic
@@ -46,9 +47,9 @@
             this.lic.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lic.Location = new System.Drawing.Point(48, 9);
             this.lic.Name = "lic";
-            this.lic.Size = new System.Drawing.Size(516, 25);
+            this.lic.Size = new System.Drawing.Size(460, 25);
             this.lic.TabIndex = 9;
-            this.lic.Text = "ZY Technologies Solutions | Car Dealers Mangment System V1.0.5.2";
+            this.lic.Text = "ZY Technologies Solutions | Car Dealers Mangment System ";
             this.lic.UseStyleColors = true;
             // 
             // metroLabel1
@@ -113,11 +114,26 @@
             this.hyperlinkLabelControl1.Text = "What\'new ?";
             this.hyperlinkLabelControl1.Click += new System.EventHandler(this.hyperlinkLabelControl1_Click);
             // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.BackColor = System.Drawing.SystemColors.Control;
+            this.metroLabel4.CustomBackground = true;
+            this.metroLabel4.CustomForeColor = true;
+            this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel4.Location = new System.Drawing.Point(497, 9);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(66, 25);
+            this.metroLabel4.TabIndex = 15;
+            this.metroLabel4.Text = "version";
+            this.metroLabel4.UseStyleColors = true;
+            // 
             // frmAbout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(638, 202);
+            this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.hyperlinkLabelControl1);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.metroLabel3);
@@ -129,6 +145,7 @@
             this.Name = "frmAbout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About";
+            this.Load += new System.EventHandler(this.frmAbout_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,5 +159,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl1;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
     }
 }

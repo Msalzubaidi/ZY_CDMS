@@ -55,6 +55,7 @@
             // 
             // txtemail
             // 
+            this.txtemail.Enabled = false;
             this.txtemail.Location = new System.Drawing.Point(126, 117);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(212, 20);
@@ -110,6 +111,7 @@
             // 
             // txtpassword
             // 
+            this.txtpassword.Enabled = false;
             this.txtpassword.Location = new System.Drawing.Point(126, 91);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(212, 20);

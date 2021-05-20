@@ -91,8 +91,8 @@ namespace ZY_CDMS.Forms
             {
                 if (cbo_reports.SelectedIndex == 0 )
                 {
-                
-                        selectedReport = 0;
+                   
+                    selectedReport = 0;
                     from = dtp_from.DateTime;
                     to = dtp_to.DateTime;
                     CusVersion = version;

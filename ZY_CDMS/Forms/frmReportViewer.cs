@@ -508,6 +508,20 @@ namespace ZY_CDMS.Forms
                 crystalReportViewer1.ReportSource = inv;
               
             }
+
+            if (frmReports.selectedReport == 88)
+            {
+                ZYTechinvoice z = new ZYTechinvoice();
+                
+                z.Refresh();
+                z.SetDatabaseLogon(username, pass, server, dbname, false);
+             
+
+                z.Refresh();
+                crystalReportViewer1.ReportSource = z;
+
+
+            }
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)

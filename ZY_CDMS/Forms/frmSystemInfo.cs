@@ -193,5 +193,14 @@ namespace ZY_CDMS.Forms
         {
           
         }
+
+        private void simpleButton2_Click_1(object sender, EventArgs e)
+        {
+            frmReportViewer rv = null;
+            frmReports.selectedReport = 88;
+            rv = new frmReportViewer();
+            rv.Show();
+
+        }
     }
 }
