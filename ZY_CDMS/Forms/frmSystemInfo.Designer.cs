@@ -60,6 +60,7 @@
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.txtprint = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -259,7 +260,7 @@
             this.metroLabel11.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel11.CustomBackground = true;
             this.metroLabel11.CustomForeColor = true;
-            this.metroLabel11.Location = new System.Drawing.Point(133, 159);
+            this.metroLabel11.Location = new System.Drawing.Point(164, 159);
             this.metroLabel11.Name = "metroLabel11";
             this.metroLabel11.Size = new System.Drawing.Size(67, 19);
             this.metroLabel11.TabIndex = 29;
@@ -271,25 +272,25 @@
             this.txt_datefrom.Enabled = false;
             this.txt_datefrom.Location = new System.Drawing.Point(21, 184);
             this.txt_datefrom.Name = "txt_datefrom";
-            this.txt_datefrom.Size = new System.Drawing.Size(106, 20);
+            this.txt_datefrom.Size = new System.Drawing.Size(137, 20);
             this.txt_datefrom.TabIndex = 30;
             this.txt_datefrom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt_dateto
             // 
             this.txt_dateto.Enabled = false;
-            this.txt_dateto.Location = new System.Drawing.Point(133, 184);
+            this.txt_dateto.Location = new System.Drawing.Point(164, 184);
             this.txt_dateto.Name = "txt_dateto";
-            this.txt_dateto.Size = new System.Drawing.Size(106, 20);
+            this.txt_dateto.Size = new System.Drawing.Size(137, 20);
             this.txt_dateto.TabIndex = 31;
             this.txt_dateto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt_activeyear
             // 
             this.txt_activeyear.Enabled = false;
-            this.txt_activeyear.Location = new System.Drawing.Point(246, 184);
+            this.txt_activeyear.Location = new System.Drawing.Point(307, 184);
             this.txt_activeyear.Name = "txt_activeyear";
-            this.txt_activeyear.Size = new System.Drawing.Size(106, 20);
+            this.txt_activeyear.Size = new System.Drawing.Size(75, 20);
             this.txt_activeyear.TabIndex = 33;
             this.txt_activeyear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -299,7 +300,7 @@
             this.metroLabel12.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel12.CustomBackground = true;
             this.metroLabel12.CustomForeColor = true;
-            this.metroLabel12.Location = new System.Drawing.Point(246, 159);
+            this.metroLabel12.Location = new System.Drawing.Point(307, 162);
             this.metroLabel12.Name = "metroLabel12";
             this.metroLabel12.Size = new System.Drawing.Size(73, 19);
             this.metroLabel12.TabIndex = 32;
@@ -309,7 +310,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(364, 167);
+            this.pictureBox1.Location = new System.Drawing.Point(388, 167);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(217, 88);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -324,7 +325,7 @@
             this.metroLabel13.BackColor = System.Drawing.SystemColors.Control;
             this.metroLabel13.CustomBackground = true;
             this.metroLabel13.CustomForeColor = true;
-            this.metroLabel13.Location = new System.Drawing.Point(458, 145);
+            this.metroLabel13.Location = new System.Drawing.Point(486, 145);
             this.metroLabel13.Name = "metroLabel13";
             this.metroLabel13.Size = new System.Drawing.Size(39, 19);
             this.metroLabel13.TabIndex = 35;
@@ -356,7 +357,7 @@
             // simpleButton1
             // 
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(52, 226);
+            this.simpleButton1.Location = new System.Drawing.Point(83, 226);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 38;
@@ -366,7 +367,7 @@
             // simpleButton3
             // 
             this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(133, 226);
+            this.simpleButton3.Location = new System.Drawing.Point(164, 226);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(75, 23);
             this.simpleButton3.TabIndex = 40;
@@ -380,18 +381,29 @@
             // simpleButton2
             // 
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(214, 226);
+            this.simpleButton2.Location = new System.Drawing.Point(245, 226);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(127, 23);
             this.simpleButton2.TabIndex = 41;
             this.simpleButton2.Text = "Print Formal Letter";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click_1);
             // 
+            // txtprint
+            // 
+            this.txtprint.Enabled = false;
+            this.txtprint.Location = new System.Drawing.Point(227, 6);
+            this.txtprint.Name = "txtprint";
+            this.txtprint.Size = new System.Drawing.Size(141, 20);
+            this.txtprint.TabIndex = 42;
+            this.txtprint.Text = "ZYTech00001";
+            this.txtprint.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // frmSystemInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(593, 261);
+            this.ClientSize = new System.Drawing.Size(611, 261);
+            this.Controls.Add(this.txtprint);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton1);
@@ -467,5 +479,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private System.Windows.Forms.ToolTip toolTip1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private System.Windows.Forms.TextBox txtprint;
     }
 }

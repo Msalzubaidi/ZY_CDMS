@@ -357,11 +357,28 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton5_Click(object sender, EventArgs e)
         {
-            string path = cbo_reports.EditValue.ToString()+" Report.xlsx";
-            gridView1.ExportToXlsx(path);
-            // Open the created XLSX file with the default application.
-            MessageBox.Show("Report Exported To Excel Successfully ... ", Resources.MessageTitle, 0, MessageBoxIcon.Information);
-            Process.Start(path);
+
+            if (string.IsNullOrEmpty(cbo_reports.EditValue.ToString()) || string.IsNullOrWhiteSpace(dtp_from.EditValue.ToString()) || string.IsNullOrWhiteSpace(dtp_to.EditValue.ToString()) || (cbo_reports.SelectedIndex < 0 || cbo_reports.SelectedIndex > 15))
+            {
+                if (frmLogin.languagearabic == 1)
+                    MessageBox.Show("الرجاء إختيار تقرير لعرضه ", "زد واي لتكنولجيا المعلومات ", 0, MessageBoxIcon.Warning);
+                else
+                    MessageBox.Show("Please Select Report  to view Data !!! ", Resources.MessageTitle, 0, MessageBoxIcon.Warning);
+            }
+            else
+            {
+
+                string path = cbo_reports.EditValue.ToString() + " Report.xlsx";
+                gridView1.ExportToXlsx(path);
+                // Open the created XLSX file with the default application.
+                MessageBox.Show("Report Exported To Excel Successfully ... ", Resources.MessageTitle, 0, MessageBoxIcon.Information);
+                Process.Start(path);
+
+            }
+
+
+
+            
          
         }
 
@@ -377,14 +394,32 @@ namespace ZY_CDMS.Forms
             //MyGrid.Print();
 
 
-            if (!MyGrid.IsPrintingAvailable)
+
+            if (string.IsNullOrEmpty(cbo_reports.EditValue.ToString()) || string.IsNullOrWhiteSpace(dtp_from.EditValue.ToString()) || string.IsNullOrWhiteSpace(dtp_to.EditValue.ToString()) || (cbo_reports.SelectedIndex < 0 || cbo_reports.SelectedIndex > 15))
             {
-                MessageBox.Show("The 'DevExpress.XtraPrinting' library is not found", "Error");
-                return;
+                if (frmLogin.languagearabic == 1)
+                    MessageBox.Show("الرجاء إختيار تقرير لعرضه ", "زد واي لتكنولجيا المعلومات ", 0, MessageBoxIcon.Warning);
+                else
+                    MessageBox.Show("Please Select Report  to view Data !!! ", Resources.MessageTitle, 0, MessageBoxIcon.Warning);
+            }
+            else
+            {
+
+                if (!MyGrid.IsPrintingAvailable)
+                {
+                    MessageBox.Show("The 'DevExpress.XtraPrinting' library is not found", "Error");
+                    return;
+                }
+
+                // Open the Preview window.
+                MyGrid.ShowPrintPreview();
+
+
             }
 
-            // Open the Preview window.
-            MyGrid.ShowPrintPreview();
+
+
+           
 
         }
 

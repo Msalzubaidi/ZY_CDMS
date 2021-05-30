@@ -41,13 +41,19 @@
             this.txtsender = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtpaswordsender = new System.Windows.Forms.TextBox();
+            this.emailbeg = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.users.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 22);
+            this.label1.Location = new System.Drawing.Point(12, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 13);
             this.label1.TabIndex = 2;
@@ -56,7 +62,7 @@
             // txtemail
             // 
             this.txtemail.Enabled = false;
-            this.txtemail.Location = new System.Drawing.Point(126, 117);
+            this.txtemail.Location = new System.Drawing.Point(106, 117);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(212, 20);
             this.txtemail.TabIndex = 3;
@@ -64,7 +70,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 120);
+            this.label2.Location = new System.Drawing.Point(12, 120);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 4;
@@ -92,7 +98,7 @@
             // 
             // users
             // 
-            this.users.Location = new System.Drawing.Point(127, 14);
+            this.users.Location = new System.Drawing.Point(107, 14);
             this.users.Name = "users";
             this.users.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -103,7 +109,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 94);
+            this.label3.Location = new System.Drawing.Point(12, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 13);
             this.label3.TabIndex = 11;
@@ -112,7 +118,7 @@
             // txtpassword
             // 
             this.txtpassword.Enabled = false;
-            this.txtpassword.Location = new System.Drawing.Point(126, 91);
+            this.txtpassword.Location = new System.Drawing.Point(106, 91);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(212, 20);
             this.txtpassword.TabIndex = 10;
@@ -121,7 +127,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 47);
+            this.label4.Location = new System.Drawing.Point(12, 47);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 13);
             this.label4.TabIndex = 15;
@@ -129,16 +135,17 @@
             // 
             // txtsender
             // 
-            this.txtsender.Location = new System.Drawing.Point(127, 39);
+            this.txtsender.Enabled = false;
+            this.txtsender.Location = new System.Drawing.Point(247, 39);
             this.txtsender.Name = "txtsender";
-            this.txtsender.Size = new System.Drawing.Size(212, 20);
+            this.txtsender.Size = new System.Drawing.Size(72, 20);
             this.txtsender.TabIndex = 14;
             this.txtsender.Text = "@gmail.com";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(28, 68);
+            this.label5.Location = new System.Drawing.Point(12, 68);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 13);
             this.label5.TabIndex = 13;
@@ -146,18 +153,86 @@
             // 
             // txtpaswordsender
             // 
-            this.txtpaswordsender.Location = new System.Drawing.Point(127, 65);
+            this.txtpaswordsender.Location = new System.Drawing.Point(107, 65);
             this.txtpaswordsender.Name = "txtpaswordsender";
             this.txtpaswordsender.Size = new System.Drawing.Size(212, 20);
             this.txtpaswordsender.TabIndex = 12;
             this.txtpaswordsender.UseSystemPasswordChar = true;
             // 
+            // emailbeg
+            // 
+            this.emailbeg.Location = new System.Drawing.Point(106, 39);
+            this.emailbeg.Name = "emailbeg";
+            this.emailbeg.Size = new System.Drawing.Size(140, 20);
+            this.emailbeg.TabIndex = 16;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(323, 17);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "* Required";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(323, 42);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 13);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "* Required";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(323, 120);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(68, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "* Required";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(323, 94);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(68, 13);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "* Required";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(323, 68);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(68, 13);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "* Required";
+            // 
             // frmResetPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(359, 204);
+            this.ClientSize = new System.Drawing.Size(396, 204);
             this.ControlBox = false;
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.emailbeg);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtsender);
             this.Controls.Add(this.label5);
@@ -194,5 +269,11 @@
         private System.Windows.Forms.TextBox txtsender;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtpaswordsender;
+        private System.Windows.Forms.TextBox emailbeg;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }

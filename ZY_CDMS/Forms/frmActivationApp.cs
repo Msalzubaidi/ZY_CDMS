@@ -46,7 +46,7 @@ namespace ZY_CDMS.Forms
         {
             DataBase db = new DataBase();
 
-            if (master.Text == DataBase.MasterPassword || string.IsNullOrEmpty (master.Text)==false)
+            if (master.Text == "ZYTech2020" + DataBase.MasterPassword && string.IsNullOrEmpty (master.Text)==false)
             {
                 db.ActivaApp();
 
@@ -107,7 +107,7 @@ namespace ZY_CDMS.Forms
 
             string newcomname = comname.Replace(" ", String.Empty);
           
-            key.Text = sb.ToString()+ newcomname.ToString();
+            key.Text = sb.ToString() + newcomname.ToString();
 
             if(ActiveStatus == 0 )
             {
@@ -118,8 +118,33 @@ namespace ZY_CDMS.Forms
                 toggleSwitch1.IsOn = true;
             }
 
+            master.Visible = false;
+            simpleButton1.Visible = false;
+            simpleButton2.Visible = false;
+            metroLabel1.Visible = false;
 
 
+        }
+
+        private void hyperlinkLabelControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            if(textBox1.Text == DataBase.MasterPassword )
+            {
+                MessageBox.Show("ZYTech2020" + DataBase.MasterPassword , "Activation Key - تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                master.Visible = true;
+                simpleButton1.Visible = true;
+                simpleButton2.Visible = true;
+                metroLabel1.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Please Try Again After 1 Miniute ", "Activation Key - تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

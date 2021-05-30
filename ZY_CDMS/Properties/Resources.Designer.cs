@@ -223,7 +223,7 @@ namespace ZY_CDMS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ZY Technologies Solutions.
+        ///   Looks up a localized string similar to ZY Technologies Solutions - تنبيه.
         /// </summary>
         public static string MessageTitle {
             get {

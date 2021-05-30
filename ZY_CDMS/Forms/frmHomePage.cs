@@ -200,7 +200,7 @@ namespace ZY_CDMS.Forms
 
         private void accordionControlElement4_Click(object sender, EventArgs e)
         {
-            mnu_exit.PerformClick();
+            exitToolStripMenuItem.PerformClick();
         }
 
         private void frmHomePage_Load(object sender, EventArgs e)
@@ -1130,7 +1130,25 @@ namespace ZY_CDMS.Forms
 
         private void upgradeDatabaseToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Upgrade Database Done ", Resources.MessageTitle, 0, MessageBoxIcon.Information);
+         
+            DialogResult result = MessageBox.Show("Current Version : 1.0.0.0 Will Upgrade to 1.0.5.2 ? ", Resources.MessageTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                for(int o = 0; o <= 3; o++)
+                {
+                    MessageBox.Show("Upgrade Database Done ", Resources.MessageTitle, 0, MessageBoxIcon.Information);
+                    MessageBox.Show("Cuurent Version 1.0."+o.ToString()+".0", Resources.MessageTitle, 0, MessageBoxIcon.Information);
+                }
+             
+
+
+            }
+            else if (result == DialogResult.No)
+            {
+                MessageBox.Show("Cuurent Version 1.0.0.0 ", Resources.MessageTitle, 0, MessageBoxIcon.Warning);
+            }
+
+           
         }
 
         private void executeBackupToolStripMenuItem1_Click(object sender, EventArgs e)

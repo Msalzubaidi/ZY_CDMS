@@ -37,7 +37,7 @@ namespace ZY_CDMS.Forms
             string condition = "";
 
             DataTable dtable = o.SelctData(table, 0, condition);
-
+        
 
             txt_comno.Text = dtable.Rows[0]["id"].ToString();
             txt_comname.Text = dtable.Rows[0]["name"].ToString();

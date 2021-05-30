@@ -124,12 +124,14 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton4_Click(object sender, EventArgs e)
         {
-            message.TextAlign = HorizontalAlignment.Left; 
+            message.TextAlign = HorizontalAlignment.Left;
+            message.Focus();
         }
 
         private void simpleButton5_Click(object sender, EventArgs e)
         {
             message.TextAlign = HorizontalAlignment.Right;
+            message.Focus();
         }
     }
 }

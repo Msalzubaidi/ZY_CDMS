@@ -88,24 +88,36 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            MailMessage myMsg = new MailMessage();
-            myMsg.From = new MailAddress(txtsender.Text);
-            
-            myMsg.To.Add(txtemail.Text);
-            myMsg.Subject = "ZY TECH APP - CDMS 2021";
-            myMsg.Body = "Hi " + users.Text + " Your password is  " + "( " + txtpassword.Text + " ) " + "Please Don't Share it with other.";
-
-            using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+            if (string.IsNullOrEmpty(emailbeg.Text) || string.IsNullOrEmpty(users.Text) || string.IsNullOrEmpty(txtemail.Text) || string.IsNullOrEmpty(txtpassword.Text) || string.IsNullOrEmpty(txtpaswordsender.Text) || string.IsNullOrEmpty(txtsender.Text))
             {
-             
-                smtp.Credentials = new NetworkCredential(txtsender.Text, txtpaswordsender.Text);
-                smtp.EnableSsl = true;
-                smtp.Send(myMsg);
-                MessageBox.Show("Please Check Your Inbox", Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please Fill Required Text Boxes ", Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+          
+            else
+            {
+                MailMessage myMsg = new MailMessage();
+                string senderemail = emailbeg.Text.Trim() + txtsender.Text.Trim();
+                myMsg.From = new MailAddress(senderemail);
+
+                myMsg.To.Add(txtemail.Text);
+                myMsg.Subject = "ZY TECH APP - CDMS 2021";
+                myMsg.Body = "Hi " + users.Text + " Your password is  " + "( " + txtpassword.Text + " ) " + "Please Don't Share it with other.";
+
+
+                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                {
+
+                    smtp.Credentials = new NetworkCredential(txtsender.Text, txtpaswordsender.Text);
+                    smtp.EnableSsl = true;
+                    smtp.Send(myMsg);
+                    MessageBox.Show("Please Check Your Inbox", Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
 
             }
-           
-         
+
+
         }
     }
 }

@@ -43,9 +43,9 @@
             this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement17 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement11 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement13 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mun_settings = new System.Windows.Forms.ToolStripMenuItem();
             this.defineMakeModelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -99,9 +99,9 @@
             this.accordionControlElement2,
             this.accordionControlElement3,
             this.accordionControlElement7,
-            this.accordionControlElement4,
             this.accordionControlElement11,
-            this.accordionControlElement13});
+            this.accordionControlElement13,
+            this.accordionControlElement4});
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.OptionsMinimizing.State = DevExpress.XtraBars.Navigation.AccordionControlState.Minimized;
             this.accordionControl1.ShowFilterControl = DevExpress.XtraBars.Navigation.ShowFilterControl.Always;
@@ -214,14 +214,6 @@
             resources.ApplyResources(this.accordionControlElement7, "accordionControlElement7");
             this.accordionControlElement7.Click += new System.EventHandler(this.accordionControlElement7_Click);
             // 
-            // accordionControlElement4
-            // 
-            this.accordionControlElement4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement4.ImageOptions.Image")));
-            this.accordionControlElement4.Name = "accordionControlElement4";
-            this.accordionControlElement4.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            resources.ApplyResources(this.accordionControlElement4, "accordionControlElement4");
-            this.accordionControlElement4.Click += new System.EventHandler(this.accordionControlElement4_Click);
-            // 
             // accordionControlElement11
             // 
             this.accordionControlElement11.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement11.ImageOptions.Image")));
@@ -237,6 +229,14 @@
             this.accordionControlElement13.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             resources.ApplyResources(this.accordionControlElement13, "accordionControlElement13");
             this.accordionControlElement13.Click += new System.EventHandler(this.accordionControlElement13_Click);
+            // 
+            // accordionControlElement4
+            // 
+            this.accordionControlElement4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement4.ImageOptions.Image")));
+            this.accordionControlElement4.Name = "accordionControlElement4";
+            this.accordionControlElement4.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            resources.ApplyResources(this.accordionControlElement4, "accordionControlElement4");
+            this.accordionControlElement4.Click += new System.EventHandler(this.accordionControlElement4_Click);
             // 
             // menuStrip1
             // 

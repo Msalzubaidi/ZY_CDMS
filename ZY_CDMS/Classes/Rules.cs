@@ -71,7 +71,7 @@ namespace ZY_CDMS.Classes
 
         }
 
-        public int checkexist(string tablename , int parx , string condition)
+       public int checkexist(string tablename , int parx , string condition)
         {
             int x = parx;
 
@@ -80,7 +80,7 @@ namespace ZY_CDMS.Classes
             string table_name = tablename;
             string qrycondition = condition;
             string qry = "";
-            
+             
             if (x == 0)
             {
                 //Only For Select * 

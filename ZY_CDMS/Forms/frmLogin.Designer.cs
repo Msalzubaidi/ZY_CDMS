@@ -258,13 +258,12 @@
             this.metroLabel5.CustomBackground = true;
             this.metroLabel5.CustomForeColor = true;
             this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel5.Location = new System.Drawing.Point(11, 283);
+            this.metroLabel5.Location = new System.Drawing.Point(86, 280);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(89, 25);
             this.metroLabel5.TabIndex = 52;
             this.metroLabel5.Text = "اللغة العربية";
             this.metroLabel5.UseStyleColors = true;
-            this.metroLabel5.UseWaitCursor = true;
             this.metroLabel5.Visible = false;
             this.metroLabel5.Click += new System.EventHandler(this.metroLabel5_Click);
             // 
@@ -274,11 +273,13 @@
             this.metroLabel6.CustomBackground = true;
             this.metroLabel6.CustomForeColor = true;
             this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel6.Location = new System.Drawing.Point(115, 283);
+            this.metroLabel6.Location = new System.Drawing.Point(179, 280);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(100, 23);
+            this.metroLabel6.Size = new System.Drawing.Size(79, 30);
             this.metroLabel6.TabIndex = 53;
+            this.metroLabel6.Text = "English";
             this.metroLabel6.UseStyleColors = true;
+            this.metroLabel6.Visible = false;
             this.metroLabel6.Click += new System.EventHandler(this.metroLabel6_Click_1);
             // 
             // toolTip2
@@ -303,7 +304,7 @@
             this.groupBox1.Controls.Add(this.password);
             this.groupBox1.Controls.Add(this.username);
             this.groupBox1.Controls.Add(this.server);
-            this.groupBox1.Location = new System.Drawing.Point(377, 60);
+            this.groupBox1.Location = new System.Drawing.Point(377, 76);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(370, 133);
             this.groupBox1.TabIndex = 54;
