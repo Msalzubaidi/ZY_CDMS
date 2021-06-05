@@ -217,6 +217,12 @@
     <Compile Include="Forms\frmAppSettings.Designer.cs">
       <DependentUpon>frmAppSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmDefineServices.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -508,6 +514,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmConnection.resx">
       <DependentUpon>frmConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDefineServices.resx">
       <DependentUpon>frmDefineServices.cs</DependentUpon>

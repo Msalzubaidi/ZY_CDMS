@@ -69,6 +69,7 @@
             this.Name = "frmReportViewer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Report Viewer";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmReportViewer_Load);
             this.ResumeLayout(false);
 

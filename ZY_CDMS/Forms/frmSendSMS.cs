@@ -34,13 +34,20 @@ namespace ZY_CDMS.Forms
         private void simpleButton3_Click(object sender, EventArgs e)
         {
             message.Clear();
+            txt_custname.Clear();
             txt_cusmobile.Clear();
-            cbo_cusid.ResetText();
+            txt_custid.Clear();
             cbo_cusid.Focus();
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
+            if (this.Controls.OfType<TextBox>().Any(t => string.IsNullOrEmpty(t.Text)))
+            {
+                MessageBox.Show(Resources.missingTextboxes, Resources.MessageTitle, 0, MessageBoxIcon.Error);
+            }
+            else
+            { 
             try
             {
                 WebClient client = new WebClient();
@@ -58,8 +65,8 @@ namespace ZY_CDMS.Forms
             {
                 MessageBox.Show(exp.ToString(), Resources.MessageTitle, 0, MessageBoxIcon.Warning);
             }
-            
-   
+
+            }
         }
 
         private void cust_TextChanged(object sender, EventArgs e)
@@ -124,14 +131,39 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton4_Click(object sender, EventArgs e)
         {
-            message.TextAlign = HorizontalAlignment.Left;
-            message.Focus();
+           
         }
 
         private void simpleButton5_Click(object sender, EventArgs e)
         {
-            message.TextAlign = HorizontalAlignment.Right;
-            message.Focus();
+           
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+            if (englang.Checked)
+            {
+                message.TextAlign = HorizontalAlignment.Right;
+                message.Focus();
+            }
+            if (arlang.Checked)
+            {
+                message.TextAlign = HorizontalAlignment.Left;
+                message.Focus();
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                txt_cusmobile.UseSystemPasswordChar = true;
+            }
+            if (checkBox1.Checked == false)
+            {
+                txt_cusmobile.UseSystemPasswordChar = false;
+            }
+        }
         }
     }
-}
+

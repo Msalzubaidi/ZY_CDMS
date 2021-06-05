@@ -170,11 +170,25 @@ namespace ZY_CDMS.Forms
 
         private void simpleButton4_Click(object sender, EventArgs e)
         {
-            string path = "Report.xlsx";
-            gridView1.ExportToXlsx(path);
-            // Open the created XLSX file with the default application.
-            MessageBox.Show("Search Result Exported To Excel Successfully ... ", Resources.MessageTitle, 0, MessageBoxIcon.Information);
-            Process.Start(path);
+
+
+            if (gridView1.Columns.Count <= 0 )
+            {
+                MessageBox.Show("Please Select Vin  to view Data !!! ", Resources.MessageTitle, 0, MessageBoxIcon.Warning);
+            }
+            else
+            {
+
+                string path = "Report.xlsx";
+                gridView1.ExportToXlsx(path);
+                // Open the created XLSX file with the default application.
+                MessageBox.Show("Search Result Exported To Excel Successfully ... ", Resources.MessageTitle, 0, MessageBoxIcon.Information);
+                Process.Start(path);
+            }
         }
+
+        
+
+
     }
 }

@@ -41,9 +41,12 @@
             this.txt_custid = new System.Windows.Forms.TextBox();
             this.txt_custname = new System.Windows.Forms.TextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.englang = new System.Windows.Forms.RadioButton();
+            this.arlang = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_cusid.Properties)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // simpleButton2
@@ -175,33 +178,58 @@
             this.metroLabel3.Text = "Name";
             this.metroLabel3.UseStyleColors = true;
             // 
-            // simpleButton4
+            // englang
             // 
-            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(16, 162);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(63, 23);
-            this.simpleButton4.TabIndex = 40;
-            this.simpleButton4.Text = "English ";
-            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
+            this.englang.AutoSize = true;
+            this.englang.Location = new System.Drawing.Point(14, 18);
+            this.englang.Name = "englang";
+            this.englang.Size = new System.Drawing.Size(58, 17);
+            this.englang.TabIndex = 42;
+            this.englang.TabStop = true;
+            this.englang.Text = "English";
+            this.englang.UseVisualStyleBackColor = true;
             // 
-            // simpleButton5
+            // arlang
             // 
-            this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
-            this.simpleButton5.Location = new System.Drawing.Point(85, 162);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(63, 23);
-            this.simpleButton5.TabIndex = 41;
-            this.simpleButton5.Text = "عربي";
-            this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
+            this.arlang.AutoSize = true;
+            this.arlang.Location = new System.Drawing.Point(71, 19);
+            this.arlang.Name = "arlang";
+            this.arlang.Size = new System.Drawing.Size(55, 17);
+            this.arlang.TabIndex = 43;
+            this.arlang.TabStop = true;
+            this.arlang.Text = "العربية";
+            this.arlang.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.arlang);
+            this.groupBox1.Controls.Add(this.englang);
+            this.groupBox1.Location = new System.Drawing.Point(12, 179);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(132, 48);
+            this.groupBox1.TabIndex = 45;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Language";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(16, 156);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(104, 17);
+            this.checkBox1.TabIndex = 46;
+            this.checkBox1.Text = "Hide Mobile Num";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // frmSendSMS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(444, 241);
-            this.Controls.Add(this.simpleButton5);
-            this.Controls.Add(this.simpleButton4);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.txt_custname);
             this.Controls.Add(this.txt_custid);
@@ -221,6 +249,8 @@
             this.Text = "Send SMS ";
             this.Load += new System.EventHandler(this.frmSendSMS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cbo_cusid.Properties)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,7 +270,9 @@
         private System.Windows.Forms.TextBox txt_custid;
         private System.Windows.Forms.TextBox txt_custname;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton5;
+        private System.Windows.Forms.RadioButton englang;
+        private System.Windows.Forms.RadioButton arlang;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

@@ -151,24 +151,7 @@ namespace ZY_CDMS.Forms
 
         private void Licence_Click(object sender, EventArgs e)
         {
-            bool isopen = false;
-            foreach (Form f in Application.OpenForms)
-            {
-                if (f.Text == "Devloper")
-                {
-                    isopen = true;
-                    f.BringToFront();
-                    break;
-                }
-            }
-
-            if (isopen == false)
-            {
-               frmDevloper dev = new frmDevloper();
-               
-                dev.Show();
-                this.Close();
-            }
+          
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

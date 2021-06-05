@@ -61,6 +61,7 @@
             this.username = new System.Windows.Forms.TextBox();
             this.server = new System.Windows.Forms.TextBox();
             this.hyperlinkLabelControl1 = new DevExpress.XtraEditors.HyperlinkLabelControl();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -135,7 +136,7 @@
             // simpleButton1
             // 
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(69, 205);
+            this.simpleButton1.Location = new System.Drawing.Point(69, 209);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(106, 36);
             this.simpleButton1.TabIndex = 3;
@@ -145,7 +146,7 @@
             // simpleButton2
             // 
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(188, 205);
+            this.simpleButton2.Location = new System.Drawing.Point(188, 209);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(106, 36);
             this.simpleButton2.TabIndex = 4;
@@ -381,6 +382,18 @@
             this.hyperlinkLabelControl1.Text = "Forget My Password ? ";
             this.hyperlinkLabelControl1.Click += new System.EventHandler(this.hyperlinkLabelControl1_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox1.Location = new System.Drawing.Point(92, 188);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(101, 17);
+            this.checkBox1.TabIndex = 56;
+            this.checkBox1.Text = "Show Password";
+            this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -388,6 +401,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(759, 317);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.hyperlinkLabelControl1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.metroLabel6);
@@ -460,5 +474,6 @@
         private System.Windows.Forms.TextBox username;
         private System.Windows.Forms.TextBox server;
         private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

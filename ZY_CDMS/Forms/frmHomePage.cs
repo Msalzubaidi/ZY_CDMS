@@ -298,6 +298,14 @@ namespace ZY_CDMS.Forms
                     accordionControlElement5.Visible = false;
                 }
 
+                if (frmLogin.pastype == "master")
+                {
+                    devModeToolStripMenuItem.Visible = true; 
+                }
+                if (frmLogin.pastype != "master")
+                {
+                    devModeToolStripMenuItem.Visible = false;
+                }
 
                 if (SellCar == 0  )
                 {
@@ -465,8 +473,6 @@ namespace ZY_CDMS.Forms
             {
                 lic.Visible = true;
                 lic.ForeColor = Color.Azure;
-
-               
 
                
                 
@@ -1177,6 +1183,49 @@ namespace ZY_CDMS.Forms
         private void rebuildMenusToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Refresh();
+        }
+
+        private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            bool isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "frmDashboard")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+
+            if (isopen == false)
+            {
+                frmDashboard d = new frmDashboard();
+                d.Show();
+            }
+        }
+
+        private void devModeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Devloper")
+                {
+                    isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+
+            if (isopen == false)
+            {
+                frmDevloper dev = new frmDevloper();
+
+                dev.Show();
+                
+            }
         }
     }
 }

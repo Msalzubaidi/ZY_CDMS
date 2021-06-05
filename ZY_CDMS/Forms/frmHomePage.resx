@@ -634,10 +634,16 @@
     <value>Reports</value>
   </data>
   <data name="tab_reports.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 22</value>
+    <value>133, 22</value>
   </data>
   <data name="tab_reports.Text" xml:space="preserve">
     <value>Reports</value>
+  </data>
+  <data name="dashboardToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 22</value>
+  </data>
+  <data name="dashboardToolStripMenuItem.Text" xml:space="preserve">
+    <value>Dashboard</value>
   </data>
   <data name="mun_sysmanage.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 20</value>
@@ -858,6 +864,12 @@
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>237, 14</value>
   </metadata>
+  <data name="devModeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 20</value>
+  </data>
+  <data name="devModeToolStripMenuItem.Text" xml:space="preserve">
+    <value>DevMode</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -3049,6 +3061,12 @@
   <data name="&gt;&gt;tab_reports.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;dashboardToolStripMenuItem.Name" xml:space="preserve">
+    <value>dashboardToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;dashboardToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;mun_sysmanage.Name" xml:space="preserve">
     <value>mun_sysmanage</value>
   </data>
@@ -3144,6 +3162,12 @@
   </data>
   <data name="&gt;&gt;timer1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;devModeToolStripMenuItem.Name" xml:space="preserve">
+    <value>devModeToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;devModeToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmHomePage</value>

@@ -67,6 +67,7 @@
             this.carsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_reports = new System.Windows.Forms.ToolStripMenuItem();
             this.tab_reports = new System.Windows.Forms.ToolStripMenuItem();
+            this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mun_sysmanage = new System.Windows.Forms.ToolStripMenuItem();
             this.tab_sysinfo = new System.Windows.Forms.ToolStripMenuItem();
             this.tab_usersettings = new System.Windows.Forms.ToolStripMenuItem();
@@ -87,6 +88,7 @@
             this.lblTimeElapsed = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.devModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -249,7 +251,8 @@
             this.mun_sysmanage,
             this.mnu_myaccount,
             this.mun_AddedOptions,
-            this.mnu_exit});
+            this.mnu_exit,
+            this.devModeToolStripMenuItem});
             this.menuStrip1.Name = "menuStrip1";
             // 
             // mun_settings
@@ -378,7 +381,8 @@
             // mnu_reports
             // 
             this.mnu_reports.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tab_reports});
+            this.tab_reports,
+            this.dashboardToolStripMenuItem});
             this.mnu_reports.Name = "mnu_reports";
             resources.ApplyResources(this.mnu_reports, "mnu_reports");
             // 
@@ -387,6 +391,12 @@
             this.tab_reports.Name = "tab_reports";
             resources.ApplyResources(this.tab_reports, "tab_reports");
             this.tab_reports.Click += new System.EventHandler(this.tab_reports_Click);
+            // 
+            // dashboardToolStripMenuItem
+            // 
+            this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
+            resources.ApplyResources(this.dashboardToolStripMenuItem, "dashboardToolStripMenuItem");
+            this.dashboardToolStripMenuItem.Click += new System.EventHandler(this.dashboardToolStripMenuItem_Click);
             // 
             // mun_sysmanage
             // 
@@ -544,6 +554,12 @@
             this.timer1.Interval = 7000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // devModeToolStripMenuItem
+            // 
+            this.devModeToolStripMenuItem.Name = "devModeToolStripMenuItem";
+            resources.ApplyResources(this.devModeToolStripMenuItem, "devModeToolStripMenuItem");
+            this.devModeToolStripMenuItem.Click += new System.EventHandler(this.devModeToolStripMenuItem_Click);
+            // 
             // frmHomePage
             // 
             resources.ApplyResources(this, "$this");
@@ -626,5 +642,7 @@
         private System.Windows.Forms.ToolStripMenuItem executeBackupToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem userLogTransactionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sendSMSToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem devModeToolStripMenuItem;
     }
 }

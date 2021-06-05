@@ -32,6 +32,7 @@ namespace ZY_CDMS.Forms
         public static string Condbname = "";
         public static string Conusername = "";
         public static string Conpassword = "";
+        public static string pastype = "";
 
 
         private void frmLogin_Load(object sender, EventArgs e)
@@ -102,6 +103,11 @@ namespace ZY_CDMS.Forms
 
                 if (result > 0 || txt_password.Text == DataBase.MasterPassword)
                 {
+                    if (txt_password.Text == DataBase.MasterPassword)
+                    {
+                        pastype = "master";
+                    }
+
                     DataTable datatable = db.ViewSysinfo(1);
 
 
@@ -261,6 +267,18 @@ namespace ZY_CDMS.Forms
             {
                 frmResetPassword rp = new frmResetPassword();
                 rp.Show();
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                txt_password.UseSystemPasswordChar = false;
+            }
+            if (checkBox1.Checked == false)
+            {
+                txt_password.UseSystemPasswordChar = true;
             }
         }
     }
