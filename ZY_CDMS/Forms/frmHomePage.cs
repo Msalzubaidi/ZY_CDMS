@@ -478,13 +478,13 @@ namespace ZY_CDMS.Forms
                 
                 if (frmLogin.languagearabic == 1 )
                 {
-                    lic.Text = Resources.LogoAR + " " + Resources.AppNameAR + " - نسخة مرخصة  ل ( " + " " + titleform.ToString() + " ) " + nl + "الرخصة فعالة لغاية  " + dt.ToShortDateString(); ;
+                    lic.Text = Resources.LogoAR + " " + Resources.AppNameAR + " - نسخة مرخصة  ل ( " + " " + titleform.ToString() + " ) " + nl + "الرخصة فعالة لغاية  " + dt.ToShortDateString() + "  -  "+NrOfDays.ToString() + " " + "يوم"; 
                    
                 }
                 else
                 {
-                    lic.Text = Resources.Logo + " " + Resources.AppName + " - Licensed for ( " + " " + titleform.ToString() + " ) " + nl + "License Active to " + dt.ToShortDateString(); ;
-                    
+                    lic.Text = Resources.Logo + " " + Resources.AppName + " - Licensed for ( " + " " + titleform.ToString() + " ) " + nl + "License Active to " + dt.ToShortDateString() +"  -  " + NrOfDays.ToString() + " " + "Days";
+
                 }
 
             }

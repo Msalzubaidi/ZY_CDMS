@@ -82,13 +82,13 @@
             this.mnu_exit = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.devModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lic = new MetroFramework.Controls.MetroLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.progressPanel1 = new DevExpress.XtraWaitForm.ProgressPanel();
             this.lblTimeElapsed = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.devModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -494,6 +494,12 @@
             resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click_1);
             // 
+            // devModeToolStripMenuItem
+            // 
+            this.devModeToolStripMenuItem.Name = "devModeToolStripMenuItem";
+            resources.ApplyResources(this.devModeToolStripMenuItem, "devModeToolStripMenuItem");
+            this.devModeToolStripMenuItem.Click += new System.EventHandler(this.devModeToolStripMenuItem_Click);
+            // 
             // lic
             // 
             resources.ApplyResources(this.lic, "lic");
@@ -553,12 +559,6 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 7000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // devModeToolStripMenuItem
-            // 
-            this.devModeToolStripMenuItem.Name = "devModeToolStripMenuItem";
-            resources.ApplyResources(this.devModeToolStripMenuItem, "devModeToolStripMenuItem");
-            this.devModeToolStripMenuItem.Click += new System.EventHandler(this.devModeToolStripMenuItem_Click);
             // 
             // frmHomePage
             // 
