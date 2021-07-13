@@ -107,12 +107,18 @@ namespace ZY_CDMS.Forms
 
                 using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
                 {
-
-                    smtp.Credentials = new NetworkCredential(txtsender.Text, txtpaswordsender.Text);
+                    try
+                    { 
+                    smtp.Credentials = new NetworkCredential(senderemail , txtpaswordsender.Text);
                     smtp.EnableSsl = true;
                     smtp.Send(myMsg);
                     MessageBox.Show("Please Check Your Inbox", Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch
 
+                    {
+                        MessageBox.Show("UnExpexted Error", Resources.MessageTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
 
             }

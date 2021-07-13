@@ -199,6 +199,7 @@
             this.arlang.TabStop = true;
             this.arlang.Text = "العربية";
             this.arlang.UseVisualStyleBackColor = true;
+            this.arlang.CheckedChanged += new System.EventHandler(this.arlang_CheckedChanged);
             // 
             // groupBox1
             // 

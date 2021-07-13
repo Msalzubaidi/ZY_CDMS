@@ -164,6 +164,11 @@ namespace ZY_CDMS.Forms
                 txt_cusmobile.UseSystemPasswordChar = false;
             }
         }
+
+        private void arlang_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
+    }
     }
 
